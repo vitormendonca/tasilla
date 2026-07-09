@@ -1,0 +1,49 @@
+﻿Listagem de caminhos de pasta para o volume Acer
+O n�mero de s�rie do volume � 00000042 62BF:8B4E
+C:\USERS\VITOR\DOCUMENTS\tasilla\LIB
+�   main.dart
+�   
+����data
+�       homework_data.dart
+�       listening_data.dart
+�       reading_data.dart
+�       vocabulary_data.dart
+�       
+����models
+�       activity_question.dart
+�       homework_activity.dart
+�       listening_exercise.dart
+�       reading_activity.dart
+�       vocabulary_quiz.dart
+�       
+����screens
+�   �   login_screen.dart
+�   �   
+�   ����homework
+�   �       homework_activity_screen.dart
+�   �       homework_screen.dart
+�   �       
+�   ����listening
+�   �       listening_exercise_screen.dart
+�   �       listening_screen.dart
+�   �       
+�   ����reading
+�   �       reading_screen.dart
+�   �       
+�   ����student
+�   �       student_home_screen.dart
+�   �       student_profile_screen.dart
+�   �       
+�   ����teacher
+�   �       teacher_home_screen.dart
+�   �       
+�   ����vocabulary
+�           vocabulary_quiz_screen.dart
+�           vocabulary_screen.dart
+�           
+����services
+�       student_progress_service.dart
+�       
+����widgets
+        practice_card.dart
+        
