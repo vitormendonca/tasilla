@@ -488,11 +488,58 @@ Anna: Goodbye!''',
         ActivityQuestion(
           id: 'A1-FINAL-EXAM_q1',
           type: QuestionType.multipleChoice,
-          question: 'What is the minimum final exam score?',
-          options: ['75%', '50%', '100%'],
-          correctAnswer: '75%',
+          question: 'Choose the correct sentence.',
+          options: [
+            'I am from Brazil.',
+            'I are from Brazil.',
+            'I is from Brazil.',
+          ],
+          correctAnswer: 'I am from Brazil.',
+        ),
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_q2',
+          type: QuestionType.multipleChoice,
+          question: 'Complete: She ___ one sister and one brother.',
+          options: ['have', 'has', 'having'],
+          correctAnswer: 'has',
+        ),
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_q3',
+          type: QuestionType.multipleChoice,
+          question: 'Which question asks for a name?',
+          options: [
+            "What's your name?",
+            'How old are you?',
+            'Where do you live?',
+          ],
+          correctAnswer: "What's your name?",
+        ),
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_q4',
+          type: QuestionType.multipleChoice,
+          question: 'Choose the answer: Where are you from?',
+          options: ['I am twenty years old.', 'I am from Spain.', 'My name is Ana.'],
+          correctAnswer: 'I am from Spain.',
+        ),
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_q5',
+          type: QuestionType.fillBlank,
+          question: 'Complete the sentence: I ___ English every day.',
+          correctAnswer: 'study',
         ),
       ],
+      explanations: {
+        'A1-FINAL-EXAM_q1':
+            'Use am with I. You are, he/she/it is, I am.',
+        'A1-FINAL-EXAM_q2':
+            'Use has with he/she/it. I/you/we/they have.',
+        'A1-FINAL-EXAM_q3':
+            "What's your name? asks for a name. How old asks for age; Where asks for a place.",
+        'A1-FINAL-EXAM_q4':
+            'Where questions are answered with a place. From Spain gives the country.',
+        'A1-FINAL-EXAM_q5':
+            'Use study to talk about learning something regularly. I study English every day.',
+      },
     ),
     rubric: _finalExamRubric,
   );
