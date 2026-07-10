@@ -903,8 +903,7 @@ const List<_CoreExperienceSeed> _coreSeeds = [
     audioPath: 'assets/audio/a1/a1_exp_001_meeting_anna.mp3',
     maxAudioPlays: 3,
     audioScript: '''
-Hello.
-My name is Anna.
+Hello! My name is Anna.
 I am from Canada.
 Nice to meet you.''',
     readingText: '''
@@ -966,10 +965,10 @@ Nice to meet you.''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_002_first_conversation.mp3',
     audioScript: '''
-Speaker A: Good morning. How are you?
-Speaker B: I'm fine, thank you. How are you?
-Speaker A: I'm good. See you later.
-Speaker B: Goodbye.''',
+Tom: Good morning! How are you?
+Anna: I am fine, thank you. How are you?
+Tom: I am good. See you later!
+Anna: Goodbye!''',
     numberOfSpeakers: 2,
     writingPrompt:
         'Create a short greeting conversation with hello, how are you, and goodbye.',
@@ -1029,9 +1028,9 @@ Speaker B: Goodbye.''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_003_countries.mp3',
     audioScript: '''
-Hi. I'm Lucas.
-I'm Brazilian.
-I'm from Brazil.''',
+Hi! I am Lucas.
+I am from Brazil.
+I am Brazilian.''',
     writingPrompt: 'Write your country and nationality.',
     writingMode: WritingMode.guidedProfile,
     minimumRequirements: ['country', 'nationality'],
@@ -1079,8 +1078,9 @@ I'm from Brazil.''',
     checkExplanation: 'Sarah says she is 25 years old.',
     audioPath: 'assets/audio/a1/a1_exp_004_numbers_age.mp3',
     audioScript: '''
-My name is Sarah.
-I'm 25 years old.''',
+Hi! My name is Sarah.
+I am twenty-five years old.
+My brother is thirty.''',
     writingPrompt: 'Write your age using the sentence I am ___ years old.',
     writingMode: WritingMode.guidedProfile,
     minimumRequirements: ['age sentence'],
@@ -1194,12 +1194,12 @@ Language: English student''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_006_basic_questions.mp3',
     audioScript: '''
-Anna: Hello! What's your name?
+Anna: Hello! What is your name?
 Leo: My name is Leo.
 Anna: Where are you from?
-Leo: I'm from Brazil.
+Leo: I am from Brazil.
 Anna: How old are you?
-Leo: I'm 20 years old.''',
+Leo: I am twenty years old.''',
     numberOfSpeakers: 2,
     speakingPrompt:
         "Answer: What's your name? Where are you from? How old are you?",
@@ -1354,12 +1354,12 @@ I'm a teacher.''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_009_simple_conversation.mp3',
     audioScript: '''
-A: Hi! What's your name?
-B: My name is Sofia.
-A: Nice to meet you.
-B: Nice to meet you too.
-A: Where are you from?
-B: I'm from Spain.''',
+Tom: Hi! What is your name?
+Sarah: My name is Sofia.
+Tom: Nice to meet you.
+Sarah: Nice to meet you too.
+Tom: Where are you from?
+Sarah: I am from Spain.''',
     numberOfSpeakers: 2,
     speakingPrompt: "Answer: What's your name? Where are you from?",
     maxRecordingSeconds: 60,
@@ -1414,9 +1414,10 @@ B: I'm from Spain.''',
     audioPath: 'assets/audio/a1/a1_exp_010_foundation_challenge.mp3',
     audioScript: '''
 Hello. My name is Alex.
-I'm 28 years old.
-I'm from Canada.
-I live in Toronto.''',
+I am twenty-eight years old.
+I am from Canada.
+I live in Toronto.
+My sister lives in Vancouver.''',
     writingPrompt: 'Introduce yourself in 5 sentences.',
     writingMode: WritingMode.guidedIntroduction,
     minimumRequirements: ['name', 'age', 'country', 'city or place'],
@@ -1482,12 +1483,12 @@ I live in Toronto.''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_011_my_family.mp3',
     audioScript: '''
-Hi, I am Emma.
+Hi, I'm Emma.
 This is my family.
 My mother is Ana.
 My father is Mark.
 I have one brother.
-His name is Leo.''',
+His name is Leo. He is twelve.''',
     readingText: '''
 My name is Emma.
 I live with my parents.
@@ -1645,10 +1646,10 @@ She is short, funny and friendly.''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_013_things_i_like.mp3',
     audioScript: '''
-Hi, I am Maya.
+Hi, I'm Maya.
 I like music and books.
 I love movies.
-I do not like coffee.
+I don't like coffee.
 My favorite sport is soccer.''',
     readingText: '''
 Maya likes music, books and movies.
@@ -1812,6 +1813,7 @@ He studies English at night.''',
       ),
     ],
     audioScript: '''
+Hi, I'm Paulo.
 On Monday, I have English class at seven.
 On Wednesday, I work in the morning.
 On Saturday, I play soccer at six.
@@ -1895,7 +1897,7 @@ Sunday evening - relax at home''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_016_my_activities.mp3',
     audioScript: '''
-I am Bruno.
+I'm Bruno.
 I study English every day.
 I read at night.
 I sometimes watch movies.
@@ -1966,12 +1968,12 @@ He plays soccer on weekends.''',
     ],
     audioPath: 'assets/audio/a1/a1_exp_017_present_questions.mp3',
     audioScript: '''
-A: Do you study English?
-B: Yes, I do.
-A: Do you like music?
-B: Yes, I do.
-A: Do you play soccer?
-B: No, I do not.''',
+Anna: Do you study English?
+Leo: Yes, I do.
+Anna: Do you like music?
+Leo: Yes, I do.
+Anna: Do you play soccer?
+Leo: No, I don't.''',
     numberOfSpeakers: 2,
     readingText: '''
 A: Do you study English?
@@ -2056,7 +2058,7 @@ B: No, I do not.''',
     ],
     audioScript: '''
 My name is Carla.
-I am 23 years old.
+I'm twenty-three years old.
 I live in Lima.
 I have one sister.
 I study English every day.
@@ -2319,7 +2321,7 @@ On weekends, they play soccer together.''',
     grammarTitle: 'How much is it?',
     grammarExplanation: 'Use how much to ask about price.',
     patterns: ['How much is it?', 'It is ten dollars.'],
-    examples: ['It is five reais.', 'How much is the coffee?'],
+    examples: ['It is five dollars.', 'How much is the coffee?'],
     examplePrompt: 'Ask about a price.',
     exampleAnswer: 'How much is it?',
     checkQuestion: 'Which question asks for price?',
@@ -2330,7 +2332,13 @@ On weekends, they play soccer together.''',
     ],
     correctOption: 'How much is it?',
     checkExplanation: 'How much asks about price.',
-    audioScript: 'A: How much is the coffee? B: It is five reais.',
+    audioScript: '''
+Tom: Good morning. How much is the coffee?
+Anna: It's five dollars.
+Tom: And the sandwich?
+Anna: It's eight dollars.
+Tom: One coffee, please.
+Anna: Here you are. Thank you!''',
     numberOfSpeakers: 2,
   ),
   _CoreExperienceSeed(
@@ -2344,9 +2352,9 @@ On weekends, they play soccer together.''',
     grammarTitle: 'Prices on menus',
     grammarExplanation: 'Menus often list item plus price.',
     patterns: ['Coffee - 5', 'Sandwich - 12'],
-    examples: ['Tea is 4 reais.', 'Juice is 6 reais.'],
+    examples: ['Tea is 4 dollars.', 'Juice is 6 dollars.'],
     examplePrompt: 'Find the price of tea.',
-    exampleAnswer: 'Tea is 4 reais.',
+    exampleAnswer: 'Tea is 4 dollars.',
     checkQuestion: 'What can you find on a menu?',
     checkOptions: ['Food prices', 'Family members', 'Classroom instructions'],
     correctOption: 'Food prices',
@@ -2547,7 +2555,11 @@ On weekends, they play soccer together.''',
     checkOptions: ['Do you work?', 'How much is it?', 'Where is the bank?'],
     correctOption: 'Do you work?',
     checkExplanation: 'Do you work asks about work.',
-    audioScript: 'A: Do you work? B: Yes. I work in an office in the morning.',
+    audioScript: '''
+Anna: Do you work?
+Leo: Yes, I work in an office.
+Anna: When do you work?
+Leo: In the morning. I study English at night.''',
     numberOfSpeakers: 2,
   ),
   _CoreExperienceSeed(
