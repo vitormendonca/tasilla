@@ -116,6 +116,10 @@ SINGLES = [
         "Hi, Maria. This is Paulo.\nThe class is on Tuesday at seven.\n"
         "Please bring your book.\nSee you there. Bye!",
     ),
+    (
+        "a1_exp_028.mp3", "SARAH",
+        "The bus to the city is at nine.\nThe station is near the bank.",
+    ),
 ]
 
 DIALOGUES = [
@@ -182,6 +186,19 @@ DIALOGUES = [
         ("LEO",   "And what time is the English class?"),
         ("SARAH", "At eight thirty."),
         ("LEO",   "Thank you!"),
+    ]),
+    ("a1_exp_038.mp3", [
+        ("SARAH", "Hi, I am Sofia. I study English."),
+        ("TOM",   "Nice to meet you. I am Marco. I work in a store."),
+    ]),
+    ("a1_final_exam_listening.mp3", [
+        ("ANNA", "Hi, I'm Anna. I'm from Canada. I'm twenty-six years old."),
+        ("TOM",  "Nice to meet you. My name is Tom. I'm from Brazil."),
+        ("ANNA", "What do you do, Tom?"),
+        ("TOM",  "I work in a school. I study English at night."),
+        ("ANNA", "I live in Toronto with my sister. We like music and coffee."),
+        ("TOM",  "On Saturdays, I play soccer. See you later!"),
+        ("ANNA", "Goodbye!"),
     ]),
 ]
 

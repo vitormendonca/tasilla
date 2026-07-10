@@ -422,11 +422,46 @@ LearningExperience _finalExamExperience({required int order}) {
         'Each final exam section has a 20 percent weight. Passing score is 75 percent.',
     listeningBlock: const ListeningBlock(
       audioTitle: 'A1 final listening section',
-      audioScript:
-          'Two people introduce themselves and talk about familiar everyday information.',
+      audioScript: '''
+Anna: Hi, I'm Anna. I'm from Canada. I'm twenty-six years old.
+Tom: Nice to meet you. My name is Tom. I'm from Brazil.
+Anna: What do you do, Tom?
+Tom: I work in a school. I study English at night.
+Anna: I live in Toronto with my sister. We like music and coffee.
+Tom: On Saturdays, I play soccer. See you later!
+Anna: Goodbye!''',
       audioPath: 'assets/audio/a1/a1_final_exam_listening.mp3',
       maxAudioPlays: 2,
       numberOfSpeakers: 2,
+      listeningQuestions: [
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_listen_q1',
+          type: QuestionType.multipleChoice,
+          question: 'Where is Tom from?',
+          options: ['Brazil', 'Canada', 'Spain'],
+          correctAnswer: 'Brazil',
+        ),
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_listen_q2',
+          type: QuestionType.multipleChoice,
+          question: 'Where does Anna live?',
+          options: ['Toronto', 'Vancouver', 'Sao Paulo'],
+          correctAnswer: 'Toronto',
+        ),
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_listen_q3',
+          type: QuestionType.multipleChoice,
+          question: 'What does Tom do on Saturdays?',
+          options: ['He plays soccer.', 'He works.', 'He studies music.'],
+          correctAnswer: 'He plays soccer.',
+        ),
+        ActivityQuestion(
+          id: 'A1-FINAL-EXAM_listen_q4',
+          type: QuestionType.dictation,
+          question: 'Listen and type this sentence: I work in a school.',
+          correctAnswer: 'I work in a school',
+        ),
+      ],
     ),
     readingBlock: const ReadingBlock(
       readingTitle: 'A1 final reading section',
@@ -1124,6 +1159,13 @@ My brother is thirty.''',
     checkOptions: ['Ana Silva', 'Maria Silva', 'Julia Santos'],
     correctOption: 'Maria Silva',
     checkExplanation: 'The profile says Name: Maria Silva.',
+    audioPath: 'assets/audio/a1/a1_new_phone_number.mp3',
+    audioScript: '''
+Anna: What is your phone number?
+Sarah: It's nine, nine, four, five, two, one, eight, seven.
+Anna: Nine, nine, four, five, two, one, eight, seven?
+Sarah: Yes, that's right.''',
+    numberOfSpeakers: 2,
     extraQuestions: [
       ActivityQuestion(
         id: 'A1-EXP-005_q2',
@@ -2431,6 +2473,13 @@ Anna: Here you are. Thank you!''',
     checkOptions: ['Bank', 'Sister', 'Favorite'],
     correctOption: 'Bank',
     checkExplanation: 'A bank is a town place.',
+    audioPath: 'assets/audio/a1/a1_new_places_in_town.mp3',
+    audioScript: '''
+This is my street.
+The bank is next to the supermarket.
+The school is near the park.
+The pharmacy is in front of the bus stop.
+I like my street.''',
   ),
   _CoreExperienceSeed(
     title: 'Travel Information',
@@ -2580,6 +2629,12 @@ Leo: In the morning. I study English at night.''',
     checkOptions: ['See you at five.', 'My sister is tall.', 'This is a menu.'],
     correctOption: 'See you at five.',
     checkExplanation: 'It is a brief everyday message.',
+    audioPath: 'assets/audio/a1/a1_new_short_message.mp3',
+    audioScript: '''
+Tom: Hi, Maria. This is Paulo.
+The class is on Tuesday at seven.
+Please bring your book.
+See you there. Bye!''',
     readingText: 'Hi Leo. Meet me at the station at five. See you soon.',
     readingFormat: ReadingFormat.message,
   ),

@@ -7,7 +7,7 @@ const List<ListeningExercise> listeningExercises = [
     title: 'Morning Routine',
     description: 'Listen to a short audio about a daily routine.',
     level: 'A1',
-    audioPath: 'audio/airport_conversation.mp3',
+    audioPath: 'assets/audio/airport_conversation.mp3',
     transcript:
         'Anna wakes up at seven o’clock every morning. She has breakfast and goes to work by bus.',
     questions: [
@@ -41,7 +41,7 @@ const List<ListeningExercise> listeningExercises = [
     title: 'At the Café',
     description: 'Listen to a simple conversation at a café.',
     level: 'A1',
-    audioPath: 'audio/airport_conversation.mp3',
+    audioPath: 'assets/audio/airport_conversation.mp3',
     transcript:
         'Tom is at a café. He orders a coffee and a cheese sandwich. The waiter says the total is eight dollars.',
     questions: [
@@ -78,7 +78,7 @@ const List<ListeningExercise> listeningExercises = [
     title: 'My Family',
     description: 'Listen to someone introducing their family.',
     level: 'A1',
-    audioPath: 'audio/airport_conversation.mp3',
+    audioPath: 'assets/audio/airport_conversation.mp3',
     transcript:
         'My name is Laura. I live with my mother, my father, and my brother. My brother is twelve years old.',
     questions: [
@@ -116,7 +116,7 @@ const List<ListeningExercise> listeningExercises = [
     title: 'At School',
     description: 'Listen to a short audio about school objects.',
     level: 'A1',
-    audioPath: 'audio/airport_conversation.mp3',
+    audioPath: 'assets/audio/airport_conversation.mp3',
     transcript:
         'Ben is in the classroom. He has a book, a pencil, and a notebook on his desk.',
     questions: [
@@ -153,7 +153,7 @@ const List<ListeningExercise> listeningExercises = [
     title: 'Weekend Plans',
     description: 'Listen to a simple conversation about the weekend.',
     level: 'A1',
-    audioPath: 'audio/airport_conversation.mp3',
+    audioPath: 'assets/audio/airport_conversation.mp3',
     transcript:
         'Sarah wants to go to the park on Saturday. She wants to walk, read a book, and drink orange juice.',
     questions: [
@@ -188,7 +188,7 @@ const List<ListeningExercise> listeningExercises = [
     description:
         'Review daily routine, café, family, school, and weekend plans.',
     level: 'A1 Review',
-    audioPath: 'audio/airport_conversation.mp3',
+    audioPath: 'assets/audio/airport_conversation.mp3',
     transcript:
         'Anna wakes up early. Tom orders coffee at a café. Laura talks about her family. Ben is in the classroom. Sarah wants to go to the park on Saturday.',
     questions: [
