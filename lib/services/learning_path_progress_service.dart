@@ -264,6 +264,18 @@ class LearningPathProgressService {
     );
   }
 
+  static Future<void> recordStepAttempt({
+    required String stepId,
+    required double score,
+    required bool passed,
+  }) async {
+    await _recordRemoteStepAttempt(
+      stepId: stepId,
+      score: score,
+      passed: passed,
+    );
+  }
+
   static Iterable<String> _stepIdsForLevel(String level) {
     return learningPathSteps
         .where((step) => step.level.toUpperCase() == level)
@@ -498,7 +510,8 @@ class LearningPathProgressService {
       final data = await client
           .from('student_step_progress')
           .select('learning_step_id')
-          .eq('student_id', studentId);
+          .eq('student_id', studentId)
+          .inFilter('status', const ['completed', 'validated', 'approved']);
 
       return _rowsFromResponse(data)
           .map((row) => row['learning_step_id']?.toString() ?? '')
@@ -524,7 +537,8 @@ class LearningPathProgressService {
       final data = await client
           .from('student_step_progress')
           .select('learning_step_id')
-          .eq('student_id', studentId);
+          .eq('student_id', studentId)
+          .inFilter('status', const ['completed', 'validated', 'approved']);
 
       return _rowsFromResponse(data)
           .map((row) => row['learning_step_id']?.toString() ?? '')
@@ -644,6 +658,32 @@ class LearningPathProgressService {
       });
     } catch (error) {
       debugPrint('Remote level check attempt failed: $error');
+    }
+  }
+
+  static Future<void> _recordRemoteStepAttempt({
+    required String stepId,
+    required double score,
+    required bool passed,
+  }) async {
+    final client = SupabaseBootstrap.client;
+    final studentId = await _remoteStudentId();
+
+    if (client == null || studentId == null) {
+      return;
+    }
+
+    try {
+      await client.from('student_step_progress').upsert({
+        'student_id': studentId,
+        'learning_step_id': stepId,
+        'status': passed ? 'completed' : 'review_needed',
+        'score': score,
+        'validated_by_level_check': false,
+        'completed_at': DateTime.now().toIso8601String(),
+      }, onConflict: 'student_id,learning_step_id');
+    } catch (error) {
+      debugPrint('Remote step attempt recording failed: $error');
     }
   }
 

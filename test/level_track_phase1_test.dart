@@ -1,4 +1,4 @@
-﻿import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:tasilla/data/a1_learning_experience_data.dart';
 import 'package:tasilla/data/level_track_data.dart';
 import 'package:tasilla/data/learning_path_data.dart';
@@ -29,7 +29,7 @@ void main() {
   });
 
   test(
-    'A1 learning activities enrich the current roadmap without changing it',
+    'A1 source package retains the full certificate structure for later phases',
     () {
       final roadmapSteps = getA1RoadmapSteps();
       final activities = getA1LearningActivities();
@@ -65,7 +65,7 @@ void main() {
           .where((activity) => activity.skill == LearningSkill.mixed)
           .toList();
 
-      expect(activities, hasLength(roadmapSteps.length));
+      expect(roadmapSteps, hasLength(a1LaunchExperienceLimit));
       expect(activities, hasLength(70));
       expect(coreActivities, hasLength(40));
       expect(reinforcementActivities, hasLength(18));
@@ -284,4 +284,3 @@ StudentActivityResult _resultFor(
     needsReview: needsReview,
   );
 }
-

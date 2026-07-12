@@ -4,6 +4,7 @@ import '../models/learning_experience.dart';
 import 'a1_learning_experience_data.dart';
 
 const String a1RoadmapSkillId = 'a1_roadmap';
+const int a1LaunchExperienceLimit = 20;
 
 class LearningSkillDefinition {
   final String id;
@@ -64,7 +65,15 @@ LearningSkillDefinition? getLearningSkillDefinition(String skillId) {
 }
 
 List<LearningPathStep> getLearningPathStepsBySkill(String skillId) {
-  return learningPathSteps.where((step) => step.skillId == skillId).toList()
+  final skill = _skillForSkillId(skillId);
+  return _getA1LaunchExperiences()
+      .where(
+        (experience) =>
+            experience.status == LearningExperienceStatus.published &&
+            experience.primarySkill == skill,
+      )
+      .map((experience) => _skillPathStepFromExperience(experience, skillId))
+      .toList()
     ..sort((a, b) => a.order.compareTo(b.order));
 }
 
@@ -73,8 +82,19 @@ List<LearningPathStep> getA1RoadmapSteps() {
 }
 
 List<LearningPathStep> _buildA1RoadmapStepsFromExperiences() {
-  return getA1LearningExperiences().map(_roadmapStepFromExperience).toList()
+  return _getA1LaunchExperiences().map(_roadmapStepFromExperience).toList()
     ..sort((a, b) => a.order.compareTo(b.order));
+}
+
+Iterable<LearningExperience> _getA1LaunchExperiences() {
+  return getA1LearningExperiences().where((experience) {
+    if (experience.activityKind != ActivityKind.coreActivity) {
+      return false;
+    }
+
+    final number = _numberFromExperienceId(experience.id, 'A1-EXP-');
+    return number != null && number <= a1LaunchExperienceLimit;
+  });
 }
 
 LearningPathStep _roadmapStepFromExperience(LearningExperience experience) {
@@ -83,6 +103,36 @@ LearningPathStep _roadmapStepFromExperience(LearningExperience experience) {
     level: experience.level,
     skillId: a1RoadmapSkillId,
     skillTitle: _skillTitleForRoadmap(experience),
+    title: experience.title,
+    description: experience.description,
+    type: _stepTypeForExperienceKind(experience.activityKind),
+    levelId: 'a1',
+    cycleId: experience.unitId,
+    skill: experience.primarySkill,
+    activityKind: experience.activityKind,
+    cefrLevel: experience.cefrLevel,
+    canDoStatement: experience.canDoStatement,
+    passingScore: experience.passingScore,
+    order: experience.order,
+    lessonNumber: experience.activityKind == ActivityKind.coreActivity
+        ? _numberFromExperienceId(experience.id, 'A1-EXP-')
+        : null,
+    reviewNumber: experience.activityKind == ActivityKind.review
+        ? _numberFromExperienceId(experience.id, 'A1-REV-')
+        : null,
+  );
+}
+
+LearningPathStep _skillPathStepFromExperience(
+  LearningExperience experience,
+  String skillId,
+) {
+  final definition = getLearningSkillDefinition(skillId);
+  return LearningPathStep(
+    id: experience.id,
+    level: experience.level,
+    skillId: skillId,
+    skillTitle: definition?.title ?? experience.primarySkill.label,
     title: experience.title,
     description: experience.description,
     type: _stepTypeForExperienceKind(experience.activityKind),

@@ -40,17 +40,22 @@ void main() {
     return latestResult;
   }
 
-  testWidgets('tapping the wrong option renders it red and reveals the correct option in green', (tester) async {
-    await pumpSection(tester);
+  testWidgets(
+    'tapping the wrong option renders it red and reveals the correct option in green',
+    (tester) async {
+      await pumpSection(tester);
 
-    await tester.tap(find.text('London'));
-    await tester.pump();
+      await tester.tap(find.text('London'));
+      await tester.pump();
 
-    expect(colorOf(tester, 'London'), AppTheme.semanticRed);
-    expect(colorOf(tester, 'Paris'), AppTheme.semanticGreen);
-  });
+      expect(colorOf(tester, 'London'), AppTheme.semanticRed);
+      expect(colorOf(tester, 'Paris'), AppTheme.semanticGreen);
+    },
+  );
 
-  testWidgets('tapping the correct option renders only it green', (tester) async {
+  testWidgets('tapping the correct option renders only it green', (
+    tester,
+  ) async {
     await pumpSection(tester);
 
     await tester.tap(find.text('Paris'));
@@ -77,34 +82,39 @@ void main() {
     expect(colorOf(tester, 'Paris'), AppTheme.semanticGreen);
   });
 
-  testWidgets('calls onResultChanged with the recomputed score after every tap', (tester) async {
-    QuizSectionResult? latest;
-    await tester.pumpWidget(
-      MaterialApp(
-        home: Scaffold(
-          body: InteractiveQuizSection(
-            sectionTitle: 'Questions',
-            questions: const [question],
-            explanations: const {},
-            onResultChanged: (result) => latest = result,
+  testWidgets(
+    'calls onResultChanged with the recomputed score after every tap',
+    (tester) async {
+      QuizSectionResult? latest;
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: InteractiveQuizSection(
+              sectionTitle: 'Questions',
+              questions: const [question],
+              explanations: const {},
+              onResultChanged: (result) => latest = result,
+            ),
           ),
         ),
-      ),
-    );
-    await tester.pump();
-    expect(latest!.totalCount, 1);
-    expect(latest!.answeredCount, 0);
+      );
+      await tester.pump();
+      expect(latest!.totalCount, 1);
+      expect(latest!.answeredCount, 0);
 
-    await tester.tap(find.text('Paris'));
-    await tester.pump();
+      await tester.tap(find.text('Paris'));
+      await tester.pump();
 
-    expect(latest!.answeredCount, 1);
-    expect(latest!.correctCount, 1);
-    expect(latest!.allAnswered, true);
-    expect(latest!.score, 1.0);
-  });
+      expect(latest!.answeredCount, 1);
+      expect(latest!.correctCount, 1);
+      expect(latest!.allAnswered, true);
+      expect(latest!.score, 1.0);
+    },
+  );
 
-  testWidgets('shows the explanation once the question is answered', (tester) async {
+  testWidgets('shows the explanation once the question is answered', (
+    tester,
+  ) async {
     await pumpSection(
       tester,
       explanations: const {'q1': 'Paris has been the capital since 987 AD.'},
@@ -115,19 +125,106 @@ void main() {
     await tester.tap(find.text('Paris'));
     await tester.pump();
 
-    expect(find.text('Paris has been the capital since 987 AD.'), findsOneWidget);
+    expect(
+      find.text('Paris has been the capital since 987 AD.'),
+      findsOneWidget,
+    );
   });
 
-  testWidgets('non-multiple-choice questions render as static text with a not-yet-interactive note', (tester) async {
-    const textQuestion = ActivityQuestion(
-      id: 'q2',
-      type: QuestionType.textInput,
-      question: 'Write a sentence using "hello".',
-      correctAnswer: 'hello',
+  testWidgets(
+    'non-multiple-choice questions render as static text with a not-yet-interactive note',
+    (tester) async {
+      const textQuestion = ActivityQuestion(
+        id: 'q2',
+        type: QuestionType.textInput,
+        question: 'Write a sentence using "hello".',
+        correctAnswer: 'hello',
+      );
+
+      await pumpSection(tester, questions: const [textQuestion]);
+
+      expect(find.text('Not yet interactive'), findsOneWidget);
+    },
+  );
+
+  testWidgets('dictation accepts normalized text and contributes to score', (
+    tester,
+  ) async {
+    const dictation = ActivityQuestion(
+      id: 'dictation-1',
+      type: QuestionType.dictation,
+      question: 'Type what you hear.',
+      correctAnswer: 'Hello, my name is Anna.',
     );
+    QuizSectionResult? latest;
 
-    await pumpSection(tester, questions: const [textQuestion]);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: InteractiveQuizSection(
+            sectionTitle: 'Dictation',
+            questions: const [dictation],
+            explanations: const {},
+            onResultChanged: (result) => latest = result,
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
 
-    expect(find.text('Not yet interactive'), findsOneWidget);
+    expect(latest!.totalCount, 1);
+    expect(latest!.allAnswered, false);
+
+    await tester.enterText(
+      find.byKey(const ValueKey('answer_dictation-1')),
+      '  hello my name is anna  ',
+    );
+    await tester.tap(find.byTooltip('Check answer'));
+    await tester.pump();
+
+    expect(find.text('Correct'), findsOneWidget);
+    expect(latest!.correctCount, 1);
+    expect(latest!.allAnswered, true);
+  });
+
+  testWidgets('fill blank locks a wrong answer and reveals the correction', (
+    tester,
+  ) async {
+    const fillBlank = ActivityQuestion(
+      id: 'fill-1',
+      type: QuestionType.fillBlank,
+      question: 'I ___ a student.',
+      correctAnswer: 'am',
+    );
+    QuizSectionResult? latest;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: InteractiveQuizSection(
+            sectionTitle: 'Grammar',
+            questions: const [fillBlank],
+            explanations: const {},
+            onResultChanged: (result) => latest = result,
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+
+    await tester.enterText(find.byKey(const ValueKey('answer_fill-1')), 'is');
+    await tester.tap(find.byTooltip('Check answer'));
+    await tester.pump();
+
+    expect(find.text('Correct answer: am'), findsOneWidget);
+    expect(latest!.answeredCount, 1);
+    expect(latest!.correctCount, 0);
+    expect(latest!.allAnswered, true);
+    expect(
+      tester
+          .widget<TextField>(find.byKey(const ValueKey('answer_fill-1')))
+          .enabled,
+      false,
+    );
   });
 }

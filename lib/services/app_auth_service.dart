@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/students_data.dart';
@@ -9,6 +10,67 @@ import 'supabase_bootstrap.dart';
 
 class AppAuthService {
   static const String teacherCode = 'teacher123';
+  static final ValueNotifier<AppSession?> currentSession =
+      ValueNotifier<AppSession?>(null);
+
+  static Future<AppSession?> restoreSession() async {
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
+
+    if (client != null && user != null) {
+      try {
+        final profile = await client
+            .from('profiles')
+            .select('id, role, full_name, current_level')
+            .eq('id', user.id)
+            .maybeSingle();
+
+        if (profile == null) {
+          await signOut();
+          return null;
+        }
+
+        final session = _sessionFromProfile(profile, fallbackEmail: user.email);
+        await _saveSession(session);
+        currentSession.value = session;
+        return session;
+      } catch (_) {
+        // Never grant access from stale local preferences when a remote session
+        // cannot be validated against its protected profile.
+        currentSession.value = null;
+        return null;
+      }
+    }
+
+    // Local sessions exist only for the repository's explicit demo mode.
+    if (SupabaseBootstrap.isConfigured) {
+      currentSession.value = null;
+      return null;
+    }
+
+    final prefs = await SharedPreferences.getInstance();
+    final role = prefs.getString('currentUserRole');
+    if (role == null) return null;
+
+    final isTeacher = role == 'teacher' || role == 'admin';
+    final session = AppSession(
+      userId:
+          prefs.getString(
+            isTeacher ? 'currentTeacherId' : 'currentStudentId',
+          ) ??
+          '',
+      role: role,
+      name:
+          prefs.getString(
+            isTeacher ? 'currentTeacherName' : 'currentStudentName',
+          ) ??
+          (isTeacher ? 'Teacher' : 'Student'),
+      level: prefs.getString('currentStudentLevel') ?? 'A1',
+      isRemote: false,
+    );
+    currentSession.value = session;
+    return session;
+  }
 
   static Future<AppLoginResult> signInWithEmail({
     required String email,
@@ -47,15 +109,10 @@ class AppAuthService {
         );
       }
 
-      final session = AppSession(
-        userId: profile['id']?.toString() ?? user.id,
-        role: profile['role']?.toString() ?? 'student',
-        name: profile['full_name']?.toString() ?? user.email ?? 'User',
-        level: profile['current_level']?.toString() ?? 'A1',
-        isRemote: true,
-      );
+      final session = _sessionFromProfile(profile, fallbackEmail: user.email);
 
       await _saveSession(session);
+      currentSession.value = session;
 
       return AppLoginResult.success(session);
     } catch (error) {
@@ -76,6 +133,7 @@ class AppAuthService {
       );
 
       await _saveSession(session);
+      currentSession.value = session;
 
       return AppLoginResult.success(session);
     }
@@ -104,6 +162,7 @@ class AppAuthService {
         );
 
         await _saveSession(session, studentAccessCode: student.accessCode);
+        currentSession.value = session;
 
         return AppLoginResult.success(session);
       }
@@ -155,6 +214,7 @@ class AppAuthService {
       );
 
       await _saveSession(session, studentAccessCode: normalizedCode);
+      currentSession.value = session;
       return AppLoginResult.success(session);
     } catch (error) {
       // Invalid-credentials here means "no such student remotely" — return null
@@ -200,6 +260,20 @@ class AppAuthService {
     await prefs.remove('currentStudentAccessCode');
     await prefs.remove('currentTeacherId');
     await prefs.remove('currentTeacherName');
+    currentSession.value = null;
+  }
+
+  static AppSession _sessionFromProfile(
+    Map<String, dynamic> profile, {
+    String? fallbackEmail,
+  }) {
+    return AppSession(
+      userId: profile['id']?.toString() ?? '',
+      role: profile['role']?.toString() ?? 'student',
+      name: profile['full_name']?.toString() ?? fallbackEmail ?? 'User',
+      level: profile['current_level']?.toString() ?? 'A1',
+      isRemote: true,
+    );
   }
 
   static Future<void> _saveSession(

@@ -31,8 +31,13 @@ if (-not $values.ContainsKey('SUPABASE_ANON_KEY')) {
   throw 'SUPABASE_ANON_KEY is missing in .env.local.'
 }
 
+if (-not $values.ContainsKey('STUDENT_CODE_SALT')) {
+  throw 'STUDENT_CODE_SALT is missing in .env.local.'
+}
+
 Set-Location -LiteralPath $repoRoot
 
 & C:\flutter\bin\flutter.bat run -d chrome `
   "--dart-define=SUPABASE_URL=$($values['SUPABASE_URL'])" `
-  "--dart-define=SUPABASE_ANON_KEY=$($values['SUPABASE_ANON_KEY'])"
+  "--dart-define=SUPABASE_ANON_KEY=$($values['SUPABASE_ANON_KEY'])" `
+  "--dart-define=STUDENT_CODE_SALT=$($values['STUDENT_CODE_SALT'])"

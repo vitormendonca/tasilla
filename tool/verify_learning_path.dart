@@ -1,4 +1,4 @@
-﻿import 'dart:io';
+import 'dart:io';
 
 import 'package:tasilla/data/a1_learning_experience_data.dart';
 import 'package:tasilla/data/level_track_data.dart';
@@ -10,8 +10,8 @@ import 'package:tasilla/models/student_activity_result.dart';
 import 'package:tasilla/services/level_progress_service.dart';
 
 void main() {
-  _verifyOfficialA1Roadmap();
-  _verifyLegacySkillPaths();
+  _verifyA1LaunchRoadmap();
+  _verifySharedSkillPaths();
   _verifyPhase1LevelTrack();
   _verifyA1ContentPackageDetails();
   _verifyPhase1Progress();
@@ -108,7 +108,7 @@ void _verifyA1ContentPackageDetails() {
   );
 }
 
-void _verifyOfficialA1Roadmap() {
+void _verifyA1LaunchRoadmap() {
   final roadSteps = getA1RoadmapSteps();
   final core = _stepsForKind(roadSteps, ActivityKind.coreActivity);
   final reinforcements = _stepsForKind(
@@ -120,39 +120,40 @@ void _verifyOfficialA1Roadmap() {
   final portfolio = _stepsForKind(roadSteps, ActivityKind.portfolioTask);
   final finalExams = _stepsForKind(roadSteps, ActivityKind.finalExam);
 
-  _expect(roadSteps.length == 70, 'A1 Road Map should have 70 experiences.');
-  _expect(core.length == 40, 'A1 Road Map should have 40 core experiences.');
   _expect(
-    reinforcements.length == 18,
-    'A1 Road Map should have 18 smart reinforcements.',
+    roadSteps.length == a1LaunchExperienceLimit,
+    'A1 launch Road Map should expose only EXP 001 to 020.',
   );
-  _expect(reviews.length == 6, 'A1 Road Map should have 6 mixed reviews.');
-  _expect(checkpoints.length == 3, 'A1 Road Map should have 3 checkpoints.');
-  _expect(portfolio.length == 2, 'A1 Road Map should have 2 portfolio tasks.');
-  _expect(finalExams.length == 1, 'A1 Road Map should have one final exam.');
+  _expect(
+    core.length == a1LaunchExperienceLimit,
+    'A1 launch Road Map should have 20 core experiences.',
+  );
+  _expect(
+    reinforcements.isEmpty,
+    'A1 launch Road Map should hide templated reinforcements.',
+  );
+  _expect(reviews.isEmpty, 'A1 launch Road Map should hide draft reviews.');
+  _expect(
+    checkpoints.isEmpty,
+    'A1 launch Road Map should hide draft checkpoints.',
+  );
+  _expect(portfolio.isEmpty, 'A1 launch Road Map should hide portfolio tasks.');
+  _expect(finalExams.isEmpty, 'A1 launch Road Map should hide the final exam.');
   _expect(roadSteps.first.id == 'A1-EXP-001', 'First A1 experience mismatch.');
   _expect(
-    roadSteps.last.id == 'A1-FINAL-EXAM',
-    'Final A1 experience mismatch.',
+    roadSteps.last.id == 'A1-EXP-020',
+    'Last launch A1 experience mismatch.',
   );
 }
 
-void _verifyLegacySkillPaths() {
+void _verifySharedSkillPaths() {
   for (final skill in learningSkillDefinitions) {
     final skillSteps = getLearningPathStepsBySkill(skill.id);
-    final lessons = skillSteps
-        .where((step) => step.type == LearningPathStepType.lesson)
-        .toList();
-    final reviews = skillSteps
-        .where((step) => step.type == LearningPathStepType.review)
-        .toList();
-    final finalTests = skillSteps
-        .where((step) => step.type == LearningPathStepType.finalTest)
-        .toList();
-
-    _expect(lessons.length == 12, '${skill.id} should keep 12 lessons.');
-    _expect(reviews.length == 4, '${skill.id} should keep 4 reviews.');
-    _expect(finalTests.length == 1, '${skill.id} should keep one final test.');
+    _expect(skillSteps.isNotEmpty, '${skill.id} should expose A1 experiences.');
+    _expect(
+      skillSteps.every((step) => getA1LearningExperienceById(step.id) != null),
+      '${skill.id} should only reference authored A1 experiences.',
+    );
   }
 }
 
@@ -302,4 +303,3 @@ void _expect(bool condition, String message) {
     throw StateError(message);
   }
 }
-

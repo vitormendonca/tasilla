@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+
 import '../models/app_session.dart';
 import '../services/app_auth_service.dart';
 import '../services/supabase_bootstrap.dart';
 import '../theme/app_theme.dart';
 import '../theme/theme_controller.dart';
-import 'student/student_home_screen.dart';
-import 'teacher/teacher_home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -40,17 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
       });
       return;
     }
-    final session = result.session;
-    if (session == null) return;
     setState(() => _isLoading = false);
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => session.isTeacher
-            ? const TeacherHomeScreen()
-            : const StudentHomeScreen(),
-      ),
-    );
   }
 
   Future<void> _loginWithEmail() async {
@@ -60,8 +49,14 @@ class _LoginScreenState extends State<LoginScreen> {
       setState(() => _errorMessage = 'Enter your email and password.');
       return;
     }
-    setState(() { _isLoading = true; _errorMessage = null; });
-    final result = await AppAuthService.signInWithEmail(email: email, password: password);
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
+    final result = await AppAuthService.signInWithEmail(
+      email: email,
+      password: password,
+    );
     await _handleLoginResult(result);
   }
 
@@ -71,7 +66,10 @@ class _LoginScreenState extends State<LoginScreen> {
       setState(() => _errorMessage = 'Enter your access code.');
       return;
     }
-    setState(() { _isLoading = true; _errorMessage = null; });
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
     final result = await AppAuthService.signInWithDemoCode(code);
     await _handleLoginResult(result);
   }
@@ -80,8 +78,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final canvas = isDark ? const Color(0xFF161618) : const Color(0xFFFAFAF8);
-    final textPrimary = isDark ? const Color(0xFFF5F5F0) : const Color(0xFF1A1A1A);
-    final textMuted = isDark ? const Color(0xFF48484A) : const Color(0xFFAEAAA2);
+    final textPrimary = isDark
+        ? const Color(0xFFF5F5F0)
+        : const Color(0xFF1A1A1A);
+    final textMuted = isDark
+        ? const Color(0xFF48484A)
+        : const Color(0xFFAEAAA2);
     final surface = isDark ? const Color(0xFF242426) : const Color(0xFFF0EEE8);
     final border = isDark ? const Color(0xFF2C2C2E) : const Color(0xFFE4E2DC);
     final isSupabaseConfigured = SupabaseBootstrap.isConfigured;
@@ -96,7 +98,6 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 // Theme toggle
                 Align(
                   alignment: Alignment.topRight,
@@ -224,13 +225,17 @@ class _LoginScreenState extends State<LoginScreen> {
                               height: 18,
                               child: CircularProgressIndicator(
                                 strokeWidth: 2,
-                                color: isDark ? const Color(0xFF161618) : const Color(0xFFFAFAF8),
+                                color: isDark
+                                    ? const Color(0xFF161618)
+                                    : const Color(0xFFFAFAF8),
                               ),
                             )
                           : Text(
                               'ENTER →',
                               style: TextStyle(
-                                color: isDark ? const Color(0xFF161618) : const Color(0xFFFAFAF8),
+                                color: isDark
+                                    ? const Color(0xFF161618)
+                                    : const Color(0xFFFAFAF8),
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 letterSpacing: 0.10 * 12,
@@ -250,10 +255,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   }),
                   child: Text(
                     _isTeacherMode ? 'I am a student' : 'I am a teacher',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: textMuted,
-                    ),
+                    style: TextStyle(fontSize: 12, color: textMuted),
                   ),
                 ),
 
@@ -284,10 +286,47 @@ class _LoginScreenState extends State<LoginScreen> {
                           spacing: 8,
                           runSpacing: 8,
                           children: [
-                            _DemoChip(label: 'joao123', textMuted: textMuted, border: border, surface: surface, onTap: () { _accessCodeController.text = 'joao123'; setState(() => _errorMessage = null); }),
-                            _DemoChip(label: 'maria123', textMuted: textMuted, border: border, surface: surface, onTap: () { _accessCodeController.text = 'maria123'; setState(() => _errorMessage = null); }),
-                            _DemoChip(label: 'ana123', textMuted: textMuted, border: border, surface: surface, onTap: () { _accessCodeController.text = 'ana123'; setState(() => _errorMessage = null); }),
-                            _DemoChip(label: 'teacher123', textMuted: textMuted, border: border, surface: surface, onTap: () { _accessCodeController.text = AppAuthService.teacherCode; setState(() => _errorMessage = null); }),
+                            _DemoChip(
+                              label: 'joao123',
+                              textMuted: textMuted,
+                              border: border,
+                              surface: surface,
+                              onTap: () {
+                                _accessCodeController.text = 'joao123';
+                                setState(() => _errorMessage = null);
+                              },
+                            ),
+                            _DemoChip(
+                              label: 'maria123',
+                              textMuted: textMuted,
+                              border: border,
+                              surface: surface,
+                              onTap: () {
+                                _accessCodeController.text = 'maria123';
+                                setState(() => _errorMessage = null);
+                              },
+                            ),
+                            _DemoChip(
+                              label: 'ana123',
+                              textMuted: textMuted,
+                              border: border,
+                              surface: surface,
+                              onTap: () {
+                                _accessCodeController.text = 'ana123';
+                                setState(() => _errorMessage = null);
+                              },
+                            ),
+                            _DemoChip(
+                              label: 'teacher123',
+                              textMuted: textMuted,
+                              border: border,
+                              surface: surface,
+                              onTap: () {
+                                _accessCodeController.text =
+                                    AppAuthService.teacherCode;
+                                setState(() => _errorMessage = null);
+                              },
+                            ),
                           ],
                         ),
                       ],
@@ -370,8 +409,12 @@ class _UnderlineField extends StatelessWidget {
             filled: true,
             fillColor: Colors.transparent,
             border: UnderlineInputBorder(borderSide: BorderSide(color: border)),
-            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: border)),
-            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: textPrimary, width: 1.5)),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: border),
+            ),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: textPrimary, width: 1.5),
+            ),
             contentPadding: const EdgeInsets.symmetric(vertical: 10),
           ),
         ),

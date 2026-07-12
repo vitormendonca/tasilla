@@ -34,12 +34,30 @@ class InteractiveQuizSection extends StatefulWidget {
   });
 
   @override
-  State<InteractiveQuizSection> createState() =>
-      _InteractiveQuizSectionState();
+  State<InteractiveQuizSection> createState() => _InteractiveQuizSectionState();
 }
 
 class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
   final Map<String, String> selectedAnswers = {};
+  final Map<String, String> draftAnswers = {};
+
+  bool _isGradable(ActivityQuestion question) {
+    return question.type == QuestionType.multipleChoice ||
+        question.type == QuestionType.dictation ||
+        question.type == QuestionType.fillBlank;
+  }
+
+  String _normalized(String value) {
+    return value
+        .trim()
+        .toLowerCase()
+        .replaceAll(RegExp(r'[^a-z0-9\s]'), '')
+        .replaceAll(RegExp(r'\s+'), ' ');
+  }
+
+  bool _isCorrect(ActivityQuestion question, String answer) {
+    return _normalized(answer) == _normalized(question.correctAnswer);
+  }
 
   @override
   void initState() {
@@ -52,15 +70,14 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
   }
 
   QuizSectionResult _computeResult() {
-    final gradable = widget.questions
-        .where((q) => q.type == QuestionType.multipleChoice)
-        .toList();
+    final gradable = widget.questions.where(_isGradable).toList();
     final answered = gradable
         .where((q) => selectedAnswers.containsKey(q.id))
         .length;
-    final correct = gradable
-        .where((q) => selectedAnswers[q.id] == q.correctAnswer)
-        .length;
+    final correct = gradable.where((q) {
+      final answer = selectedAnswers[q.id];
+      return answer != null && _isCorrect(q, answer);
+    }).length;
     return QuizSectionResult(
       answeredCount: answered,
       correctCount: correct,
@@ -77,13 +94,25 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
     _emitResult();
   }
 
+  void _submitTextAnswer(ActivityQuestion question) {
+    if (selectedAnswers.containsKey(question.id)) return;
+    final answer = draftAnswers[question.id]?.trim() ?? '';
+    if (answer.isEmpty) return;
+    setState(() {
+      selectedAnswers[question.id] = answer;
+    });
+    _emitResult();
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final textPrimary =
-        isDark ? const Color(0xFFF5F5F0) : const Color(0xFF1A1A1A);
-    final textMuted =
-        isDark ? const Color(0xFF48484A) : const Color(0xFFAEAAA2);
+    final textPrimary = isDark
+        ? const Color(0xFFF5F5F0)
+        : const Color(0xFF1A1A1A);
+    final textMuted = isDark
+        ? const Color(0xFF48484A)
+        : const Color(0xFFAEAAA2);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +155,7 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
       ),
     );
 
-    if (question.type != QuestionType.multipleChoice) {
+    if (!_isGradable(question)) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -137,8 +166,7 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
               spacing: 7,
               runSpacing: 7,
               children: [
-                for (final option in question.options)
-                  _chip(option, textMuted),
+                for (final option in question.options) _chip(option, textMuted),
               ],
             ),
           ],
@@ -152,6 +180,16 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
             ),
           ),
         ],
+      );
+    }
+
+    if (question.type == QuestionType.dictation ||
+        (question.type == QuestionType.fillBlank && question.options.isEmpty)) {
+      return _textAnswerTile(
+        question,
+        prompt: prompt,
+        textPrimary: textPrimary,
+        textMuted: textMuted,
       );
     }
 
@@ -179,6 +217,72 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
         ),
         if (isAnswered && (explanation?.trim().isNotEmpty ?? false)) ...[
           const SizedBox(height: 6),
+          Text(
+            explanation!,
+            style: TextStyle(fontSize: 12, color: textMuted, height: 1.3),
+          ),
+        ],
+      ],
+    );
+  }
+
+  Widget _textAnswerTile(
+    ActivityQuestion question, {
+    required Widget prompt,
+    required Color textPrimary,
+    required Color textMuted,
+  }) {
+    final submitted = selectedAnswers[question.id];
+    final isAnswered = submitted != null;
+    final isCorrect = isAnswered && _isCorrect(question, submitted);
+    final explanation = widget.explanations[question.id];
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        prompt,
+        const SizedBox(height: 8),
+        TextField(
+          key: ValueKey('answer_${question.id}'),
+          enabled: !isAnswered,
+          onChanged: (value) => draftAnswers[question.id] = value,
+          onSubmitted: (_) => _submitTextAnswer(question),
+          textInputAction: TextInputAction.done,
+          style: TextStyle(fontSize: 13, color: textPrimary),
+          decoration: InputDecoration(
+            hintText: question.type == QuestionType.dictation
+                ? 'Type what you hear'
+                : 'Type the missing word or phrase',
+            isDense: true,
+            suffixIcon: isAnswered
+                ? Icon(
+                    isCorrect
+                        ? Icons.check_circle_outline
+                        : Icons.cancel_outlined,
+                    color: isCorrect
+                        ? AppTheme.semanticGreen
+                        : AppTheme.semanticRed,
+                  )
+                : IconButton(
+                    tooltip: 'Check answer',
+                    onPressed: () => _submitTextAnswer(question),
+                    icon: const Icon(Icons.arrow_forward),
+                  ),
+          ),
+        ),
+        if (isAnswered) ...[
+          const SizedBox(height: 6),
+          Text(
+            isCorrect ? 'Correct' : 'Correct answer: ${question.correctAnswer}',
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+              color: isCorrect ? AppTheme.semanticGreen : AppTheme.semanticRed,
+            ),
+          ),
+        ],
+        if (isAnswered && (explanation?.trim().isNotEmpty ?? false)) ...[
+          const SizedBox(height: 4),
           Text(
             explanation!,
             style: TextStyle(fontSize: 12, color: textMuted, height: 1.3),
@@ -223,7 +327,11 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
       ),
       child: Text(
         label,
-        style: TextStyle(fontSize: 11, color: color, fontWeight: FontWeight.w500),
+        style: TextStyle(
+          fontSize: 11,
+          color: color,
+          fontWeight: FontWeight.w500,
+        ),
       ),
     );
   }

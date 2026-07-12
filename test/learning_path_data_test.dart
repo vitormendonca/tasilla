@@ -1,11 +1,11 @@
-﻿import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:tasilla/data/a1_learning_experience_data.dart';
 import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/models/learning_enums.dart';
 import 'package:tasilla/models/learning_path_step.dart';
 
 void main() {
-  test('A1 roadmap exposes the official 70-experience structure', () {
+  test('A1 launch roadmap exposes only polished EXP 001 to 020', () {
     final roadSteps = getA1RoadmapSteps();
     final core = _stepsForKind(roadSteps, ActivityKind.coreActivity);
     final reinforcements = _stepsForKind(
@@ -17,13 +17,13 @@ void main() {
     final portfolio = _stepsForKind(roadSteps, ActivityKind.portfolioTask);
     final finalExams = _stepsForKind(roadSteps, ActivityKind.finalExam);
 
-    expect(roadSteps, hasLength(70));
-    expect(core, hasLength(40));
-    expect(reinforcements, hasLength(18));
-    expect(reviews, hasLength(6));
-    expect(checkpoints, hasLength(3));
-    expect(portfolio, hasLength(2));
-    expect(finalExams, hasLength(1));
+    expect(roadSteps, hasLength(a1LaunchExperienceLimit));
+    expect(core, hasLength(a1LaunchExperienceLimit));
+    expect(reinforcements, isEmpty);
+    expect(reviews, isEmpty);
+    expect(checkpoints, isEmpty);
+    expect(portfolio, isEmpty);
+    expect(finalExams, isEmpty);
 
     expect(
       core.every((step) => step.type == LearningPathStepType.lesson),
@@ -43,9 +43,8 @@ void main() {
       portfolio.every((step) => step.type == LearningPathStepType.portfolio),
       true,
     );
-    expect(finalExams.single.type, LearningPathStepType.finalTest);
     expect(roadSteps.first.id, 'A1-EXP-001');
-    expect(roadSteps.last.id, 'A1-FINAL-EXAM');
+    expect(roadSteps.last.id, 'A1-EXP-020');
     expect(
       roadSteps.every(
         (step) =>
@@ -58,33 +57,29 @@ void main() {
     );
   });
 
-  test('legacy per-skill paths remain available for the MVP flow', () {
-    final skillLessonIds = {
-      for (final skill in learningSkillDefinitions)
-        ...getLearningPathStepsBySkill(skill.id)
-            .where((step) => step.type == LearningPathStepType.lesson)
-            .map((step) => step.id),
-    };
-
+  test('skill paths reuse published A1 experiences', () {
     for (final skill in learningSkillDefinitions) {
       final skillSteps = getLearningPathStepsBySkill(skill.id);
-      final lessons = skillSteps
-          .where((step) => step.type == LearningPathStepType.lesson)
-          .toList();
-      final reviews = skillSteps
-          .where((step) => step.type == LearningPathStepType.review)
-          .toList();
-      final finals = skillSteps
-          .where((step) => step.type == LearningPathStepType.finalTest)
-          .toList();
-
-      expect(lessons, hasLength(12));
-      expect(reviews, hasLength(4));
-      expect(finals, hasLength(1));
+      expect(skillSteps, isNotEmpty);
+      expect(
+        skillSteps.every(
+          (step) => getA1LearningExperienceById(step.id) != null,
+        ),
+        true,
+      );
+      expect(skillSteps.every((step) => step.skillId == skill.id), true);
     }
 
-    expect(skillLessonIds, contains('listening_a1_lesson_1'));
-    expect(skillLessonIds, isNot(contains('A1-EXP-001')));
+    final listening = getLearningPathStepsBySkill('listening');
+    expect(
+      listening,
+      contains(
+        predicate<LearningPathStep>((step) {
+          final experience = getA1LearningExperienceById(step.id)!;
+          return experience.listeningBlock?.hasPlannedAudioPath ?? false;
+        }),
+      ),
+    );
   });
 
   test('A1 certificate journey exposes package-backed EXP 001 to 020', () {
@@ -119,4 +114,3 @@ List<LearningPathStep> _stepsForKind(
 ) {
   return steps.where((step) => step.activityKind == kind).toList();
 }
-

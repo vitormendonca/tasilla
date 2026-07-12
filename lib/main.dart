@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/login_screen.dart';
 import 'services/supabase_bootstrap.dart';
 import 'theme/app_theme.dart';
 import 'theme/theme_controller.dart';
+import 'widgets/auth_gate.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +25,7 @@ class TasillaApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeMode,
-          home: const LoginScreen(),
+          home: const AuthGate(),
         );
       },
     );

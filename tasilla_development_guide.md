@@ -161,15 +161,15 @@ Full spec: `tasilla_a1_certification_standard.md`
 - [x] Landing page live at tasilla.com (teacher-first, pricing, certificate showcase)
 - [x] Domains connected: tasilla.com (site), app.tasilla.com + tasilla.app (Flutter app)
 - [x] Stripe payment links live for Pro/Business/Business+/Scale + standalone certificate
-- [ ] Limit v1 to EXP 001–020 (hide templated reinforcements/units 3–4)
+- [x] Limit v1 to EXP 001–020 (hide templated reinforcements/units 3–4)
 - [ ] Beta with 3–5 real students (demo mode is fine)
 
 ### v1.0.5 — Assessment engine (NEW — prerequisite, found July 2026)
 Discovered that quizzes render as read-only text today; "Complete" buttons mark steps done unconditionally with no scoring. This must be built before selling certificates carries integrity. See `tasilla_a1_certification_standard.md` section 8 for full detail.
-- [ ] Interactive quiz: tappable options, right/wrong feedback (green/red), score calculation
-- [ ] Score-gated completion (70% per skill minimum, per certification standard)
-- [ ] Real audio playback in the listening section (currently hardcoded "Audio pending generation" regardless of file existence)
-- [ ] Wire the 5 Skill Paths (Listening/Speaking/Reading/Vocabulary/Grammar) to their real data files — currently falls back to a placeholder for all of them
+- [x] Interactive quiz: tappable options, right/wrong feedback (green/red), score calculation
+- [x] Score-gated completion (70% per skill minimum, per certification standard)
+- [x] Real audio playback in the listening section
+- [x] Wire the 5 Skill Paths (Listening/Speaking/Reading/Vocabulary/Grammar) to shared authored A1 experiences
 
 ### v1.1 — Trust
 - [ ] Supabase live (auth, progress, assignments)

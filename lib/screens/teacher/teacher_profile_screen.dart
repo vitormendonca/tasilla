@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../services/app_auth_service.dart';
-import '../login_screen.dart';
 
 class TeacherProfileScreen extends StatefulWidget {
   const TeacherProfileScreen({super.key});
@@ -31,11 +30,7 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
   Future<void> logout() async {
     await AppAuthService.signOut();
     if (!mounted) return;
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => const LoginScreen()),
-      (route) => false,
-    );
+    Navigator.popUntil(context, (route) => route.isFirst);
   }
 
   Future<void> confirmLogout() async {
@@ -46,8 +41,14 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
           title: const Text('Logout'),
           content: const Text('Do you want to leave this teacher account?'),
           actions: [
-            TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Cancel')),
-            TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Logout')),
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: const Text('Logout'),
+            ),
           ],
         );
       },
@@ -58,11 +59,15 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final canvas      = isDark ? const Color(0xFF161618) : const Color(0xFFFAFAF8);
-    final textPrimary = isDark ? const Color(0xFFF5F5F0) : const Color(0xFF1A1A1A);
-    final textMuted   = isDark ? const Color(0xFF48484A) : const Color(0xFFAEAAA2);
-    final surface     = isDark ? const Color(0xFF242426) : const Color(0xFFF0EEE8);
-    final border      = isDark ? const Color(0xFF2C2C2E) : const Color(0xFFE4E2DC);
+    final canvas = isDark ? const Color(0xFF161618) : const Color(0xFFFAFAF8);
+    final textPrimary = isDark
+        ? const Color(0xFFF5F5F0)
+        : const Color(0xFF1A1A1A);
+    final textMuted = isDark
+        ? const Color(0xFF48484A)
+        : const Color(0xFFAEAAA2);
+    final surface = isDark ? const Color(0xFF242426) : const Color(0xFFF0EEE8);
+    final border = isDark ? const Color(0xFF2C2C2E) : const Color(0xFFE4E2DC);
 
     return Scaffold(
       backgroundColor: canvas,
@@ -71,7 +76,14 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
         elevation: 0,
         scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: textMuted),
-        title: Text('Teacher Profile', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: textPrimary)),
+        title: Text(
+          'Teacher Profile',
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: textPrimary,
+          ),
+        ),
       ),
       body: ListView(
         padding: const EdgeInsets.all(20),
@@ -79,22 +91,46 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
           // Profile header
           Container(
             padding: const EdgeInsets.all(18),
-            decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(12), border: Border.all(color: border)),
+            decoration: BoxDecoration(
+              color: surface,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: border),
+            ),
             child: Row(
               children: [
                 Container(
-                  width: 52, height: 52,
-                  decoration: BoxDecoration(color: textPrimary.withValues(alpha: 0.08), shape: BoxShape.circle),
-                  child: Center(child: Icon(Icons.person_outline, color: textMuted, size: 28)),
+                  width: 52,
+                  height: 52,
+                  decoration: BoxDecoration(
+                    color: textPrimary.withValues(alpha: 0.08),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.person_outline,
+                      color: textMuted,
+                      size: 28,
+                    ),
+                  ),
                 ),
                 const SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Teacher Profile', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: textPrimary)),
+                      Text(
+                        'Teacher Profile',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: textPrimary,
+                        ),
+                      ),
                       const SizedBox(height: 4),
-                      Text(teacherName, style: TextStyle(fontSize: 13, color: textMuted)),
+                      Text(
+                        teacherName,
+                        style: TextStyle(fontSize: 13, color: textMuted),
+                      ),
                     ],
                   ),
                 ),
@@ -106,14 +142,29 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
           // Account type
           Container(
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(12), border: Border.all(color: border)),
+            decoration: BoxDecoration(
+              color: surface,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: border),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('ACCOUNT TYPE', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: textMuted)),
+                Text(
+                  'ACCOUNT TYPE',
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.6,
+                    color: textMuted,
+                  ),
+                ),
                 const SizedBox(height: 10),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 3,
+                  ),
                   decoration: BoxDecoration(
                     color: textMuted.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(4),
@@ -124,7 +175,15 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
                     children: [
                       Icon(Icons.school_outlined, color: textMuted, size: 12),
                       const SizedBox(width: 5),
-                      Text('TEACHER', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w700, letterSpacing: 0.8, color: textMuted)),
+                      Text(
+                        'TEACHER',
+                        style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.8,
+                          color: textMuted,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -141,11 +200,23 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
           // Teacher tools
           Container(
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(12), border: Border.all(color: border)),
+            decoration: BoxDecoration(
+              color: surface,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: border),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('TEACHER TOOLS', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: textMuted)),
+                Text(
+                  'TEACHER TOOLS',
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.6,
+                    color: textMuted,
+                  ),
+                ),
                 const SizedBox(height: 10),
                 Text(
                   'More teacher settings, school information, and account customization will appear here in future versions.',
@@ -159,11 +230,23 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
           // Account / logout
           Container(
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(12), border: Border.all(color: border)),
+            decoration: BoxDecoration(
+              color: surface,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: border),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('ACCOUNT', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: textMuted)),
+                Text(
+                  'ACCOUNT',
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.6,
+                    color: textMuted,
+                  ),
+                ),
                 const SizedBox(height: 10),
                 Text(
                   'Use this option only when you want to leave this account or switch users.',
@@ -182,9 +265,24 @@ class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.logout, size: 16, color: isDark ? const Color(0xFF161618) : Colors.white),
+                        Icon(
+                          Icons.logout,
+                          size: 16,
+                          color: isDark
+                              ? const Color(0xFF161618)
+                              : Colors.white,
+                        ),
                         const SizedBox(width: 8),
-                        Text('Logout', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: isDark ? const Color(0xFF161618) : Colors.white)),
+                        Text(
+                          'Logout',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: isDark
+                                ? const Color(0xFF161618)
+                                : Colors.white,
+                          ),
+                        ),
                       ],
                     ),
                   ),
