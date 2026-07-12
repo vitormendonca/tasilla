@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:crypto/crypto.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/students_data.dart';
@@ -77,6 +80,19 @@ class AppAuthService {
       return AppLoginResult.success(session);
     }
 
+    // Preferred path: if Supabase is configured, treat the access code as a real
+    // credential. The student's Auth email/password are derived deterministically
+    // from the code, so no password is ever shown to or typed by the student.
+    final client = SupabaseBootstrap.client;
+    if (client != null) {
+      final remoteResult = await _signInStudentByAccessCode(normalizedCode);
+      if (remoteResult != null) {
+        return remoteResult;
+      }
+      // Fall through to local demo list only if the remote lookup found nothing,
+      // so existing demo codes keep working during migration.
+    }
+
     for (final student in studentsData) {
       if (student.accessCode.toLowerCase() == normalizedCode) {
         final session = AppSession(
@@ -96,6 +112,77 @@ class AppAuthService {
     return AppLoginResult.failure(
       'Invalid access code. Please check and try again.',
     );
+  }
+
+  /// Signs a student into Supabase Auth using credentials derived from their
+  /// access code. Returns null (not a failure) if the code has no remote match,
+  /// so the caller can fall back to the local demo list.
+  static Future<AppLoginResult?> _signInStudentByAccessCode(
+    String normalizedCode,
+  ) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null) return null;
+
+    final email = studentEmailForCode(normalizedCode);
+    final password = studentPasswordForCode(normalizedCode);
+
+    try {
+      final response = await client.auth.signInWithPassword(
+        email: email,
+        password: password,
+      );
+
+      final user = response.user;
+      if (user == null) return null;
+
+      final profile = await client
+          .from('profiles')
+          .select('id, role, full_name, current_level, access_code')
+          .eq('id', user.id)
+          .maybeSingle();
+
+      if (profile == null) {
+        await client.auth.signOut();
+        return null;
+      }
+
+      final session = AppSession(
+        userId: profile['id']?.toString() ?? user.id,
+        role: profile['role']?.toString() ?? 'student',
+        name: profile['full_name']?.toString() ?? 'Student',
+        level: profile['current_level']?.toString() ?? 'A1',
+        isRemote: true,
+      );
+
+      await _saveSession(session, studentAccessCode: normalizedCode);
+      return AppLoginResult.success(session);
+    } catch (error) {
+      // Invalid-credentials here means "no such student remotely" — return null
+      // so the local demo fallback can run. Only surface other errors.
+      final message = error.toString().toLowerCase();
+      if (message.contains('invalid login credentials')) {
+        return null;
+      }
+      return AppLoginResult.failure(_friendlyError(error));
+    }
+  }
+
+  /// Deterministic Auth email for a student access code.
+  /// Example: 'test-student-1' -> 'test-student-1@students.tasilla.app'
+  static String studentEmailForCode(String code) {
+    final normalized = code.trim().toLowerCase();
+    return '$normalized@students.tasilla.app';
+  }
+
+  /// Deterministic Auth password for a student access code, combining the code
+  /// with an app-wide salt passed at build time (never committed to the repo).
+  /// The same code + salt always produces the same password, so the app can
+  /// authenticate without storing per-student passwords anywhere.
+  static String studentPasswordForCode(String code) {
+    final normalized = code.trim().toLowerCase();
+    final salt = const String.fromEnvironment('STUDENT_CODE_SALT');
+    final bytes = utf8.encode('$normalized::$salt');
+    return sha256.convert(bytes).toString();
   }
 
   static Future<void> signOut() async {

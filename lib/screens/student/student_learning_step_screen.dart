@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../data/a1_learning_experience_data.dart';
 import '../../data/learning_path_data.dart';
-import '../../models/activity_question.dart';
 import '../../models/learning_experience.dart';
 import '../../models/learning_path_step.dart';
 import '../../services/learning_path_progress_service.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/interactive_quiz_section.dart';
 
 class StudentLearningStepScreen extends StatefulWidget {
   final LearningPathStep step;
@@ -25,6 +25,8 @@ class StudentLearningStepScreen extends StatefulWidget {
 
 class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
   bool isSaving = false;
+  int _attemptNumber = 0;
+  final Map<String, QuizSectionResult> _sectionResults = {};
 
   Future<void> _completeStep() async {
     if (widget.alreadyCompleted || isSaving) {
@@ -147,9 +149,9 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
       if (experience.listeningBlock != null)
         _listeningSection(experience.listeningBlock!, textPrimary: textPrimary, textMuted: textMuted),
       if (experience.readingBlock != null)
-        _textSection(experience.readingBlock!.readingTitle, experience.readingBlock!.readingText, textPrimary: textPrimary, textMuted: textMuted),
+        _readingSection(experience.readingBlock!, textPrimary: textPrimary, textMuted: textMuted),
       if (experience.quizBlock?.questions.isNotEmpty ?? false)
-        _questionsSection(experience.quizBlock!.questions, textPrimary: textPrimary, textMuted: textMuted),
+        _questionsSection(experience.quizBlock!, textPrimary: textPrimary, textMuted: textMuted),
       if (experience.writingTask != null)
         _writingSection(experience.writingTask!, textPrimary: textPrimary, textMuted: textMuted),
       if (experience.speakingTask != null)
@@ -244,25 +246,52 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
         ],
         const SizedBox(height: 8),
         Text(block.audioScript, style: TextStyle(fontSize: 13, color: textPrimary, height: 1.4)),
+        if (block.listeningQuestions.isNotEmpty) ...[
+          const SizedBox(height: 14),
+          InteractiveQuizSection(
+            key: ValueKey('listening_attempt_$_attemptNumber'),
+            sectionTitle: 'Listening comprehension',
+            questions: block.listeningQuestions,
+            explanations: const {},
+            onResultChanged: (result) {
+              _sectionResults['listening'] = result;
+            },
+          ),
+        ],
       ],
     );
   }
 
-  Widget _questionsSection(List<ActivityQuestion> questions, {required Color textPrimary, required Color textMuted}) {
+  Widget _readingSection(ReadingBlock block, {required Color textPrimary, required Color textMuted}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Questions', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: textPrimary)),
-        const SizedBox(height: 8),
-        for (int i = 0; i < questions.length; i++) ...[
-          Text('${i + 1}. ${questions[i].question}', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500, color: textPrimary, height: 1.3)),
-          if (questions[i].options.isNotEmpty) ...[
-            const SizedBox(height: 6),
-            Wrap(spacing: 7, runSpacing: 7, children: [for (final o in questions[i].options) _contentChip(o, textMuted)]),
-          ],
-          if (i < questions.length - 1) const SizedBox(height: 10),
+        _textSection(block.readingTitle, block.readingText, textPrimary: textPrimary, textMuted: textMuted),
+        if (block.readingQuestions.isNotEmpty) ...[
+          const SizedBox(height: 14),
+          InteractiveQuizSection(
+            key: ValueKey('reading_attempt_$_attemptNumber'),
+            sectionTitle: 'Reading comprehension',
+            questions: block.readingQuestions,
+            explanations: const {},
+            onResultChanged: (result) {
+              _sectionResults['reading'] = result;
+            },
+          ),
         ],
       ],
+    );
+  }
+
+  Widget _questionsSection(QuizBlock quizBlock, {required Color textPrimary, required Color textMuted}) {
+    return InteractiveQuizSection(
+      key: ValueKey('quiz_attempt_$_attemptNumber'),
+      sectionTitle: 'Questions',
+      questions: quizBlock.questions,
+      explanations: quizBlock.explanations,
+      onResultChanged: (result) {
+        _sectionResults['quiz'] = result;
+      },
     );
   }
 
