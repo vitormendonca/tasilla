@@ -12,11 +12,13 @@ import '../../widgets/interactive_quiz_section.dart';
 class StudentLearningStepScreen extends StatefulWidget {
   final LearningPathStep step;
   final bool alreadyCompleted;
+  final Future<void> Function(String stepId)? onMarkStepCompleted;
 
   const StudentLearningStepScreen({
     super.key,
     required this.step,
     required this.alreadyCompleted,
+    this.onMarkStepCompleted,
   });
 
   @override
@@ -27,17 +29,75 @@ class StudentLearningStepScreen extends StatefulWidget {
 class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
   bool isSaving = false;
   int _attemptNumber = 0;
+  bool _attemptedAndFailed = false;
+  String? _completionMessage;
   final Map<String, QuizSectionResult> _sectionResults = {};
+
+  double get _combinedScore {
+    final totalCorrect = _sectionResults.values.fold(
+      0,
+      (sum, result) => sum + result.correctCount,
+    );
+    final totalQuestions = _sectionResults.values.fold(
+      0,
+      (sum, result) => sum + result.totalCount,
+    );
+    if (totalQuestions == 0) return 1.0;
+    return totalCorrect / totalQuestions;
+  }
+
+  bool get _allSectionsAnswered =>
+      _sectionResults.values.every((result) => result.allAnswered);
 
   Future<void> _completeStep() async {
     if (widget.alreadyCompleted || isSaving) {
       Navigator.pop(context, false);
       return;
     }
+
+    final experience = getA1LearningExperienceById(widget.step.id);
+    final threshold = experience?.passingScore ?? widget.step.passingScore;
+
+    if (!_allSectionsAnswered) {
+      setState(() {
+        _completionMessage = 'Answer all questions before completing this step.';
+      });
+      return;
+    }
+
+    if (_combinedScore < threshold) {
+      setState(() {
+        _attemptedAndFailed = true;
+        _completionMessage =
+            'Score: ${(_combinedScore * 100).round()}% — needs ${(threshold * 100).round()}% to pass. Review and try again.';
+      });
+      return;
+    }
+
     setState(() { isSaving = true; });
-    await LearningPathProgressService.markStepCompleted(widget.step.id);
+    final markCompleted = widget.onMarkStepCompleted ??
+        LearningPathProgressService.markStepCompleted;
+    await markCompleted(widget.step.id);
     if (!mounted) return;
     Navigator.pop(context, true);
+  }
+
+  void _resetAttempt() {
+    setState(() {
+      _attemptNumber++;
+      _sectionResults.clear();
+      _attemptedAndFailed = false;
+      _completionMessage = null;
+    });
+  }
+
+  void _updateSectionResult(String section, QuizSectionResult result) {
+    _sectionResults[section] = result;
+    if (_completionMessage != null && !_attemptedAndFailed && mounted) {
+      setState(() {
+        _completionMessage = null;
+      });
+    }
   }
 
   @override
@@ -93,21 +153,41 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
           const SizedBox(height: 18),
           _developmentExercise(context, experience, isDark: isDark, textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border),
           const SizedBox(height: 22),
+          if (_completionMessage != null) ...[
+            Text(
+              _completionMessage!,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 12,
+                color: _attemptedAndFailed ? AppTheme.semanticRed : textMuted,
+                height: 1.4,
+              ),
+            ),
+            const SizedBox(height: 12),
+          ],
           GestureDetector(
-            onTap: isSaving ? null : _completeStep,
+            onTap: isSaving
+                ? null
+                : _attemptedAndFailed
+                    ? _resetAttempt
+                    : _completeStep,
             child: Container(
               width: double.infinity,
               height: 50,
               decoration: BoxDecoration(
-                color: isDark ? Colors.white : const Color(0xFF1A1A1A),
+                color: _attemptedAndFailed
+                    ? AppTheme.semanticRed
+                    : isDark ? Colors.white : const Color(0xFF1A1A1A),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Center(
                 child: isSaving
                     ? SizedBox(width: 18, height: 18, child: CircularProgressIndicator(color: isDark ? const Color(0xFF161618) : Colors.white, strokeWidth: 1.5))
                     : Text(
-                        widget.alreadyCompleted ? 'ALREADY COMPLETED' : _completionLabel(widget.step.type).toUpperCase(),
-                        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, letterSpacing: 1.0, color: isDark ? const Color(0xFF161618) : Colors.white),
+                        _attemptedAndFailed
+                            ? 'TRY AGAIN'
+                            : widget.alreadyCompleted ? 'ALREADY COMPLETED' : _completionLabel(widget.step.type).toUpperCase(),
+                        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, letterSpacing: 1.0, color: _attemptedAndFailed || !isDark ? Colors.white : const Color(0xFF161618)),
                       ),
               ),
             ),
@@ -261,7 +341,7 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
             questions: block.listeningQuestions,
             explanations: const {},
             onResultChanged: (result) {
-              _sectionResults['listening'] = result;
+              _updateSectionResult('listening', result);
             },
           ),
         ],
@@ -282,7 +362,7 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
             questions: block.readingQuestions,
             explanations: const {},
             onResultChanged: (result) {
-              _sectionResults['reading'] = result;
+              _updateSectionResult('reading', result);
             },
           ),
         ],
@@ -297,7 +377,7 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
       questions: quizBlock.questions,
       explanations: quizBlock.explanations,
       onResultChanged: (result) {
-        _sectionResults['quiz'] = result;
+        _updateSectionResult('quiz', result);
       },
     );
   }
