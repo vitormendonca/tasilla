@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../data/a1_learning_experience_data.dart';
 import '../../data/learning_path_data.dart';
+import '../../models/learning_enums.dart';
 import '../../models/learning_experience.dart';
 import '../../models/learning_path_step.dart';
 import '../../services/learning_path_progress_service.dart';
@@ -138,6 +139,11 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
   }
 
   Widget _experienceContent(BuildContext context, LearningExperience experience, {required Color textPrimary, required Color textMuted, required Color border}) {
+    final skill = experience.primarySkill;
+    final isMixed = skill == LearningSkill.mixed;
+
+    bool shows(LearningSkill sectionSkill) => isMixed || skill == sectionSkill;
+
     final sections = <Widget>[
       _textSection('Objective', experience.canDoStatement, textPrimary: textPrimary, textMuted: textMuted),
       if (experience.introductionText.trim().isNotEmpty)
@@ -146,17 +152,18 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
         _vocabularySection(experience.vocabularyBlocks, textPrimary: textPrimary, textMuted: textMuted),
       if (experience.grammarBlocks.isNotEmpty)
         _grammarSection(experience.grammarBlocks, textPrimary: textPrimary, textMuted: textMuted),
-      if (experience.listeningBlock != null)
+      if (experience.listeningBlock != null && shows(LearningSkill.listening))
         _listeningSection(experience.listeningBlock!, textPrimary: textPrimary, textMuted: textMuted),
-      if (experience.readingBlock != null)
+      if (experience.readingBlock != null && shows(LearningSkill.reading))
         _readingSection(experience.readingBlock!, textPrimary: textPrimary, textMuted: textMuted),
-      if (experience.quizBlock?.questions.isNotEmpty ?? false)
+      if ((experience.quizBlock?.questions.isNotEmpty ?? false) && shows(LearningSkill.vocabularyUseOfEnglish))
         _questionsSection(experience.quizBlock!, textPrimary: textPrimary, textMuted: textMuted),
-      if (experience.writingTask != null)
+      if (experience.writingTask != null && shows(LearningSkill.writing))
         _writingSection(experience.writingTask!, textPrimary: textPrimary, textMuted: textMuted),
-      if (experience.speakingTask != null)
+      if (experience.speakingTask != null && shows(LearningSkill.speaking))
         _speakingSection(experience.speakingTask!, textPrimary: textPrimary, textMuted: textMuted),
-      if (experience.rubric?.criteria.isNotEmpty ?? false)
+      if ((experience.rubric?.criteria.isNotEmpty ?? false) &&
+          (shows(LearningSkill.writing) || shows(LearningSkill.speaking)))
         _rubricSection(experience.rubric!, textPrimary: textPrimary, textMuted: textMuted),
     ];
 

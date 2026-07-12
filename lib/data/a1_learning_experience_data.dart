@@ -562,7 +562,10 @@ QuizBlock _quizBlock(String id, _CoreExperienceSeed seed) {
 }
 
 ListeningBlock? _listeningBlockFor(String id, _CoreExperienceSeed seed) {
-  if (seed.audioScript.trim().isEmpty) {
+  final isListeningLesson = seed.primarySkill == LearningSkill.listening;
+  final isMixedLesson = seed.primarySkill == LearningSkill.mixed;
+  final hasExplicitScript = seed.audioScript.trim().isNotEmpty;
+  if (!isListeningLesson && !hasExplicitScript) {
     return null;
   }
 
@@ -571,25 +574,30 @@ ListeningBlock? _listeningBlockFor(String id, _CoreExperienceSeed seed) {
     audioScript: seed.audioScript,
     audioPath: seed.audioPath.isEmpty ? _plannedAudioPath(id) : seed.audioPath,
     maxAudioPlays: seed.maxAudioPlays,
-    listeningQuestions: [
-      ActivityQuestion(
-        id: '${id}_listen_q1',
-        type: QuestionType.multipleChoice,
-        question: 'What is the main idea?',
-        options: [
-          seed.correctOption,
-          seed.checkOptions[1],
-          seed.checkOptions[2],
-        ],
-        correctAnswer: seed.correctOption,
-      ),
-    ],
+    listeningQuestions: (isListeningLesson || isMixedLesson)
+        ? [
+            ActivityQuestion(
+              id: '${id}_listen_q1',
+              type: QuestionType.multipleChoice,
+              question: 'What is the main idea?',
+              options: [
+                seed.correctOption,
+                seed.checkOptions[1],
+                seed.checkOptions[2],
+              ],
+              correctAnswer: seed.correctOption,
+            ),
+          ]
+        : const [],
     numberOfSpeakers: seed.numberOfSpeakers,
   );
 }
 
 ReadingBlock? _readingBlockFor(String id, _CoreExperienceSeed seed) {
-  if (seed.readingText.trim().isEmpty) {
+  final isReadingLesson = seed.primarySkill == LearningSkill.reading;
+  final isMixedLesson = seed.primarySkill == LearningSkill.mixed;
+  final hasExplicitText = seed.readingText.trim().isNotEmpty;
+  if (!isReadingLesson && !hasExplicitText) {
     return null;
   }
 
@@ -597,19 +605,21 @@ ReadingBlock? _readingBlockFor(String id, _CoreExperienceSeed seed) {
     readingTitle: '${seed.shortTopic} reading',
     readingText: seed.readingText,
     readingFormat: seed.readingFormat,
-    readingQuestions: [
-      ActivityQuestion(
-        id: '${id}_read_q1',
-        type: QuestionType.multipleChoice,
-        question: 'What does the text help the student understand?',
-        options: [
-          seed.correctOption,
-          seed.checkOptions[1],
-          seed.checkOptions[2],
-        ],
-        correctAnswer: seed.correctOption,
-      ),
-    ],
+    readingQuestions: (isReadingLesson || isMixedLesson)
+        ? [
+            ActivityQuestion(
+              id: '${id}_read_q1',
+              type: QuestionType.multipleChoice,
+              question: 'What does the text help the student understand?',
+              options: [
+                seed.correctOption,
+                seed.checkOptions[1],
+                seed.checkOptions[2],
+              ],
+              correctAnswer: seed.correctOption,
+            ),
+          ]
+        : const [],
   );
 }
 
