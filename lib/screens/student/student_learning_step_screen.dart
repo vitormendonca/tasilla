@@ -6,6 +6,7 @@ import '../../models/learning_enums.dart';
 import '../../models/learning_experience.dart';
 import '../../models/learning_path_step.dart';
 import '../../services/learning_path_progress_service.dart';
+import '../../services/submission_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/interactive_quiz_section.dart';
 import '../../widgets/lesson_audio_player.dart';
@@ -15,11 +16,16 @@ class StudentLearningStepScreen extends StatefulWidget {
   final bool alreadyCompleted;
   final Future<void> Function(String stepId)? onMarkStepCompleted;
 
+  /// Supplies the submission directly instead of fetching it, so the status
+  /// display can be exercised without a live Supabase session.
+  final Submission? initialSubmission;
+
   const StudentLearningStepScreen({
     super.key,
     required this.step,
     required this.alreadyCompleted,
     this.onMarkStepCompleted,
+    this.initialSubmission,
   });
 
   @override
@@ -34,6 +40,36 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
   String? _completionMessage;
   final Map<String, QuizSectionResult> _sectionResults = {};
   bool _listeningQuestionsAnswered = false;
+  Submission? _submission;
+  bool _redoing = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _submission = widget.initialSubmission;
+
+    if (_submission == null) {
+      _loadSubmission();
+    }
+  }
+
+  /// Speaking and writing lessons are the only ones a teacher reviews, so those
+  /// are the only ones worth a lookup.
+  Future<void> _loadSubmission() async {
+    final experience = getA1LearningExperienceById(widget.step.id);
+    final skill = experience?.primarySkill;
+
+    if (skill != LearningSkill.speaking && skill != LearningSkill.writing) {
+      return;
+    }
+
+    final submission = await SubmissionService.getSubmissionForStep(
+      widget.step.id,
+    );
+
+    if (!mounted) return;
+    setState(() => _submission = submission);
+  }
 
   double get _combinedScore {
     final totalCorrect = _sectionResults.values.fold(
@@ -209,6 +245,17 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
             border: border,
           ),
           const SizedBox(height: 22),
+          if (_submission != null && !_redoing) ...[
+            _submissionStatusCard(
+              _submission!,
+              isDark: isDark,
+              textPrimary: textPrimary,
+              textMuted: textMuted,
+              surface: surface,
+              border: border,
+            ),
+            const SizedBox(height: 18),
+          ],
           if (_completionMessage != null) ...[
             Text(
               _completionMessage!,
@@ -268,6 +315,122 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+
+  /// Shows what the teacher did with the work. Progression is deliberately not
+  /// gated on this: the lesson counts as complete when the work is submitted,
+  /// not when it is approved. Approval gates the certificate, not the roadmap —
+  /// a student must never be stuck because their teacher is on holiday.
+  Widget _submissionStatusCard(
+    Submission submission, {
+    required bool isDark,
+    required Color textPrimary,
+    required Color textMuted,
+    required Color surface,
+    required Color border,
+  }) {
+    final statusColor = submission.isApproved
+        ? AppTheme.semanticGreen
+        : submission.isRejected
+        ? AppTheme.semanticRed
+        : textMuted;
+    final statusLabel = submission.isApproved
+        ? 'Approved'
+        : submission.isRejected
+        ? 'Needs redo'
+        : 'Waiting for teacher review';
+    final feedback = submission.teacherFeedback?.trim() ?? '';
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: surface,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: submission.isPending
+              ? border
+              : statusColor.withValues(alpha: 0.35),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 3,
+                ),
+                decoration: BoxDecoration(
+                  color: statusColor.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(4),
+                  border: Border.all(
+                    color: statusColor.withValues(alpha: 0.2),
+                  ),
+                ),
+                child: Text(
+                  statusLabel,
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.w600,
+                    color: statusColor,
+                  ),
+                ),
+              ),
+              const Spacer(),
+              Text(
+                submissionTimeAgo(submission.submittedAt),
+                style: TextStyle(fontSize: 11, color: textMuted),
+              ),
+            ],
+          ),
+          if (feedback.isNotEmpty) ...[
+            const SizedBox(height: 12),
+            Text(
+              'Teacher feedback',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: textPrimary,
+              ),
+            ),
+            const SizedBox(height: 5),
+            Text(
+              feedback,
+              style: TextStyle(fontSize: 13, color: textMuted, height: 1.5),
+            ),
+          ],
+          if (submission.isRejected) ...[
+            const SizedBox(height: 14),
+            GestureDetector(
+              key: const ValueKey('submission_try_again_button'),
+              onTap: () => setState(() => _redoing = true),
+              child: Container(
+                width: double.infinity,
+                height: 44,
+                decoration: BoxDecoration(
+                  color: AppTheme.semanticRed,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Center(
+                  child: Text(
+                    'TRY AGAIN',
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ],
       ),
     );

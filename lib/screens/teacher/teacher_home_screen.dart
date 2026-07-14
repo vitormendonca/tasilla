@@ -4,6 +4,7 @@ import '../../theme/theme_controller.dart';
 import 'teacher_assigned_activities_screen.dart';
 import 'teacher_classes_screen.dart';
 import 'teacher_profile_screen.dart';
+import 'teacher_review_screen.dart';
 import 'teacher_students_screen.dart';
 
 class TeacherHomeScreen extends StatelessWidget {
@@ -77,6 +78,13 @@ class TeacherHomeScreen extends StatelessWidget {
             title: 'Activities',
             subtitle: 'View available homework, listening and vocabulary activities.',
             onTap: () => _openScreen(context, const TeacherAssignedActivitiesScreen()),
+            textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border,
+          ),
+          _actionTile(
+            icon: Icons.rate_review_outlined,
+            title: 'Review',
+            subtitle: 'Listen to speaking and read writing submissions. Approve or request a redo.',
+            onTap: () => _openScreen(context, const TeacherReviewScreen()),
             textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border,
           ),
           _actionTile(

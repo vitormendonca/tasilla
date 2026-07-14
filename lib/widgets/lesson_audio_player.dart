@@ -4,17 +4,26 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class LessonAudioPlayer extends StatefulWidget {
+  /// A bundled asset path, or — when [isRemote] is true — a playable URL.
   final String audioPath;
   final String transcript;
-  final int maxPlays;
+
+  /// null means unlimited plays. A teacher reviewing a recording must be able
+  /// to replay it as often as the judgement needs; the cap is a student rule.
+  final int? maxPlays;
   final bool allowTranscript;
+
+  /// Plays [audioPath] as a URL (a private-bucket signed URL) rather than a
+  /// bundled asset.
+  final bool isRemote;
 
   const LessonAudioPlayer({
     super.key,
     required this.audioPath,
-    required this.transcript,
-    required this.maxPlays,
-    required this.allowTranscript,
+    this.transcript = '',
+    this.maxPlays,
+    this.allowTranscript = false,
+    this.isRemote = false,
   });
 
   @override
@@ -35,9 +44,15 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
       ? widget.audioPath.substring('assets/'.length)
       : widget.audioPath;
 
-  bool get _canStartNewPlay => _playCount < widget.maxPlays;
+  Source get _source =>
+      widget.isRemote ? UrlSource(widget.audioPath) : AssetSource(_assetPath);
+
+  bool get _hasPlayLimit => widget.maxPlays != null;
+  bool get _canStartNewPlay =>
+      !_hasPlayLimit || _playCount < widget.maxPlays!;
+  bool get _hasTranscript => widget.transcript.trim().isNotEmpty;
   bool get _transcriptAvailable =>
-      widget.allowTranscript || _playCount >= widget.maxPlays;
+      widget.allowTranscript || (_hasPlayLimit && _playCount >= widget.maxPlays!);
 
   @override
   void initState() {
@@ -91,7 +106,7 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
       }
       if (!_canStartNewPlay) return;
 
-      await _player.play(AssetSource(_assetPath));
+      await _player.play(_source);
       if (mounted) {
         setState(() {
           _playCount++;
@@ -151,8 +166,10 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
                   LinearProgressIndicator(value: progress),
                   const SizedBox(height: 4),
                   Text(
-                    '${_time(_position)} / ${_time(_duration)}  ·  '
-                    'Play $_playCount of ${widget.maxPlays}',
+                    _hasPlayLimit
+                        ? '${_time(_position)} / ${_time(_duration)}  ·  '
+                              'Play $_playCount of ${widget.maxPlays}'
+                        : '${_time(_position)} / ${_time(_duration)}',
                     style: TextStyle(fontSize: 11, color: textMuted),
                   ),
                 ],
@@ -167,31 +184,34 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
             style: const TextStyle(fontSize: 12, color: Colors.red),
           ),
         ],
-        const SizedBox(height: 8),
-        if (_transcriptAvailable)
-          TextButton.icon(
-            onPressed: () => setState(() => _showTranscript = !_showTranscript),
-            icon: Icon(
-              _showTranscript
-                  ? Icons.visibility_off_outlined
-                  : Icons.visibility_outlined,
-              size: 17,
+        if (_hasTranscript) ...[
+          const SizedBox(height: 8),
+          if (_transcriptAvailable)
+            TextButton.icon(
+              onPressed: () =>
+                  setState(() => _showTranscript = !_showTranscript),
+              icon: Icon(
+                _showTranscript
+                    ? Icons.visibility_off_outlined
+                    : Icons.visibility_outlined,
+                size: 17,
+              ),
+              label: Text(
+                _showTranscript ? 'Hide transcript' : 'Show transcript',
+              ),
+            )
+          else
+            Text(
+              'The transcript unlocks after the listening questions or all plays.',
+              style: TextStyle(fontSize: 11, color: textMuted),
             ),
-            label: Text(
-              _showTranscript ? 'Hide transcript' : 'Show transcript',
+          if (_showTranscript && _transcriptAvailable) ...[
+            const SizedBox(height: 6),
+            Text(
+              widget.transcript,
+              style: TextStyle(fontSize: 13, color: textPrimary, height: 1.4),
             ),
-          )
-        else
-          Text(
-            'The transcript unlocks after the listening questions or all plays.',
-            style: TextStyle(fontSize: 11, color: textMuted),
-          ),
-        if (_showTranscript && _transcriptAvailable) ...[
-          const SizedBox(height: 6),
-          Text(
-            widget.transcript,
-            style: TextStyle(fontSize: 13, color: textPrimary, height: 1.4),
-          ),
+          ],
         ],
       ],
     );
