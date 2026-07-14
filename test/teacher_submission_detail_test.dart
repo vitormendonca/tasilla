@@ -159,9 +159,9 @@ void main() {
   testWidgets('a lesson with no rubric says so rather than showing nothing', (
     tester,
   ) async {
-    // A1-EXP-001 is a speaking lesson below the teacher-review threshold, so it
-    // carries no rubric.
-    await _pumpDetail(tester, _textSubmission(learningStepId: 'A1-EXP-001'));
+    // Reinforcement lessons are practice, never certificate evidence, so they
+    // carry no rubric. A submission should still render rather than break.
+    await _pumpDetail(tester, _textSubmission(learningStepId: 'A1-REF-001'));
 
     expect(find.text('Rubric'), findsOneWidget);
     expect(find.textContaining('no rubric attached'), findsOneWidget);

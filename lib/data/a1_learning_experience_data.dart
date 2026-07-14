@@ -79,9 +79,9 @@ List<LearningExperience> _buildA1LearningExperiences() {
 LearningExperience _coreExperience({required int number, required int order}) {
   final seed = _coreSeeds[number - 1];
   final id = 'A1-EXP-${_threeDigits(number)}';
-  final isTeacherReviewed =
-      seed.primarySkill == LearningSkill.writing ||
-      seed.primarySkill == LearningSkill.speaking && number >= 31;
+  final speakingIsReviewed = _speakingIsReviewed(seed, number);
+  final writingIsReviewed = _writingIsReviewed(seed, number);
+  final isTeacherReviewed = speakingIsReviewed || writingIsReviewed;
 
   return LearningExperience(
     id: id,
@@ -125,8 +125,8 @@ LearningExperience _coreExperience({required int number, required int order}) {
     quizBlock: _quizBlock(id, seed),
     listeningBlock: _listeningBlockFor(id, seed),
     readingBlock: _readingBlockFor(id, seed),
-    writingTask: _writingTaskFor(seed, requiresReview: isTeacherReviewed),
-    speakingTask: _speakingTaskFor(seed, requiresReview: isTeacherReviewed),
+    writingTask: _writingTaskFor(seed, requiresReview: writingIsReviewed),
+    speakingTask: _speakingTaskFor(seed, requiresReview: speakingIsReviewed),
     teacherNotes:
         'MVP content shell. Keep audio optional until final files are added.',
     rubric: isTeacherReviewed ? _productionRubric : null,
@@ -244,11 +244,14 @@ LearningExperience _reviewExperience({
         ),
       ],
     ),
+    // The late reviews are certificate evidence, and evidence counts for one
+    // skill only — otherwise a single review would clear both the speaking and
+    // the writing gate. So they alternate: review 5 is spoken, review 6 written.
     speakingTask: SpeakingTask(
       speakingPrompt:
           'Answer two short questions using the language from $coveredRange.',
       maxRecordingSeconds: 60,
-      requiresTeacherReview: number >= 5,
+      requiresTeacherReview: number >= 5 && number.isOdd,
     ),
     writingTask: WritingTask(
       writingPrompt:
@@ -256,7 +259,7 @@ LearningExperience _reviewExperience({
       writingMode: WritingMode.freeResponse,
       minSentences: 3,
       maxSentences: 5,
-      requiresTeacherReview: number >= 5,
+      requiresTeacherReview: number >= 5 && number.isEven,
     ),
     rubric: number >= 5 ? _productionRubric : null,
   );
@@ -622,6 +625,44 @@ ReadingBlock? _readingBlockFor(String id, _CoreExperienceSeed seed) {
         : const [],
   );
 }
+
+/// Whether this lesson's speaking task is recorded and sent to a teacher.
+///
+/// These lessons ARE the speaking score: the certificate scores speaking as the
+/// teacher's approval rate over exactly this set, never as a quiz average. The
+/// launch scope (001-020) contributes four; the later core lessons carry the
+/// rest for when 021-040 are unhidden.
+///
+/// Speaking and writing are decided separately, and only ever against a lesson's
+/// primary skill, so that each lesson is evidence for exactly one skill. A
+/// lesson counted under two skills would let one piece of work satisfy both
+/// gates, and the standard requires the four to be earned independently.
+bool _speakingIsReviewed(_CoreExperienceSeed seed, int number) {
+  if (seed.primarySkill != LearningSkill.speaking ||
+      seed.speakingPrompt.trim().isEmpty) {
+    return false;
+  }
+
+  return number >= 31 || _launchReviewedSpeaking.contains(number);
+}
+
+/// Whether this lesson's writing is submitted to a teacher.
+///
+/// Every writing-primary lesson qualifies. 018 and 020 are mixed lessons whose
+/// free-response task is substantial enough to stand as evidence, and the launch
+/// scope needs them to reach four written pieces — with only 008 and 016, the
+/// certificate would rest the entire writing gate on two samples.
+bool _writingIsReviewed(_CoreExperienceSeed seed, int number) {
+  if (seed.writingPrompt.trim().isEmpty) {
+    return false;
+  }
+
+  return seed.primarySkill == LearningSkill.writing ||
+      _launchReviewedWriting.contains(number);
+}
+
+const Set<int> _launchReviewedSpeaking = {1, 9, 12, 13};
+const Set<int> _launchReviewedWriting = {18, 20};
 
 WritingTask? _writingTaskFor(
   _CoreExperienceSeed seed, {
