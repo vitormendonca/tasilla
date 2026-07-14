@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../data/a1_learning_experience_data.dart';
 import 'supabase_bootstrap.dart';
@@ -211,6 +212,56 @@ class SubmissionService {
       }, onConflict: 'student_id,learning_step_id');
     } catch (error) {
       throw SubmissionReviewException(_friendlyError(error));
+    }
+  }
+
+  /// Uploads a recording or a handwritten page and returns its storage path.
+  ///
+  /// The path always starts with the student's own id, because that is exactly
+  /// what the storage policy checks: a student may only write under
+  /// `submissions/{their own uuid}/`. Anything else is rejected by the bucket,
+  /// not merely by the UI.
+  ///
+  /// Upserts, so a redo replaces the previous take rather than piling up files
+  /// nobody will ever listen to.
+  static Future<String> uploadSubmissionFile({
+    required String learningStepId,
+    required Uint8List bytes,
+    required String fileExtension,
+    required String contentType,
+  }) async {
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
+
+    if (client == null || user == null) {
+      throw const SubmissionReviewException(
+        'You must be signed in to submit work.',
+      );
+    }
+
+    if (bytes.isEmpty) {
+      throw const SubmissionReviewException(
+        'That recording came out empty. Please try again.',
+      );
+    }
+
+    final path = '${user.id}/$learningStepId.$fileExtension';
+
+    try {
+      await client.storage
+          .from(_bucket)
+          .uploadBinary(
+            path,
+            bytes,
+            fileOptions: FileOptions(contentType: contentType, upsert: true),
+          );
+
+      return path;
+    } catch (error) {
+      debugPrint('Submission upload failed for $path: $error');
+      throw const SubmissionReviewException(
+        'Could not upload your work. Check your connection and try again.',
+      );
     }
   }
 

@@ -10,6 +10,7 @@ import '../../services/submission_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/interactive_quiz_section.dart';
 import '../../widgets/lesson_audio_player.dart';
+import '../../widgets/speaking_recorder.dart';
 
 class StudentLearningStepScreen extends StatefulWidget {
   final LearningPathStep step;
@@ -20,12 +21,18 @@ class StudentLearningStepScreen extends StatefulWidget {
   /// display can be exercised without a live Supabase session.
   final Submission? initialSubmission;
 
+  /// Stands in for the microphone and the bucket, so the recording flow can be
+  /// driven in a widget test.
+  @visibleForTesting
+  final SpeakingRecorderBackend? recorderBackend;
+
   const StudentLearningStepScreen({
     super.key,
     required this.step,
     required this.alreadyCompleted,
     this.onMarkStepCompleted,
     this.initialSubmission,
+    this.recorderBackend,
   });
 
   @override
@@ -53,13 +60,13 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
     }
   }
 
-  /// Speaking and writing lessons are the only ones a teacher reviews, so those
-  /// are the only ones worth a lookup.
+  /// Only reviewed lessons can have a submission, so only they are worth a
+  /// lookup. The flag is asked directly rather than inferred from the primary
+  /// skill, because two mixed lessons also carry reviewed writing.
   Future<void> _loadSubmission() async {
     final experience = getA1LearningExperienceById(widget.step.id);
-    final skill = experience?.primarySkill;
 
-    if (skill != LearningSkill.speaking && skill != LearningSkill.writing) {
+    if (!(experience?.requiresTeacherReview ?? false)) {
       return;
     }
 
@@ -825,7 +832,7 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
     required Color textPrimary,
     required Color textMuted,
   }) {
-    return _taskSection(
+    final prompt = _taskSection(
       title: 'Speaking',
       prompt: task.speakingPrompt,
       details: [
@@ -837,6 +844,44 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
       textPrimary: textPrimary,
       textMuted: textMuted,
     );
+
+    if (!task.requiresTeacherReview || !_awaitingSubmission) {
+      return prompt;
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        prompt,
+        const SizedBox(height: 12),
+        SpeakingRecorder(
+          learningStepId: widget.step.id,
+          maxRecordingSeconds: task.maxRecordingSeconds,
+          onSubmitted: _onWorkSubmitted,
+          backend: widget.recorderBackend,
+        ),
+      ],
+    );
+  }
+
+  /// True while the student still owes this lesson a piece of work: they have
+  /// never submitted, or the teacher sent it back and they tapped Try again.
+  bool get _awaitingSubmission => _submission == null || _redoing;
+
+  /// Re-reads the row the upload just created, which flips the lesson over to
+  /// the status card. Completion is untouched on purpose — submitting is what
+  /// finishes the lesson; the teacher's verdict only gates the certificate.
+  Future<void> _onWorkSubmitted() async {
+    final submission = await SubmissionService.getSubmissionForStep(
+      widget.step.id,
+    );
+
+    if (!mounted) return;
+
+    setState(() {
+      _submission = submission;
+      _redoing = false;
+    });
   }
 
   Widget _taskSection({

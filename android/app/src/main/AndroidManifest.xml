@@ -1,4 +1,8 @@
 ﻿<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Speaking submissions are recorded in the app; without this the recorder
+         is refused permission and the student cannot produce speaking evidence. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:label="tasilla"
         android:name="${applicationName}"

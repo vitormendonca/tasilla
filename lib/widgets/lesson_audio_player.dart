@@ -17,6 +17,11 @@ class LessonAudioPlayer extends StatefulWidget {
   /// bundled asset.
   final bool isRemote;
 
+  /// Plays [audioPath] as a file on disk — a recording the student just made and
+  /// has not uploaded yet. On web a fresh recording is a blob URL instead, so
+  /// there it goes through [isRemote].
+  final bool isLocalFile;
+
   const LessonAudioPlayer({
     super.key,
     required this.audioPath,
@@ -24,6 +29,7 @@ class LessonAudioPlayer extends StatefulWidget {
     this.maxPlays,
     this.allowTranscript = false,
     this.isRemote = false,
+    this.isLocalFile = false,
   });
 
   @override
@@ -44,8 +50,15 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
       ? widget.audioPath.substring('assets/'.length)
       : widget.audioPath;
 
-  Source get _source =>
-      widget.isRemote ? UrlSource(widget.audioPath) : AssetSource(_assetPath);
+  Source get _source {
+    if (widget.isLocalFile) {
+      return DeviceFileSource(widget.audioPath);
+    }
+
+    return widget.isRemote
+        ? UrlSource(widget.audioPath)
+        : AssetSource(_assetPath);
+  }
 
   bool get _hasPlayLimit => widget.maxPlays != null;
   bool get _canStartNewPlay =>
