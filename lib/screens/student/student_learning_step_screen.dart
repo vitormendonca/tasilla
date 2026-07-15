@@ -11,6 +11,7 @@ import '../../theme/app_theme.dart';
 import '../../widgets/interactive_quiz_section.dart';
 import '../../widgets/lesson_audio_player.dart';
 import '../../widgets/speaking_recorder.dart';
+import '../../widgets/writing_submitter.dart';
 
 class StudentLearningStepScreen extends StatefulWidget {
   final LearningPathStep step;
@@ -26,6 +27,11 @@ class StudentLearningStepScreen extends StatefulWidget {
   @visibleForTesting
   final SpeakingRecorderBackend? recorderBackend;
 
+  /// Stands in for the file picker and the bucket, so the writing flow can be
+  /// driven in a widget test.
+  @visibleForTesting
+  final WritingSubmitterBackend? writingBackend;
+
   const StudentLearningStepScreen({
     super.key,
     required this.step,
@@ -33,6 +39,7 @@ class StudentLearningStepScreen extends StatefulWidget {
     this.onMarkStepCompleted,
     this.initialSubmission,
     this.recorderBackend,
+    this.writingBackend,
   });
 
   @override
@@ -813,7 +820,7 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
     required Color textPrimary,
     required Color textMuted,
   }) {
-    return _taskSection(
+    final prompt = _taskSection(
       title: 'Writing',
       prompt: task.writingPrompt,
       details: [
@@ -824,6 +831,24 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
       color: AppTheme.semanticYellow,
       textPrimary: textPrimary,
       textMuted: textMuted,
+    );
+
+    if (!task.requiresTeacherReview || !_awaitingSubmission) {
+      return prompt;
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        prompt,
+        const SizedBox(height: 12),
+        WritingSubmitter(
+          learningStepId: widget.step.id,
+          minSentences: task.minSentences,
+          onSubmitted: _onWorkSubmitted,
+          backend: widget.writingBackend,
+        ),
+      ],
     );
   }
 

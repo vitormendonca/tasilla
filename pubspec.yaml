@@ -42,6 +42,7 @@ dependencies:
   record: ^7.1.1
   web: ^1.1.1
   path_provider: ^2.1.6
+  file_picker: ^8.1.7
 
 dev_dependencies:
   flutter_test:
