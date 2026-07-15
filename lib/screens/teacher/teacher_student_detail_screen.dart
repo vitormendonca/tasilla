@@ -4,6 +4,7 @@ import '../../models/assigned_activity.dart';
 import '../../services/assignment_service.dart';
 import '../../theme/app_theme.dart';
 import 'teacher_assign_activity_screen.dart';
+import 'teacher_certificate_signoff_screen.dart';
 import 'teacher_student_assigned_activities_screen.dart';
 import 'teacher_student_progress_screen.dart';
 
@@ -88,6 +89,19 @@ class _TeacherStudentDetailScreenState extends State<TeacherStudentDetailScreen>
       context,
       MaterialPageRoute(
         builder: (context) => TeacherStudentProgressScreen(
+          studentId: widget.studentId,
+          studentName: widget.studentName,
+          studentLevel: widget.studentLevel,
+        ),
+      ),
+    );
+  }
+
+  void _openCertificateSignoffScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TeacherCertificateSignoffScreen(
           studentId: widget.studentId,
           studentName: widget.studentName,
           studentLevel: widget.studentLevel,
@@ -217,6 +231,13 @@ class _TeacherStudentDetailScreenState extends State<TeacherStudentDetailScreen>
               title: 'Progress',
               subtitle: 'Check completed path steps and skill performance.',
               onTap: () => _openStudentProgressScreen(context),
+              textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border,
+            ),
+            _actionTile(
+              icon: Icons.workspace_premium_outlined,
+              title: 'Certificate',
+              subtitle: 'Review the eligibility checklist and issue the certificate.',
+              onTap: () => _openCertificateSignoffScreen(context),
               textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border,
             ),
           ],
