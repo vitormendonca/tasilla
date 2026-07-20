@@ -132,20 +132,96 @@ void main() {
   });
 
   testWidgets(
-    'non-multiple-choice questions render as static text with a not-yet-interactive note',
+    'reorder-sentence questions render as static text with a not-yet-interactive note',
     (tester) async {
-      const textQuestion = ActivityQuestion(
+      const reorderQuestion = ActivityQuestion(
         id: 'q2',
-        type: QuestionType.textInput,
-        question: 'Write a sentence using "hello".',
-        correctAnswer: 'hello',
+        type: QuestionType.reorderSentence,
+        question: 'Put the words in the correct order.',
+        words: ['am', 'I', 'happy'],
+        correctAnswer: 'I am happy',
       );
 
-      await pumpSection(tester, questions: const [textQuestion]);
+      await pumpSection(tester, questions: const [reorderQuestion]);
 
       expect(find.text('Not yet interactive'), findsOneWidget);
     },
   );
+
+  testWidgets('true/false questions get tap grading like multiple choice', (
+    tester,
+  ) async {
+    const trueFalse = ActivityQuestion(
+      id: 'tf1',
+      type: QuestionType.trueFalse,
+      question: 'Paris is the capital of France.',
+      options: ['True', 'False'],
+      correctAnswer: 'True',
+    );
+    QuizSectionResult? latest;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: InteractiveQuizSection(
+            sectionTitle: 'Questions',
+            questions: const [trueFalse],
+            explanations: const {},
+            onResultChanged: (result) => latest = result,
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+    expect(latest!.totalCount, 1);
+
+    await tester.tap(find.text('False'));
+    await tester.pump();
+
+    expect(colorOf(tester, 'False'), AppTheme.semanticRed);
+    expect(colorOf(tester, 'True'), AppTheme.semanticGreen);
+    expect(latest!.correctCount, 0);
+    expect(latest!.allAnswered, true);
+  });
+
+  testWidgets('text-input questions are graded like the listening screen', (
+    tester,
+  ) async {
+    const textQuestion = ActivityQuestion(
+      id: 'ti1',
+      type: QuestionType.textInput,
+      question: 'How does Anna go to work?',
+      correctAnswer: 'By bus',
+    );
+    QuizSectionResult? latest;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: InteractiveQuizSection(
+            sectionTitle: 'Reading comprehension',
+            questions: const [textQuestion],
+            explanations: const {},
+            onResultChanged: (result) => latest = result,
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+    expect(latest!.totalCount, 1);
+    expect(latest!.allAnswered, false);
+
+    await tester.enterText(
+      find.byKey(const ValueKey('answer_ti1')),
+      '  by bus ',
+    );
+    await tester.tap(find.byTooltip('Check answer'));
+    await tester.pump();
+
+    expect(find.text('Correct'), findsOneWidget);
+    expect(latest!.correctCount, 1);
+    expect(latest!.allAnswered, true);
+  });
 
   testWidgets('dictation accepts normalized text and contributes to score', (
     tester,

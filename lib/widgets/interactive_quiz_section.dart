@@ -41,10 +41,17 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
   final Map<String, String> selectedAnswers = {};
   final Map<String, String> draftAnswers = {};
 
+  // Every type is gradable now except the reorder activity, which has no
+  // interactive surface yet. Multiple choice and true/false grade by tap;
+  // the text family (text input, dictation, fill-blank) grades by typed entry.
   bool _isGradable(ActivityQuestion question) {
-    return question.type == QuestionType.multipleChoice ||
+    return question.type != QuestionType.reorderSentence;
+  }
+
+  bool _usesTextEntry(ActivityQuestion question) {
+    return question.type == QuestionType.textInput ||
         question.type == QuestionType.dictation ||
-        question.type == QuestionType.fillBlank;
+        (question.type == QuestionType.fillBlank && question.options.isEmpty);
   }
 
   String _normalized(String value) {
@@ -183,8 +190,7 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
       );
     }
 
-    if (question.type == QuestionType.dictation ||
-        (question.type == QuestionType.fillBlank && question.options.isEmpty)) {
+    if (_usesTextEntry(question)) {
       return _textAnswerTile(
         question,
         prompt: prompt,
@@ -252,6 +258,8 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
           decoration: InputDecoration(
             hintText: question.type == QuestionType.dictation
                 ? 'Type what you hear'
+                : question.type == QuestionType.textInput
+                ? 'Type your answer'
                 : 'Type the missing word or phrase',
             isDense: true,
             suffixIcon: isAnswered
