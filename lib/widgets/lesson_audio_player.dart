@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class LessonAudioPlayer extends StatefulWidget {
   /// A bundled asset path, or — when [isRemote] is true — a playable URL.
@@ -46,6 +47,13 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
   bool _showTranscript = false;
   String? _error;
 
+  /// A bundled asset that could not be loaded. Only meaningful for asset
+  /// sources; a missing asset makes the whole player pointless, so we fall back
+  /// to the script text rather than render a dead 0:00 / 0:00 transport.
+  bool _assetMissing = false;
+
+  bool get _isAssetSource => !widget.isRemote && !widget.isLocalFile;
+
   String get _assetPath => widget.audioPath.startsWith('assets/')
       ? widget.audioPath.substring('assets/'.length)
       : widget.audioPath;
@@ -70,6 +78,9 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
   @override
   void initState() {
     super.initState();
+    if (_isAssetSource) {
+      _verifyAsset();
+    }
     _subscriptions.add(
       _player.onDurationChanged.listen((value) {
         if (mounted) setState(() => _duration = value);
@@ -104,6 +115,19 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
     }
     _player.dispose();
     super.dispose();
+  }
+
+  /// Confirms the bundled asset is really there before we present a transport.
+  /// A missing file leaves [_assetMissing] set, and [build] shows the script
+  /// instead of a player that could only ever read 0:00 / 0:00.
+  Future<void> _verifyAsset() async {
+    try {
+      await rootBundle.load(widget.audioPath);
+    } catch (_) {
+      if (mounted) {
+        setState(() => _assetMissing = true);
+      }
+    }
   }
 
   Future<void> _togglePlayback() async {
@@ -148,6 +172,27 @@ class _LessonAudioPlayerState extends State<LessonAudioPlayer> {
     final textMuted = isDark
         ? const Color(0xFF8E8E93)
         : const Color(0xFF706D67);
+
+    // No usable audio: show the script openly (there is nothing to gate on) and
+    // say so, rather than a dead transport the student could tap forever.
+    if (_isAssetSource && _assetMissing) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (_hasTranscript)
+            Text(
+              widget.transcript,
+              style: TextStyle(fontSize: 13, color: textPrimary, height: 1.4),
+            ),
+          const SizedBox(height: 6),
+          Text(
+            'Audio unavailable for this lesson — showing the script instead.',
+            style: TextStyle(fontSize: 11, color: textMuted),
+          ),
+        ],
+      );
+    }
+
     final progress = _duration.inMilliseconds == 0
         ? 0.0
         : (_position.inMilliseconds / _duration.inMilliseconds).clamp(0.0, 1.0);

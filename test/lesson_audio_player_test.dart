@@ -45,6 +45,35 @@ void main() {
     expect(find.textContaining('transcript unlocks'), findsOneWidget);
   });
 
+  testWidgets(
+    'a missing asset falls back to the script instead of a dead player',
+    (tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: LessonAudioPlayer(
+              audioPath: 'assets/audio/a1/this_file_does_not_exist.mp3',
+              transcript: 'Fallback script text.',
+              maxPlays: 2,
+            ),
+          ),
+        ),
+      );
+      // The asset check is async; the first frame still shows the player, then
+      // the failed load flips it to the script fallback. Avoid pumpAndSettle —
+      // the player's indeterminate progress bar never settles.
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 50));
+
+      expect(find.text('Fallback script text.'), findsOneWidget);
+      expect(find.textContaining('Audio unavailable'), findsOneWidget);
+      expect(
+        find.byKey(const ValueKey('lesson_audio_toggle')),
+        findsNothing,
+      );
+    },
+  );
+
   testWidgets('allowed transcript can be shown and hidden', (tester) async {
     await tester.pumpWidget(
       const MaterialApp(
