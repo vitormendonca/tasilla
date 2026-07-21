@@ -434,6 +434,7 @@ Anna: I live in Toronto with my sister. We like music and coffee.
 Tom: On Saturdays, I play soccer. See you later!
 Anna: Goodbye!''',
       audioPath: 'assets/audio/a1/a1_final_exam_listening.mp3',
+      audioStatus: 'ready',
       maxAudioPlays: 2,
       numberOfSpeakers: 2,
       listeningQuestions: [
@@ -568,7 +569,13 @@ ListeningBlock? _listeningBlockFor(String id, _CoreExperienceSeed seed) {
   final isListeningLesson = seed.primarySkill == LearningSkill.listening;
   final isMixedLesson = seed.primarySkill == LearningSkill.mixed;
   final hasExplicitScript = seed.audioScript.trim().isNotEmpty;
-  if (!isListeningLesson && !hasExplicitScript) {
+
+  // Full skill separation: a listening block is built only for a listening
+  // lesson, or for a mixed (integrative) lesson that actually carries audio.
+  // A single-skill non-listening lesson never renders audio even if its seed
+  // holds an audioScript — that is orphaned content belonging to a future
+  // listening lesson on the same topic. It stays in the seed, unsurfaced here.
+  if (!isListeningLesson && !(isMixedLesson && hasExplicitScript)) {
     return null;
   }
 
@@ -576,6 +583,9 @@ ListeningBlock? _listeningBlockFor(String id, _CoreExperienceSeed seed) {
     audioTitle: '${seed.shortTopic} listening',
     audioScript: seed.audioScript,
     audioPath: seed.audioPath.isEmpty ? _plannedAudioPath(id) : seed.audioPath,
+    // The 28 A1 voice files are generated and bundled under assets/audio/a1/,
+    // so every surfaced listening block is playable, not pending generation.
+    audioStatus: 'ready',
     maxAudioPlays: seed.maxAudioPlays,
     listeningQuestions: (isListeningLesson || isMixedLesson)
         ? [
@@ -600,7 +610,13 @@ ReadingBlock? _readingBlockFor(String id, _CoreExperienceSeed seed) {
   final isReadingLesson = seed.primarySkill == LearningSkill.reading;
   final isMixedLesson = seed.primarySkill == LearningSkill.mixed;
   final hasExplicitText = seed.readingText.trim().isNotEmpty;
-  if (!isReadingLesson && !hasExplicitText) {
+
+  // Full skill separation: a reading block is built only for a reading lesson,
+  // or for a mixed (integrative) lesson that actually carries a text. A
+  // single-skill non-reading lesson never renders a reading passage even if its
+  // seed holds readingText — orphaned content for a future reading lesson on
+  // this topic (e.g. EXP-034's short message). It stays in the seed, unsurfaced.
+  if (!isReadingLesson && !(isMixedLesson && hasExplicitText)) {
     return null;
   }
 

@@ -7,24 +7,50 @@ import 'package:tasilla/screens/student/student_learning_step_screen.dart';
 
 void main() {
   test(
-    'foreign supporting blocks do not get generated assessment questions',
+    'foreign-skill blocks are not generated at all (full separation)',
     () {
       final speaking = getA1LearningExperienceById('A1-EXP-001')!;
       final listening = getA1LearningExperienceById('A1-EXP-002')!;
       final reading = getA1LearningExperienceById('A1-EXP-005')!;
       final mixed = getA1LearningExperienceById('A1-EXP-010')!;
 
+      // A single-skill speaking lesson carries no listening or reading block,
+      // even if its seed holds an audio script / reading text (orphaned content
+      // for a future lesson on the same topic). Spec v2 revokes v1's "empty but
+      // present" blocks.
       expect(speaking.primarySkill, LearningSkill.speaking);
-      expect(speaking.listeningBlock, isNotNull);
-      expect(speaking.listeningBlock!.listeningQuestions, isEmpty);
-      expect(speaking.readingBlock, isNotNull);
-      expect(speaking.readingBlock!.readingQuestions, isEmpty);
+      expect(speaking.listeningBlock, isNull);
+      expect(speaking.readingBlock, isNull);
 
       expect(listening.listeningBlock, isNotNull);
       expect(listening.listeningBlock!.listeningQuestions, isNotEmpty);
       expect(reading.readingBlock, isNotNull);
       expect(reading.readingBlock!.readingQuestions, isNotEmpty);
       expect(mixed.listeningBlock!.listeningQuestions, isNotEmpty);
+    },
+  );
+
+  testWidgets(
+    'a listening lesson renders no vocabulary or grammar section',
+    (tester) async {
+      // EXP-002 "Greetings" is a listening lesson whose seed still carries
+      // generated vocabulary blocks. Under full separation the lesson renders
+      // only listening content — no vocab chips, no grammar.
+      final experience = getA1LearningExperienceById('A1-EXP-002')!;
+      expect(experience.primarySkill, LearningSkill.listening);
+      expect(experience.vocabularyBlocks, isNotEmpty);
+
+      final step = a1RoadmapSteps.firstWhere((step) => step.id == 'A1-EXP-002');
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: StudentLearningStepScreen(step: step, alreadyCompleted: false),
+        ),
+      );
+
+      expect(find.text('Listening'), findsOneWidget);
+      expect(find.text('Vocabulary'), findsNothing);
+      expect(find.text('Grammar'), findsNothing);
     },
   );
 

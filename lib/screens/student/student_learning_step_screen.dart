@@ -529,13 +529,18 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
           textPrimary: textPrimary,
           textMuted: textMuted,
         ),
-      if (experience.vocabularyBlocks.isNotEmpty)
+      // Vocabulary and grammar belong to the vocabulary lesson only (grammar
+      // lives embedded there, not as a sixth skill). A listening or reading
+      // lesson that happens to carry vocab/grammar blocks does not render them.
+      if (experience.vocabularyBlocks.isNotEmpty &&
+          shows(LearningSkill.vocabularyUseOfEnglish))
         _vocabularySection(
           experience.vocabularyBlocks,
           textPrimary: textPrimary,
           textMuted: textMuted,
         ),
-      if (experience.grammarBlocks.isNotEmpty)
+      if (experience.grammarBlocks.isNotEmpty &&
+          shows(LearningSkill.vocabularyUseOfEnglish))
         _grammarSection(
           experience.grammarBlocks,
           textPrimary: textPrimary,

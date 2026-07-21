@@ -127,13 +127,13 @@ void main() {
     ]);
     expect(exp001.difficultyLevel, 1);
     expect(exp001.estimatedMinutes, 10);
-    expect(exp001.listeningBlock?.audioStatus, 'pending_generation');
-    expect(
-      exp001.listeningBlock?.audioPath,
-      'assets/audio/a1/a1_exp_001_meeting_anna.mp3',
-    );
-    expect(exp001.listeningBlock?.audioScript, contains('My name is Anna'));
-    expect(exp001.readingBlock?.readingText, contains('My name is Lucas'));
+    // Full skill separation (spec v2): a single-skill speaking lesson surfaces
+    // no listening or reading block. The "Meeting Anna" audio and "Lucas"
+    // reading text are orphaned content that belongs to a future listening /
+    // reading lesson on this topic; they stay in the seed but are not exposed
+    // here, so they can never render inside the speaking lesson.
+    expect(exp001.listeningBlock, isNull);
+    expect(exp001.readingBlock, isNull);
     expect(exp001.quizBlock?.questions, hasLength(2));
     expect(exp001.writingTask?.writingPrompt, contains('Introduce yourself'));
     expect(exp001.speakingTask?.maxRecordingSeconds, 45);
@@ -143,11 +143,11 @@ void main() {
     expect(exp010.primarySkill, LearningSkill.mixed);
     expect(exp010.quizBlock?.questions, hasLength(3));
     expect(exp011.title, 'My Family');
-    expect(
-      exp011.listeningBlock?.audioPath,
-      'assets/audio/a1/a1_exp_011_my_family.mp3',
-    );
-    expect(exp011.readingBlock?.readingText, contains('My name is Emma'));
+    // EXP-011 is a vocabulary lesson: its "My Family" audio and "Emma" reading
+    // text are orphaned content, not surfaced as blocks under full separation.
+    expect(exp011.primarySkill, LearningSkill.vocabularyUseOfEnglish);
+    expect(exp011.listeningBlock, isNull);
+    expect(exp011.readingBlock, isNull);
     expect(exp020.title, 'Personal Life Challenge');
     expect(exp020.primarySkill, LearningSkill.mixed);
     expect(
@@ -160,21 +160,41 @@ void main() {
       final id = 'A1-EXP-${number.toString().padLeft(3, '0')}';
       final experience = getA1LearningExperienceById(id)!;
 
-      expect(
-        experience.listeningBlock?.audioStatus,
-        'pending_generation',
-        reason: '$id should keep audio pending.',
-      );
-      expect(
-        experience.listeningBlock?.audioScript.trim(),
-        isNotEmpty,
-        reason: '$id should render listening fallback script.',
-      );
-      expect(
-        experience.readingBlock?.readingText.trim(),
-        isNotEmpty,
-        reason: '$id should render reading content.',
-      );
+      // Full skill separation (spec v2): a lesson surfaces a listening or
+      // reading block only for its own skill (mixed lessons may carry either).
+      // Every other lesson must not expose a foreign-skill block.
+      final skill = experience.primarySkill;
+      if (skill == LearningSkill.listening) {
+        expect(
+          experience.listeningBlock?.audioStatus,
+          'ready',
+          reason: '$id audio is generated and bundled, so it is ready.',
+        );
+        expect(
+          experience.listeningBlock?.audioScript.trim(),
+          isNotEmpty,
+          reason: '$id should render its listening script.',
+        );
+      } else if (skill != LearningSkill.mixed) {
+        expect(
+          experience.listeningBlock,
+          isNull,
+          reason: '$id ($skill) must not surface a foreign listening block.',
+        );
+      }
+      if (skill == LearningSkill.reading) {
+        expect(
+          experience.readingBlock?.readingText.trim(),
+          isNotEmpty,
+          reason: '$id should render its reading content.',
+        );
+      } else if (skill != LearningSkill.mixed) {
+        expect(
+          experience.readingBlock,
+          isNull,
+          reason: '$id ($skill) must not surface a foreign reading block.',
+        );
+      }
       expect(
         experience.quizBlock?.questions.length,
         greaterThanOrEqualTo(2),
