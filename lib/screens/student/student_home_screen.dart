@@ -12,6 +12,7 @@ import 'student_a1_certificate_track_screen.dart';
 import 'student_a1_roadmap_screen.dart';
 import 'student_assignments_screen.dart';
 import 'student_learning_path_screen.dart';
+import 'student_learning_step_screen.dart';
 import 'student_profile_screen.dart';
 
 class StudentHomeScreen extends StatefulWidget {
@@ -41,6 +42,10 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
   final Map<String, bool> finalTestBySkill = {
     'listening': false, 'speaking': false, 'reading': false, 'vocabulary': false, 'homework': false,
   };
+
+  /// Kept so the skill cards can render each path's step list and states,
+  /// not just its completed count.
+  Set<String> completedStepIds = {};
 
   @override
   void initState() {
@@ -78,6 +83,7 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
     final reviewNeeded = assignments.where((a) => a.status == 'Review Needed').length;
 
     setState(() {
+      this.completedStepIds = completedStepIds;
       currentStudentName = savedStudentName;
       currentStudentLevel = savedStudentLevel;
       totalPending = pending;
@@ -474,70 +480,111 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
     );
   }
 
+  static const List<Map<String, String>> _skills = [
+    {'id': 'listening', 'title': 'Listening'},
+    {'id': 'speaking', 'title': 'Speaking'},
+    {'id': 'reading', 'title': 'Reading'},
+    {'id': 'vocabulary', 'title': 'Vocabulary'},
+    {'id': 'homework', 'title': 'Grammar'},
+  ];
+
+  /// Responsive, fit-to-content grid: two columns on wide screens, one below
+  /// ~700px. Each card carries its own height — no fixed aspect ratio, so
+  /// there is no dead space. Paired cards in a row are matched via
+  /// IntrinsicHeight so a shorter card does not leave a ragged edge.
   Widget _skillsGrid(bool isDark, Color textPrimary, Color textMuted, Color surface, Color border) {
-    const skills = [
-      {'id': 'listening', 'title': 'Listening'},
-      {'id': 'speaking', 'title': 'Speaking'},
-      {'id': 'reading', 'title': 'Reading'},
-      {'id': 'vocabulary', 'title': 'Vocabulary'},
-      {'id': 'homework', 'title': 'Grammar'},
-    ];
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final columns = constraints.maxWidth < 700 ? 1 : 2;
 
-    return GridView.count(
-      crossAxisCount: 2,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
-      childAspectRatio: 1.5,
-      children: skills.map((skill) {
-        final id = skill['id']!;
-        final title = skill['title']!;
-        final completed = completedBySkill[id] ?? 0;
-        final reviews = reviewBySkill[id] ?? 0;
-        final testDone = finalTestBySkill[id] ?? false;
-        final progress = (completed / 12).clamp(0.0, 1.0);
-        final statusColor = testDone
-            ? AppTheme.semanticGreen
-            : (reviews > 0 ? textPrimary : textMuted);
+        if (columns == 1) {
+          return Column(
+            children: [
+              for (final skill in _skills) ...[
+                _skillCard(skill, isDark, textPrimary, textMuted, surface, border),
+                if (skill != _skills.last) const SizedBox(height: 10),
+              ],
+            ],
+          );
+        }
 
-        return GestureDetector(
-          onTap: () => openScreen(context, StudentLearningPathScreen(skillId: id)),
-          child: Container(
-            padding: const EdgeInsets.all(14),
-            decoration: BoxDecoration(
-              color: surface,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: border),
+        final rows = <Widget>[];
+        for (var i = 0; i < _skills.length; i += 2) {
+          final left = _skills[i];
+          final right = i + 1 < _skills.length ? _skills[i + 1] : null;
+
+          rows.add(
+            IntrinsicHeight(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(
+                    child: _skillCard(left, isDark, textPrimary, textMuted, surface, border),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: right == null
+                        ? const SizedBox.shrink()
+                        : _skillCard(right, isDark, textPrimary, textMuted, surface, border),
+                  ),
+                ],
+              ),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          );
+          if (i + 2 < _skills.length) rows.add(const SizedBox(height: 10));
+        }
+
+        return Column(children: rows);
+      },
+    );
+  }
+
+  Widget _skillCard(Map<String, String> skill, bool isDark, Color textPrimary, Color textMuted, Color surface, Color border) {
+    final id = skill['id']!;
+    final title = skill['title']!;
+    final completed = completedBySkill[id] ?? 0;
+    final reviews = reviewBySkill[id] ?? 0;
+    final testDone = finalTestBySkill[id] ?? false;
+
+    final steps = getLearningPathStepsBySkill(id);
+    final total = steps.length;
+    final progress = total > 0 ? (completed / total).clamp(0.0, 1.0) : 0.0;
+
+    // The current step is the first not-yet-completed step in the path.
+    final currentIndex = steps.indexWhere((s) => !completedStepIds.contains(s.id));
+
+    // Show a window of up to four steps anchored on the current one, so a
+    // student always sees where they are and what is next rather than a wall
+    // of completed lessons.
+    final windowStart = currentIndex < 0
+        ? (total - 4).clamp(0, total)
+        : (currentIndex).clamp(0, (total - 4).clamp(0, total));
+    final windowSteps = steps.skip(windowStart).take(4).toList();
+
+    final statusColor = testDone
+        ? AppTheme.semanticGreen
+        : (reviews > 0 ? textPrimary : textMuted);
+
+    return GestureDetector(
+      onTap: () => openScreen(context, StudentLearningPathScreen(skillId: id)),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: surface,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: border),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        title,
-                        style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500, color: textPrimary),
-                      ),
-                    ),
-                    Text(
-                      '$completed/12',
-                      style: TextStyle(fontSize: 11, color: textMuted, fontWeight: FontWeight.w500),
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(2),
-                  child: LinearProgressIndicator(
-                    value: progress,
-                    minHeight: 2,
-                    color: progress > 0 ? textPrimary : textMuted,
-                    backgroundColor: border,
+                Expanded(
+                  child: Text(
+                    title,
+                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500, color: textPrimary),
                   ),
                 ),
-                const SizedBox(height: 8),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
@@ -546,16 +593,103 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
                     border: Border.all(color: statusColor.withValues(alpha: 0.2)),
                   ),
                   child: Text(
-                    testDone ? 'DONE' : '$reviews/4 reviews',
+                    testDone ? 'DONE' : '$reviews/4 rev',
                     style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, letterSpacing: 0.6, color: statusColor),
                   ),
                 ),
               ],
             ),
-          ),
-        );
-      }).toList(),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(2),
+                    child: LinearProgressIndicator(
+                      value: progress,
+                      minHeight: 2,
+                      color: progress > 0 ? textPrimary : textMuted,
+                      backgroundColor: border,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  '$completed/$total',
+                  style: TextStyle(fontSize: 10, color: textMuted, fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            for (final step in windowSteps)
+              _skillStepRow(step, textPrimary, textMuted),
+          ],
+        ),
+      ),
     );
+  }
+
+  Widget _skillStepRow(LearningPathStep step, Color textPrimary, Color textMuted) {
+    final isCompleted = completedStepIds.contains(step.id);
+    final isUnlocked = LearningPathProgressService.isStepUnlocked(
+      step: step, completedStepIds: completedStepIds,
+    );
+    final isCurrent = !isCompleted && isUnlocked;
+
+    final IconData icon;
+    final Color color;
+    if (isCompleted) {
+      icon = Icons.check_circle_rounded;
+      color = AppTheme.semanticGreen;
+    } else if (isCurrent) {
+      icon = Icons.play_circle_fill_rounded;
+      color = textPrimary;
+    } else {
+      icon = Icons.lock_outline_rounded;
+      color = textMuted;
+    }
+
+    return GestureDetector(
+      // Tapping the current step opens that lesson directly; locked steps do
+      // nothing (they gate the same way the full roadmap does).
+      onTap: isCurrent ? () => _openStepDirectly(step) : null,
+      behavior: HitTestBehavior.opaque,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 6),
+        child: Row(
+          children: [
+            Icon(icon, size: 14, color: color),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                step.title,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: isCurrent ? FontWeight.w600 : FontWeight.w400,
+                  color: isCompleted || isCurrent ? textPrimary : textMuted,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// Opens a single lesson straight from a skill card, bypassing the path list.
+  /// Uses the same completion round-trip as the path screen so progress the
+  /// student earns here is reflected everywhere on return.
+  Future<void> _openStepDirectly(LearningPathStep step) async {
+    final isCompleted = completedStepIds.contains(step.id);
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => StudentLearningStepScreen(step: step, alreadyCompleted: isCompleted),
+      ),
+    );
+    if (result == true) await refreshProgress();
   }
 
   Widget _sectionLabel(String text, Color textMuted) {
