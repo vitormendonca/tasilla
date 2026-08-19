@@ -1,0 +1,348 @@
+==============================================================
+TASILLA - A1 CONTENT / TOPIC 13: TRAVEL & TRANSPORT
+==============================================================
+Unit 3 - Out in the World | Difficulty dial: Topics 11-15
+(8 new words, 4 options, 'not stated' live, audio ~35s
+dialogues, reading texts 50-60 words, dictation 6 words,
+free-write)
+
+Grammar embedded: BY + transport (go by bus - no article) +
+ticket-office requests with CAN (G11 recycled) + What time
+is...? (T8 recycled with timetables)
+Can-do: Name transport, buy tickets, handle simple travel
+situations
+Recycles: T8 (times, days), T9 (prices), T10-11 (Can I
+have..., please), T12 (station, street, directions), T7
+(go, 3rd person -s)
+
+TARGET LANGUAGE
+Words (8): bus, train, car, taxi, plane, ticket, airport,
+           travel
+Phrases:   I go to work by bus. / A ticket to Olinda,
+           please. / What time is the bus? / The bus is at
+           ten thirty. / Can I have two tickets, please?
+Structures: by + transport, NO article (by bus - not by
+            a bus)
+            travel as verb: I travel / she travels (-s)
+NOTE: NO future forms - trips are talked about with to be
++ schedule times (My bus is on Saturday at seven) and
+simple present. 'I am going to...' is on the A2 excluded
+list. walk / on foot NOT taught (margin) - transport only.
+
+==============================================================
+LESSON 13.1 - VOCABULARY (auto-graded, 8 exercises, all tap)
+==============================================================
+
+Intro card:
+  bus = big, many people, in the city
+  train = long, on rails, from the station
+  car = your family drives it  |  taxi = a car you pay for
+  plane = it flies! (airport)
+  ticket = your paper to go in (bus, train, plane)
+  airport = planes go from there
+  travel = go to another city or country
+  + phrase bank: by bus / by train / by car |
+    A ticket to..., please | What time is the bus?
+
+EX 1 - Word meaning (MC)
+Q: It flies, and it is at the airport. It is a ___.
+   a) plane   [CORRECT]
+   b) train
+   c) taxi
+   d) bus
+Feedback: Plane = it flies. Train = on rails.
+
+EX 2 - Word meaning (MC)
+Q: A car with a driver - you pay at the end. It is a ___.
+   a) taxi   [CORRECT]
+   b) bus
+   c) ticket
+   d) plane
+Feedback: Taxi = a car you pay for.
+
+EX 3 - Gap-fill (tap the missing word)
+Q: Your ___ please! - Here you are. Seat twelve.
+   a) ticket   [CORRECT]
+   b) airport
+   c) menu
+   d) bag
+Feedback: Ticket = your paper for the bus, train or plane.
+
+EX 4 - Gap-fill (tap the missing word)
+Q: In July we ___ to Portugal. My mother's family is there!
+   a) travel   [CORRECT]
+   b) sleep
+   c) turn
+   d) buy
+Feedback: Travel = go to another city or country.
+
+EX 5 - Odd one out (MC)
+Q: Which one is NOT transport?
+   a) bus
+   b) kitchen   [CORRECT]
+   c) train
+   d) taxi
+Feedback: Kitchen is a room (Topic 6)!
+
+EX 6 - Dialogue completion (MC)
+Q: Ticket office: Good morning! Can I help you?  You: ___
+   a) A ticket to Recife, please. What time is the bus?
+      [CORRECT]
+   b) Turn left at the park.
+   c) I have long hair.
+   d) There is a table in the kitchen.
+Feedback: At the ticket office: say WHERE + ask WHEN.
+
+EX 7 - GRAMMAR: by + transport (MC)
+Q: I go to work ___ bus. My father goes ___ car.
+   a) by / by   [CORRECT]
+   b) by a / by a
+   c) in / on
+   d) on / at
+Feedback: BY bus, BY car, BY train - no a, no the!
+
+EX 8 - GRAMMAR: travel + -s (MC)
+Q: I ___ by train. My sister ___ by plane - expensive!
+   a) travel / travels   [CORRECT]
+   b) travels / travel
+   c) travel / travel
+   d) travels / travels
+Feedback: I travel. She travelS (T7 rule).
+
+Pass: 70% (6 of 8). XP: 10.
+
+==============================================================
+LESSON 13.2 - LISTENING (auto-graded, 1 audio + 5 exercises)
+==============================================================
+
+AUDIO SCRIPT (to record - 2 speakers, slow-natural,
+file: audio/a1/t13_listening_two_tickets_please.mp3, ~35 s):
+
+  Clerk: Good morning! Can I help you?
+  Malu:  Yes! A ticket to Olinda, please. What time is
+         the bus?
+  Clerk: The bus to Olinda is at ten thirty.
+  Malu:  Ten thirty, good. How much is the ticket?
+  Clerk: Seven dollars.
+  Malu:  Can I have two tickets, please? My sister
+         travels with me.
+  Clerk: Two tickets - fourteen dollars, please.
+
+Max plays: 3.
+
+EX 1 - Gist (MC)
+Q: Where is this conversation?
+   a) At a ticket office   [CORRECT]
+   b) In a cafe
+   c) At a hospital
+   d) In a supermarket
+
+EX 2 - Detail: time (MC)
+Q: What time is the bus to Olinda?
+   a) Ten thirty   [CORRECT]
+   b) Ten o'clock
+   c) Two o'clock
+   d) The audio does not say
+
+EX 3 - Detail: price (MC)
+Q: How much are the TWO tickets?
+   a) Fourteen dollars   [CORRECT]
+   b) Seven dollars
+   c) Forty dollars
+   d) Four dollars
+Feedback: One ticket seven - two tickets fourteen!
+
+EX 4 - NOT STATED (MC)
+Q: How does Malu pay - card or cash?
+   a) Card
+   b) Cash
+   c) She does not pay
+   d) The audio does not say   [CORRECT]
+
+EX 5 - DICTATION (type what you hear - 6 words)
+Audio repeats: The bus is at ten thirty.
+Correct answer: The bus is at ten thirty
+(accept case-insensitive, ignore punctuation; accept
+10:30 / 10 30 for ten thirty)
+
+Pass: 70% (4 of 5). XP: 10.
+
+==============================================================
+LESSON 13.3 - READING (auto-graded, 2 texts, 3 questions each)
+==============================================================
+
+TEXT A (50 words) - Station timetable format:
+---------------------------------------
+  CITY STATION - BUSES TODAY
+  Olinda ..... ten o'clock ...... seven dollars
+  Recife ..... ten thirty ....... nine dollars
+  Santos ..... eleven o'clock ... twelve dollars
+  Tickets: at the ticket office or in the app.
+  The ticket office is next to door two.
+  Good travels!
+---------------------------------------
+
+EX 1 - Gist (MC)
+Q: What is this text?
+   a) A bus timetable with prices   [CORRECT]
+   b) A cafe menu
+   c) Directions to a house
+   d) A shop notice
+
+EX 2 - Detail: time (MC)
+Q: What time is the bus to Recife?
+   a) Ten thirty   [CORRECT]
+   b) Ten o'clock
+   c) Eleven o'clock
+   d) The text does not say
+
+EX 3 - Detail: price danger pair (MC)
+Q: How much is the ticket to Santos?
+   a) Twelve dollars   [CORRECT]
+   b) Twenty dollars
+   c) Nine dollars
+   d) Seven dollars
+
+TEXT B (57 words) - Chat messages format:
+---------------------------------------
+  Iris: Hi Leo! On Saturday I travel to Salvador!
+  Leo:  Nice! By plane?
+  Iris: No, by bus. The plane is very expensive.
+  Leo:  What time is your bus?
+  Iris: At seven o'clock in the morning! My brother goes
+        with me - he likes Salvador.
+  Leo:  Two happy travelers! Can you buy a present for
+        me there?
+---------------------------------------
+
+EX 4 - Gist (MC)
+Q: What is Iris's news?
+   a) She travels to Salvador on Saturday   [CORRECT]
+   b) She has a new apartment
+   c) She works at the station
+   d) It is her birthday
+
+EX 5 - Detail (MC)
+Q: Why does Iris go by bus, not by plane?
+   a) The plane is very expensive   [CORRECT]
+   b) She likes buses
+   c) There is no airport
+   d) The text does not say
+
+EX 6 - Detail + 3rd person (MC)
+Q: Who goes to Salvador with Iris?
+   a) Her brother   [CORRECT]
+   b) Leo
+   c) Her sister
+   d) She goes alone
+Feedback: My brother GOES with me (goes = he!).
+
+Pass: 70% (5 of 6). XP: 10.
+
+==============================================================
+LESSON 13.4 - SPEAKING (teacher-graded, 1 recorded task)
+==============================================================
+
+PROMPT (no example - free stage):
+  Record yourself. Two mini parts:
+  PART 1 - Your transport: how do people in your family
+  go to work or school? (I go by... My mother goes by...)
+  PART 2 - Ticket office theater (two voices, like T11):
+  ask for a ticket to a real city, ask the time, ask the
+  price, say thank you.
+
+Max recording: 60 seconds.
+Tip: by bus, by car - small words, no 'a', no 'the'!
+
+RUBRIC:
+  1. by + transport correct (2+ examples)   [ pass / not yet ]
+  2. 3rd person -s (goes/travels) correct   [ pass / not yet ]
+  3. Ticket request + time or price question[ pass / not yet ]
+  4. Understandable pronunciation           [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+LESSON 13.5 - WRITING (teacher-graded, Mode A typed,
+FREE-WRITE)
+==============================================================
+
+PROMPT:
+  Write a short text: Transport in my life.
+  How do you go to work, school or the supermarket?
+  And one person in your family - how does he or she go?
+
+Minimum requirements:
+  - 5 sentences
+  - by + transport at least twice
+  - one 3rd person -s sentence (goes / travels / likes)
+  - one time or price detail (at eight o'clock / two
+    dollars - T8/T9)
+
+RUBRIC:
+  1. 5 sentences about real transport       [ pass / not yet ]
+  2. by + transport correct                 [ pass / not yet ]
+  3. 3rd person -s correct                  [ pass / not yet ]
+  4. Readable spelling (A1 bar)             [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+REVIEWS - WHERE TOPIC 13 CONTENT REAPPEARS
+==============================================================
+
+Topic 13 enters REVIEW 5 of each skill path (covers T13-15:
+Travel, Work & Study, Classroom). Its 3 items per review
+are written NOW; assembly happens after Topic 15.
+
+VOCABULARY REVIEW 5 - Topic 13 items (3 of 9):
+  R1. Q: Planes go from the ___.
+      a) airport [CORRECT]  b) station  c) park  d) bank
+  R2. Q: I go to school ___ bus.
+      a) by [CORRECT]  b) in a  c) on  d) at
+  R3. Q: My mother ___ to Portugal in July.
+      a) travels [CORRECT]  b) travel  c) is travel
+      d) traveling
+
+LISTENING REVIEW 5 - Topic 13 items (3 of 9):
+  New audio line: A ticket to Santos, please! - The train
+  is at nine thirty, door four. Six dollars, please.
+  R1. Where does the person go? -> Santos [CORRECT]
+  R2. What time is the train? -> nine thirty [CORRECT] /
+      nine o'clock / four o'clock / not said
+  R3. Dictation: A ticket to Santos, please. (5 words)
+
+READING REVIEW 5 - Topic 13 items (3 of 9):
+  Mini-text: NOTE: Bia, your bus ticket is on the kitchen
+  table! The bus is at eight o'clock. Go by taxi to the
+  station - it is fast!
+  R1. Where is the ticket? -> on the kitchen table [CORRECT]
+  R2. What time is the bus? -> eight o'clock [CORRECT]
+  R3. Grammar: Go ___ taxi to the station. -> by [CORRECT]
+
+SPEAKING/WRITING REVIEW 5: the by + transport and ticket-
+request criteria come from Topic 13.
+
+MIXED REVIEW E (after Topic 13, covers T11-13) - Topic 13
+guarantees: 1 by + transport item, 1 timetable listening
+item, 1 ticket request item, dictation candidate: The bus
+is at ten thirty. MIXED REVIEW E CAN NOW BE ASSEMBLED
+(next document).
+
+CHECKPOINT 3 (Unit 3 gate) - Topic 13 items:
+  1 by + transport item + 1 time/price timetable detail +
+  1 not-stated discipline item.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~35s, 2 speakers) + 1 review line (~12s)
+- STRICT no-future fence: trips use to be + time (My bus
+  is on Saturday) and simple present (I travel on
+  Saturday) - NEVER going to / will
+- present, travelers, seat, driver, app = passive exposure
+- Ticket math (7 -> 14) is SAID in the audio - the item
+  never requires the student to calculate
+- Recycling check: Can I have (T10/11), station + next to
+  (T12), times incl. thirty (T8), prices + danger pairs
+  (T9), goes/likes -s (T7)

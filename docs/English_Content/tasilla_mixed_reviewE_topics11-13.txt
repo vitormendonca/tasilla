@@ -1,0 +1,147 @@
+==============================================================
+TASILLA - A1 REVIEWS / MIXED REVIEW E (ROADMAP ONLY)
+COVERS TOPICS 11-13
+==============================================================
+Topics covered: 11 Shopping / 12 Places & Directions /
+13 Travel & Transport
+Grammar covered: this/that/these/those, Can requests,
+imperatives, next to/near, by + transport
+Position in roadmap: after Topic 13
+
+DESIGN (template = Mixed Review A; dial 11-15 = 4 options,
+'not stated' live):
+- 12 items: 3 listening + 3 reading + 4 vocabulary/grammar +
+  1 speaking + 1 writing (teacher-graded, async)
+- All content NEW - never copies of lesson items
+- Auto-graded part gates progression (pass 70% = 7 of 10);
+  speaking/writing async, never block the roadmap
+- XP 20
+
+==============================================================
+SECTION A - LISTENING (3 items, 1 new audio ~30s)
+==============================================================
+
+AUDIO SCRIPT (to record - 2 speakers, slow-natural, two
+mini-scenes, file: audio/a1/mixrevE_listening.mp3):
+
+  A: Excuse me! Where is the station, please?
+  B: Go straight and turn left at the bank. It is near!
+  A: Thank you! ...
+  A: Good morning! One ticket to Olinda, please.
+     What time is the train?
+  B: At four thirty. Five dollars, please.
+  A: Here you are!
+
+EX 1 - What does the person want FIRST?
+   a) Directions to the station   [CORRECT]
+   b) A bag
+   c) A coffee
+   d) A taxi
+
+EX 2 - Where does the person turn left?
+   a) At the bank   [CORRECT]
+   b) At the park
+   c) At the supermarket
+   d) At the school
+
+EX 3 - What time is the train to Olinda?
+   a) Four thirty   [CORRECT]
+   b) Four o'clock
+   c) Five o'clock
+   d) The audio does not say
+
+==============================================================
+SECTION B - READING (3 items, 1 new mini-text)
+==============================================================
+
+Text (42 words) - Chat messages format:
+---------------------------------------
+  Bea: Are you at the market, Gui?
+  Gui: Yes! These apples are one dollar - very cheap!
+  Bea: Buy ten for me, please! And your bus home?
+  Gui: By bus at six o'clock. The ticket is two dollars.
+  Bea: Great! See you at home!
+---------------------------------------
+
+EX 4 - Gist: What is this chat about?
+   a) Gui at the market, and his bus home   [CORRECT]
+   b) A new apartment
+   c) Bea's birthday
+   d) A cafe menu
+
+EX 5 - How much are the apples?
+   a) One dollar   [CORRECT]
+   b) Ten dollars
+   c) Two dollars
+   d) Six dollars
+
+EX 6 - NOT STATED: How does Gui pay at the market -
+card or cash?
+   a) Card
+   b) Cash
+   c) He does not pay
+   d) The text does not say   [CORRECT]
+
+==============================================================
+SECTION C - VOCABULARY & GRAMMAR (4 items)
+==============================================================
+
+EX 7 - Q: ___ bag here is nice, but ___ bag there is cheap.
+   a) This / that   [CORRECT]
+   b) That / this
+   c) These / those
+   d) This / these
+
+EX 8 - Q: ___ right at the park!
+   a) Turn   [CORRECT]
+   b) Turns
+   c) Turning
+   d) You turns
+
+EX 9 - Q: I go to work ___ train.
+   a) by   [CORRECT]
+   b) in a
+   c) on a
+   d) at
+
+EX 10 - Q: The shop is not open today. It is ___.
+   a) closed   [CORRECT]
+   b) cheap
+   c) near
+   d) new
+
+==============================================================
+SECTION D - SPEAKING (1 item, teacher-graded, async)
+==============================================================
+
+EX 11: Record 20-30 seconds. A friend is at the station
+  in your town. Give directions to your home (Go...,
+  Turn..., next to...) and say how YOU go home every day
+  (by bus / by car...).
+  Rubric: 2+ imperatives / next to or near / by +
+  transport / understandable.
+
+==============================================================
+SECTION E - WRITING (1 item, teacher-graded, async)
+==============================================================
+
+EX 12: A friend visits your city on Saturday. Write a
+  message (4-5 sentences): the bus or train time, the
+  ticket price, and directions from the station to your
+  home (one imperative + next to/near).
+  Rubric: time + price present / imperative + place
+  phrase correct / this/that or Can request bonus /
+  spelling A1 OK.
+
+Auto-graded pass: 70% (7 of 10). XP: 20.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~30s, 2 speakers, two scenes with a
+  clear pause)
+- No do-questions anywhere: Bea asks 'And your bus home?'
+  (elliptical) - the G8 fence holds until Topic 16
+- Anti-nonsense rule: Bea/Gui/Olinda options exist in
+  text/audio
+- Roadmap position: Topic 13 -> MIXED REVIEW E -> Topic 14

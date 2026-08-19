@@ -1,0 +1,316 @@
+==============================================================
+TASILLA - A1 CONTENT / TOPIC 1: INTRODUCTIONS & GREETINGS
+==============================================================
+Unit 1 - Foundation | Difficulty dial: Topics 1-5
+(6 new words, 3 options per question, slow audio 3-4 sentences,
+reading texts 30-40 words, gist + literal questions,
+scaffolded writing, dictation 4-5 words)
+
+Grammar embedded: verb TO BE (I am / you are) + subject pronouns (I, you)
+Can-do: Greet people, introduce yourself, use basic courtesy phrases
+
+TARGET LANGUAGE
+Words (6): hello, hi, goodbye, morning, name, fine
+Phrases:   My name is... / Nice to meet you / How are you? /
+           I am fine, thank you / Good morning
+Structures: I am... / You are... / My name is...
+
+==============================================================
+LESSON 1.1 - VOCABULARY (auto-graded, 8 exercises, all tap)
+==============================================================
+
+Intro card (shown before exercises):
+  hello = a greeting (any time)
+  hi = informal hello
+  good morning = greeting before 12:00
+  goodbye = when you leave
+  name = what people call you
+  fine = good / OK
+  + phrase bank: My name is... | Nice to meet you | How are you?
+
+EX 1 - Word meaning (MC)
+Q: You meet a person at 9:00 in the morning. What do you say?
+   a) Good morning   [CORRECT]
+   b) Goodbye
+   c) Fine
+Feedback: Good morning = a greeting before 12:00.
+
+EX 2 - Word meaning (MC)
+Q: You leave the classroom. What do you say?
+   a) Hello
+   b) Goodbye   [CORRECT]
+   c) My name
+Feedback: Goodbye = you say it when you leave.
+
+EX 3 - Gap-fill (tap the missing word)
+Q: My ___ is Pedro.
+   a) name   [CORRECT]
+   b) fine
+   c) hello
+Feedback: My name is Pedro. = I am Pedro.
+
+EX 4 - Gap-fill (tap the missing word)
+Q: A: How are you?  B: I am ___, thank you.
+   a) goodbye
+   b) fine   [CORRECT]
+   c) morning
+Feedback: I am fine = I am OK / good.
+
+EX 5 - Odd one out (MC)
+Q: Which word is NOT a greeting?
+   a) Hello
+   b) Hi
+   c) Name   [CORRECT]
+Feedback: Hello and hi are greetings. Name is not.
+
+EX 6 - Dialogue completion (MC)
+Q: A: Hello! My name is Ana.  B: ___
+   a) Nice to meet you, Ana!   [CORRECT]
+   b) Goodbye, Ana!
+   c) Good morning is at 9:00.
+Feedback: When a person says their name, answer: Nice to meet you.
+
+EX 7 - GRAMMAR in context: to be (MC)
+Q: I ___ Maria.
+   a) am   [CORRECT]
+   b) is
+   c) are
+Feedback: With I, always use AM. I am Maria.
+
+EX 8 - GRAMMAR in context: to be (MC)
+Q: You ___ my teacher.
+   a) am
+   b) is
+   c) are   [CORRECT]
+Feedback: With YOU, always use ARE. You are my teacher.
+
+Pass: 70% (6 of 8). XP: 10.
+
+==============================================================
+LESSON 1.2 - LISTENING (auto-graded, 1 audio + 5 exercises)
+==============================================================
+
+AUDIO SCRIPT (to record - 1 speaker, slow, clear pauses,
+file: audio/a1/t01_listening_hello_i_am_ana.mp3, ~20 seconds):
+
+  Hello! Good morning. | My name is Ana. | I am your English
+  teacher. | Nice to meet you!
+
+Max plays: 3 (Unit 1 allowance).
+
+EX 1 - Gist (MC)
+Q: What is this audio?
+   a) A person says hello and her name   [CORRECT]
+   b) A person says goodbye
+   c) A person orders a coffee
+
+EX 2 - Detail (MC)
+Q: What is her name?
+   a) Ana   [CORRECT]
+   b) Maria
+   c) Laura
+
+EX 3 - Detail (MC)
+Q: What time of day is it?
+   a) Morning   [CORRECT]  (she says Good morning)
+   b) Night
+   c) The audio does not say a greeting
+
+EX 4 - True / False (MC)
+Q: Ana is a student. True or false?
+   a) True
+   b) False   [CORRECT]  (she says: I am your English TEACHER)
+
+EX 5 - DICTATION (type what you hear - 4 words)
+Audio repeats: My name is Ana.
+Correct answer: My name is Ana
+(accept case-insensitive, ignore final punctuation)
+
+Pass: 70% (4 of 5). XP: 10.
+
+==============================================================
+LESSON 1.3 - READING (auto-graded, 2 texts, 3 questions each)
+==============================================================
+
+TEXT A (36 words) - Chat messages format:
+---------------------------------------
+  Leo:  Hello! Good morning!
+  Mia:  Hi! How are you?
+  Leo:  I am fine, thank you. My name is Leo.
+  Mia:  Nice to meet you, Leo. My name is Mia.
+  Leo:  Nice to meet you too!
+---------------------------------------
+
+EX 1 - Gist (MC)
+Q: What are Leo and Mia doing?
+   a) Meeting for the first time   [CORRECT]
+   b) Saying goodbye
+   c) Talking about food
+
+EX 2 - Detail (MC)
+Q: How is Leo?
+   a) He is fine   [CORRECT]
+   b) He is a teacher
+   c) He is at school
+
+EX 3 - Grammar in context (MC)
+Q: Leo says: I ___ fine. Which word is in the text?
+   a) am   [CORRECT]
+   b) is
+   c) are
+
+TEXT B (33 words) - Name tag / profile card format:
+---------------------------------------
+  STUDENT CARD
+  Hello! My name is Sofia.
+  I am a student.
+  My teacher is Mr. Lucas.
+  He is very nice.
+  Nice to meet you!
+---------------------------------------
+
+EX 4 - Gist (MC)
+Q: What is this text?
+   a) A student introduces herself   [CORRECT]
+   b) A goodbye message
+   c) A shopping list
+
+EX 5 - Detail (MC)
+Q: Who is Mr. Lucas?
+   a) Sofia's teacher   [CORRECT]
+   b) Sofia's brother
+   c) A student
+
+EX 6 - Detail (MC)
+Q: What is the student's name?
+   a) Sofia   [CORRECT]
+   b) Lucas
+   c) Ana
+(NOTE: every option set includes the names ACTUALLY in the text -
+this is the anti-EXP-001 rule: options must come from the text.)
+
+Pass: 70% (5 of 6... rounds to 4 of 6 = 66% fails; 5 of 6 = 83%
+passes; engine computes exact %). XP: 10.
+
+==============================================================
+LESSON 1.4 - SPEAKING (teacher-graded, 1 recorded task)
+==============================================================
+
+PROMPT (shown to student):
+  Record yourself. Say hello and introduce yourself.
+  Say 3 things:
+  1. A greeting (Hello / Good morning)
+  2. Your name (My name is...)
+  3. How you are (I am fine...)
+  Example: Hello! My name is Pedro. I am fine, thank you.
+
+Max recording: 30 seconds. Preparation tip shown before recording:
+  Practice 2 times before you record. Speak slowly. It is OK!
+
+RUBRIC (visible to student AND teacher):
+  1. Says a greeting                       [ pass / not yet ]
+  2. Says name with My name is...          [ pass / not yet ]
+  3. Uses I am correctly                   [ pass / not yet ]
+  4. Understandable pronunciation (A1 bar) [ pass / not yet ]
+
+Teacher action: Approve / Request redo (+ short feedback).
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+LESSON 1.5 - WRITING (teacher-graded, Mode A typed, SCAFFOLDED)
+==============================================================
+
+STEP 1 - MODEL (student reads):
+  Hello! Good morning!
+  My name is Carla.
+  I am fine, thank you.
+  Nice to meet you!
+
+STEP 2 - GAP-FILL the model (tap words: name / am / meet / Hello):
+  ___! Good morning!            -> Hello
+  My ___ is Carla.              -> name
+  I ___ fine, thank you.        -> am
+  Nice to ___ you!              -> meet
+(auto-checked, not scored - warm-up only)
+
+STEP 3 - WRITE YOUR OWN VERSION (typed, teacher-graded):
+Prompt: Now write YOUR introduction. Change the name to YOUR name.
+Minimum requirements:
+  - 3 to 4 sentences
+  - Use: a greeting, My name is..., I am...
+
+RUBRIC:
+  1. Has a greeting                        [ pass / not yet ]
+  2. My name is + own name                 [ pass / not yet ]
+  3. I am used correctly                   [ pass / not yet ]
+  4. Readable spelling (A1 bar)            [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+REVIEWS - WHERE TOPIC 1 CONTENT REAPPEARS
+==============================================================
+
+A) SKILL-PATH REVIEWS (every 3 lessons per skill).
+Topic 1 material enters Review 1 of each skill path, which
+covers Topics 1-3 (Introductions, Personal Info, Family).
+Review anatomy = 9 exercises, 3 drawn from each topic,
+same formats as lessons, pass 70%, XP 20.
+
+Topic 1's contribution to each Review 1 (write these now,
+assemble the full review after Topics 2-3 exist):
+
+VOCABULARY REVIEW 1 - Topic 1 items (3 of 9):
+  R1. Q: Choose the greeting for 10:00 AM.
+      a) Good morning [CORRECT]  b) Goodbye  c) Fine
+  R2. Q: ___ to meet you!
+      a) Nice [CORRECT]  b) Name  c) Morning
+  R3. Q: I ___ a student. / You ___ my friend. (tap the pair)
+      a) am / are [CORRECT]  b) are / am  c) is / is
+
+LISTENING REVIEW 1 - Topic 1 items (3 of 9):
+  New 2-sentence audio: Hi! My name is Tom. I am fine.
+  R1. Gist: Who speaks? a) Tom [CORRECT] b) Ana c) Mia
+  R2. T/F: Tom says good morning. -> False [CORRECT]
+  R3. Dictation: I am fine. (3-4 words)
+
+READING REVIEW 1 - Topic 1 items (3 of 9):
+  Mini-text (2 lines): Hello! My name is Rita. I am your new
+  teacher. Nice to meet you!
+  R1. Gist: introduction [CORRECT] vs goodbye vs invitation
+  R2. Detail: Rita is a... teacher [CORRECT] / student / doctor
+  R3. Grammar: I ___ your new teacher -> am [CORRECT]
+
+SPEAKING REVIEW 1 - integrated task (covers T1-3):
+  Record 30-45s: greet, say your name, AND say one thing about
+  your family (T3) + one personal detail (T2). Rubric checks one
+  criterion per topic. Teacher-graded.
+
+WRITING REVIEW 1 - integrated task (covers T1-3):
+  Write 4-5 sentences: greeting + name + age or city + one family
+  sentence. No model (scaffold removed for reviews). Teacher-graded.
+
+B) MIXED REVIEW A (roadmap only, after Topic 3, covers T1-3):
+  12 exercises across all skills in one session:
+  3 listening (new audio recycling T1-3 language) +
+  3 reading (one new text) + 4 vocabulary/grammar +
+  1 short speaking + 1 short writing (teacher-graded async).
+  Topic 1 guarantees: 1 greeting item, 1 to-be item, 1 dictation
+  candidate (My name is... / I am fine).
+  Pass 70% on auto-graded part. XP 20.
+
+C) CHECKPOINT 1 (after Unit 1, hard gate) - Topic 1 items:
+  1 listening detail item + 1 to-be grammar item + greeting
+  vocabulary distributed in options. Calibrated at Topics 1-5
+  difficulty dial. Pass 70%, limited attempts, XP 40.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio file to record for lesson 1.2 (~20s, 1 speaker, slow)
+- 1 short audio for Listening Review 1 (~8s) - can be same voice
+- Anti-nonsense rule: MC name options MUST be names present in
+  the text/audio, plus at most one familiar distractor
+- All feedback lines are written (never auto-generated)
+- Explanations max 1 sentence, A1-readable
+- This document is the quality benchmark for Topics 2-20

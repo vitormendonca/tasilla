@@ -1,0 +1,134 @@
+==============================================================
+TASILLA - A1 REVIEWS / MIXED REVIEW D (ROADMAP ONLY)
+COVERS TOPICS 9-10
+==============================================================
+Topics covered: 9 Numbers, Prices & Money / 10 Food & Drink
+Grammar covered: How much is/are, numbers 13-100, plural -s,
+a/an, Can I have...?, like/likes
+Position in roadmap: after Topic 10, before Checkpoint 2
+
+DESIGN (template = Mixed Review A):
+- 12 items: 3 listening + 3 reading + 4 vocabulary/grammar +
+  1 speaking + 1 writing (teacher-graded, async)
+- All content NEW - never copies of lesson items
+- Auto-graded part gates progression (pass 70% = 7 of 10);
+  speaking/writing async, never block the roadmap
+- XP 20
+
+==============================================================
+SECTION A - LISTENING (3 items, 1 new audio ~25s)
+==============================================================
+
+AUDIO SCRIPT (to record - 2 speakers, slow,
+file: audio/a1/mixrevD_listening.mp3):
+
+  Customer: Good morning! Can I have two coffees and an
+            apple, please?
+  Waiter:   Yes! The coffees are four dollars, and the
+            apple is one dollar. Five dollars, please.
+  Customer: Here you are!
+  Waiter:   Thank you!
+
+EX 1 - Gist: What is this conversation?
+   a) A person orders in a cafe   [CORRECT]
+   b) A person buys a bed
+   c) Two friends talk about the week
+
+EX 2 - What does the customer order?
+   a) Two coffees and an apple   [CORRECT]
+   b) Two teas and bread
+   c) An apple juice
+
+EX 3 - How much is it all?
+   a) Five dollars   [CORRECT]
+   b) Fifteen dollars
+   c) Fifty dollars
+
+==============================================================
+SECTION B - READING (3 items, 1 new mini-text)
+==============================================================
+
+Text (33 words) - Cafe flyer format:
+---------------------------------------
+  CAFE MAR - SMALL PRICES!
+  Apple juice ..... two dollars
+  Bread ........... one dollar
+  Tea ............. two dollars
+  All very cheap!
+  Open Monday to Friday, seven o'clock to three o'clock.
+---------------------------------------
+
+EX 4 - Gist: What is this text?
+   a) A cafe flyer with prices   [CORRECT]
+   b) A birthday invitation
+   c) A note to a friend
+
+EX 5 - How much is the apple juice?
+   a) Two dollars   [CORRECT]
+   b) One dollar
+   c) Three dollars
+
+EX 6 - T/F: Cafe Mar is open on Saturday.
+   a) True
+   b) False   [CORRECT]  (Monday to FRIDAY)
+
+==============================================================
+SECTION C - VOCABULARY & GRAMMAR (4 items)
+==============================================================
+
+EX 7 - Q: 16 = ___
+   a) sixteen   [CORRECT]
+   b) sixty
+   c) six
+
+EX 8 - Q: How much ___ the apples?
+   a) are   [CORRECT]
+   b) is
+   c) am
+
+EX 9 - Q: Can I have ___ apple and ___ tea, please?
+   a) an / a   [CORRECT]
+   b) a / an
+   c) an / an
+
+EX 10 - Q: My sister ___ coffee every morning.
+   a) drinks   [CORRECT]
+   b) drink
+   c) is drink
+
+==============================================================
+SECTION D - SPEAKING (1 item, teacher-graded, async)
+==============================================================
+
+EX 11: Record 20-30 seconds. Cafe roleplay:
+  order 2 things (Can I have..., please - a/an correct),
+  ask the price (How much is it?), and react
+  (cheap! / expensive!).
+  Rubric: polite order / a-an correct / price question /
+  understandable.
+
+==============================================================
+SECTION E - WRITING (1 item, teacher-graded, async)
+==============================================================
+
+EX 12: Write a note for your kitchen table (3-4 sentences):
+  what food and drink there is at home (there is/are - T6),
+  one thing you like, and one price (My juice is two
+  dollars...).
+  Rubric: there is/are correct / like + food word correct /
+  one number word / spelling A1 OK.
+
+Auto-graded pass: 70% (7 of 10). XP: 20.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~25s, 2 speakers, slow)
+- Number chain in audio (4 + 1 = 5) rewards careful
+  listening but EX 3 only asks the total the waiter SAYS
+- Danger-pair options (5/15/50) appear once here and once
+  in Checkpoint 2 - core Unit 2 skill
+- customer/waiter labels are production labels only, never
+  tested
+- Roadmap position: Topic 10 -> MIXED REVIEW D ->
+  CHECKPOINT 2 -> PORTFOLIO TASK 1

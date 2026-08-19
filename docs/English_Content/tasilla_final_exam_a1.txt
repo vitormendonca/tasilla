@@ -1,0 +1,338 @@
+==============================================================
+TASILLA - A1 FINAL EXAM (SUPERVISED, MULTI-FORMAT)
+THE LAST ROADMAP STEP BEFORE THE CERTIFICATE
+==============================================================
+Covers: the full course - Topics 1-20, G1-G12.
+Eligibility: Checkpoints 1-4 passed, Portfolios 1-2
+approved, all five skill-path Final Tests passed.
+
+CERTIFICATION STANDARD (locked):
+- Multi-format: dictation + gap-fill + production, plus
+  listening and reading comprehension
+- PASS = overall score >= 75% AND every section >= 65%
+- Supervised: teacher present (in person or live video),
+  one sitting, ~60 minutes
+- One attempt per sitting; retake after 7+ days; after
+  3 fails, teacher review meeting required
+- No section may be skipped. XP: 100 on pass.
+
+SECTIONS & WEIGHTS (equal - matches the 4-skills-gated
+philosophy, with Use of English as the fifth column):
+  A Listening (incl. 2 dictations)  - 10 items -> %
+  B Reading                         - 10 items -> %
+  C Use of English (gap-fill)       - 10 items -> %
+  D Writing (production)            - rubric /10 -> %
+  E Speaking (production)           - rubric /10 -> %
+  OVERALL = average of the five section percentages.
+
+==============================================================
+SECTION A - LISTENING (10 items; audio in 2 scenes)
+==============================================================
+
+AUDIO SCRIPT (to record - 3 voices,
+file: audio/a1/finalexam_listening.mp3, ~65 sec.
+Scene 1 moderate pace, Scene 2 natural pace):
+
+  SCENE 1 (monologue):
+  Hello! I am Zara. Z - A - R - A. I am 26 years old,
+  and I am from Faro. I am a teacher - I work at a
+  small school next to the park. Every day I go to
+  work by bus, at seven thirty.
+
+  SCENE 2 (dialogue, in a cafe):
+  Man:   Good morning! Can I have a coffee and bread,
+         please? How much is it?
+  Woman: Three dollars. ... Oh, look - it is raining
+         again!
+  Man:   Yes, big rain! And my son is sick at home -
+         he has a headache. I need his medicine. The
+         pharmacy is next to the bank, yes?
+  Woman: Yes, very near. Get well to him! Here - your
+         coffee and bread.
+
+Max plays: 2 per scene.
+
+EX 1 - What is Zara's job?
+   a) Teacher [CORRECT]  b) Doctor  c) Student
+   d) Office worker
+EX 2 - How does she spell her name?
+   a) Z-A-R-A [CORRECT]  b) S-A-R-A  c) Z-A-R-R-A
+   d) Z-E-R-A
+EX 3 - How does Zara go to work, and when?
+   a) By bus at seven thirty [CORRECT]
+   b) By train at seven
+   c) By car at nine thirty
+   d) The audio does not say
+EX 4 - Where is her school?
+   a) Next to the park [CORRECT]  b) Next to the bank
+   c) At the station  d) In Faro center
+EX 5 - What does the man order, and how much is it?
+   a) Coffee and bread - three dollars [CORRECT]
+   b) Tea and bread - three dollars
+   c) Coffee and an apple - thirteen dollars
+   d) The audio does not say
+EX 6 - What is the weather like?
+   a) It is raining [CORRECT]  b) It is snowing
+   c) It is hot and sunny  d) The audio does not say
+EX 7 - What is wrong at home, and what does the man
+   need?
+   a) His son has a headache; he needs medicine from
+      the pharmacy   [CORRECT]
+   b) His son is cold; he needs a jacket
+   c) The man has a headache; he needs a doctor
+   d) The audio does not say
+EX 8 - NOT STATED: How old is the man's son?
+   a) 6  b) 10  c) 16
+   d) The audio does not say [CORRECT]
+EX 9 - DICTATION 1 (type - 6 words)
+   Audio repeats: I go to work by bus.
+   Correct: I go to work by bus
+EX 10 - DICTATION 2 (type - 4 words)
+   Audio repeats: He has a headache.
+   Correct: He has a headache
+(dictations: case-insensitive, ignore punctuation)
+
+Section A score: /10 -> %. Section pass line: 6.5 -> in
+practice 7 of 10.
+
+==============================================================
+SECTION B - READING (10 items; 2 texts)
+==============================================================
+
+TEXT 1 (56 words) - School notice:
+---------------------------------------
+  ENGLISH SCHOOL - NEW STUDENTS WELCOME!
+  Classes: Monday to Friday, at nine in the morning
+  OR at seven at night.
+  One month: forty dollars.
+  We are on Green Street, next to the supermarket.
+  From the station: go straight, and turn left at
+  the bank.
+  Questions? Write to: hello@school.com
+---------------------------------------
+
+EX 1 - Gist: What is this text?
+   a) A notice from an English school [CORRECT]
+   b) A bus timetable
+   c) A job advertisement
+   d) Class notes
+EX 2 - When are the classes?
+   a) Monday to Friday, morning or night [CORRECT]
+   b) Every day at nine
+   c) Weekends only
+   d) The text does not say
+EX 3 - How much is one month?
+   a) Forty dollars [CORRECT]  b) Fourteen dollars
+   c) Nine dollars  d) Four dollars
+EX 4 - Where is the school?
+   a) On Green Street, next to the supermarket
+      [CORRECT]
+   b) Next to the bank
+   c) At the station
+   d) In the supermarket
+EX 5 - From the station, what does a person do?
+   a) Go straight, turn left at the bank [CORRECT]
+   b) Turn right at the supermarket
+   c) Take a bus
+   d) The text does not say
+
+TEXT 2 (76 words) - Personal letter:
+---------------------------------------
+  Hi, Bruno!
+  Greetings from my new life in Porto! I am a student
+  here. I study in the morning, and at night I work
+  at a cafe. I can speak Portuguese AND English at
+  work - good practice!
+  It is autumn now: wind and rain every day. Today I
+  am wearing my new black jacket.
+  My cat, Tuca, sleeps all day. She doesn't like the
+  rain!
+  Do you have news? Write to me!
+  - Alma
+---------------------------------------
+
+EX 6 - Gist: What is this text?
+   a) Alma's letter about her new life [CORRECT]
+   b) A weather report
+   c) A cafe menu
+   d) A school notice
+EX 7 - What does Alma do?
+   a) Studies in the morning, works at a cafe at night
+      [CORRECT]
+   b) Teaches English
+   c) Works at a school
+   d) The text does not say
+EX 8 - What season is it in Porto, and what is the
+   weather like?
+   a) Autumn - wind and rain [CORRECT]
+   b) Winter - snow
+   c) Summer - hot
+   d) Spring - sun
+EX 9 - Grammar: She ___ like the rain.
+   a) doesn't [CORRECT]  b) don't  c) isn't  d) can't
+EX 10 - INFERENCE: Why does Tuca sleep all day?
+   a) It is raining - and a cat loves a warm, dry
+      bed inside [CORRECT]
+   b) She works at night
+   c) She is sick
+   d) She doesn't live with Alma
+
+Section B score: /10 -> %.
+
+==============================================================
+SECTION C - USE OF ENGLISH (10 gap-fill items, tap)
+==============================================================
+
+EX 1 - I ___ 25 years old, and my parents ___ from
+Recife.
+   a) am / are [CORRECT]  b) is / are  c) am / is
+   d) are / am
+EX 2 - This is my ___ car. (the car of my father)
+   a) father's [CORRECT]  b) fathers  c) father
+   d) father is
+EX 3 - ___ two bedrooms, and ___ a big kitchen.
+   a) There are / there is [CORRECT]
+   b) There is / there are
+   c) They are / it is
+   d) There are / there are
+EX 4 - She ___ up at seven, and she ___ to work by
+train.
+   a) gets / goes [CORRECT]  b) get / go
+   c) gets / gos  d) get / goes
+EX 5 - The party is ___ Saturday ___ four o'clock.
+   a) on / at [CORRECT]  b) at / on  c) in / in
+   d) on / in
+EX 6 - Can I have ___ apple and ___ coffee, please?
+   a) an / a [CORRECT]  b) a / an  c) a / a
+   d) an / an
+EX 7 - How much are ___ shoes here? And ___ jacket
+there?
+   a) these / that [CORRECT]  b) this / those
+   c) these / these  d) that / this
+EX 8 - My brother ___ speak English, but he ___ speak
+Italian.
+   a) can / can't [CORRECT]  b) cans / can't
+   c) can / doesn't can  d) can / no can
+EX 9 - ___ you like films? - No, I ___.
+   a) Do / don't [CORRECT]  b) Does / doesn't
+   c) Are / am not  d) Do / doesn't
+EX 10 - It ___ every winter. Look - it ___ right now!
+   a) rains / is raining [CORRECT]
+   b) is raining / rains
+   c) rain / rains
+   d) rains / raining
+
+Section C score: /10 -> %.
+
+==============================================================
+SECTION D - WRITING (production, supervised, ~15 min)
+==============================================================
+
+TASK (typed in app under supervision; if Mode B
+infrastructure is live, teacher MAY set it as
+handwritten + immediate upload):
+
+  Write about YOUR LIFE for a person who does not know
+  you. 10 sentences minimum.
+  Must include:
+  1. Name, age, city (T1-2)
+  2. One family member or friend + description (T3-4)
+  3. Your home (there is/are) (T6)
+  4. Your day: 2 routine verbs + one time expression
+     (T7-8)
+  5. Job or study + one can sentence (T14)
+  6. One hobby + one don't/doesn't sentence (T16)
+  7. The weather right now, with -ing (T17)
+
+SCORING RUBRIC (/10):
+  Content: all 7 points present ........... 0-4 points
+  Grammar: A1 systems correct
+  (to be, have, -s, do-system, -ing) ...... 0-3 points
+  Vocabulary: range across topics ......... 0-2 points
+  Spelling: readable, course words right .. 0-1 point
+
+Section D score: points x 10 -> %. Section pass line:
+6.5/10.
+
+==============================================================
+SECTION E - SPEAKING (production, supervised, ~8 min)
+==============================================================
+
+Run live with the teacher (in person / call) or
+recorded under supervision:
+
+PART 1 - INTERVIEW (teacher asks, student answers in
+full sentences):
+  1. What is your name? Can you spell your first name?
+  2. Where are you from, and how old are you?
+  3. Tell me about your family.
+  4. What do you do every day?
+  5. What is the weather like today?
+  6. Do you like music? What is your hobby?
+
+PART 2 - MONOLOGUE (student speaks 60 seconds; teacher
+picks ONE):
+  A) Your home and your city
+  B) A person you love
+  C) Your perfect Saturday
+
+SCORING RUBRIC (/10):
+  Interview: 6 answers, full sentences .... 0-3 points
+  Monologue: 60s, organized, on topic ..... 0-3 points
+  Grammar range across both parts ......... 0-2 points
+  Pronunciation: understandable (A1) ...... 0-2 points
+
+Section E score: points x 10 -> %. Section pass line:
+6.5/10.
+
+==============================================================
+FINAL SCORING & CERTIFICATE
+==============================================================
+OVERALL = (A% + B% + C% + D% + E%) / 5
+
+PASS RULES (certification standard):
+  - OVERALL >= 75%
+  - AND every single section >= 65%
+  (a 90% reader who scores 50% in speaking does NOT
+  pass - no averaging across the gate)
+
+ON PASS:
+  - Certificate issued: CEFR A1, with the can-do list
+    (Topics 1-20), skill scores, checkpoint record,
+    portfolio evidence links, exam date + supervisor
+  - Handwriting evidence: lesson tasks 2/5/8/9/12/15/
+    17/20 referenced on the certificate trail
+
+ON FAIL:
+  - Section report to student + teacher: which
+    section(s) under 65% / overall under 75%
+  - Targeted revision plan auto-suggested: the failing
+    section's skill path Review 4-6 + relevant mixed
+    reviews
+  - Retake after 7+ days (new exam form: production
+    prompts rotate, audio/text variants B recorded at
+    production time)
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 exam audio (~65s, 3 voices, two scenes) + 2
+  dictation repeats; PLUS a variant-B audio recommended
+  at recording time for retakes
+- All auto-graded items tap-to-answer; dictations are
+  the only typed items - consistent with the whole
+  course
+- Section C is the required gap-fill format; every item
+  maps to a G-number (G1, G2, G5, G7, G9, G3, G4, G11,
+  G8, G10 in order)
+- Supervisor checklist (teacher dashboard): identity
+  confirmed, no notes/apps, one sitting, sections in
+  order A -> E
+- No A2 leakage in any exam item - final verification
+  done against the excluded list: past simple,
+  comparatives, some/any, future forms, present
+  continuous for future
+- THIS COMPLETES THE TASILLA A1 CONTENT SET: 20 topics
+  x 5 skills + 6 review sets + 7 mixed reviews + 4
+  checkpoints + 2 portfolios + 5 final tests + 1 final
+  exam

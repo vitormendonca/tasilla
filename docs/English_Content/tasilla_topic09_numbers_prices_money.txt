@@ -1,0 +1,338 @@
+==============================================================
+TASILLA - A1 CONTENT / TOPIC 9: NUMBERS, PRICES & MONEY
+==============================================================
+Unit 2 - Everyday Life | Difficulty dial: Topics 6-10
+(8 new words, 3 options, audio 4-5 sentences ~30s,
+reading texts 40-50 words, T/F in reading, dictation 5-6
+words, systematic recycling, scaffold fading)
+
+Grammar embedded: HOW MUCH IS / HOW MUCH ARE (singular vs
+plural - extends the T6 is/are agreement work) + plural -s
+recycling (G3). Numbers 13-100 taught as a SET on the intro
+card (precedent: T2 alphabet, T8 days).
+Can-do: Count, understand prices, handle money situations
+Recycles: T6 (table, chair, bed as things with prices),
+T8 (numbers as clock digits), T2 (single-digit numbers),
+T7 (buy/pay join the verb set)
+
+TARGET LANGUAGE
+Words (8): money, price, dollar, cent, cheap, expensive,
+           buy, pay
+Set on intro card: numbers 13-100 (thirteen... twenty,
+           thirty... one hundred), with the THIRTEEN vs
+           THIRTY danger pairs flagged (13/30, 14/40...)
+Phrases:   How much is it? / It is ninety dollars. /
+           How much are the chairs? / That is expensive! /
+           Very cheap! / I pay.
+Structures: How much IS + singular / How much ARE + plural
+            plural -s: one chair -> four chairs
+NOTE: currency word localizable at production time (dollars
+here; reais/euros per market - same audio structure).
+shopping (the activity, shops, sizes) is Topic 11 - here
+the focus is numbers and price language only.
+
+==============================================================
+LESSON 9.1 - VOCABULARY (auto-graded, 8 exercises, all tap)
+==============================================================
+
+Intro card:
+  money = dollars and cents!  |  price = 90 dollars is a price
+  dollar = 1.00  |  cent = 0.01 (100 cents = 1 dollar)
+  cheap = a small price :)  |  expensive = a big price!
+  buy = get a thing with money  |  pay = give the money
+  + set: numbers 13-100 with audio; danger pairs 13/30,
+    14/40, 15/50 flagged
+  + phrase bank: How much is it? | How much are they? |
+    That is expensive!
+
+EX 1 - Word meaning (MC)
+Q: Dollars and cents are ___.
+   a) money   [CORRECT]
+   b) days
+   c) rooms
+Feedback: Money = dollars and cents.
+
+EX 2 - Word meaning (MC)
+Q: The table is 500 dollars! It is very ___.
+   a) expensive   [CORRECT]
+   b) cheap
+   c) hungry
+Feedback: Expensive = a big price. Cheap = a small price.
+
+EX 3 - Gap-fill (tap the missing word)
+Q: I want this book. I ___ it with my money.
+   a) buy   [CORRECT]
+   b) sleep
+   c) study
+Feedback: Buy = get a thing with money.
+
+EX 4 - Gap-fill (tap the missing word)
+Q: The price is ten dollars. I ___ with my card.
+   a) pay   [CORRECT]
+   b) drink
+   c) get up
+Feedback: Pay = give the money.
+
+EX 5 - Number recognition (MC)
+Q: 30 = ___
+   a) thirty   [CORRECT]
+   b) thirteen
+   c) three
+Feedback: thirTEEN = 13. thirTY = 30. Listen for the end!
+
+EX 6 - Dialogue completion (MC)
+Q: A: How much is the chair?  B: ___
+   a) It is fifteen dollars.   [CORRECT]
+   b) It is on Monday.
+   c) There are two chairs.
+Feedback: How much...? asks the PRICE -> answer in dollars.
+
+EX 7 - GRAMMAR: How much is / are (MC)
+Q: How much ___ the bed? How much ___ the chairs?
+   a) is / are   [CORRECT]
+   b) are / is
+   c) is / is
+Feedback: One bed -> IS. Two or more chairs -> ARE.
+
+EX 8 - GRAMMAR: plural -s (MC)
+Q: One chair is cheap. Four ___ are expensive!
+   a) chairs   [CORRECT]
+   b) chair
+   c) chair's
+Feedback: 2, 3, 4... -> add -s. (chair's = of the chair, T3!)
+
+Pass: 70% (6 of 8). XP: 10.
+
+==============================================================
+LESSON 9.2 - LISTENING (auto-graded, 1 audio + 5 exercises)
+==============================================================
+
+AUDIO SCRIPT (to record - 2 speakers, slow, clear pauses,
+file: audio/a1/t09_listening_how_much_is_it.mp3, ~30 sec):
+
+  Man:   Good morning! How much is this table?
+  Woman: It is ninety dollars.
+  Man:   Ninety?! That is expensive! And how much are
+         the chairs?
+  Woman: The chairs are thirteen dollars.
+  Man:   Thirteen? Very cheap! Four chairs, please. I pay
+         with my card.
+
+Max plays: 3.
+
+EX 1 - Gist (MC)
+Q: Where is this conversation?
+   a) In a shop   [CORRECT]
+   b) In a school
+   c) At a birthday party
+
+EX 2 - Detail: number (MC)
+Q: How much is the table?
+   a) Ninety dollars   [CORRECT]
+   b) Nineteen dollars
+   c) Nine dollars
+
+EX 3 - Detail: number danger pair (MC)
+Q: How much are the chairs?
+   a) Thirteen dollars   [CORRECT]
+   b) Thirty dollars
+   c) Three dollars
+Feedback: thirTEEN = 13. Listen for the end of the word!
+
+EX 4 - True / False (MC)
+Q: The table is cheap. True or false?
+   a) True
+   b) False   [CORRECT]  (ninety dollars - expensive!)
+
+EX 5 - DICTATION (type what you hear - 5 words)
+Audio repeats: The chairs are thirteen dollars.
+Correct answer: The chairs are thirteen dollars
+(accept case-insensitive, ignore final punctuation;
+accept 13 for thirteen)
+
+Pass: 70% (4 of 5). XP: 10.
+
+==============================================================
+LESSON 9.3 - READING (auto-graded, 2 texts, 3 questions each)
+==============================================================
+
+TEXT A (42 words) - Shop flyer format:
+---------------------------------------
+  CASA BELA - BIG PRICES? NO! SMALL PRICES!
+  Bed ........ eighty dollars
+  Table ...... forty dollars
+  Chair ...... fifteen dollars
+  All very cheap!
+  We are in the city of Braga.
+  Monday to Saturday, nine o'clock to six o'clock.
+---------------------------------------
+
+EX 1 - Gist (MC)
+Q: What is this text?
+   a) A shop flyer with prices   [CORRECT]
+   b) A birthday invitation
+   c) A week schedule
+
+EX 2 - Detail: number (MC)
+Q: How much is the bed?
+   a) Eighty dollars   [CORRECT]
+   b) Eighteen dollars
+   c) Forty dollars
+
+EX 3 - True / False (MC)
+Q: The chair is expensive. True or false?
+   a) True
+   b) False   [CORRECT]  (fifteen dollars - very cheap!)
+
+TEXT B (48 words) - Chat messages format:
+---------------------------------------
+  Ravi: Mama, I need money for school, please!
+  Mama: Why, Ravi?
+  Ravi: My new English book is twenty dollars.
+  Mama: Twenty? OK, that is not expensive. And your
+        brother's book?
+  Ravi: His book is thirty dollars!
+  Mama: Thirty?! OK, OK. I pay for the two books.
+---------------------------------------
+
+EX 4 - Gist (MC)
+Q: What does Ravi want?
+   a) Money for school books   [CORRECT]
+   b) A new table
+   c) A birthday party
+
+EX 5 - Detail: number danger pair (MC)
+Q: How much is Ravi's book?
+   a) Twenty dollars   [CORRECT]
+   b) Thirty dollars
+   c) Twelve dollars
+Feedback: Ravi's book = 20. His BROTHER'S book = 30 (T3 's!).
+
+EX 6 - Grammar in context (MC)
+Q: Mama says: I ___ for the two books.
+   a) pay   [CORRECT]
+   b) pays
+   c) buy
+Feedback: I pay (no -s with I). Pay = give the money.
+
+Pass: 70% (5 of 6). XP: 10.
+
+==============================================================
+LESSON 9.4 - SPEAKING (teacher-graded, 1 recorded task)
+==============================================================
+
+PROMPT (no example - free stage):
+  Record yourself. You are in a shop (in your head!).
+  Say 4 things:
+  1. Ask the price of one thing: How much is the...?
+  2. Answer with a price: It is ... dollars.
+  3. Say cheap or expensive: That is...!
+  4. Ask about MORE than one thing: How much are the...?
+     (bed, table, chairs, books, phone...)
+
+Max recording: 60 seconds.
+Tip: Say the numbers slowly and clearly - thirTEEN or
+thirTY? Make it easy to hear.
+
+RUBRIC:
+  1. How much is/are matches sing./plural   [ pass / not yet ]
+  2. Prices said with clear numbers         [ pass / not yet ]
+  3. cheap/expensive used correctly         [ pass / not yet ]
+  4. Understandable pronunciation           [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+LESSON 9.5 - WRITING (teacher-graded, MODE B - HANDWRITTEN,
+FREE-WRITE)
+==============================================================
+
+FOURTH PAPER TASK. Student writes BY HAND on paper, then
+uploads a photo / scan / PDF.
+
+TASK: Write a shopping list with prices by hand.
+
+Instructions shown in app:
+  1. On paper, write a list of 5 things you buy (things
+     you know in English: book, table, chair, phone...).
+  2. Write a price for each thing.
+  3. For TWO things, write the price in WORDS
+     (twenty dollars - not 20).
+  4. At the end, write one sentence: The ... is cheap! or
+     The ... is expensive!
+  5. Take a photo and upload it.
+
+Minimum requirements:
+  - 5 items, each with a price
+  - 2 prices written out in words, spelled correctly
+  - 1 cheap/expensive sentence
+
+RUBRIC:
+  1. 5 items with prices, list format       [ pass / not yet ]
+  2. 2 number words spelled correctly       [ pass / not yet ]
+  3. cheap/expensive sentence correct       [ pass / not yet ]
+  4. Handwriting readable (A1 bar)          [ pass / not yet ]
+
+Teacher view: opens image/PDF + rubric side by side.
+Approve / Request redo (+ feedback).
+XP: 15 on submit, +10 on approval.
+
+DEPENDENCY NOTE: requires writing-upload feature. Until
+built, runs temporarily as typed Mode A with the same
+list format.
+
+==============================================================
+REVIEWS - TOPIC 9 CONTRIBUTIONS (completes Review 3 sets)
+==============================================================
+
+VOCABULARY REVIEW 3 - Topic 9 items (final 3 of 9):
+  R1. Q: 15 dollars for a bed? That is very ___!
+      a) cheap [CORRECT]  b) expensive  c) thirsty
+  R2. Q: How much ___ the books?
+      a) are [CORRECT]  b) is  c) am
+  R3. Q: 14 = ___
+      a) fourteen [CORRECT]  b) forty  c) four
+
+LISTENING REVIEW 3 - Topic 9 items (final 3 of 9):
+  New audio line: The phone is fifty dollars. The books are
+  fifteen dollars. I pay sixty-five dollars.
+  R1. How much is the phone? -> fifty [CORRECT] / fifteen / five
+  R2. T/F: The books are fifty dollars. -> False [CORRECT]
+  R3. Dictation: The phone is fifty dollars. (5 words)
+
+READING REVIEW 3 - Topic 9 items (final 3 of 9):
+  Mini-text: SHOP NOTE: Beds - seventy dollars. Chairs -
+  sixteen dollars. Very cheap prices, Monday to Friday!
+  R1. How much are the chairs? -> sixteen [CORRECT] / sixty / six
+  R2. T/F: The shop prices are expensive. -> False [CORRECT]
+  R3. Grammar: How much ___ the bed? -> is [CORRECT]
+
+WITH TOPICS 7+8+9 DONE, ALL FIVE 'REVIEW 3' DOCUMENTS CAN
+NOW BE ASSEMBLED IN FULL (next document).
+
+MIXED REVIEW D (after Topic 10, covers T9-10) - Topic 9
+guarantees: 1 number danger-pair item, 1 How much is/are
+item, 1 price listening detail, dictation candidate:
+The chairs are thirteen dollars.
+
+CHECKPOINT 2 (Unit 2 gate) - Topic 9 items:
+  1 number recognition item (danger pair) + 1 How much
+  is/are item + prices in listening/reading detail.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~30s, 2 speakers) + 1 review line (~10s)
+- Numbers 13-100 need intro-card audio (recorded set, one
+  number per clip, danger pairs recorded twice: 13/30...)
+- Dictation engine: accept digits for number words (13 =
+  thirteen) in dictation only - vocabulary items require
+  the word
+- Currency: dollars in master; localize to reais/euros at
+  production, same scripts
+- card (I pay with my card) = passive exposure, not tested
+- No some/any, no countable/uncountable work (A2): prices
+  use the + noun and numbers only
+- Recycling check: T6 furniture priced; T3 possessive 's
+  drives Text B distractor; T8 o'clock in flyer; T7 need/
+  buy/pay verb pattern

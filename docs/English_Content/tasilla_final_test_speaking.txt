@@ -1,0 +1,104 @@
+==============================================================
+TASILLA - A1 FINAL TESTS / SPEAKING PATH FINAL TEST
+(STEP 27 OF 27 OF THE SPEAKING SKILL PATH)
+==============================================================
+Covers: Topics 1-20. Teacher-graded. Passing (teacher
+approval) completes the Speaking path and finalizes the
+Speaking skill score for the certificate.
+
+DESIGN:
+- 3 recorded parts in ONE session (the app records
+  part by part, then submits together)
+- Mirrors a real A1 oral exam: interview -> description
+  -> monologue
+- Teacher grades a 6-criteria rubric across the 3 parts
+- XP: 30 on submit, +20 on approval
+
+==============================================================
+PART 1 - INTERVIEW (target ~60 seconds)
+==============================================================
+
+The app plays 6 recorded questions, one at a time, with
+a pause for the student's spoken answer after each
+(question audio files:
+audio/a1/finaltest_speaking_q1-q6.mp3, natural pace):
+
+  Q1: Hello! What is your name, and how do you spell it?
+  Q2: How old are you, and where are you from?
+  Q3: Who is in your family? Tell me about one person.
+  Q4: What do you do every day - in the morning and
+      at night?
+  Q5: What is the weather like today?
+  Q6: Do you like sport? What do you do in your free
+      time?
+
+Student instruction: Answer each question in 1-2 full
+sentences. Short answers ('yes') are not enough - show
+your English!
+
+==============================================================
+PART 2 - DESCRIPTION TASK (target ~45 seconds)
+==============================================================
+
+The app shows this scene card (text, no image needed -
+students imagine or use their real life):
+
+  YOUR PERSON: Choose one real person (family or
+  friend). Describe:
+  - name + who they are (his/her!)
+  - what they look like (is + adjective, has + hair/
+    eyes) + one COLOUR
+  - what they are wearing today, if you can see them -
+    or what they wear every day
+  - one thing they can do + one thing they don't do
+
+==============================================================
+PART 3 - MONOLOGUE (target 60+ seconds)
+==============================================================
+
+Choose ONE topic card (the app offers all three):
+  A) MY DAY - morning to night, with times and
+     transport
+  B) MY HOME AND MY CITY - rooms, places, directions
+     to your house
+  C) MY LIFE NOW - job/study, hobbies, your animal or
+     an animal you know
+
+Speak for at least 60 seconds. No reading from notes!
+
+Max total recording (3 parts): 4 minutes.
+
+==============================================================
+RUBRIC (6 criteria, across all 3 parts)
+==============================================================
+  1. Part 1: answers all 6 questions with
+     full sentences                          [ pass / not yet ]
+  2. Part 2: description systems correct
+     (is/has/wearing + colour)               [ pass / not yet ]
+  3. Part 3: fills 60s, organized, on topic  [ pass / not yet ]
+  4. Grammar range: to be, present + -s,
+     do-system, can, one -ing                [ pass / not yet ]
+  5. Vocabulary range: words from 8+
+     different topics across the 3 parts     [ pass / not yet ]
+  6. Understandable throughout (A1 bar: a
+     patient listener follows easily)        [ pass / not yet ]
+
+Approval bar: 5 of 6, criterion 6 mandatory.
+Teacher action: Approve / Request redo of ONE part
+(other parts keep their recording).
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 6 short question audios to record (Q1-Q6, one voice,
+  natural pace, friendly)
+- Engine: multi-part recording session with per-part
+  re-record BEFORE submit; after submit, teacher can
+  request redo per part
+- This test + 20 speaking lessons + 2 portfolios = the
+  speaking evidence trail; the final test is the exam-
+  like sample
+- Rubric criterion 5 operationalizes 'full recycling'
+  for the teacher: 8+ topics is a checkbox, not a count
+  exercise - the dashboard shows the topic list as
+  hints

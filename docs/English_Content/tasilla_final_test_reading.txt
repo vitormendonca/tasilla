@@ -1,0 +1,208 @@
+==============================================================
+TASILLA - A1 FINAL TESTS / READING PATH FINAL TEST
+(STEP 27 OF 27 OF THE READING SKILL PATH)
+==============================================================
+Covers: Topics 1-20. Passing this test completes the
+Reading path and feeds the Reading skill score (gated
+at 70%).
+
+DESIGN:
+- 3 new texts in three real-life formats, difficulty
+  ramping like the course: profile (Units 1-2 language),
+  notice (Unit 3), personal letter (Unit 4 + full
+  recycling)
+- 20 items: 6 + 6 + 8
+- Pass 70% (14 of 20). Attempts: 2, then teacher unlock.
+  XP: 50. Time guide: ~20 minutes, untimed.
+
+==============================================================
+TEXT 1 - PROFILE PAGE (Units 1-2 language, 58 words)
+==============================================================
+---------------------------------------
+  MY PAGE - by Marisa
+  Hello! My name is Marisa, and I am 29 years old. I am
+  from Aveiro. I am a student at night.
+  My family is small: my mother, Ines, and my brother,
+  Nuno. Nuno is tall and very funny.
+  Our apartment has two bedrooms. There is a big table
+  in the kitchen - my favorite place!
+---------------------------------------
+
+EX 1 (T1) - Gist: What is this text?
+   a) Marisa introduces herself and her life  [CORRECT]
+   b) A goodbye note
+   c) A house advertisement
+   d) A birthday invitation
+
+EX 2 (T2) - How old is Marisa?
+   a) 29   [CORRECT]
+   b) 92
+   c) 19
+   d) The text does not say
+
+EX 3 (T3) - Who is Nuno?
+   a) Marisa's brother   [CORRECT]
+   b) Marisa's father
+   c) Marisa's friend
+   d) Marisa's teacher
+
+EX 4 (T4) - What is Nuno like?
+   a) Tall and very funny   [CORRECT]
+   b) Short and nice
+   c) Small, with big eyes
+   d) The text does not describe him
+
+EX 5 (T6) - Where is the big table?
+   a) In the kitchen   [CORRECT]
+   b) In a bedroom
+   c) In the bathroom
+   d) The text does not say
+
+EX 6 (T2) - Grammar: I ___ from Aveiro.
+   a) am   [CORRECT]
+   b) is
+   c) are
+   d) be
+
+==============================================================
+TEXT 2 - STATION NOTICE (Unit 3 language, 62 words)
+==============================================================
+---------------------------------------
+  CITY STATION - INFORMATION
+  Buses today:
+  Faro ........ nine thirty ........ eight dollars
+  Porto ....... ten o'clock ........ thirteen dollars
+  * The ticket office is next to door three. Card or
+    cash!
+  * Is the office closed? Buy your ticket in the app.
+  * The cafe is open seven to seven - turn right at
+    door one.
+  Good travels!
+---------------------------------------
+
+EX 7 - Gist: What is this text?
+   a) Information at a bus station   [CORRECT]
+   b) A cafe menu
+   c) A school notice
+   d) A postcard
+
+EX 8 (T13) - What time is the bus to Faro?
+   a) Nine thirty   [CORRECT]
+   b) Ten o'clock
+   c) Nine o'clock
+   d) The text does not say
+
+EX 9 (T9) - How much is the ticket to Porto?
+   a) Thirteen dollars   [CORRECT]
+   b) Thirty dollars
+   c) Eight dollars
+   d) Three dollars
+
+EX 10 (T12) - Where is the ticket office?
+   a) Next to door three   [CORRECT]
+   b) Next to door one
+   c) In the cafe
+   d) The text does not say
+
+EX 11 (T11) - The ticket office is closed. What can
+you do?
+   a) Buy the ticket in the app   [CORRECT]
+   b) Pay at the cafe
+   c) Travel without a ticket
+   d) Wait for Monday
+
+EX 12 - NOT STATED: How much is a coffee at the
+station cafe?
+   a) One dollar
+   b) Two dollars
+   c) Seven dollars
+   d) The text does not say   [CORRECT]
+
+==============================================================
+TEXT 3 - PERSONAL LETTER (Unit 4 + full recycling,
+78 words)
+==============================================================
+---------------------------------------
+  Hi, Duda!
+  News from my new city! It is winter here - it is
+  snowing right now, and I am wearing my big red
+  jacket in the house. Ha!
+  I work at the hospital now. I can't write every day -
+  but I am happy. On Saturdays I swim, and at night I
+  read.
+  My cat, Mimi, doesn't like the snow. She sleeps all
+  day next to my bed!
+  Do you have news? Write to me!
+  - Carla
+---------------------------------------
+
+EX 13 - Gist: What is this text?
+   a) A letter from Carla about her new life  [CORRECT]
+   b) A weather report
+   c) A job advertisement
+   d) Class notes
+
+EX 14 (T17) - What is the weather like there right now?
+   a) It is snowing   [CORRECT]
+   b) It is raining
+   c) It is hot
+   d) The text does not say
+
+EX 15 (T18) - What is Carla wearing?
+   a) A big red jacket   [CORRECT]
+   b) A blue dress
+   c) Black shoes
+   d) A white shirt
+
+EX 16 (T14) - Where does Carla work now?
+   a) At the hospital   [CORRECT]
+   b) At a school
+   c) At the pharmacy
+   d) The text does not say
+
+EX 17 (T16) - What does Carla do on Saturdays?
+   a) She swims   [CORRECT]
+   b) She reads
+   c) She works
+   d) She sleeps all day
+
+EX 18 (T20) - Who is Mimi?
+   a) Carla's cat   [CORRECT]
+   b) Carla's sister
+   c) Carla's dog
+   d) Duda's cat
+
+EX 19 - INFERENCE: Why is Carla wearing a big jacket
+IN THE HOUSE?
+   a) The house is very cold in winter   [CORRECT]
+   b) She is going out
+   c) Red is her favorite colour
+   d) The jacket is new
+
+EX 20 (T16/T20) - Grammar: My cat ___ like the snow.
+   a) doesn't   [CORRECT]
+   b) don't
+   c) isn't
+   d) can't not
+
+==============================================================
+SCORING & PATH COMPLETION
+==============================================================
+Pass: 70% (14 of 20). XP: 50.
+On pass: Reading path complete (27/27); Reading skill
+  score finalized for the certificate.
+On fail: as other final tests (2 attempts, weakest-text
+  revision advice, then teacher unlock).
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- No audio needed
+- Three formats echo the course's recurring genres:
+  profile (T1/T2), notice/timetable (T9/T11/T13),
+  personal letter (T17-20) - familiar shapes, new
+  content
+- Danger pair 13/30 in EX 9; inference and not-stated
+  each appear once
+- Anti-nonsense rule: Marisa/Ines/Nuno, Carla/Duda/Mimi
+  options all from their texts

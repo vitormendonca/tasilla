@@ -1,0 +1,129 @@
+==============================================================
+TASILLA - A1 REVIEWS / MIXED REVIEW B (ROADMAP ONLY)
+COVERS TOPICS 4-5
+==============================================================
+Topics covered: 4 Describing People / 5 Feelings & States
+Grammar covered: to be full paradigm (all persons, questions,
+negatives, short answers), have/has for features
+Position in roadmap: after Topic 5, before Checkpoint 1
+
+DESIGN (template = Mixed Review A):
+- 12 items: 3 listening + 3 reading + 4 vocabulary/grammar +
+  1 speaking + 1 writing (teacher-graded, async)
+- All content NEW - never copies of lesson items
+- Auto-graded part gates progression (pass 70% = 7 of 10);
+  speaking/writing async, never block the roadmap
+- XP 20
+
+==============================================================
+SECTION A - LISTENING (3 items, 1 new audio ~20s)
+==============================================================
+
+AUDIO SCRIPT (to record - 1 speaker, slow,
+file: audio/a1/mixrevB_listening.mp3):
+
+  Hello! My name is Iva. | This is my friend Gustavo. |
+  He is tall and he has short hair. | He is tired today,
+  but he is very happy!
+
+EX 1 - Who is Gustavo?
+   a) Iva's friend   [CORRECT]
+   b) Iva's brother
+   c) Iva's father
+
+EX 2 - What does Gustavo look like?
+   a) Tall, with short hair   [CORRECT]
+   b) Short, with long hair
+   c) The audio does not describe him
+
+EX 3 - T/F: Gustavo is sad today.
+   a) True
+   b) False   [CORRECT]  (tired, but very HAPPY)
+
+==============================================================
+SECTION B - READING (3 items, 1 new mini-text)
+==============================================================
+
+Text (33 words) - Social post format:
+---------------------------------------
+  Hi! I am Nilo. I am short and I have big eyes.
+  Today I am very happy - my sister is here!
+  Her name is Vane. She is tall and very nice.
+---------------------------------------
+
+EX 4 - Gist: What is this text?
+   a) Nilo describes himself and his sister   [CORRECT]
+   b) A goodbye message
+   c) A registration form
+
+EX 5 - Who is Vane?
+   a) Nilo's sister   [CORRECT]
+   b) Nilo's friend
+   c) Nilo's mother
+
+EX 6 - What does Vane look like?
+   a) She is tall   [CORRECT]
+   b) She is short
+   c) She has big eyes
+
+==============================================================
+SECTION C - VOCABULARY & GRAMMAR (4 items)
+==============================================================
+
+EX 7 - Q: I ___ short hair. My mother ___ long hair.
+   a) have / has   [CORRECT]
+   b) has / have
+   c) have / have
+
+EX 8 - Q: A: ___ you hungry?  B: Yes, I ___.
+   a) Are / am   [CORRECT]
+   b) Is / are
+   c) Are / is
+
+EX 9 - Q: You need water. You are ___.
+   a) thirsty   [CORRECT]
+   b) hungry
+   c) tall
+
+EX 10 - Q: My parents ___ very nice.
+   a) are   [CORRECT]
+   b) is
+   c) am
+
+==============================================================
+SECTION D - SPEAKING (1 item, teacher-graded, async)
+==============================================================
+
+EX 11: Record 20-30 seconds. Choose ONE person you know.
+  Say: who they are + name (T3), what they look like
+  (is + adjective, has + hair/eyes - T4), and how they are
+  today (feeling word - T5).
+  Rubric: describes appearance / gives a feeling /
+  to be + have/has correct / understandable.
+
+==============================================================
+SECTION E - WRITING (1 item, teacher-graded, async)
+==============================================================
+
+EX 12: A friend writes to you:
+  Hi! How are you today? And what does your best friend
+  look like?
+  Reply in 3-4 sentences (2 feeling words about you + 2
+  description sentences about your friend with is/has).
+  Rubric: replies to both questions / is + adjective and
+  has + feature correct / spelling A1 OK.
+
+Auto-graded pass: 70% (7 of 10). XP: 20.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~20s, 1 speaker, slow)
+- Anti-nonsense rule: name options (Iva, Gustavo, Nilo, Vane)
+  exist in the audio/text; distractor roles only from the
+  same audio/text
+- EX 6 distractor c) She has big eyes is Nilo's feature, not
+  Vane's - tests careful reading, all words from the text
+- Roadmap position: Topic 5 -> MIXED REVIEW B -> CHECKPOINT 1
+- Together with Mixed Review A, closes Unit 1 integration
+  before the hard gate

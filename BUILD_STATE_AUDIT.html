@@ -1,0 +1,607 @@
+<title>TASILLA Build State</title>
+<style>
+  :root {
+    --paper:      #FBFBFC;
+    --surface:    #FFFFFF;
+    --surface-2:  #F3F5F8;
+    --ink:        #14181F;
+    --ink-2:      #3D4756;
+    --muted:      #6B7686;
+    --rule:       #DCE1E8;
+    --rule-soft:  #E9ECF1;
+    --accent:     #1F5F8B;
+    --accent-2:   #16455F;
+    --good:       #2E7D5B;
+    --warn:       #9A6B12;
+    --bad:        #A93226;
+    --good-bg:    #EAF3EE;
+    --warn-bg:    #F8F1E2;
+    --bad-bg:     #F8ECEA;
+    --shadow:     0 1px 2px rgba(20,24,31,.05), 0 8px 24px -12px rgba(20,24,31,.12);
+
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
+    --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+    --mono:  "Cascadia Mono", "SF Mono", "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #0E1116;
+      --surface:   #161B22;
+      --surface-2: #1C222B;
+      --ink:       #E6EAF0;
+      --ink-2:     #B4BECC;
+      --muted:     #8592A3;
+      --rule:      #2A323D;
+      --rule-soft: #222932;
+      --accent:    #6FB2DC;
+      --accent-2:  #9BCCEB;
+      --good:      #5FBE92;
+      --warn:      #D8A93F;
+      --bad:       #E2726A;
+      --good-bg:   #14261F;
+      --warn-bg:   #262013;
+      --bad-bg:    #2A1817;
+      --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:     #0E1116;
+    --surface:   #161B22;
+    --surface-2: #1C222B;
+    --ink:       #E6EAF0;
+    --ink-2:     #B4BECC;
+    --muted:     #8592A3;
+    --rule:      #2A323D;
+    --rule-soft: #222932;
+    --accent:    #6FB2DC;
+    --accent-2:  #9BCCEB;
+    --good:      #5FBE92;
+    --warn:      #D8A93F;
+    --bad:       #E2726A;
+    --good-bg:   #14261F;
+    --warn-bg:   #262013;
+    --bad-bg:    #2A1817;
+    --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.62;
+    margin: 0;
+    padding: 0 24px 96px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .measure { max-width: 68ch; }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    padding: 56px 0 28px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(34px, 5.4vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .standfirst {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2.2vw, 20px);
+    line-height: 1.5;
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  /* ---------- verdict ---------- */
+  .verdict {
+    margin: 32px 0 0;
+    padding: 22px 24px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+  }
+  .verdict p { margin: 0; }
+  .verdict p + p { margin-top: 12px; }
+
+  /* ---------- sections ---------- */
+  section { padding-top: 56px; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 27px;
+    letter-spacing: -.01em;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .sec-note {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 650;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 32px 0 12px;
+  }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  code, .mono {
+    font-family: var(--mono);
+    font-size: .875em;
+    background: var(--surface-2);
+    border: 1px solid var(--rule-soft);
+    border-radius: 3px;
+    padding: .1em .38em;
+    word-break: break-word;
+  }
+
+  /* ---------- metric strip ---------- */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .metric { background: var(--surface); padding: 16px 18px; }
+  .metric .n {
+    font-family: var(--serif);
+    font-size: 30px;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+    display: block;
+  }
+  .metric .l {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.35;
+    display: block;
+    margin-top: 5px;
+  }
+  .metric.is-bad .n  { color: var(--bad); }
+  .metric.is-warn .n { color: var(--warn); }
+  .metric.is-good .n { color: var(--good); }
+
+  /* ---------- findings ---------- */
+  .finding {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--muted);
+    border-radius: 3px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+  }
+  .finding.sev-crit { border-left-color: var(--bad); }
+  .finding.sev-high { border-left-color: var(--warn); }
+  .finding.sev-med  { border-left-color: var(--accent); }
+
+  .f-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .f-title {
+    font-weight: 650;
+    font-size: 16px;
+    letter-spacing: -.005em;
+    flex: 1 1 auto;
+    min-width: 200px;
+  }
+  .pill {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 100px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .pill.crit { background: var(--bad-bg);  color: var(--bad); }
+  .pill.high { background: var(--warn-bg); color: var(--warn); }
+  .pill.med  { background: var(--surface-2); color: var(--accent); }
+  .pill.ok   { background: var(--good-bg); color: var(--good); }
+
+  .finding p { font-size: 15px; margin: 0 0 10px; }
+  .finding p:last-child { margin-bottom: 0; }
+  .f-fix {
+    font-size: 14px;
+    color: var(--ink-2);
+    border-top: 1px dashed var(--rule);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+  .f-fix strong {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  /* ---------- tables ---------- */
+  .scroll { overflow-x: auto; margin-bottom: 20px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    min-width: 480px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 14px 9px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  th {
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+
+  /* ---------- lists ---------- */
+  ul.clean { list-style: none; padding: 0; margin: 0 0 16px; }
+  ul.clean li {
+    padding: 7px 0 7px 22px;
+    position: relative;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 15px;
+  }
+  ul.clean li:last-child { border-bottom: none; }
+  ul.clean li::before {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  ul.clean li.yes::before { content: "✓"; color: var(--good); }
+  ul.clean li.no::before  { content: "✗"; color: var(--bad); }
+  ul.clean li.part::before{ content: "~"; color: var(--warn); }
+
+  ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; }
+  ol.steps > li {
+    counter-increment: s;
+    position: relative;
+    padding: 0 0 18px 44px;
+    border-left: 1px solid var(--rule);
+    margin-left: 13px;
+  }
+  ol.steps > li:last-child { border-left-color: transparent; padding-bottom: 0; }
+  ol.steps > li::before {
+    content: counter(s);
+    position: absolute;
+    left: -13px;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--surface);
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+  }
+  ol.steps .st { font-weight: 650; display: block; margin-bottom: 3px; }
+  ol.steps .sd { font-size: 14.5px; color: var(--ink-2); }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <span class="eyebrow">Project audit · 19 August 2026 · In progress</span>
+    <h1>TASILLA: what's built, what broke</h1>
+    <p class="standfirst">A full read of the Flutter A1-certification app — the committed history, the large uncommitted rewrite sitting in the working tree, and the issues standing between it and a certificate that can actually be issued. <strong>Two of ten resolved.</strong></p>
+  </header>
+
+  <div class="verdict">
+    <p><strong>Done:</strong> <code>web/</code> restored, so the build is unblocked. All 40 audio files generated and casting verified against the comprehension questions.</p>
+    <p><strong>Next:</strong> the missing content generator, and the 14 deleted tests — which is what would have caught the audio defects automatically.</p>
+    <p><strong>Still uncommitted:</strong> the 149 JSON lessons, the verification page, 13.2 MB of new audio, and the generator. All of it lives in one working tree with no backup.</p>
+  </div>
+
+  <section>
+    <h2>At a glance</h2>
+    <p class="sec-note">Counts taken directly from the working tree and the live Supabase project.</p>
+
+    <div class="metrics">
+      <div class="metric"><span class="n">18</span><span class="l">commits, 9–20 Jul 2026</span></div>
+      <div class="metric"><span class="n">89</span><span class="l">Dart files · 25,690 lines</span></div>
+      <div class="metric"><span class="n">149</span><span class="l">JSON lessons (new, uncommitted)</span></div>
+      <div class="metric is-bad"><span class="n">79</span><span class="l">tracked files deleted, uncommitted</span></div>
+      <div class="metric is-bad"><span class="n">0</span><span class="l">tests remaining (was 14)</span></div>
+      <div class="metric is-bad"><span class="n">40</span><span class="l">audio files referenced but missing</span></div>
+      <div class="metric is-warn"><span class="n">0</span><span class="l">rows in all 7 live DB tables</span></div>
+      <div class="metric is-good"><span class="n">800</span><span class="l">graded questions authored</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What has been built</h2>
+    <p class="sec-note">Committed work, 9–20 July 2026. All of this is real and in <code>main</code>.</p>
+
+    <h3>Learning &amp; assessment</h3>
+    <ul class="clean">
+      <li class="yes">Scored, gated quizzes — a lesson only completes at ≥ 70%, enforced in <code>interactive_quiz_section.dart</code></li>
+      <li class="yes">Grading for multiple-choice, true/false, dictation and free-text answers (case- and space-normalised)</li>
+      <li class="yes">Single-skill lesson separation — a listening lesson renders only listening, no cross-skill bleed</li>
+      <li class="yes">Audio player with asset-existence fallback, so a missing file degrades instead of crashing</li>
+      <li class="yes">Roadmap, per-skill paths, unlock gating, placement test, level tracks</li>
+    </ul>
+
+    <h3>Evidence &amp; the certificate loop</h3>
+    <ul class="clean">
+      <li class="yes">Students record speaking submissions in-app (web + native, <code>record</code> package)</li>
+      <li class="yes">Students hand in writing typed or as a photographed page</li>
+      <li class="yes">Teacher review queue — listen, read, approve or request a redo</li>
+      <li class="yes">Four-skill scoring with a 70% independent threshold per skill</li>
+      <li class="yes">Teacher certificate sign-off screen</li>
+      <li class="yes">Certificate issuing with a public human-readable code (<code>TSL-A1-…</code>)</li>
+    </ul>
+
+    <h3>Backend</h3>
+    <ul class="clean">
+      <li class="yes">Live Supabase project <code>tasilla project</code>, healthy, Postgres 17 — 7 tables, RLS on all</li>
+      <li class="yes">Student login derives real Supabase credentials from an access code, so <code>auth.uid()</code> is populated and RLS actually applies</li>
+      <li class="yes">A DB check constraint (<code>four_skill_minimum</code>) makes a sub-standard certificate row physically impossible</li>
+      <li class="yes">A trigger stops a student writing their own <code>approved</code> status — self-certification is blocked at the database, not just the UI</li>
+      <li class="yes">Anon-readable policy on non-revoked certificates, which is what makes public verification possible</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The latest changes</h2>
+    <p class="sec-note">Everything below post-dates the last commit and lives only in the working tree. 10 files modified, 9 added, 79 deleted.</p>
+
+    <h3>1 — The course content was completely replaced</h3>
+    <p>The 2,972-line generated Dart seed (<code>a1_learning_experience_data.dart</code>) has been swapped for 149 authored JSON files in <code>assets/content/a1/</code>, loaded at boot through a new <code>a1_content_loader.dart</code> and a generated manifest. All seven consumers were rewired; ID parsing gained a TASILLA branch (<code>A1-T01-VOC</code>) with the legacy <code>A1-EXP-001</code> scheme kept as a fallback.</p>
+
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Content type</th><th>Count</th><th>Composition</th></tr></thead>
+        <tbody>
+          <tr><td>Core activities</td><td class="num">100</td><td>20 topics × 5 skills</td></tr>
+          <tr><td>Reviews</td><td class="num">42</td><td>6 review sets × 5 skills, 7 mixed reviews, 5 final skill tests</td></tr>
+          <tr><td>Checkpoints</td><td class="num">4</td><td>one per unit</td></tr>
+          <tr><td>Portfolio tasks</td><td class="num">2</td><td></td></tr>
+          <tr><td>Final exam</td><td class="num">1</td><td></td></tr>
+          <tr><td><strong>Total</strong></td><td class="num"><strong>149</strong></td><td>800 questions — 735 multiple-choice, 36 dictation, 29 true/false</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>This is genuinely good content: real speaking rubrics with four scored criteria, per-question explanations, phrase banks, embedded grammar. And it quietly completes most of <em>Phase 3</em> of the roadmap, which was scheduled for v1.2. The counts in <code>level_track_data.dart</code> were updated to match the new content exactly.</p>
+
+    <h3>2 — The public verification page was built</h3>
+    <p><code>verify_certificate_screen.dart</code> (472 lines) plus hash-based routing in <code>main.dart</code>, so <code>#/verify/TSL-A1-XXXXX</code> resolves with no login and no server rewrites — deliberately chosen to survive GitHub Pages. It shows level, scores, issuing teacher and the proven can-do statements. <strong>This was the roadmap's single named Phase 0 blocker.</strong></p>
+
+    <h3>3 — Student home screen rebuilt</h3>
+    <p>Skill cards went from a fixed 1.5-ratio grid to a responsive layout that collapses to one column under 700px. Each card now shows a four-step window anchored on the student's current step, with lock/current/done states, and the current lesson opens directly from the card.</p>
+
+    <h3>4 — Schema documentation verified against production</h3>
+    <p><code>docs/supabase_schema.md</code> was rewritten from a 5-table description to the real 7-table state, with 33 RLS policies, storage bucket policies and the review-authority trigger all documented as verified live on 17 July.</p>
+
+    <h3>5 — Two new specs, nothing built</h3>
+    <p><code>docsv2/</code> adds a gamification spec (streaks, XP, map-based leagues, pets) and a teacher fidelity spec (tiers, public teacher pages, content feedback loop). Both are explicitly marked as documented-for-later.</p>
+  </section>
+
+  <section>
+    <h2>What is missing or broken</h2>
+    <p class="sec-note">Ranked by what blocks issuing a real certificate. Every item below was verified directly, not inferred.</p>
+
+    <div class="finding sev-med">
+      <div class="f-head"><span class="f-title">✓ RESOLVED: The web build was blocked — <code>web/</code> has been restored</span><span class="pill ok">Resolved</span></div>
+      <p>All 7 files in <code>web/</code> have been restored from git: <code>index.html</code> (customised Flutter entry with <code>$FLUTTER_BASE_HREF</code> placeholder), <code>manifest.json</code> (PWA config), and 5 icon variants.</p>
+      <p><strong>Status:</strong> <code>git checkout -- web/</code> executed. Files verified intact. Web build is now unblocked.</p>
+      <div class="f-fix"><strong>Next step:</strong> Run <code>flutter pub get</code> and <code>flutter build web --release</code> to verify the build completes (Flutter not available on current machine, so not yet tested).</div>
+    </div>
+
+    <div class="finding sev-med">
+      <div class="f-head"><span class="f-title">✓ RESOLVED: all 40 audio files generated</span><span class="pill ok">Resolved</span></div>
+      <p><strong>40 of 40 content references now resolve.</strong> 13.2 MB in <code>assets/audio/a1/</code>, generated from the authored scripts via <code>generate_a1_audio.py</code>.</p>
+
+      <p>Cast, after the stock ElevenLabs voices were rejected for sounding like
+      generic AI narration:</p>
+      <ul style="margin: 10px 0; padding-left: 24px;">
+        <li><strong>Nichalia</strong> — narrator, carries 12 of the 16 monologues</li>
+        <li><strong>Brian</strong> — male dialogue</li>
+        <li><strong>Alice</strong> — second female; the exam needs Zara and Woman tellable apart</li>
+        <li><strong>Robert</strong> — spare</li>
+      </ul>
+
+      <p>Five defects in the first version of the generator were found and fixed
+      before the full run, all of which would have shipped silently:</p>
+      <ul style="margin: 10px 0; padding-left: 24px;">
+        <li><strong>Stage directions read aloud</strong> — a voice would have announced
+            "SCENE ONE MONOLOGUE" inside the final exam</li>
+        <li><strong>Exam voices inverted</strong> — voices were assigned by order of
+            appearance, so Zara was male and the Man was female, contradicting every
+            gendered question in the exam</li>
+        <li><strong>Four male narrators voiced female</strong> — T03, R1, R6, CP2;
+            R1 asks "How does <em>he</em> spell <em>his</em> name?"</li>
+        <li><strong>Every 2-speaker dialogue got 3 voices</strong> — wrapped lines were
+            parsed as a new person</li>
+        <li><strong>The final test is two separate recordings</strong>, not one — Part B's
+            eleven questions carry their own <code>audioPath</code> and had no audio</li>
+      </ul>
+
+      <p>Delivery settings were also wrong: <code>stability</code> was 0.70, which is the
+      high-consistency end and reads as monotone. Now 0.40 with <code>style</code> 0.30, and
+      each dialogue turn is rendered with <code>previous_text</code>/<code>next_text</code>
+      so intonation carries across the conversation.</p>
+
+      <div class="f-fix"><strong>Remaining</strong>Listen to <code>finalexam_listening.mp3</code> and <code>t03_listening_my_family.mp3</code> to confirm casting in context. The 28 orphaned <code>a1_exp_*.mp3</code> files from the old content scheme are now unreferenced and can be removed in their own commit.</div>
+    </div>
+
+    <div class="finding sev-crit">
+      <div class="f-head"><span class="f-title">The content generator is not in the repo</span><span class="pill crit">Critical</span></div>
+      <p>Both <code>a1_content_loader.dart</code> and the manifest header name <code>tools/convert_tasilla_content.py</code> as the generator for all 149 JSON files. There is no <code>tools/</code> directory, and the script exists nowhere in the project. The old <code>tool/</code> directory was deleted too.</p>
+      <p>The manifest is marked "GENERATED — do not edit by hand", so the course content is currently unregenerable and only hand-editable against that instruction.</p>
+      <div class="f-fix"><strong>Fix</strong>Recover the script and commit it alongside the JSON, or delete the generated-file headers and accept the JSON as hand-authored source.</div>
+    </div>
+
+    <div class="finding sev-crit">
+      <div class="f-head"><span class="f-title">All 14 tests were deleted</span><span class="pill crit">Critical</span></div>
+      <p>The entire <code>test/</code> directory is gone from disk, including <code>certificate_service_test.dart</code>, <code>certificate_evidence_test.dart</code>, <code>learning_step_score_gate_test.dart</code> and <code>submission_service_test.dart</code>.</p>
+      <p>The timing is the problem: coverage vanished in the same working tree where the content foundation underneath the certificate gate was swapped. The tests that would have caught the scope change below are exactly the ones removed.</p>
+      <div class="f-fix"><strong>Fix</strong><code>git checkout -- test/</code>, then run them. Expect real failures — several assert against <code>A1-EXP-</code> IDs that no longer exist. Those failures are the audit.</div>
+    </div>
+
+    <div class="finding sev-high">
+      <div class="f-head"><span class="f-title">The certificate bar silently jumped from 20 lessons to 100</span><span class="pill high">High</span></div>
+      <p><code>certificate_service.dart:139</code> still reads <code>launchScope = 20</code> with the comment "the launch course is lessons 001–020". But <code>_coreNumber()</code> now returns the <em>topic</em> number for TASILLA IDs, so topics 1–20 match all 100 core lessons.</p>
+      <p>The gate now requires: 100 completed core lessons, 20 teacher-approved speaking submissions and 20 teacher-approved writing submissions. The roadmap still says the MVP "honestly ships at the lower number the 20 lessons allow" and lists raising the bar to 10 speaking + 10 writing as future Phase 3 work.</p>
+      <p>The new bar is arguably the right one — it is the requirement getting there by accident, through a constant whose meaning changed underneath it, that is the risk.</p>
+      <div class="f-fix"><strong>Fix</strong>Decide the intended bar, then make it explicit. If 100 lessons is right, rename the constant and update the comment, the roadmap and the certification standard together.</div>
+    </div>
+
+    <div class="finding sev-high">
+      <div class="f-head"><span class="f-title">The final exam exists as content but is not part of the gate</span><span class="pill high">High</span></div>
+      <p><code>A1-EXAM.json</code> ships in the new content. But <code>evaluate()</code> builds five criteria — core lessons, listening, reading, speaking, writing — and none of them is the exam. On the database side, the <code>≥ 0.75</code> check on <code>certificates.final_exam_score</code> was removed by the Piece 5 migration and the column left nullable.</p>
+      <p>The project's own definition of done, in <code>mvp_spec.md §7</code>, reads: "…and the exam is passed." As it stands a certificate can issue without one.</p>
+      <div class="f-fix"><strong>Fix</strong>Add an exam criterion to <code>evaluate()</code> and restore the DB constraint — the statements are already written and commented at the foot of <code>mvp_piece5_certificate_gate.sql</code>.</div>
+    </div>
+
+    <div class="finding sev-high">
+      <div class="f-head"><span class="f-title">The base schema cannot be rebuilt from the repo</span><span class="pill high">High</span></div>
+      <p><code>supabase/migrations/</code> and <code>supabase/seed.sql</code> were deleted from disk. What survives is two loose SQL files in <code>docs/</code> covering submissions and the certificate gate. The schema doc names <code>tasilla_supabase_schema_v2.sql</code> as the origin of the five base tables — that file exists nowhere in the project, and the live database reports only one tracked migration.</p>
+      <p>The production database is fine. Reproducing it — a staging copy, a rebuild, a second environment — currently is not possible from source.</p>
+      <div class="f-fix"><strong>Fix</strong>Restore <code>supabase/</code> from git, then dump the live schema and reconcile, so the checked-in migrations describe what actually exists.</div>
+    </div>
+
+    <div class="finding sev-med">
+      <div class="f-head"><span class="f-title">The live database has never held a row</span><span class="pill med">Medium</span></div>
+      <p>All 7 tables report 0 rows. No students provisioned, no submissions, no certificates. The roadmap's second Phase 0 item — "run the loop end-to-end on real data" — has not started, and every claim about the review-and-issue loop is therefore untested against production.</p>
+      <div class="f-fix"><strong>Fix</strong>Provision one student and one teacher per <code>provisioning_students.md</code> and walk the full loop once. Do this after the audio and web-build fixes, or the run will stall on listening.</div>
+    </div>
+
+    <div class="finding sev-med">
+      <div class="f-head"><span class="f-title">2,972 lines of dead content code</span><span class="pill med">Medium</span></div>
+      <p><code>a1_learning_experience_data.dart</code> is now imported by nothing — the loader's own comment says it is "kept on disk, no longer referenced". It is the largest file in the project. <code>docs/orphaned_content_a1.md</code> deliberately preserves language material inside it, so this needs a decision rather than a delete.</p>
+      <div class="f-fix"><strong>Fix</strong>Harvest the orphaned audio scripts and reading passages into the new JSON topics they belong to, then remove the file.</div>
+    </div>
+
+    <div class="finding sev-med">
+      <div class="f-head"><span class="f-title">Documentation describes a project that no longer exists</span><span class="pill med">Medium</span></div>
+      <p>The README documents <code>supabase/</code>, <code>tool/verify_learning_path.dart</code> and validation commands that all point at deleted paths, and describes a 60-activity roadmap that the content swap replaced. <code>estrutura.txt</code> is a stale directory listing from a different machine (<code>C:\USERS\VITOR\…</code>). The roadmap still lists the verification page as not built.</p>
+      <div class="f-fix"><strong>Fix</strong>Update the roadmap first — it is the file that claims to be the source of truth for what's next, and it is currently wrong in both directions.</div>
+    </div>
+
+    <div class="finding">
+      <div class="f-head"><span class="f-title">Not verified: whether the project compiles</span><span class="pill ok">Note</span></div>
+      <p>Flutter is not on this machine's PATH, so <code>flutter analyze</code> could not be run. Import rewiring and content-schema alignment were checked by reading; the type coverage of the new JSON against <code>LearningExperience.fromJson</code> looks correct, and all three question types used by the content (<code>multipleChoice</code>, <code>trueFalse</code>, <code>dictation</code>) are both parsed and graded. But compile-cleanliness is unconfirmed and should be the first thing checked.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Roadmap reconciliation</h2>
+    <p class="sec-note">The roadmap was last updated 15 July. Four of its judgements are now wrong.</p>
+
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Roadmap says</th><th>Actually</th></tr></thead>
+        <tbody>
+          <tr><td>Verification page — <strong>not built</strong></td><td>Built, 472 lines, routed. Uncommitted.</td></tr>
+          <tr><td>Phase 3 content depth — <strong>v1.2, far off</strong></td><td>Largely done. 20 topics × 5 skills authored.</td></tr>
+          <tr><td>Certificate ships at a lowered bar</td><td>Bar is now 100 lessons + 20 + 20, by accident.</td></tr>
+          <tr><td>Audio integrity — <strong>needs fixing</strong></td><td>Regressed from partial to zero coverage.</td></tr>
+          <tr><td>End-to-end run on real data — <strong>not done</strong></td><td>Still accurate. Database is empty.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Suggested order of work</h2>
+    <p class="sec-note">Restore first, then verify, then decide. The uncommitted work is valuable and currently unprotected.</p>
+
+    <ol class="steps">
+      <li>
+        <span class="st">Protect the new work before touching anything else</span>
+        <span class="sd">149 JSON lessons, the verification page and the home-screen rebuild exist in exactly one place: this working tree, uncommitted. Commit them on a branch now.</span>
+      </li>
+      <li>
+        <span class="st">Restore the 79 deletions</span>
+        <span class="sd"><code>git checkout -- web/ test/ supabase/ tool/ scripts/ macos/ windows/ linux/</code>. If some were deliberate — dropping macOS and Windows targets is a reasonable call — delete them in a commit that says so, rather than leaving them as working-tree noise.</span>
+      </li>
+      <li>
+        <span class="st">Run <code>flutter analyze</code> and the restored tests</span>
+        <span class="sd">The first honest signal on whether the content swap actually holds. Expect ID-scheme failures; they are the change list.</span>
+      </li>
+      <li>
+        <span class="st">Fix the audio</span>
+        <span class="sd">40 files. Until this is done, listening cannot be scored honestly, and listening is a quarter of the certificate.</span>
+      </li>
+      <li>
+        <span class="st">Decide the certificate bar deliberately</span>
+        <span class="sd">100 lessons + 20 speaking + 20 writing, or something lower. Then align the constant, its comment, the roadmap and the certification standard — and add the final exam to the gate.</span>
+      </li>
+      <li>
+        <span class="st">Run the loop once, on real data</span>
+        <span class="sd">One student, one teacher, all the way to a resolving verify link. This is the only thing that turns the definition of done from a paragraph into a fact.</span>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    Audit of <code>speaknation_appia</code> · working tree at 19 Aug 2026, 18 commits deep, <code>main</code> · live Supabase project <code>dgkstqbrclbmrudailfz</code>, healthy, 7 tables, empty. · <strong>Resolved:</strong> web/ restored · 40/40 audio generated.
+  </footer>
+
+</div>

@@ -1,0 +1,102 @@
+==============================================================
+TASILLA - A1 FINAL TESTS / WRITING PATH FINAL TEST
+(STEP 27 OF 27 OF THE WRITING SKILL PATH)
+==============================================================
+Covers: Topics 1-20. Teacher-graded. Passing (teacher
+approval) completes the Writing path and finalizes the
+Writing skill score for the certificate.
+
+DESIGN:
+- 2 tasks in ONE session, mirroring the course's two
+  writing worlds: a practical form/message task + a
+  free personal text
+- Task 1 typed; Task 2 HANDWRITTEN and uploaded (the
+  certificate claims handwritten ability - the final
+  test proves it one last time). If the upload feature
+  is not live, both run typed (flag on certificate
+  evidence).
+- Teacher grades a 6-criteria rubric across both tasks
+- XP: 30 on submit, +20 on approval
+
+==============================================================
+TASK 1 - PRACTICAL WRITING (typed, ~10 minutes)
+==============================================================
+
+Situation shown in app:
+  You are sick today, and you have an English class at
+  the school this afternoon. Write a message to your
+  teacher (5-6 sentences):
+  - say you are sick + ONE symptom (have + ...)
+  - say what you can't do
+  - one sentence with -ing: what is happening at home
+    now
+  - ask ONE question (about the homework, the next
+    class, a word...)
+  - say when the teacher sees you again (day - T8)
+
+==============================================================
+TASK 2 - PERSONAL TEXT (HANDWRITTEN + uploaded,
+~20 minutes)
+==============================================================
+
+Choose ONE prompt card (the app offers all three):
+  A) MY LIFE - who you are, family, home, work or
+     study, one hobby
+  B) A PERSON I LOVE - who + description + clothes +
+     what they do every day + what they can do
+  C) MY PERFECT SATURDAY - morning to night: weather,
+     food, places, free time (careful: all in PRESENT
+     tense - what you DO on your perfect Saturday!)
+
+Requirements:
+  - 10-12 sentences BY HAND on paper
+  - Then photograph and upload
+
+==============================================================
+RUBRIC (6 criteria, across both tasks)
+==============================================================
+  1. Task 1: message complete - all 5
+     content points                          [ pass / not yet ]
+  2. Task 1: have/can't/-ing forms correct   [ pass / not yet ]
+  3. Task 2: 10-12 sentences, on the chosen
+     prompt, organized                       [ pass / not yet ]
+  4. Task 2: grammar range - to be, have,
+     present + -s, do-system or can, one
+     time expression                         [ pass / not yet ]
+  5. Vocabulary range: words from 8+
+     different topics across both tasks      [ pass / not yet ]
+  6. Spelling + handwriting readable
+     throughout (A1 bar)                     [ pass / not yet ]
+
+Approval bar: 5 of 6, criterion 6 mandatory.
+Teacher action: Approve / Request redo of ONE task.
+
+==============================================================
+GRADING GUIDANCE FOR TEACHERS
+==============================================================
+- A1 exit writing = short, simple, correct-enough
+  sentences with and/but/so. Do NOT expect paragraphs
+  or connectors beyond these.
+- Prompt C trap: students may slip toward future or
+  past forms they picked up elsewhere. Course scope is
+  present systems only - if a student writes correct
+  future/past, do not penalize, but grade the A1
+  systems (that is what the certificate claims).
+- Spelling bar: readable and consistent; phonetic slips
+  on hard words are A1-normal (beleave/believe), but
+  course words (family, kitchen, Tuesday...) should
+  be right.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- No audio needed
+- Task 2 depends on the writing-upload feature (Mode B
+  infrastructure); fallback = typed with a certificate
+  evidence flag 'handwritten sample: from lesson tasks
+  2/5/8/9/12/15/17/20 instead'
+- This test + 20 writing lessons + 2 portfolios = the
+  writing evidence trail
+- With all five final tests passed + portfolios
+  approved, the student is eligible for the FINAL EXAM
+  (separate document)

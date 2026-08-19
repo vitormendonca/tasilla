@@ -1,0 +1,303 @@
+==============================================================
+TASILLA - A1 CONTENT / TOPIC 3: FAMILY & RELATIONSHIPS
+==============================================================
+Unit 1 - Foundation | Difficulty dial: Topics 1-5
+(6 new words, 3 options, slow audio 3-4 sentences,
+reading texts 30-40 words, dictation 4-5 words)
+
+Grammar embedded: possessive 'S (Ana's brother) + possessive
+adjectives HIS / HER / OUR (extends T2's my/your)
+Can-do: Talk about family members
+Recycles: T1 (My name is, I am), T2 (age, city, Are you...?)
+
+TARGET LANGUAGE
+Words (6): mother, father, brother, sister, family, friend
+Phrases:   This is my mother. / I have a brother. /
+           His name is... / Her name is... / How old is she?
+Structures: Ana's brother / my father's car (possessive 's)
+            his / her / our + noun
+            She is... / He is... (3rd person to be, natural
+            extension of T1-2 to be work)
+
+==============================================================
+LESSON 3.1 - VOCABULARY (auto-graded, 8 exercises, all tap)
+==============================================================
+
+Intro card:
+  mother = your mom
+  father = your dad
+  brother = a boy/man with the same parents
+  sister = a girl/woman with the same parents
+  family = mother + father + brothers + sisters...
+  friend = a person you like, not family
+  + phrase bank: This is my... | I have a... | His name is... |
+    Her name is...
+
+EX 1 - Word meaning (MC)
+Q: Your mother and your father are your ___.
+   a) parents / family   [CORRECT]
+   b) friends
+   c) sisters
+Feedback: Mother + father = family (parents).
+
+EX 2 - Word meaning (MC)
+Q: A girl with the same mother and father as you is your ___.
+   a) sister   [CORRECT]
+   b) brother
+   c) friend
+Feedback: Sister = girl. Brother = boy.
+
+EX 3 - Gap-fill (tap the missing word)
+Q: This is Paulo. He is not my family. He is my ___.
+   a) friend   [CORRECT]
+   b) father
+   c) sister
+Feedback: A friend is a person you like who is not family.
+
+EX 4 - Gap-fill (tap the missing word)
+Q: I have one brother and one ___. Her name is Lia.
+   a) sister   [CORRECT]
+   b) father
+   c) friend
+Feedback: HER name = a girl -> sister.
+
+EX 5 - Odd one out (MC)
+Q: Which one is NOT a family word?
+   a) mother
+   b) city   [CORRECT]
+   c) brother
+Feedback: City is from Topic 2 - it is a place, not family.
+
+EX 6 - Dialogue completion (MC)
+Q: A: Who is this?  B: ___
+   a) This is my mother.   [CORRECT]
+   b) I am from Brazil.
+   c) Good morning.
+Feedback: Who is this? -> answer with This is my...
+
+EX 7 - GRAMMAR: possessive 's (MC)
+Q: Ana has a brother. He is ___ brother.
+   a) Ana's   [CORRECT]
+   b) Ana is
+   c) Anas
+Feedback: Ana's brother = the brother of Ana. Use apostrophe + s.
+
+EX 8 - GRAMMAR: his / her (MC)
+Q: This is my father. ___ name is Carlos.
+   a) His   [CORRECT]
+   b) Her
+   c) Your
+Feedback: Father = man -> HIS. Mother = woman -> HER.
+
+Pass: 70% (6 of 8). XP: 10.
+
+==============================================================
+LESSON 3.2 - LISTENING (auto-graded, 1 audio + 5 exercises)
+==============================================================
+
+AUDIO SCRIPT (to record - 1 speaker, slow, clear pauses,
+file: audio/a1/t03_listening_my_family.mp3, ~25 seconds):
+
+  Hello! My name is Tiago. | This is my family. | My mother's
+  name is Rosa. She is 50 years old. | My father's name is
+  Miguel. | I have one sister. Her name is Duda. | She is my
+  best friend too!
+
+Max plays: 3.
+
+EX 1 - Gist (MC)
+Q: What does Tiago talk about?
+   a) His family   [CORRECT]
+   b) His city
+   c) His school
+
+EX 2 - Detail (MC)
+Q: What is his mother's name?
+   a) Rosa   [CORRECT]
+   b) Duda
+   c) Ana
+
+EX 3 - Detail (MC)
+Q: How old is his mother?
+   a) 50   [CORRECT]
+   b) 15
+   c) The audio does not say
+
+EX 4 - True / False (MC)
+Q: Tiago has two sisters. True or false?
+   a) True
+   b) False   [CORRECT]  (he says: I have ONE sister)
+
+EX 5 - DICTATION (type what you hear - 5 words)
+Audio repeats: Her name is Duda.
+Correct answer: Her name is Duda
+(accept case-insensitive, ignore final punctuation)
+
+Pass: 70% (4 of 5). XP: 10.
+
+==============================================================
+LESSON 3.3 - READING (auto-graded, 2 texts, 3 questions each)
+==============================================================
+
+TEXT A (39 words) - Photo caption / social post format:
+---------------------------------------
+  [Photo: four people]
+  My family! This is my mother, Vera, and my father, Joao.
+  The boy is my brother, Caio. He is 10 years old.
+  I love my family very much.
+  - Posted by Lara
+---------------------------------------
+
+EX 1 - Gist (MC)
+Q: What is this text?
+   a) A photo of Lara's family   [CORRECT]
+   b) A registration form
+   c) A goodbye message
+
+EX 2 - Detail (MC)
+Q: Who is Caio?
+   a) Lara's brother   [CORRECT]
+   b) Lara's father
+   c) Lara's friend
+
+EX 3 - Detail (MC)
+Q: How old is Caio?
+   a) 10   [CORRECT]
+   b) 4
+   c) The text does not say
+
+TEXT B (36 words) - Chat messages format:
+---------------------------------------
+  Nina: Is this your sister in the photo?
+  Gil:  No, she is not my sister. She is my friend Clara.
+  Nina: And the man? Is he your father?
+  Gil:  Yes! His name is Rui. He is 45.
+---------------------------------------
+
+EX 4 - Gist (MC)
+Q: What are Nina and Gil talking about?
+   a) People in a photo   [CORRECT]
+   b) A city
+   c) An email
+
+EX 5 - Detail (MC)
+Q: Who is Clara?
+   a) Gil's friend   [CORRECT]
+   b) Gil's sister
+   c) Gil's mother
+Feedback: Gil says: she is NOT my sister. She is my FRIEND.
+
+EX 6 - Grammar in context (MC)
+Q: Gil says: ___ name is Rui. Which word is in the text?
+   a) His   [CORRECT]
+   b) Her
+   c) Your
+Feedback: Rui is his father - a man -> HIS name.
+
+Pass: 70% (5 of 6). XP: 10.
+
+==============================================================
+LESSON 3.4 - SPEAKING (teacher-graded, 1 recorded task)
+==============================================================
+
+PROMPT:
+  Record yourself. Talk about 2 people in your family.
+  For each person say:
+  1. Who they are (This is my... / I have a...)
+  2. Their name (His name is... / Her name is...)
+  3. One more thing (age or city - remember Topic 2!)
+  Example: I have a sister. Her name is Julia. She is 15
+  years old. This is my father. His name is Marcos. He is
+  from Santos.
+
+Max recording: 45 seconds.
+Tip: Choose the 2 people BEFORE you record.
+
+RUBRIC:
+  1. Presents 2 family members             [ pass / not yet ]
+  2. Uses his/her correctly at least once  [ pass / not yet ]
+  3. Adds age or city (T2 recycling)       [ pass / not yet ]
+  4. Understandable pronunciation          [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+LESSON 3.5 - WRITING (teacher-graded, Mode A typed, SCAFFOLDED)
+==============================================================
+
+STEP 1 - MODEL (student reads):
+  My family is small.
+  My mother's name is Sonia. She is 48 years old.
+  I have one brother. His name is Beto.
+  He is my friend too!
+
+STEP 2 - GAP-FILL the model (tap: name / His / have / mother's):
+  My ___ name is Sonia.        -> mother's
+  She is 48 years old. I ___ one brother.  -> have
+  ___ name is Beto.            -> His
+  (warm-up, auto-checked, not scored)
+
+STEP 3 - WRITE YOUR OWN VERSION (typed, teacher-graded):
+Prompt: Write about YOUR family (or people close to you).
+Minimum requirements:
+  - 4 sentences
+  - Use: one possessive 's (my mother's name...),
+    his or her at least once, one age or city
+
+RUBRIC:
+  1. 4 sentences about real people          [ pass / not yet ]
+  2. Possessive 's used correctly           [ pass / not yet ]
+  3. His/her matches the person             [ pass / not yet ]
+  4. Readable spelling (A1 bar)             [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+SENSITIVITY NOTE for teachers: family structures vary. The
+prompt allows 'people close to you' - never force students to
+describe a standard family. Rubric criterion 1 accepts any 2
+real people (friend, grandmother, guardian...).
+
+==============================================================
+REVIEWS - TOPIC 3 CONTRIBUTIONS (completes Review 1 sets)
+==============================================================
+
+VOCABULARY REVIEW 1 - Topic 3 items (final 3 of 9):
+  R1. Q: Your father's mother is in your ___.
+      a) family [CORRECT]  b) city  c) email
+  R2. Q: This is Leo. ___ sister is my friend.
+      a) His [CORRECT]  b) Her  c) My
+  R3. Q: This is ___ car. (the car of Marta)
+      a) Marta's [CORRECT]  b) Marta is  c) Martas
+
+LISTENING REVIEW 1 - Topic 3 items (final 3 of 9):
+  New audio line: This is my brother. His name is Igor.
+  He is 20.
+  R1. Who is Igor? -> brother [CORRECT] / father / friend
+  R2. How old? -> 20 [CORRECT] / 12 / not said
+  R3. Dictation: His name is Igor. (4 words)
+
+READING REVIEW 1 - Topic 3 items (final 3 of 9):
+  Mini-text: My sister's name is Bela. She is 17. She is
+  from Niteroi.
+  R1. Bela is the writer's... sister [CORRECT]
+  R2. Where is Bela from? -> Niteroi [CORRECT]
+  R3. Grammar: My ___ name is Bela -> sister's [CORRECT]
+
+WITH TOPICS 1+2+3 DONE, ALL FIVE 'REVIEW 1' DOCUMENTS AND
+MIXED REVIEW A CAN NOW BE ASSEMBLED IN FULL (next document).
+
+CHECKPOINT 1 (Unit 1 gate) - Topic 3 items:
+  1 his/her item + 1 possessive 's item + family words
+  distributed in listening/reading sections.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~25s, 1 speaker) + 1 review line (~7s)
+- 3rd person to be (She is / He is) enters here naturally via
+  family descriptions - flag it on the intro card, full
+  is/are system consolidates over T4-T5
+- Anti-nonsense rule: all name options exist in text/audio
+- Recycling check: ages (T2), cities (T2), My name is (T1)
+  all reappear in texts, audio, and production requirements
+- Sensitivity: family diversity note included in writing lesson

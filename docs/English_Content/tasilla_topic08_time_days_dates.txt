@@ -1,0 +1,336 @@
+==============================================================
+TASILLA - A1 CONTENT / TOPIC 8: TIME, DAYS & DATES
+==============================================================
+Unit 2 - Everyday Life | Difficulty dial: Topics 6-10
+(8 new words, 3 options, audio 4-5 sentences ~30s,
+reading texts 40-50 words, T/F in reading, dictation 5-6
+words, systematic recycling, scaffold fading)
+
+Grammar embedded: TIME PREPOSITIONS (G9): AT + clock time,
+ON + day, IN + month/the morning + What time/day questions
+with to be
+Can-do: Tell the time, say days and months, give simple dates
+Recycles: T7 (routine verbs + every day / in the morning /
+at night), T2 (numbers as digits, ages), T6 (in + place vs
+at/on/in + time), T5 (happy)
+
+TARGET LANGUAGE
+Words (8): day, week, month, year, today, time, o'clock,
+           birthday
+Sets on intro card (learned as lists, like the T2 alphabet):
+           Days: Monday, Tuesday, Wednesday, Thursday,
+           Friday, Saturday, Sunday
+           Months: January - December (exposure + own
+           birthday month active)
+Phrases:   What time is it? / It is eight o'clock. /
+           What day is it today? / Today is Saturday. /
+           My birthday is in May. / My class is on Monday
+           at seven o'clock.
+Structures: at + clock time / on + day / in + month
+            What time...? What day...? (to be questions)
+NOTE: ordinal dates (May 5th) NOT taught - A1 dates here are
+day + month only (in May / on Saturday). Half past / quarter
+NOT taught - o'clock and digital style (eight thirty) only.
+
+==============================================================
+LESSON 8.1 - VOCABULARY (auto-graded, 8 exercises, all tap)
+==============================================================
+
+Intro card:
+  day = Monday is a day  |  week = 7 days
+  month = May is a month  |  year = 12 months
+  today = this day, now  |  time = 8:00 is a time
+  o'clock = 8:00 = eight o'clock
+  birthday = your special day!
+  + sets: the 7 days (audio per day) + the 12 months (list)
+  + phrase bank: What time is it? | Today is... |
+    at eight o'clock | on Monday | in May
+
+EX 1 - Word meaning (MC)
+Q: Monday, Tuesday, Wednesday... these are ___ of the week.
+   a) days   [CORRECT]
+   b) months
+   c) years
+Feedback: 7 days = 1 week. May, June = months.
+
+EX 2 - Word meaning (MC)
+Q: January, May, December... these are ___.
+   a) months   [CORRECT]
+   b) days
+   c) times
+Feedback: 12 months = 1 year.
+
+EX 3 - Gap-fill (tap the missing word)
+Q: A: What ___ is it?  B: It is eight o'clock.
+   a) time   [CORRECT]
+   b) day
+   c) birthday
+Feedback: What TIME is it? -> a clock answer.
+
+EX 4 - Gap-fill (tap the missing word)
+Q: ___ is Saturday - no work, no school!
+   a) Today   [CORRECT]
+   b) Year
+   c) O'clock
+Feedback: Today = this day, now.
+
+EX 5 - Odd one out (MC)
+Q: Which one is a DAY of the week?
+   a) May
+   b) Friday   [CORRECT]
+   c) Year
+Feedback: Friday is a day. May is a month.
+
+EX 6 - Dialogue completion (MC)
+Q: A: When is your birthday?  B: ___
+   a) It is in May.   [CORRECT]
+   b) It is eight o'clock.
+   c) I get up in the morning.
+Feedback: Birthdays -> IN + month.
+
+EX 7 - GRAMMAR: at / on / in (MC)
+Q: My class is ___ Monday ___ seven o'clock.
+   a) on / at   [CORRECT]
+   b) at / on
+   c) in / in
+Feedback: ON + day. AT + clock time. IN + month.
+
+EX 8 - GRAMMAR: time questions (MC)
+Q: A: What ___ is it today?  B: It is Sunday!
+   a) day   [CORRECT]
+   b) time
+   c) month
+Feedback: What DAY...? -> Sunday. What TIME...? -> 8 o'clock.
+
+Pass: 70% (6 of 8). XP: 10.
+
+==============================================================
+LESSON 8.2 - LISTENING (auto-graded, 1 audio + 5 exercises)
+==============================================================
+
+AUDIO SCRIPT (to record - 2 speakers, slow, clear pauses,
+file: audio/a1/t08_listening_what_time_is_it.mp3, ~30 sec):
+
+  Nico: What time is it, Lila?
+  Lila: It is eight o'clock.
+  Nico: Oh no! My English class is at eight thirty!
+  Lila: Nico... today is Saturday. There is no class today!
+  Nico: Saturday?! Ha! Now I am very happy.
+
+Max plays: 3.
+
+EX 1 - Gist (MC)
+Q: What is this conversation about?
+   a) The time and the day today   [CORRECT]
+   b) A birthday party
+   c) A new apartment
+
+EX 2 - Detail (MC)
+Q: What time is it?
+   a) Eight o'clock   [CORRECT]
+   b) Eight thirty
+   c) The audio does not say
+
+EX 3 - Detail (MC)
+Q: What day is it today?
+   a) Saturday   [CORRECT]
+   b) Monday
+   c) Sunday
+
+EX 4 - True / False (MC)
+Q: Nico's class is today. True or false?
+   a) True
+   b) False   [CORRECT]  (today is Saturday - no class!)
+
+EX 5 - DICTATION (type what you hear - 5 words)
+Audio repeats: It is eight o'clock.
+Correct answer: It is eight o'clock
+(accept case-insensitive, ignore final punctuation and
+the apostrophe: oclock accepted)
+
+Pass: 70% (4 of 5). XP: 10.
+
+==============================================================
+LESSON 8.3 - READING (auto-graded, 2 texts, 3 questions each)
+==============================================================
+
+TEXT A (43 words) - Weekly schedule format:
+---------------------------------------
+  MY WEEK - by Lika
+  Monday: I study English at seven o'clock.
+  Wednesday: I work in the morning.
+  Friday: I watch TV with my sister at night.
+  Sunday: I sleep! Sunday is my happy day.
+  What is your week like?
+---------------------------------------
+
+EX 1 - Gist (MC)
+Q: What is this text?
+   a) Lika's week, day by day   [CORRECT]
+   b) A birthday invitation
+   c) A house advertisement
+
+EX 2 - Detail (MC)
+Q: When does Lika study English?
+   a) On Monday at seven o'clock   [CORRECT]
+   b) On Friday at night
+   c) On Sunday in the morning
+
+EX 3 - True / False (MC)
+Q: Lika works on Friday. True or false?
+   a) True
+   b) False   [CORRECT]  (she works on WEDNESDAY)
+
+TEXT B (41 words) - Invitation card format:
+---------------------------------------
+  COME TO MY BIRTHDAY!
+  My birthday is in May, and the party is on Saturday!
+  Where: my house
+  What time: four o'clock
+  There is food and music!
+  Please come - it is my special day.
+  - Vado
+---------------------------------------
+
+EX 4 - Gist (MC)
+Q: What is this text?
+   a) A birthday invitation   [CORRECT]
+   b) A week schedule
+   c) A note to a mother
+
+EX 5 - Detail (MC)
+Q: What time is the party?
+   a) Four o'clock   [CORRECT]
+   b) Eight o'clock
+   c) The text does not say
+
+EX 6 - Grammar in context (MC)
+Q: The party is ___ Saturday. My birthday is ___ May.
+   a) on / in   [CORRECT]
+   b) in / on
+   c) at / at
+Feedback: ON + day (Saturday). IN + month (May).
+
+Pass: 70% (5 of 6). XP: 10.
+
+==============================================================
+LESSON 8.4 - SPEAKING (teacher-graded, 1 recorded task)
+==============================================================
+
+PROMPT (no example - scaffold fading from Topic 8):
+  Record yourself. Talk about your week.
+  Say 4 things:
+  1. What day is it today? (Today is...)
+  2. One thing you do + day + time
+     (I study English on Monday at eight o'clock.)
+  3. Your happy day of the week + one reason
+     (Sunday! I sleep...)
+  4. Your birthday month (My birthday is in...)
+
+Max recording: 60 seconds.
+Tip: Say the day and time TOGETHER: on Monday AT eight.
+
+RUBRIC:
+  1. Day + time given correctly             [ pass / not yet ]
+  2. at/on/in used correctly                [ pass / not yet ]
+  3. Routine verb recycled (T7)             [ pass / not yet ]
+  4. Understandable pronunciation           [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+LESSON 8.5 - WRITING (teacher-graded, MODE B - HANDWRITTEN,
+FREE-WRITE - no model from Topic 8)
+==============================================================
+
+THIRD PAPER TASK. Student writes BY HAND on paper, then
+uploads a photo / scan / PDF.
+
+TASK: Write out your weekly schedule by hand.
+
+Instructions shown in app:
+  1. On paper, write the 7 days of the week, Monday to
+     Sunday, one per line.
+  2. For at least 4 days, add one activity + a time or
+     part of day.
+     Example line format: Monday - I study English at
+     eight o'clock. (format hint only - content is yours)
+  3. Take a photo and upload it.
+
+Minimum requirements:
+  - All 7 days written, in order, spelled correctly
+  - 4+ days have an activity (T7 verbs) + time expression
+  - at / on / in used correctly at least twice
+
+RUBRIC:
+  1. 7 days in order, readable spelling     [ pass / not yet ]
+  2. 4+ real activities with T7 verbs       [ pass / not yet ]
+  3. Time expressions correct (at/on/in)    [ pass / not yet ]
+  4. Handwriting readable (A1 bar)          [ pass / not yet ]
+
+Teacher view: opens image/PDF + rubric side by side.
+Approve / Request redo (+ feedback).
+XP: 15 on submit, +10 on approval.
+
+DEPENDENCY NOTE: requires writing-upload feature. Until
+built, runs temporarily as typed Mode A with the same
+7-line schedule format.
+
+==============================================================
+REVIEWS - WHERE TOPIC 8 CONTENT REAPPEARS
+==============================================================
+
+Topic 8 enters REVIEW 3 of each skill path (covers T7-9).
+Its 3 items per review are written NOW; assembly happens
+after Topic 9.
+
+VOCABULARY REVIEW 3 - Topic 8 items (3 of 9):
+  R1. Q: Seven days = one ___.
+      a) week [CORRECT]  b) month  c) year
+  R2. Q: My birthday is ___ July. The party is ___ Sunday.
+      a) in / on [CORRECT]  b) on / in  c) at / at
+  R3. Q: A: What ___ is it?  B: It is nine o'clock.
+      a) time [CORRECT]  b) day  c) week
+
+LISTENING REVIEW 3 - Topic 8 items (3 of 9):
+  New audio line: My English class is on Tuesday at seven
+  o'clock. Today is Tuesday - and it is seven o'clock now!
+  R1. When is the class? -> Tuesday at seven [CORRECT]
+  R2. T/F: Today is Saturday. -> False [CORRECT]
+  R3. Dictation: Today is Tuesday. (3 words - short dictation
+      OK in review mix)
+
+READING REVIEW 3 - Topic 8 items (3 of 9):
+  Mini-text: NOTE: English class is on Thursday this week,
+  not Monday! Time: eight o'clock, room 4.
+  R1. What day is the class this week? -> Thursday [CORRECT]
+  R2. T/F: The class is at eight o'clock. -> True [CORRECT]
+  R3. Grammar: The class is ___ Thursday. -> on [CORRECT]
+
+SPEAKING/WRITING REVIEW 3: the day + time criterion
+(at/on/in correct) comes from Topic 8.
+
+MIXED REVIEW C (after Topic 8, covers T6-8) - Topic 8
+guarantees: 1 at/on/in item, 1 what-time listening item,
+1 day/month vocabulary item, dictation candidate:
+It is eight o'clock. MIXED REVIEW C CAN NOW BE ASSEMBLED
+(next document).
+
+CHECKPOINT 2 (Unit 2 gate) - Topic 8 items:
+  1 at/on/in grammar item + 1 time/day detail item
+  (listening or reading).
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~30s, 2 speakers) + 1 review line (~10s)
+- Days set needs 7 short audio clips for the intro card
+  (one word each) if feasible; months as text list only
+- Dictation engine note: accept oclock for o'clock
+- No ordinals (first/second = A2-adjacent for dates); no
+  half past / quarter to; digital eight thirty allowed
+- party, music = passive exposure in invitation only
+- Free-write era begins: no model text in writing; speaking
+  example dropped
+- Recycling check: T7 verbs in schedule + speaking rubric;
+  numbers (T2/T9 bridge) as clock digits; happy (T5)

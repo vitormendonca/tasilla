@@ -1,0 +1,182 @@
+==============================================================
+TASILLA - A1 ASSESSMENT / CHECKPOINT 2 (UNIT 2 HARD GATE)
+==============================================================
+Covers: Topics 6-10 (Home, Daily Routine, Time & Dates,
+Numbers & Money, Food & Drink) + G3 (a/an, plurals),
+G5 (there is/are), G6 (in/on/under), G7 (simple present
+affirmative, 3rd person -s), G9 (time expressions),
+G11 (Can I have - request half)
+Position: after Mixed Review D. HARD GATE - student cannot
+enter Unit 3 (Topic 11) without passing. Portfolio Task 1
+follows the checkpoint.
+
+CHECKPOINT DESIGN RULES (as Checkpoint 1):
+- 20 auto-graded items: Listening 7 (1 new audio, incl. 1
+  dictation) + Reading 6 (1 new text) + Vocabulary/Grammar 7
+- All content NEW; difficulty at the Topics 6-10 dial
+  (3 options, ~30-40s audio, T/F present)
+- Pass 70% (14 of 20). Attempts: 2, then teacher unlock.
+  Max plays: 2. XP: 40.
+
+==============================================================
+SECTION 1 - LISTENING (7 items, 1 new audio)
+==============================================================
+
+AUDIO SCRIPT (to record - 1 speaker, slow, clear pauses,
+file: audio/a1/checkpoint2_listening.mp3, ~40 sec):
+
+  Hello! My name is Vito. | My apartment is small: there
+  are two rooms, and there is a big table in the kitchen. |
+  Every day I get up in the morning and I go to work. |
+  But today is Saturday! | In the morning I go to the cafe
+  at nine o'clock. I order a coffee and bread - three
+  dollars, very cheap! | At night my sister watches TV
+  with me. She likes tea.
+
+Max plays: 2.
+
+EX 1 - Gist: What is this audio?
+   a) Vito talks about his home and his Saturday  [CORRECT]
+   b) Vito orders furniture in a shop
+   c) Vito introduces his family
+
+EX 2 (T6) - What is in the kitchen?
+   a) A big table   [CORRECT]
+   b) Two beds
+   c) A TV
+
+EX 3 (T8) - What day is it today?
+   a) Saturday   [CORRECT]
+   b) Monday
+   c) Sunday
+
+EX 4 (T8) - What time does Vito go to the cafe?
+   a) Nine o'clock   [CORRECT]
+   b) Three o'clock
+   c) The audio does not say
+
+EX 5 (T10) - What does Vito order at the cafe?
+   a) A coffee and bread   [CORRECT]
+   b) Tea and an apple
+   c) Rice and juice
+
+EX 6 (T9) - T/F: The coffee and bread are thirteen dollars.
+   a) True
+   b) False   [CORRECT]  (THREE dollars - very cheap)
+
+EX 7 - DICTATION (type what you hear - 5 words)
+Audio repeats: I go to the cafe.
+Correct answer: I go to the cafe
+(accept case-insensitive, ignore punctuation and the
+accent in cafe)
+
+==============================================================
+SECTION 2 - READING (6 items, 1 new text)
+==============================================================
+
+TEXT (55 words) - Blog post format:
+---------------------------------------
+  MY SUNDAY - by Neta
+  On Sunday I get up at ten o'clock. I sleep and sleep!
+  In the morning I go to a small cafe. I like the apple
+  juice there - it is two dollars, very cheap!
+  At night my family eats in the kitchen. There are six
+  chairs at our big table. My mother likes rice.
+---------------------------------------
+
+EX 8 - Gist: What is this text?
+   a) Neta's Sunday   [CORRECT]
+   b) A cafe menu
+   c) A house advertisement
+
+EX 9 (T8) - What time does Neta get up on Sunday?
+   a) Ten o'clock   [CORRECT]
+   b) Six o'clock
+   c) Two o'clock
+
+EX 10 (T10) - What does Neta like at the cafe?
+   a) The apple juice   [CORRECT]
+   b) The coffee
+   c) The bread
+
+EX 11 (T9) - T/F: The apple juice is expensive.
+   a) True
+   b) False   [CORRECT]  (two dollars - very cheap)
+
+EX 12 (T6) - How many chairs are at the table?
+   a) Six   [CORRECT]
+   b) Sixteen
+   c) Two
+
+EX 13 (T7) - Grammar: My mother ___ rice.
+   a) likes   [CORRECT]
+   b) like
+   c) is like
+
+==============================================================
+SECTION 3 - VOCABULARY & GRAMMAR (7 items)
+==============================================================
+
+EX 14 (T6) - Q: ___ two bedrooms in our house.
+   a) There are   [CORRECT]
+   b) There is
+   c) It is
+
+EX 15 (T6) - Q: Your photo is not on the table. It is ___
+the table!
+   a) under   [CORRECT]
+   b) in
+   c) at
+
+EX 16 (T7) - Q: My father ___ to work every day.
+   a) goes   [CORRECT]
+   b) go
+   c) gos
+
+EX 17 (T8) - Q: My class is ___ Monday ___ eight o'clock.
+   a) on / at   [CORRECT]
+   b) at / on
+   c) in / in
+
+EX 18 (T9) - Q: 13 = ___
+   a) thirteen   [CORRECT]
+   b) thirty
+   c) three
+
+EX 19 (T10) - Q: Can I have ___ apple, please?
+   a) an   [CORRECT]
+   b) a
+   c) the a
+
+EX 20 (T9) - Q: How much ___ the chairs?
+   a) are   [CORRECT]
+   b) is
+   c) am
+
+==============================================================
+SCORING & GATE BEHAVIOR
+==============================================================
+Pass: 70% (14 of 20). XP: 40.
+On pass: Portfolio Task 1 unlocks, then Unit 3 (Topic 11);
+  certificate evidence row Unit 2 checkpoint = PASS with
+  score + date.
+On fail (attempt 1): show section scores; suggest Mixed
+  Reviews C + D before retry. Retry after 24h.
+On fail (attempt 2): locked; teacher dashboard flag with
+  per-section breakdown; teacher unlocks manually.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~40s, 1 speaker, slow) + dictation
+- Per-topic guarantees honored: T6 there is/are + preposition
+  + rooms/furniture details; T7 -s items (goes, likes,
+  watches in audio); T8 at/on/in + day/time details; T9
+  danger pair + How much are; T10 a/an + cafe detail +
+  like/likes
+- Danger-pair discipline: 13/30 (EX 18), 6/16 (EX 12),
+  3/13 (EX 6) - three number contrasts across sections
+- Anti-nonsense rule: Vito/Neta are the only names; all
+  option content from the audio/text
+- No A2 leakage: no some/any (there is rice), no past, no
+  future, no comparatives - verified

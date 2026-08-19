@@ -1,0 +1,106 @@
+==============================================================
+TASILLA - A1 ASSESSMENT / PORTFOLIO TASK 1
+(TEACHER-GRADED SPEAKING + WRITING, UNITS 1-2)
+==============================================================
+Covers: Topics 1-10. Position: after Checkpoint 2, before
+Unit 3. Purpose: certificate evidence - one extended
+speaking sample + one extended writing sample, teacher-
+approved (certification standard: 10 speaking + 10 writing
+submissions include the 2 portfolios).
+
+PORTFOLIO DESIGN RULES (apply to Portfolio 1 and 2):
+- Two parts, both teacher-graded. No auto-grading.
+- Does NOT block roadmap progression (async), but both
+  parts must be APPROVED for certificate eligibility.
+- Longer than lesson tasks; rubric has 6 criteria, and
+  RECYCLING IS REQUIRED: the rubric names the topics that
+  must appear.
+- Redo policy: teacher may request redo of one part
+  without resetting the other.
+- XP: 25 per part on submit, +15 per part on approval.
+
+==============================================================
+PART A - SPEAKING PORTFOLIO 1: "ME AND MY LIFE"
+==============================================================
+
+PROMPT (shown to student):
+  Record 60-90 seconds. This is your first BIG recording -
+  show everything you know!
+  Talk about:
+  1. You: name, age, city (T1-2)
+  2. One person: family or friend - name, what they look
+     like, how they are today (T3-5)
+  3. Your home: rooms + one thing and where it is (T6)
+  4. Your day: 2 things you do + when (day, time) (T7-8)
+  5. Food: one thing you like or order at a cafe, with
+     a price (T9-10)
+  Speak in this order - it tells your story!
+
+Max recording: 90 seconds.
+Tip: Practice each part once. Do NOT read a text - talk!
+
+RUBRIC (6 criteria):
+  1. Introduction complete: name+age+city   [ pass / not yet ]
+  2. Person: is/has description + his/her   [ pass / not yet ]
+  3. Home: there is/are + preposition       [ pass / not yet ]
+  4. Routine: verbs + time expression,
+     -s if 3rd person used                  [ pass / not yet ]
+  5. Food/price: like or Can I have +
+     a number                               [ pass / not yet ]
+  6. Understandable throughout (A1 bar:
+     patient listener follows easily)       [ pass / not yet ]
+
+Approval bar: 5 of 6 criteria pass, criterion 6 mandatory.
+
+==============================================================
+PART B - WRITING PORTFOLIO 1: "MY LIFE" PAGE
+==============================================================
+
+PROMPT (typed in app, NO model):
+  Write your MY LIFE page - like a profile page about
+  your whole life. 8 to 10 sentences.
+  Include:
+  - Greeting + name + age + city (T1-2)
+  - One family member or friend: name + description (T3-4)
+  - One feeling sentence (T5)
+  - Your home: there is/are + one preposition (T6)
+  - Your routine: 2 verbs + one day or time (T7-8)
+  - One price or number sentence (T9-10)
+
+Minimum requirements:
+  - 8-10 sentences, all six content points present
+  - At least one 3rd person -s verb
+  - at/on/in used at least once for time
+
+RUBRIC (6 criteria):
+  1. All six content points present         [ pass / not yet ]
+  2. to be + have/has correct               [ pass / not yet ]
+  3. there is/are + prepositions correct    [ pass / not yet ]
+  4. Simple present + 3rd person -s correct [ pass / not yet ]
+  5. Numbers/time expressions correct       [ pass / not yet ]
+  6. Spelling readable throughout (A1 bar)  [ pass / not yet ]
+
+Approval bar: 5 of 6 criteria pass, criterion 6 mandatory.
+
+==============================================================
+TEACHER GUIDANCE
+==============================================================
+- This is evidence, not a test: if one criterion fails,
+  request redo of THAT part with one concrete tip
+  (e.g. "Add where things are in your home: in / on /
+  under").
+- Expected level: short, simple, correct sentences.
+  Connectors beyond and/but are NOT expected at A1.
+- Store both artifacts with date + rubric snapshot: they
+  appear in the certificate evidence trail.
+- Sensitivity: 'family member or friend' and 'your home'
+  accept any real person / living space (see T3/T6 notes).
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- No audio to record; no auto-graded items
+- Engine: portfolio entities need submitted/approved states
+  per part, plus certificate evidence flag
+- Portfolio 2 (after Checkpoint 4) mirrors this document
+  with Units 3-4 content

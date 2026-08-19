@@ -1,0 +1,181 @@
+==============================================================
+TASILLA - A1 ASSESSMENT / CHECKPOINT 1 (UNIT 1 HARD GATE)
+==============================================================
+Covers: Topics 1-5 (Introductions, Personal Information,
+Family, Describing People, Feelings & States) + G1 (to be,
+full paradigm) + G2 (pronouns, my/your/his/her, possessive 's)
+Position: after Mixed Review B. HARD GATE - student cannot
+enter Unit 2 (Topic 6) without passing.
+
+CHECKPOINT DESIGN RULES (apply to all 4 checkpoints):
+- 20 auto-graded items: Listening 7 (1 new audio, incl. 1
+  dictation) + Reading 6 (1 new text) + Vocabulary/Grammar 7
+- All content NEW; difficulty calibrated at the unit's dial
+  (here: Topics 1-5 dial - 3 options, slow audio)
+- No speaking/writing inside checkpoints (portfolios and
+  skill-path lessons carry the teacher-graded evidence)
+- Pass 70% (14 of 20). Attempts: 2; after 2 fails, teacher
+  unlock required (dashboard flag + suggested revision:
+  the unit's mixed reviews). XP: 40.
+- Per-topic item guarantees below are the ones pre-written
+  in each topic file - assembled here verbatim or minimally
+  adapted.
+
+==============================================================
+SECTION 1 - LISTENING (7 items, 1 new audio)
+==============================================================
+
+AUDIO SCRIPT (to record - 1 speaker, slow, clear pauses,
+file: audio/a1/checkpoint1_listening.mp3, ~35 sec):
+
+  Good morning! | My name is Alba. A - L - B - A. | I am 28
+  years old and I am from Santos. | This is my brother, Nuno.
+  | He is tall and he has long hair. | Today he is tired and
+  hungry - but he is not sad!
+
+Max plays: 2 (checkpoint allowance is stricter than lessons).
+
+EX 1 (T1) - Gist: What is this audio?
+   a) A person introduces herself and her brother  [CORRECT]
+   b) A person says goodbye
+   c) A person orders food
+
+EX 2 (T1) - T/F: Alba says a greeting.
+   a) True   [CORRECT]  (Good morning!)
+   b) False
+
+EX 3 (T2) - How does she spell her name?
+   a) A - L - B - A   [CORRECT]
+   b) A - L - V - A
+   c) A - B - L - A
+
+EX 4 (T2) - Where is Alba from?
+   a) Santos   [CORRECT]
+   b) Salvador
+   c) The audio does not say
+
+EX 5 (T3) - Who is Nuno?
+   a) Alba's brother   [CORRECT]
+   b) Alba's father
+   c) Alba's friend
+
+EX 6 (T4/T5) - What does Nuno look like, and how is he today?
+   a) Tall with long hair; tired and hungry   [CORRECT]
+   b) Short with short hair; happy
+   c) Tall with long hair; sad
+
+EX 7 - DICTATION (type what you hear - 5 words)
+Audio repeats: I am from Santos.
+Correct answer: I am from Santos
+(accept case-insensitive, ignore final punctuation)
+
+==============================================================
+SECTION 2 - READING (6 items, 1 new text)
+==============================================================
+
+TEXT (52 words - checkpoint texts may run longer since all
+language is known) - Profile page format:
+---------------------------------------
+  MY PAGE - by Dino
+  Hello! Good morning! My name is Dino and I am 21 years
+  old. I am from Braga.
+  My mother's name is Ema. She is short and she has big
+  eyes. She is very nice.
+  My friend Tomas is here today. He is happy!
+---------------------------------------
+
+EX 8 (T1) - Gist: What is this text?
+   a) Dino introduces himself, his mother and a friend [CORRECT]
+   b) A goodbye note
+   c) A lost person notice
+
+EX 9 (T2) - How old is Dino?
+   a) 21   [CORRECT]
+   b) 12
+   c) The text does not say
+
+EX 10 (T3) - Who is Ema?
+   a) Dino's mother   [CORRECT]
+   b) Dino's sister
+   c) Dino's friend
+
+EX 11 (T4) - What does Ema look like?
+   a) Short, with big eyes   [CORRECT]
+   b) Tall, with long hair
+   c) The text does not describe her
+
+EX 12 (T5) - Who is happy today?
+   a) Tomas   [CORRECT]
+   b) Ema
+   c) Dino
+
+EX 13 (T3) - Grammar: My ___ name is Ema.
+   a) mother's   [CORRECT]
+   b) mothers
+   c) mother is
+
+==============================================================
+SECTION 3 - VOCABULARY & GRAMMAR (7 items)
+==============================================================
+
+EX 14 (T1) - You meet your teacher at 9:00 AM. You say:
+   a) Good morning!   [CORRECT]
+   b) Goodbye!
+   c) I am fine.
+
+EX 15 (T2) - Q: Rome is a ___. Italy is a ___.
+   a) city / country   [CORRECT]
+   b) country / city
+   c) number / email
+
+EX 16 (T2) - Q: ___ you from Lisbon? - No, I am ___.
+   a) Are / not   [CORRECT]
+   b) Is / not
+   c) Are / no
+
+EX 17 (T3) - Q: This is my sister. ___ name is Clara.
+   a) Her   [CORRECT]
+   b) His
+   c) Your
+
+EX 18 (T4) - Q: I ___ short hair. My brother ___ long hair.
+   a) have / has   [CORRECT]
+   b) has / have
+   c) have / have
+
+EX 19 (T5) - Q: You need food. You are ___.
+   a) hungry   [CORRECT]
+   b) thirsty
+   c) tired
+
+EX 20 (G1 gate: full paradigm) - Q: I ___ happy. She ___
+tired. We ___ hungry.
+   a) am / is / are   [CORRECT]
+   b) is / am / are
+   c) am / are / is
+
+==============================================================
+SCORING & GATE BEHAVIOR
+==============================================================
+Pass: 70% (14 of 20). XP: 40.
+On pass: Unit 2 (Topic 6) unlocks; certificate evidence row
+  Unit 1 checkpoint = PASS with score + date.
+On fail (attempt 1): show section scores; suggest Mixed
+  Reviews A + B before retry. Retry available after 24h.
+On fail (attempt 2): locked; teacher dashboard flag with
+  per-section breakdown; teacher unlocks manually.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~35s, 1 speaker, slow) + dictation repeat
+- Max plays 2 (not 3): checkpoints are stricter than lessons
+- Per-topic guarantees honored: T1 greeting + gist; T2
+  spelling + negative + city/country; T3 his/her + 's;
+  T4 have/has + description detail; T5 feelings + paradigm +
+  short answer (EX 16)
+- EX 20 is THE G1 gate item: all three persons in one item
+- Anti-nonsense rule: Alba/Nuno/Dino/Ema/Tomas options all
+  exist in audio/text
+- No A2 leakage check: no past forms, no comparatives, no
+  some/any, no future - verified

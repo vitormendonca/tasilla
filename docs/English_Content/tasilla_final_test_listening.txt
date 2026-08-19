@@ -1,0 +1,195 @@
+==============================================================
+TASILLA - A1 FINAL TESTS / LISTENING PATH FINAL TEST
+(STEP 27 OF 27 OF THE LISTENING SKILL PATH)
+==============================================================
+Covers: Topics 1-20. Passing this test completes the
+Listening path and feeds the Listening skill score
+(gated at 70%).
+
+DESIGN:
+- 2 new audios: Audio 1 = slow monologue (Units 1-2
+  language), Audio 2 = natural-pace dialogue (Units 3-4
+  language). The pace shift IS the test design - exactly
+  how the course grew.
+- 20 items: 9 on Audio 1 + 9 on Audio 2 + 2 dictations
+  (one per audio)
+- Pass 70% (14 of 20). Attempts: 2, then teacher unlock.
+  Max plays: 2 per audio. XP: 50.
+
+==============================================================
+AUDIO 1 - MONOLOGUE (slow, clear - Units 1-2 language)
+==============================================================
+
+SCRIPT (to record - 1 speaker, slow,
+file: audio/a1/finaltest_listening_audio1.mp3, ~45 sec):
+
+  Hello! Good morning! My name is Sandra. S - A - N -
+  D - R - A. I am 34 years old, and I am from Belem.
+  This is my family: my father, Nuno, and my sister,
+  Rosa. Rosa is tall, and she has long hair. Our house
+  is small - there are two bedrooms. Every day I get
+  up in the morning, I drink coffee, and I go to work
+  at eight o'clock. Coffee is one dollar at the cafe -
+  very cheap!
+
+EX 1 (T1) - Gist: What is this audio?
+   a) Sandra introduces herself and her life  [CORRECT]
+   b) Sandra says goodbye
+   c) Sandra orders a coffee
+   d) Sandra gives directions
+
+EX 2 (T2) - How does she spell her name?
+   a) S-A-N-D-R-A   [CORRECT]
+   b) S-A-N-T-R-A
+   c) Z-A-N-D-R-A
+   d) S-A-M-D-R-A
+
+EX 3 (T2) - Where is Sandra from?
+   a) Belem   [CORRECT]
+   b) Santos
+   c) Recife
+   d) The audio does not say
+
+EX 4 (T3) - Who is Rosa?
+   a) Sandra's sister   [CORRECT]
+   b) Sandra's mother
+   c) Sandra's friend
+   d) Sandra's teacher
+
+EX 5 (T4) - What does Rosa look like?
+   a) Tall, with long hair   [CORRECT]
+   b) Short, with short hair
+   c) Small, with big eyes
+   d) The audio does not describe her
+
+EX 6 (T6) - How many bedrooms are there?
+   a) Two   [CORRECT]
+   b) Three
+   c) One
+   d) The audio does not say
+
+EX 7 (T7/T8) - When does Sandra go to work?
+   a) At eight o'clock, in the morning   [CORRECT]
+   b) At night
+   c) At ten o'clock
+   d) On Saturdays only
+
+EX 8 (T9) - How much is the coffee?
+   a) One dollar   [CORRECT]
+   b) Ten dollars
+   c) Eight dollars
+   d) The audio does not say
+
+EX 9 - DICTATION 1 (type what you hear - 5 words)
+Audio repeats: I am from Belem.
+Correct answer: I am from Belem
+(accept case-insensitive, ignore punctuation)
+
+==============================================================
+AUDIO 2 - DIALOGUE (natural pace - Units 3-4 language)
+==============================================================
+
+SCRIPT (to record - 2 speakers, natural pace,
+file: audio/a1/finaltest_listening_audio2.mp3, ~50 sec):
+
+  Igor: Nena! Are you at the shop?
+  Nena: Yes! I am buying a jacket - it is raining, and
+        it is very cold this week!
+  Igor: What colour?
+  Nena: Blue. It is twenty-five dollars - cheap! And
+        you? What are you doing?
+  Igor: I am at home. I am sick, Nena. I have a
+        headache, and I can't go to work.
+  Nena: Oh no! Go to bed! Does your brother have your
+        medicine?
+  Igor: Yes, he does - he is at the pharmacy now. It
+        is next to the station.
+  Nena: Good. Sleep! And don't watch films all night!
+
+EX 10 - Gist: What is happening?
+   a) Nena shops; Igor is sick at home   [CORRECT]
+   b) Both are at the shop
+   c) Igor buys medicine for Nena
+   d) They plan a trip by train
+
+EX 11 (T11/T18) - What is Nena buying, and what colour?
+   a) A blue jacket   [CORRECT]
+   b) A blue dress
+   c) A black jacket
+   d) White shoes
+
+EX 12 (T9/T11) - How much is it?
+   a) Twenty-five dollars   [CORRECT]
+   b) Thirty-five dollars
+   c) Twenty dollars
+   d) The audio does not say
+
+EX 13 (T17) - Why does Nena buy it?
+   a) It is raining and very cold this week  [CORRECT]
+   b) It is her birthday
+   c) It is summer
+   d) Igor likes blue
+
+EX 14 (T19) - What is wrong with Igor?
+   a) A headache - he can't go to work   [CORRECT]
+   b) His leg is bad
+   c) He is cold
+   d) The audio does not say
+
+EX 15 (T16) - Does Igor's brother have the medicine?
+   a) Yes, he does   [CORRECT]
+   b) No, he doesn't
+   c) Only tonight
+   d) The audio does not say
+
+EX 16 (T12) - Where is the pharmacy?
+   a) Next to the station   [CORRECT]
+   b) Next to the shop
+   c) Under Igor's house
+   d) The audio does not say
+
+EX 17 - INFERENCE (T16/T19): Why does Nena say 'don't
+watch films all night'?
+   a) Igor needs sleep - and films are clearly his
+      habit   [CORRECT]
+   b) Igor has no TV
+   c) Films are expensive
+   d) The brother is watching films
+
+EX 18 - NOT STATED: What day is it?
+   a) Saturday
+   b) Monday
+   c) Sunday
+   d) The audio does not say   [CORRECT]
+
+EX 19 - DICTATION 2 (type what you hear - 6 words)
+Audio repeats: I can't go to work.
+Correct answer: I can't go to work
+(accept case-insensitive, ignore punctuation; accept
+cant)
+
+EX 20 - DICTATION 3 (type what you hear - 6 words)
+Audio repeats: It is raining this week.
+Correct answer: It is raining this week
+(accept case-insensitive, ignore punctuation)
+
+==============================================================
+SCORING & PATH COMPLETION
+==============================================================
+Pass: 70% (14 of 20). XP: 50.
+On pass: Listening path complete (27/27); Listening
+  skill score finalized for the certificate.
+On fail: as Vocabulary final test (2 attempts, then
+  teacher unlock; weakest-audio revision advice).
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 2 audios to record: ~45s slow + ~50s natural, 3 voices
+  total (Sandra; Igor + Nena)
+- 3 dictations total (EX 9, 19, 20) - dictation remains
+  the ONLY typed exercise type in the course
+- Audio 1 deliberately at Units 1-2 pace: fair sampling
+  means testing early skills at early difficulty
+- Anti-nonsense rule holds: all names in options exist
+  in the audio

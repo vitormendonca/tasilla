@@ -1,0 +1,327 @@
+==============================================================
+TASILLA - A1 CONTENT / TOPIC 2: PERSONAL INFORMATION
+==============================================================
+Unit 1 - Foundation | Difficulty dial: Topics 1-5
+(6 new words, 3 options, slow audio 3-4 sentences,
+reading texts 30-40 words, dictation 4-5 words)
+
+Grammar embedded: TO BE questions and negatives (Are you...?
+I am not...) + possessive adjectives MY / YOUR
+Can-do: Give name, age, nationality, phone, email; spell aloud
+Recycles from T1: hello, My name is..., I am...
+
+TARGET LANGUAGE
+Words (6): age, country, city, number, email, address
+Phrases:   How old are you? / I am ... years old /
+           Where are you from? / I am from Brazil /
+           What is your phone number? / Can you spell it?
+Structures: Are you...? Yes, I am / No, I am not.
+            my name, your name, my email, your city
+Alphabet:  A-Z for spelling aloud (taught in intro card + audio)
+
+==============================================================
+LESSON 2.1 - VOCABULARY (auto-graded, 8 exercises, all tap)
+==============================================================
+
+Intro card:
+  age = how old you are
+  country = Brazil, Japan, Italy...
+  city = Sao Paulo, Rome, Tokyo...
+  number = 1, 2, 3... your phone has a number
+  email = ana@mail.com
+  address = where your house is
+  + phrase bank: How old are you? | Where are you from? |
+    Can you spell it?
+
+EX 1 - Word meaning (MC)
+Q: Brazil is a ___.
+   a) country   [CORRECT]
+   b) city
+   c) number
+Feedback: Brazil is a country. Sao Paulo is a city.
+
+EX 2 - Word meaning (MC)
+Q: ana@mail.com is an ___.
+   a) address
+   b) email   [CORRECT]
+   c) age
+Feedback: An email has @ in it.
+
+EX 3 - Gap-fill (tap the missing word)
+Q: How old are you? - I am 20 years old. This is my ___.
+   a) age   [CORRECT]
+   b) email
+   c) country
+Feedback: Age = how old you are.
+
+EX 4 - Gap-fill (tap the missing word)
+Q: What is your phone ___?
+   a) city
+   b) number   [CORRECT]
+   c) country
+Feedback: A phone has a number.
+
+EX 5 - Odd one out (MC)
+Q: Which one is a CITY?
+   a) Japan
+   b) Tokyo   [CORRECT]
+   c) 25
+Feedback: Tokyo is a city. Japan is a country. 25 is a number.
+
+EX 6 - Dialogue completion (MC)
+Q: A: Where are you from?  B: ___
+   a) I am from Brazil.   [CORRECT]
+   b) I am 20 years old.
+   c) Nice to meet you.
+Feedback: Where are you from? asks about your country or city.
+
+EX 7 - GRAMMAR: to be question (MC)
+Q: ___ you from Italy? - No, I am not.
+   a) Are   [CORRECT]
+   b) Is
+   c) Am
+Feedback: With YOU, questions use ARE: Are you...?
+
+EX 8 - GRAMMAR: my / your (MC)
+Q: A: What is ___ name?  B: ___ name is Pedro.
+   a) your / My   [CORRECT]
+   b) my / Your
+   c) your / Your
+Feedback: I ask about YOUR name. You answer with MY name.
+
+Pass: 70% (6 of 8). XP: 10.
+
+==============================================================
+LESSON 2.2 - LISTENING (auto-graded, 1 audio + 5 exercises)
+==============================================================
+
+AUDIO SCRIPT (to record - 2 speakers, slow, clear pauses,
+file: audio/a1/t02_listening_where_are_you_from.mp3, ~25 sec):
+
+  Man:   Hello! Are you a new student?
+  Woman: Yes, I am. My name is Bia. B - I - A.
+  Man:   Nice to meet you, Bia. Where are you from?
+  Woman: I am from Recife. My phone number is 9 - 8 - 5 - 5.
+
+Max plays: 3.
+
+EX 1 - Gist (MC)
+Q: What is this conversation about?
+   a) A new student gives personal information   [CORRECT]
+   b) Two friends say goodbye
+   c) A teacher spells a city name
+
+EX 2 - Detail (MC)
+Q: Where is Bia from?
+   a) Recife   [CORRECT]
+   b) Rio
+   c) The audio does not say
+
+EX 3 - Detail: spelling (MC)
+Q: How does she spell her name?
+   a) B - I - A   [CORRECT]
+   b) B - E - A
+   c) M - I - A
+
+EX 4 - True / False (MC)
+Q: Bia is a teacher. True or false?
+   a) True
+   b) False   [CORRECT]  (she says: Yes, I am - a new STUDENT)
+
+EX 5 - DICTATION (type what you hear - 5 words)
+Audio repeats: I am from Recife.
+Correct answer: I am from Recife
+(accept case-insensitive, ignore final punctuation)
+
+Pass: 70% (4 of 5). XP: 10.
+
+==============================================================
+LESSON 2.3 - READING (auto-graded, 2 texts, 3 questions each)
+==============================================================
+
+TEXT A (38 words) - Student profile page format:
+---------------------------------------
+  NEW STUDENT PROFILE
+  Name: Daniel Costa
+  Age: 19
+  Country: Brazil
+  City: Curitiba
+  Email: daniel.costa@mail.com
+  Hello! My name is Daniel. I am 19 years old.
+  I am from Curitiba. Nice to meet you!
+---------------------------------------
+
+EX 1 - Gist (MC)
+Q: What is this text?
+   a) A student profile   [CORRECT]
+   b) A goodbye note
+   c) A phone message
+
+EX 2 - Detail (MC)
+Q: How old is Daniel?
+   a) 19   [CORRECT]
+   b) 90
+   c) The text does not say
+
+EX 3 - Detail (MC)
+Q: What city is Daniel from?
+   a) Curitiba   [CORRECT]
+   b) Brazil
+   c) Costa
+Feedback: Curitiba is his city. Brazil is his country.
+
+TEXT B (34 words) - Chat messages format:
+---------------------------------------
+  Rui:  Hi Eva! What is your email?
+  Eva:  It is eva.lima@mail.com.
+  Rui:  Can you spell Lima, please?
+  Eva:  Yes. L - I - M - A.
+  Rui:  Thank you! And are you from Lisbon?
+  Eva:  No, I am not. I am from Porto.
+---------------------------------------
+
+EX 4 - Gist (MC)
+Q: What does Rui want?
+   a) Eva's email   [CORRECT]
+   b) Eva's age
+   c) Eva's address
+
+EX 5 - Detail (MC)
+Q: Where is Eva from?
+   a) Porto   [CORRECT]
+   b) Lisbon
+   c) Lima
+Feedback: She says: No, I am not (from Lisbon). I am from Porto.
+
+EX 6 - Grammar in context (MC)
+Q: Eva says: No, I ___ not. Which words are in the text?
+   a) am   [CORRECT]
+   b) is
+   c) are
+
+Pass: 70% (5 of 6). XP: 10.
+
+==============================================================
+LESSON 2.4 - SPEAKING (teacher-graded, 1 recorded task)
+==============================================================
+
+PROMPT:
+  Record yourself. Give your personal information.
+  Say 4 things:
+  1. Your name (My name is...)
+  2. Your age (I am ... years old)
+  3. Your country or city (I am from...)
+  4. SPELL your first name (A - N - A ...)
+  Example: My name is Ana. I am 25 years old. I am from
+  Bertioga. A - N - A.
+
+Max recording: 40 seconds.
+Tip: Practice the alphabet letters of YOUR name first.
+
+RUBRIC:
+  1. Says name + age with I am           [ pass / not yet ]
+  2. Says city/country with I am from    [ pass / not yet ]
+  3. Spells own name, letters clear      [ pass / not yet ]
+  4. Understandable pronunciation        [ pass / not yet ]
+
+XP: 15 on submit, +10 on approval.
+
+==============================================================
+LESSON 2.5 - WRITING (teacher-graded, MODE B - HANDWRITTEN)
+==============================================================
+
+THE FIRST PAPER TASK. Student writes BY HAND, photographs or
+scans it, and uploads (photo / PDF / DOCX).
+
+TASK: Fill in a registration form by hand.
+
+Instructions shown in app:
+  1. Copy this form on paper (or print it).
+  2. Fill it in BY HAND with YOUR information.
+  3. Take a photo and upload it.
+
+FORM (displayed in app for the student to copy):
+  -----------------------------------------
+  ENGLISH SCHOOL - REGISTRATION FORM
+  First name:  ______________________
+  Last name:   ______________________
+  Age:         ______________________
+  Country:     ______________________
+  City:        ______________________
+  Phone number:______________________
+  Email:       ______________________
+  One sentence about you:
+  My name is ________ and I am from ________.
+  -----------------------------------------
+
+Minimum requirements:
+  - All 7 fields filled in by hand
+  - Final sentence complete and readable
+
+RUBRIC:
+  1. All fields completed                 [ pass / not yet ]
+  2. Information matches field labels     [ pass / not yet ]
+  3. Final sentence uses I am from        [ pass / not yet ]
+  4. Handwriting readable, spelling A1 OK [ pass / not yet ]
+
+Teacher view: opens image/PDF + rubric side by side.
+Approve / Request redo (+ feedback).
+XP: 15 on submit, +10 on approval.
+
+DEPENDENCY NOTE: requires writing-upload feature (Storage
+bucket, writing_submissions table, file picker, teacher file
+viewer). Until built, this lesson can temporarily run as typed
+Mode A with the same form as a text template.
+
+==============================================================
+REVIEWS - WHERE TOPIC 2 CONTENT REAPPEARS
+==============================================================
+
+A) SKILL-PATH REVIEW 1 (covers T1-3) - Topic 2 items (3 of 9):
+
+VOCABULARY REVIEW 1 - Topic 2 items:
+  R1. Q: Sao Paulo is a ___.
+      a) city [CORRECT]  b) country  c) email
+  R2. Q: ___ you from Portugal? - No, I am not.
+      a) Are [CORRECT]  b) Is  c) Am
+  R3. Q: What is ___ email? - ___ email is leo@mail.com.
+      a) your / My [CORRECT]  b) my / Your  c) my / My
+
+LISTENING REVIEW 1 - Topic 2 items:
+  New audio line: I am 30 years old. I am from Salvador.
+  R1. Detail: How old? -> 30 [CORRECT] / 13 / not said
+  R2. Detail: From where? -> Salvador [CORRECT] / Santos / Recife
+  R3. Dictation: I am from Salvador. (4-5 words)
+
+READING REVIEW 1 - Topic 2 items:
+  Mini-profile: Name: Iris. Age: 22. City: Braga.
+  R1. Detail: age -> 22 [CORRECT]
+  R2. Detail: Braga is her... city [CORRECT] / country / name
+  R3. Grammar: Iris writes: I ___ 22 years old -> am [CORRECT]
+
+SPEAKING REVIEW 1 (integrated T1-3): the personal-detail
+criterion comes from Topic 2 (age OR city + spelling one word).
+
+WRITING REVIEW 1 (integrated T1-3): the age-or-city sentence
+requirement comes from Topic 2.
+
+B) MIXED REVIEW A (after Topic 3, covers T1-3):
+  Topic 2 guarantees: 1 spelling item (audio), 1 Are you...?
+  question item, 1 my/your item, dictation candidate:
+  I am from... sentence.
+
+C) CHECKPOINT 1 (Unit 1 hard gate) - Topic 2 items:
+  1 listening spelling item + 1 to-be negative item
+  (No, I am not) + profile-reading detail item.
+
+==============================================================
+PRODUCTION NOTES
+==============================================================
+- 1 audio to record (~25s, 2 speakers, slow) + 1 review line (~6s)
+- Numbers in audio limited to single digits spoken slowly
+  (full numbers topic is T9 - do not front-load)
+- Alphabet: intro card shows A-Z with audio per letter if
+  feasible; otherwise spelling exposure via main audio only
+- Anti-nonsense rule applies: name/city options only from text
+- First Mode B lesson: flags the writing-upload dependency
+- Recycling check: T1 phrases appear in both texts and audio
