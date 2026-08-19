@@ -1,0 +1,231 @@
+{
+  "id": "A1-MIX-A",
+  "order": 21,
+  "title": "Mixed Review A (Topics 1-3)",
+  "description": "Roadmap-only cross-skill review: listening + reading + vocabulary/grammar + async speaking and writing.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Integrate core A1 skills in familiar situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-MIX-A-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "___ she your sister? - No, she is my friend.",
+        "options": [
+          "Is",
+          "Are",
+          "Am"
+        ],
+        "correctAnswer": "Is",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-A-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "My ___ name is Pedro. (the name of my father)",
+        "options": [
+          "father's",
+          "fathers",
+          "father is"
+        ],
+        "correctAnswer": "father's",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-A-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "A: How ___ are you? B: I am 18.",
+        "options": [
+          "old",
+          "name",
+          "fine"
+        ],
+        "correctAnswer": "old",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-A-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Choose the correct order to meet a person:",
+        "options": [
+          "Hello -> My name is Ana -> Nice to meet you",
+          "Goodbye -> My name is Ana -> Hello",
+          "Nice to meet you -> Goodbye -> Hello"
+        ],
+        "correctAnswer": "Hello -> My name is Ana -> Nice to meet you",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Mixed Review A listening",
+    "audioScript": "Hello! I am Vera. V - E - R - A. I am from Niteroi.\nThis is my friend Caio. He is 19 years old.",
+    "audioPath": "assets/audio/a1/mixrevA_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-MIX-A-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "Vera introduces...",
+        "options": [
+          "herself and a friend",
+          "her teacher",
+          "her city only"
+        ],
+        "correctAnswer": "herself and a friend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-A-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "Spelling:",
+        "options": [
+          "V-E-R-A",
+          "B-E-R-A",
+          "V-E-R-E"
+        ],
+        "correctAnswer": "V-E-R-A",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-A-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "Who is Caio?",
+        "options": [
+          "Vera's friend",
+          "brother",
+          "father"
+        ],
+        "correctAnswer": "Vera's friend",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": {
+    "readingTitle": "Mixed Review A text",
+    "readingText": "TEXT A - Mini-text\nHi! My name is Davi. I am 21 and I am from Olinda. My sister's name is Alice. She is my best friend. Nice to meet you!",
+    "readingFormat": "paragraph",
+    "readingQuestions": [
+      {
+        "id": "A1-MIX-A-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Davi introduces himself",
+          "goodbye",
+          "menu"
+        ],
+        "correctAnswer": "Davi introduces himself",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-A-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Who is Alice?",
+        "options": [
+          "Davi's sister",
+          "mother",
+          "teacher"
+        ],
+        "correctAnswer": "Davi's sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-A-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Where is Davi from?",
+        "options": [
+          "Olinda",
+          "Alice",
+          "not said"
+        ],
+        "correctAnswer": "Olinda",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": {
+    "writingPrompt": "A new student writes to you: Hi! I am Max. I am 20 and I am from Berlin. Who are you? Reply in 3-4 sentences (name, age or city, one family or friend sentence).",
+    "writingMode": "short_message",
+    "wordBank": [],
+    "minimumRequirements": [],
+    "minSentences": 3,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Record 20-30s: answer these 3 questions aloud - What is your name? How old are you? Who is in your family?",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 30,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_review1_set_topics1-3.txt. Auto-graded part gates progression (7 of 10); speaking/writing async.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Speaking: answers all 3",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: to be correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: understandable.",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: replies to Max",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: 3 requirements present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: spelling.",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

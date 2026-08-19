@@ -1,0 +1,64 @@
+{
+  "id": "A1-T13-SPE",
+  "order": 91,
+  "title": "Topic 13: Travel & Transport - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name transport, buy tickets, handle simple travel situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record yourself. Two mini parts:\nPART 1 - Your transport: how do people in your family\ngo to work or school? (I go by... My mother goes by...)\nPART 2 - Ticket office theater (two voices, like T11):\nask for a ticket to a real city, ask the time, ask the\nprice, say thank you.\n\nTip: by bus, by car - small words, no 'a', no 'the'!",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 60,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic13_travel_transport.txt, Lesson 13.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "by + transport correct (2+ examples)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "3rd person -s (goes/travels) correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Ticket request + time or price question",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

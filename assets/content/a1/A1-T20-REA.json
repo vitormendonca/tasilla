@@ -1,0 +1,125 @@
+{
+  "id": "A1-T20-REA",
+  "order": 133,
+  "title": "Topic 20: Animals & Nature - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about pets, common animals and simple nature words",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 20: two texts",
+    "readingText": "TEXT A - Park notice format\nWELCOME TO CITY PARK!\nThere are big trees and gardens with red and white\nflowers.\nOur birds sing every morning - come and listen!\nIn the water: fish! Please DON'T give them bread.\nYou can see the horses every day at ten o'clock.\nOpen every day, seven to seven.\nDogs are OK - with you, on the street side!\n\nTEXT B - Chat messages format\nTuca: Nina!! You have a new cat?!\nNina: Yes! Her name is Luna. She is white, with four\n      black feet - little black shoes!\nTuca: Ha! Is she big?\nNina: No, small. Look at the photo - she is playing\n      with my shoe right now!\nTuca: And your dog? Does he like Luna?\nNina: No, he doesn't! He is old. He doesn't play -\n      he sleeps all day.",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T20-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A notice at a city park",
+          "A zoo ticket",
+          "A pet shop flyer",
+          "A weather report"
+        ],
+        "correctAnswer": "A notice at a city park",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-REA-Q2",
+        "type": "multipleChoice",
+        "question": "What time can you see the horses?",
+        "options": [
+          "Ten o'clock, every day",
+          "Seven o'clock",
+          "Only on the weekend",
+          "The text does not say"
+        ],
+        "correctAnswer": "Ten o'clock, every day",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What is the rule about the fish?",
+        "options": [
+          "Don't give them bread",
+          "Don't swim with them",
+          "Give them bread every morning",
+          "Fish are not in this park TEXT B (70 words) - Chat messages format: --------------------------------------- Tuca: Nina!! You have a new cat?! Nina: Yes! Her name is Luna. She is white, with four black feet - little black shoes! Tuca: Ha! Is she big? Nina: No, small. Look at the photo - she is playing with my shoe right now! Tuca: And your dog? Does he like Luna? Nina: No, he doesn't! He is old. He doesn't play - he sleeps all day. ---------------------------------------"
+        ],
+        "correctAnswer": "Don't give them bread",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What is Nina's news?",
+        "options": [
+          "She has a new cat, Luna",
+          "She has a new dog",
+          "Her dog is sick",
+          "She is at the park"
+        ],
+        "correctAnswer": "She has a new cat, Luna",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What does Luna look like?",
+        "options": [
+          "White, with four black feet",
+          "Black, with white feet",
+          "Big and old",
+          "The text does not say"
+        ],
+        "correctAnswer": "White, with four black feet",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Why does the old dog NOT play with Luna?",
+        "options": [
+          "He is old and sleeps all day - playing is not his life now",
+          "He doesn't live with Nina",
+          "Luna is too big",
+          "He plays with shoes"
+        ],
+        "correctAnswer": "He is old and sleeps all day - playing is not his life now",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic20_animals_nature.txt, Lesson 20.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

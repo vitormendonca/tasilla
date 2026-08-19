@@ -1,0 +1,193 @@
+{
+  "id": "A1-T11-VOC",
+  "order": 73,
+  "title": "Topic 11: Shopping - Vocabulary",
+  "description": "Core words for shopping: shop, market, open, closed, size, bag, card, cash. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Buy things, ask prices, sizes, quantities",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "shop = you buy things there  |  market = a big open shop,\nmany small shops in one place\nopen = you can go in :)  |  closed = you cannot go in\nsize = small or big  |  bag = you put things in it\ncard = plastic money  |  cash = paper money\n+ phrase bank: Can I help you? | Card or cash? |\nthis bag (here) / that bag (there)\n+ grammar note: THIS/THAT + one thing;\nTHESE/THOSE + 2, 3, 4... things",
+  "vocabularyBlocks": [
+    {
+      "title": "Shopping words",
+      "words": [
+        "shop",
+        "market",
+        "open",
+        "closed",
+        "size",
+        "bag",
+        "card",
+        "cash"
+      ],
+      "exampleSentences": [
+        "Can I help you?",
+        "How much is this bag?",
+        "Can I have this one, please?",
+        "Can you buy apples for me?",
+        "Card or cash?",
+        "What size?"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "THIS / THAT / THESE / THOSE (G4) + CAN I...? / CAN YOU...? p",
+      "explanation": "THIS / THAT / THESE / THOSE (G4) + CAN I...? / CAN YOU...? polite requests (G11) + How much recycled from T9",
+      "patterns": [
+        "this/that (near/far, singular) +",
+        "these/those (near/far, plural)",
+        "Can I...? / Can you...? + please (requests)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T11-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "It is Sunday. The shop is not open. It is ___.",
+        "options": [
+          "closed",
+          "open",
+          "cheap",
+          "small"
+        ],
+        "correctAnswer": "closed",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "Paper money in your hand is ___.",
+        "options": [
+          "cash",
+          "card",
+          "size",
+          "a menu"
+        ],
+        "correctAnswer": "cash",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: My apples, my bread and my rice are in one big ___.",
+        "options": [
+          "bag",
+          "shop",
+          "card",
+          "price"
+        ],
+        "correctAnswer": "bag",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: There are many small shops with food at the ___.",
+        "options": [
+          "market",
+          "size",
+          "kitchen",
+          "bathroom"
+        ],
+        "correctAnswer": "market",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which word is NOT about shopping?",
+        "options": [
+          "cash",
+          "bedroom",
+          "price",
+          "shop"
+        ],
+        "correctAnswer": "bedroom",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "Shop assistant: Good morning! Can I help you? You: ___",
+        "options": [
+          "Yes, please. How much is this bag?",
+          "I get up in the morning",
+          "There are two bathrooms",
+          "My birthday is in May"
+        ],
+        "correctAnswer": "Yes, please. How much is this bag?",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: ___ bag here is cheap. ___ bags there are expensive!",
+        "options": [
+          "This / Those",
+          "These / That",
+          "This / That",
+          "Those / This"
+        ],
+        "correctAnswer": "This / Those",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: ___ I have this small bag, please? And ___ you open it?",
+        "options": [
+          "Can / can",
+          "Am / are",
+          "Is / can",
+          "Can / are"
+        ],
+        "correctAnswer": "Can / can",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T11-VOC-Q1": "Closed = you cannot go in. Open = come in!",
+      "A1-T11-VOC-Q2": "Cash = paper money. Card = plastic.",
+      "A1-T11-VOC-Q3": "A bag = you put your things in it.",
+      "A1-T11-VOC-Q4": "Market = a big place with many small shops.",
+      "A1-T11-VOC-Q5": "Bedroom is a room at home (Topic 6).",
+      "A1-T11-VOC-Q6": "Can I help you? -> ask about the thing you want.",
+      "A1-T11-VOC-Q7": "THIS + one, near. THOSE + many, there.",
+      "A1-T11-VOC-Q8": "Requests: Can I have...? Can you open...? + please!"
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic11_shopping.txt, Lesson 11.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

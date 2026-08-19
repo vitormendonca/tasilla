@@ -1,0 +1,165 @@
+{
+  "id": "A1-R5-VOC",
+  "order": 104,
+  "title": "Review 5 (Topics 13-15) - Vocabulary",
+  "description": "Skill-path review: 9 new exercises recycling Topics 13-15.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 13-15 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-R5-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Planes go from the ___.",
+        "options": [
+          "airport",
+          "station",
+          "park",
+          "bank"
+        ],
+        "correctAnswer": "airport",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "I go to school ___ bus.",
+        "options": [
+          "by",
+          "in a",
+          "on",
+          "at"
+        ],
+        "correctAnswer": "by",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "My mother ___ to Portugal in July.",
+        "options": [
+          "travels",
+          "travel",
+          "is travel",
+          "traveling"
+        ],
+        "correctAnswer": "travels",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "She works at the hospital. She is a ___.",
+        "options": [
+          "doctor",
+          "teacher",
+          "student",
+          "taxi"
+        ],
+        "correctAnswer": "doctor",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "He is ___ teacher. She works in ___ office.",
+        "options": [
+          "a / an",
+          "an / a",
+          "a / a",
+          "an / an"
+        ],
+        "correctAnswer": "a / an",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "My father ___ speak English and Portuguese.",
+        "options": [
+          "can",
+          "cans",
+          "can to",
+          "is can"
+        ],
+        "correctAnswer": "can",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "You write ON it. It is ___.",
+        "options": [
+          "paper",
+          "a pen",
+          "a word",
+          "a book"
+        ],
+        "correctAnswer": "paper",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "The new words? Read ___, please!",
+        "options": [
+          "them",
+          "it",
+          "they",
+          "him"
+        ],
+        "correctAnswer": "them",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-VOC-Q9",
+        "type": "multipleChoice",
+        "question": "A new word! ___ do you spell it?",
+        "options": [
+          "How",
+          "What",
+          "Where",
+          "Who"
+        ],
+        "correctAnswer": "How",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review5_set_topics13-15.txt. All content new; never copies of lesson items.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

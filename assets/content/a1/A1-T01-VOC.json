@@ -1,0 +1,180 @@
+{
+  "id": "A1-T01-VOC",
+  "order": 1,
+  "title": "Topic 1: Introductions & Greetings - Vocabulary",
+  "description": "Core words for introductions & greetings: hello, hi, goodbye, morning, name, fine. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Greet people, introduce yourself, use basic courtesy phrases",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "hello = a greeting (any time)\nhi = informal hello\ngood morning = greeting before 12:00\ngoodbye = when you leave\nname = what people call you\nfine = good / OK\n+ phrase bank: My name is... | Nice to meet you | How are you?",
+  "vocabularyBlocks": [
+    {
+      "title": "Introductions & Greetings words",
+      "words": [
+        "hello",
+        "hi",
+        "goodbye",
+        "morning",
+        "name",
+        "fine"
+      ],
+      "exampleSentences": [
+        "My name is...",
+        "Nice to meet you",
+        "How are you?",
+        "I am fine, thank you",
+        "Good morning"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "verb TO BE (I am / you are) + subject pronouns (I, you)",
+      "explanation": "verb TO BE (I am / you are) + subject pronouns (I, you)",
+      "patterns": [
+        "I am... / You are... / My name is..."
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T01-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "You meet a person at 9:00 in the morning. What do you say?",
+        "options": [
+          "Good morning",
+          "Goodbye",
+          "Fine"
+        ],
+        "correctAnswer": "Good morning",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T01-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "You leave the classroom. What do you say?",
+        "options": [
+          "Hello",
+          "Goodbye",
+          "My name"
+        ],
+        "correctAnswer": "Goodbye",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T01-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: My ___ is Pedro.",
+        "options": [
+          "name",
+          "fine",
+          "hello"
+        ],
+        "correctAnswer": "name",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T01-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: A: How are you? B: I am ___, thank you.",
+        "options": [
+          "goodbye",
+          "fine",
+          "morning"
+        ],
+        "correctAnswer": "fine",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T01-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which word is NOT a greeting?",
+        "options": [
+          "Hello",
+          "Hi",
+          "Name"
+        ],
+        "correctAnswer": "Name",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T01-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: Hello! My name is Ana. B: ___",
+        "options": [
+          "Nice to meet you, Ana!",
+          "Goodbye, Ana!",
+          "Good morning is at 9:00"
+        ],
+        "correctAnswer": "Nice to meet you, Ana!",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T01-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ Maria.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "correctAnswer": "am",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T01-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: You ___ my teacher.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "correctAnswer": "are",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T01-VOC-Q1": "Good morning = a greeting before 12:00.",
+      "A1-T01-VOC-Q2": "Goodbye = you say it when you leave.",
+      "A1-T01-VOC-Q3": "My name is Pedro. = I am Pedro.",
+      "A1-T01-VOC-Q4": "I am fine = I am OK / good.",
+      "A1-T01-VOC-Q5": "Hello and hi are greetings. Name is not.",
+      "A1-T01-VOC-Q6": "When a person says their name, answer: Nice to meet you.",
+      "A1-T01-VOC-Q7": "With I, always use AM. I am Maria.",
+      "A1-T01-VOC-Q8": "With YOU, always use ARE. You are my teacher."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic01_introductions.txt, Lesson 1.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

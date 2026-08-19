@@ -1,0 +1,109 @@
+{
+  "id": "A1-T17-LIS",
+  "order": 117,
+  "title": "Topic 17: Weather & Seasons - Listening",
+  "description": "One audio (2 speakers) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe the weather and seasons",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 17 listening",
+    "audioScript": "Lala: Hi, Ivo! Where are you?\nIvo:  At my sister's house in Recife! It is very hot\nhere - the sun is out, and we are swimming all\nday!\nLala: Swimming?! Ivo, here in Curitiba it is COLD.\nIt is raining now, and the wind... terrible!\nIvo:  Ha! Winter in Curitiba, Lala. It rains every\nwinter there.\nLala: Yes... so I am at home. I am drinking tea and\nwatching films!",
+    "audioPath": "assets/audio/a1/t17_listening_weather_call.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T17-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What do Lala and Ivo talk about?",
+        "options": [
+          "The weather in their two cities",
+          "A trip by plane",
+          "Ivo's sister's job",
+          "Films at the cinema"
+        ],
+        "correctAnswer": "The weather in their two cities",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What is the weather like in Recife?",
+        "options": [
+          "Very hot, sun out",
+          "Cold and raining",
+          "Snowing",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Very hot, sun out",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What is Ivo doing in Recife?",
+        "options": [
+          "Swimming",
+          "Watching films",
+          "Drinking tea",
+          "Working"
+        ],
+        "correctAnswer": "Swimming",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "Why is Lala at home with tea and films?",
+        "options": [
+          "Because it is cold and raining in Curitiba",
+          "Because she doesn't like the sun",
+          "Because she works at home",
+          "Because Ivo is in Recife"
+        ],
+        "correctAnswer": "Because it is cold and raining in Curitiba",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "It is cold and it is raining",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic17_weather_seasons.txt, Lesson 17.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

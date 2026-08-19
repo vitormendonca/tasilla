@@ -1,0 +1,329 @@
+{
+  "id": "A1-CP4",
+  "order": 142,
+  "title": "Checkpoint 4 - Unit 4 (Topics 16-20)",
+  "description": "Hard gate: 20 auto-graded items across listening, reading and vocabulary/grammar. 2 attempts, then teacher unlock.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 5,
+  "estimatedMinutes": 25,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "checkpoint",
+  "canDoStatement": "Prove Unit 4 (Topics 16-20) language under checkpoint conditions",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-CP4-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "___ your sister dance? - Yes, she ___!",
+        "options": [
+          "Does / does",
+          "Do / do",
+          "Is / is",
+          "Does / do"
+        ],
+        "correctAnswer": "Does / does",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "I ___ play football, and my father ___ swim.",
+        "options": [
+          "don't / doesn't",
+          "doesn't / don't",
+          "don't / don't",
+          "not / not"
+        ],
+        "correctAnswer": "don't / doesn't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "It ___ every winter. And look - it ___ right now!",
+        "options": [
+          "rains / is raining",
+          "is raining / rains",
+          "rain / raining",
+          "rains / rains"
+        ],
+        "correctAnswer": "rains / is raining",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Today she ___ her new ___.",
+        "options": [
+          "is wearing / red dress",
+          "wears / dress red",
+          "is wearing / dress red",
+          "wearing / red dress"
+        ],
+        "correctAnswer": "is wearing / red dress",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "He ___ a headache, so he ___ come to class.",
+        "options": [
+          "has / can't",
+          "have / can't",
+          "has / doesn't",
+          "is / can't"
+        ],
+        "correctAnswer": "has / can't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "Birds can ___, and fish can ___.",
+        "options": [
+          "fly / swim",
+          "swim / fly",
+          "sing / fly",
+          "fly / sing"
+        ],
+        "correctAnswer": "fly / swim",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "My dog ___ five years old. He ___ big black eyes, and right now he ___ in the garden.",
+        "options": [
+          "is / has / is sleeping",
+          "has / is / sleeps",
+          "is / have / sleeping",
+          "is / has / sleeps"
+        ],
+        "correctAnswer": "is / has / is sleeping",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Checkpoint 4 listening",
+    "audioScript": "Hi, Ana! It is Sunday morning, and it is raining here\ntoday - big, big rain! So... no swimming for me. I am\nat home, and I am wearing my old black jacket - it is\ncold in the house! My cat is sleeping on my feet.\nWarm! My brother is sick: he has a headache, and he\ncan't play games with me. So... films! We watch films\nevery rain day - it is our hobby. And you? What are\nyou doing? Call me!",
+    "audioPath": "assets/audio/a1/checkpoint4_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 2,
+    "listeningQuestions": [
+      {
+        "id": "A1-CP4-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this audio?",
+        "options": [
+          "A voice message about a rainy Sunday at home",
+          "A weather report for three cities",
+          "A message from a pharmacy",
+          "An invitation to a swim club"
+        ],
+        "correctAnswer": "A voice message about a rainy Sunday at home",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What is the weather like?",
+        "options": [
+          "Raining, and cold in the house",
+          "Hot, sun out",
+          "Snowing",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Raining, and cold in the house",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What is cancelled today?",
+        "options": [
+          "Swimming",
+          "Films",
+          "A game with the cat",
+          "Work"
+        ],
+        "correctAnswer": "Swimming",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "What is the speaker wearing?",
+        "options": [
+          "An old black jacket",
+          "A new white dress",
+          "A red hat",
+          "Blue shoes"
+        ],
+        "correctAnswer": "An old black jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "Which is TRUE?",
+        "options": [
+          "The brother has a headache; the cat is sleeping",
+          "The cat is sick; the brother is sleeping",
+          "Both are playing games",
+          "The audio does not describe them"
+        ],
+        "correctAnswer": "The brother has a headache; the cat is sleeping",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "Why films today?",
+        "options": [
+          "Rain day + sick brother -> films are the rain-day hobby",
+          "There is a new cinema",
+          "The speaker doesn't like films",
+          "The cat likes films"
+        ],
+        "correctAnswer": "Rain day + sick brother -> films are the rain-day hobby",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-LIS-Q7",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "It is raining here today",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": {
+    "readingTitle": "Checkpoint 4 text",
+    "readingText": "TEXT A - Club newsletter format\nCLUB NEWS - WINTER!\nIt is winter: cold, wind and rain every day. But we\ndon't stop!\n* We swim on Saturdays at ten.\n* Film night: Friday at eight. This week an old film,\n  black and white!\n* Sick? Have a headache? Stay at home and sleep.\n  Don't come to the club - get well first!\n* NEW: our garden has red flowers, and the birds\n  sing all morning!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-CP4-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Winter news from a club",
+          "A weather report",
+          "A medicine label",
+          "A postcard"
+        ],
+        "correctAnswer": "Winter news from a club",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-REA-Q2",
+        "type": "multipleChoice",
+        "question": "When does the club swim?",
+        "options": [
+          "Saturdays at ten",
+          "Fridays at eight",
+          "Every morning",
+          "The text does not say"
+        ],
+        "correctAnswer": "Saturdays at ten",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What is special about this week's film?",
+        "options": [
+          "It is old - black and white",
+          "It is about winter",
+          "It is in colour",
+          "It is about birds"
+        ],
+        "correctAnswer": "It is old - black and white",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What is the rule if you are sick?",
+        "options": [
+          "Stay at home and sleep - don't come",
+          "Come to the club and rest",
+          "Go to the pharmacy first, then come",
+          "Call the doctor at the club"
+        ],
+        "correctAnswer": "Stay at home and sleep - don't come",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What is new in the garden?",
+        "options": [
+          "Red flowers, and birds singing all morning",
+          "A swimming pool",
+          "New trees",
+          "Horses"
+        ],
+        "correctAnswer": "Red flowers, and birds singing all morning",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP4-REA-Q6",
+        "type": "multipleChoice",
+        "question": "How much is film night?",
+        "options": [
+          "Two dollars",
+          "Five dollars",
+          "It is free",
+          "The text does not say"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_checkpoint4_unit4.txt. Pass 70% (14 of 20). XP 40. Max plays 2.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,157 @@
+{
+  "id": "A1-R2-REA",
+  "order": 41,
+  "title": "Review 2 (Topics 4-6) - Reading",
+  "description": "New text(s) + 9 exercises.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 4-6 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Review 2 text",
+    "readingText": "TEXT A - language is known) - Social post format\nMY NEW HOUSE - by Cadu\nHello! Our new house is in Niteroi. It is small but very\nnice. There are two bedrooms, and there is a big table\nin the kitchen.\nMy sister Bela is very happy - her new bedroom is big!\nBela is short and she has long hair.\nI am happy too!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-R2-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Cadu describes his new house",
+          "A house advertisement",
+          "A registration form"
+        ],
+        "correctAnswer": "Cadu describes his new house",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Where is the house?",
+        "options": [
+          "Niteroi",
+          "Santos",
+          "The text does not say"
+        ],
+        "correctAnswer": "Niteroi",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How many bedrooms are there?",
+        "options": [
+          "Two",
+          "One",
+          "Three"
+        ],
+        "correctAnswer": "Two",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q4",
+        "type": "multipleChoice",
+        "question": "Where is the big table?",
+        "options": [
+          "In the kitchen",
+          "In a bedroom",
+          "Under a bed"
+        ],
+        "correctAnswer": "In the kitchen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What does Bela look like?",
+        "options": [
+          "Short, with long hair",
+          "Tall, with short hair",
+          "The text does not describe her"
+        ],
+        "correctAnswer": "Short, with long hair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q6",
+        "type": "multipleChoice",
+        "question": "___ new bedroom is big. (Bela = a girl)",
+        "options": [
+          "Her",
+          "His",
+          "Your"
+        ],
+        "correctAnswer": "Her",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q7",
+        "type": "multipleChoice",
+        "question": "How is Bela?",
+        "options": [
+          "Very happy",
+          "Tired",
+          "Cold"
+        ],
+        "correctAnswer": "Very happy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q8",
+        "type": "trueFalse",
+        "question": "True or false? Cadu is sad.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-REA-Q9",
+        "type": "multipleChoice",
+        "question": "There ___ two bedrooms.",
+        "options": [
+          "are",
+          "is",
+          "am"
+        ],
+        "correctAnswer": "are",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review2_set_topics4-6.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

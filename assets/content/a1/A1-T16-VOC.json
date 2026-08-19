@@ -1,0 +1,197 @@
+{
+  "id": "A1-T16-VOC",
+  "order": 111,
+  "title": "Topic 16: Free Time & Preferences - Vocabulary",
+  "description": "Core words for free time & preferences: hobby, music, film, game, sport, play, dance, swim, sing, weekend. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about hobbies, likes and dislikes",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "hobby = a thing you love to do in free time\nmusic = you listen to it (and dance!)\nfilm = you watch it (one hour, two hours...)\ngame = you play it (phone, cards, football...)\nsport = swim, run, football...\nplay = games, sport, music!  |  dance = move with music\nswim = move in the water  |  sing = music with your voice\nweekend = Saturday + Sunday\n+ phrase bank: Do you like...? | Yes, I do / No, I\ndon't | my favorite...\n+ grammar note: questions with DO/DOES, negatives with\nDON'T/DOESN'T - and the -s moves to DOES:\nShe playS -> DOES she play? / She DOESN'T play.",
+  "vocabularyBlocks": [
+    {
+      "title": "Free Time & Preferences words",
+      "words": [
+        "hobby",
+        "music",
+        "film",
+        "game",
+        "sport",
+        "play",
+        "dance",
+        "swim",
+        "sing",
+        "weekend"
+      ],
+      "exampleSentences": [
+        "What do you do in your free time?",
+        "Do you like music?",
+        "Yes, I do.",
+        "No, I don't.",
+        "I don't dance.",
+        "She doesn't play games.",
+        "my favorite film (favorite = chunk in the phrase bank)"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "SIMPLE PRESENT NEGATIVES & QUESTIONS (G8 - the big unlock): ",
+      "explanation": "SIMPLE PRESENT NEGATIVES & QUESTIONS (G8 - the big unlock): Do you...? / Does she...? / I don't... / He doesn't... + short answers (Yes, I do. / No, she doesn't.). The T15 survival chunks (How do you spell...? What does ... mean?) are now ANALYZED - students finally see the machine inside phrases they already use.",
+      "patterns": [
+        "do/does questions + don't/doesn't negatives",
+        "+ short answers",
+        "like + noun (I like music - like + -ing NOT",
+        "taught; A1 bar is like + thing)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T16-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Saturday and Sunday together are the ___.",
+        "options": [
+          "weekend",
+          "hobby",
+          "week",
+          "month"
+        ],
+        "correctAnswer": "weekend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "You move in the water. You ___.",
+        "options": [
+          "swim",
+          "dance",
+          "sing",
+          "play"
+        ],
+        "correctAnswer": "swim",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: My ___ is music - I listen every day and I sing!",
+        "options": [
+          "hobby",
+          "game",
+          "job",
+          "office"
+        ],
+        "correctAnswer": "hobby",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: We watch a ___ every Saturday night.",
+        "options": [
+          "film",
+          "sport",
+          "music",
+          "bread"
+        ],
+        "correctAnswer": "film",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT a free-time word?",
+        "options": [
+          "game",
+          "ticket",
+          "music",
+          "sport"
+        ],
+        "correctAnswer": "ticket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: Do you like sport? B: ___",
+        "options": [
+          "Yes, I do! I swim every weekend",
+          "Yes, I am",
+          "It is next to the park",
+          "I am a teacher"
+        ],
+        "correctAnswer": "Yes, I do! I swim every weekend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ dance. My father ___ swim.",
+        "options": [
+          "don't / doesn't",
+          "doesn't / don't",
+          "don't / don't",
+          "not / not"
+        ],
+        "correctAnswer": "don't / doesn't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: ___ you play games? ___ your sister play too?",
+        "options": [
+          "Do / Does",
+          "Does / Do",
+          "Do / Do",
+          "Are / Is"
+        ],
+        "correctAnswer": "Do / Does",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T16-VOC-Q1": "Weekend = the END of the week: Saturday + Sunday.",
+      "A1-T16-VOC-Q2": "Swim = water! Dance = music + moves.",
+      "A1-T16-VOC-Q3": "Hobby = your free-time love. Job (T14) = work!",
+      "A1-T16-VOC-Q4": "You WATCH a film (watch - T7!).",
+      "A1-T16-VOC-Q5": "Ticket is for travel (T13) - unless it is a film ticket!",
+      "A1-T16-VOC-Q6": "Do you...? -> Yes, I DO / No, I DON'T (not Yes, I am - that is for ARE you...? T5!).",
+      "A1-T16-VOC-Q7": "I DON'T. He/she DOESN'T. (The -s moves into DOES!)",
+      "A1-T16-VOC-Q8": "DO you...? DOES she...? And the main verb stays clean: Does she PLAY (never plays)."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic16_free_time_preferences.txt, Lesson 16.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,119 @@
+{
+  "id": "A1-T03-REA",
+  "order": 13,
+  "title": "Topic 3: Family & Relationships - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about family members",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 3: two texts",
+    "readingText": "TEXT A - Photo caption / social post format\n[Photo: four people]\nMy family! This is my mother, Vera, and my father, Joao.\nThe boy is my brother, Caio. He is 10 years old.\nI love my family very much.\n- Posted by Lara\n\nTEXT B - Chat messages format\nNina: Is this your sister in the photo?\nGil:  No, she is not my sister. She is my friend Clara.\nNina: And the man? Is he your father?\nGil:  Yes! His name is Rui. He is 45.",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T03-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A photo of Lara's family",
+          "A registration form",
+          "A goodbye message"
+        ],
+        "correctAnswer": "A photo of Lara's family",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Who is Caio?",
+        "options": [
+          "Lara's brother",
+          "Lara's father",
+          "Lara's friend"
+        ],
+        "correctAnswer": "Lara's brother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How old is Caio?",
+        "options": [
+          "10",
+          "4",
+          "The text does not say TEXT B (36 words) - Chat messages format: --------------------------------------- Nina: Is this your sister in the photo? Gil: No, she is not my sister. She is my friend Clara. Nina: And the man? Is he your father? Gil: Yes! His name is Rui. He is 45. ---------------------------------------"
+        ],
+        "correctAnswer": "10",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What are Nina and Gil talking about?",
+        "options": [
+          "People in a photo",
+          "A city",
+          "An email"
+        ],
+        "correctAnswer": "People in a photo",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-REA-Q5",
+        "type": "multipleChoice",
+        "question": "Who is Clara?",
+        "options": [
+          "Gil's friend",
+          "Gil's sister",
+          "Gil's mother"
+        ],
+        "correctAnswer": "Gil's friend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Gil says: ___ name is Rui. Which word is in the text?",
+        "options": [
+          "His",
+          "Her",
+          "Your"
+        ],
+        "correctAnswer": "His",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic03_family_relationships.txt, Lesson 3.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

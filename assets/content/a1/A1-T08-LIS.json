@@ -1,0 +1,104 @@
+{
+  "id": "A1-T08-LIS",
+  "order": 50,
+  "title": "Topic 8: Time, Days & Dates - Listening",
+  "description": "One audio (2 speakers) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Tell the time, say days and months, give simple dates",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 8 listening",
+    "audioScript": "Nico: What time is it, Lila?\nLila: It is eight o'clock.\nNico: Oh no! My English class is at eight thirty!\nLila: Nico... today is Saturday. There is no class today!\nNico: Saturday?! Ha! Now I am very happy.",
+    "audioPath": "assets/audio/a1/t08_listening_what_time_is_it.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T08-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this conversation about?",
+        "options": [
+          "The time and the day today",
+          "A birthday party",
+          "A new apartment"
+        ],
+        "correctAnswer": "The time and the day today",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T08-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What time is it?",
+        "options": [
+          "Eight o'clock",
+          "Eight thirty",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Eight o'clock",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T08-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What day is it today?",
+        "options": [
+          "Saturday",
+          "Monday",
+          "Sunday"
+        ],
+        "correctAnswer": "Saturday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T08-LIS-Q4",
+        "type": "trueFalse",
+        "question": "Nico's class is today. True or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T08-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "It is eight o'clock",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic08_time_days_dates.txt, Lesson 8.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

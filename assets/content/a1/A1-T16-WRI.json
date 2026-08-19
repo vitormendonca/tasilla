@@ -1,0 +1,83 @@
+{
+  "id": "A1-T16-WRI",
+  "order": 115,
+  "title": "Topic 16: Free Time & Preferences - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about hobbies, likes and dislikes",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "PROMPT:\n  Write a text: My free time - the real me!\n  What do you do? What do you NOT do? What about your\n  family or friends?\n\nMinimum requirements:\n  - 6 sentences\n  - 3+ free-time words from this topic\n  - one negative with don't AND one with doesn't\n  - one question with Do or Does (to the reader!)\n  - one time expression (T8: on the weekend, at night...)",
+    "writingMode": "guided_preferences",
+    "wordBank": [
+      "hobby",
+      "music",
+      "film",
+      "game",
+      "sport",
+      "play",
+      "dance",
+      "swim",
+      "sing",
+      "weekend"
+    ],
+    "minimumRequirements": [
+      "6 sentences",
+      "3+ free-time words from this topic",
+      "one negative with don't AND one with doesn't",
+      "one question with Do or Does (to the reader!)",
+      "one time expression (T8: on the weekend, at night...)"
+    ],
+    "minSentences": 6,
+    "maxSentences": 8,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic16_free_time_preferences.txt, Lesson 16.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "6 sentences, real free time",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "don't/doesn't correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Do/Does question correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

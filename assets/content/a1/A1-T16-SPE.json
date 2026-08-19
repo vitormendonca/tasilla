@@ -1,0 +1,64 @@
+{
+  "id": "A1-T16-SPE",
+  "order": 114,
+  "title": "Topic 16: Free Time & Preferences - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about hobbies, likes and dislikes",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record a 60-second monologue: MY FREE TIME.\nSpeak alone, no dialogue - like a little radio show!\nCover:\n1. Your hobby or hobbies + when (weekend, at night...)\n2. One thing you DON'T do or DON'T like (I don't...)\n3. One person in your family: what he/she does or\ndoesn't do (She plays... / He doesn't dance...)\n4. Finish with a question to ME: Do you like...?\n\nTip: 60 seconds is long! Plan 4 small parts, breathe,",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 75,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic16_free_time_preferences.txt, Lesson 16.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Fills ~60s on topic, organized",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "don't/doesn't used correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Do/Does question correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,7 +1,7 @@
 import '../models/learning_path_step.dart';
 import '../models/learning_enums.dart';
 import '../models/learning_experience.dart';
-import 'a1_learning_experience_data.dart';
+import 'a1_content_loader.dart';
 
 const String a1RoadmapSkillId = 'a1_roadmap';
 const int a1LaunchExperienceLimit = 20;
@@ -92,7 +92,7 @@ Iterable<LearningExperience> _getA1LaunchExperiences() {
       return false;
     }
 
-    final number = _numberFromExperienceId(experience.id, 'A1-EXP-');
+    final number = _lessonNumberFromId(experience.id);
     return number != null && number <= a1LaunchExperienceLimit;
   });
 }
@@ -115,10 +115,10 @@ LearningPathStep _roadmapStepFromExperience(LearningExperience experience) {
     passingScore: experience.passingScore,
     order: experience.order,
     lessonNumber: experience.activityKind == ActivityKind.coreActivity
-        ? _numberFromExperienceId(experience.id, 'A1-EXP-')
+        ? _lessonNumberFromId(experience.id)
         : null,
     reviewNumber: experience.activityKind == ActivityKind.review
-        ? _numberFromExperienceId(experience.id, 'A1-REV-')
+        ? _reviewNumberFromId(experience.id)
         : null,
   );
 }
@@ -145,10 +145,10 @@ LearningPathStep _skillPathStepFromExperience(
     passingScore: experience.passingScore,
     order: experience.order,
     lessonNumber: experience.activityKind == ActivityKind.coreActivity
-        ? _numberFromExperienceId(experience.id, 'A1-EXP-')
+        ? _lessonNumberFromId(experience.id)
         : null,
     reviewNumber: experience.activityKind == ActivityKind.review
-        ? _numberFromExperienceId(experience.id, 'A1-REV-')
+        ? _reviewNumberFromId(experience.id)
         : null,
   );
 }
@@ -184,6 +184,27 @@ int? _numberFromExperienceId(String id, String prefix) {
   }
 
   return int.tryParse(id.substring(prefix.length));
+}
+
+/// TASILLA content ids: A1-T{nn}-{VOC|LIS|REA|SPE|WRI} -> topic number.
+/// Falls back to the legacy A1-EXP-{nnn} scheme so both content sets work.
+int? _lessonNumberFromId(String id) {
+  final tasilla = RegExp(r'^A1-T(\d{2})-').firstMatch(id);
+  if (tasilla != null) {
+    return int.parse(tasilla.group(1)!);
+  }
+
+  return _numberFromExperienceId(id, 'A1-EXP-');
+}
+
+/// TASILLA review ids: A1-R{n}-{skill} -> review number (legacy A1-REV-{n}).
+int? _reviewNumberFromId(String id) {
+  final tasilla = RegExp(r'^A1-R(\d)-').firstMatch(id);
+  if (tasilla != null) {
+    return int.parse(tasilla.group(1)!);
+  }
+
+  return _numberFromExperienceId(id, 'A1-REV-');
 }
 
 List<LearningPathStep> _buildSkillPath(LearningSkillDefinition skill) {

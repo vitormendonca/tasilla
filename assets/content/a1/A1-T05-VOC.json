@@ -1,0 +1,183 @@
+{
+  "id": "A1-T05-VOC",
+  "order": 27,
+  "title": "Topic 5: Feelings & States - Vocabulary",
+  "description": "Core words for feelings & states: happy, sad, tired, hungry, thirsty, cold. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say how you feel; ask others how they feel",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "happy = you smile!  |  sad = you are not happy\ntired = you need sleep  |  hungry = you need food\nthirsty = you need water  |  cold = brrr!\n+ phrase bank: How are you? | Are you tired? |\nYes, I am / No, I am not",
+  "vocabularyBlocks": [
+    {
+      "title": "Feelings & States words",
+      "words": [
+        "happy",
+        "sad",
+        "tired",
+        "hungry",
+        "thirsty",
+        "cold"
+      ],
+      "exampleSentences": [
+        "How are you?",
+        "I am tired.",
+        "Are you hungry?",
+        "Yes, I am.",
+        "No, I am not.",
+        "I am happy but tired."
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "FULL TO BE PARADIGM completed - adds WE ARE / THEY ARE to I/",
+      "explanation": "FULL TO BE PARADIGM completed - adds WE ARE / THEY ARE to I/you (T1-2) and he/she (T3-4). Questions + short answers with feelings: Are you tired? Yes, I am / No, I am not.",
+      "patterns": [
+        "to be + feeling adjective (all persons)",
+        "we are / they are (paradigm now complete)",
+        "Are you...? Yes, I am / No, I am not"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T05-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "You need food. You are ___.",
+        "options": [
+          "hungry",
+          "thirsty",
+          "happy"
+        ],
+        "correctAnswer": "hungry",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "It is 11 at night and you need sleep. You are ___.",
+        "options": [
+          "tired",
+          "cold",
+          "sad"
+        ],
+        "correctAnswer": "tired",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: Water, please! I am very ___.",
+        "options": [
+          "thirsty",
+          "hungry",
+          "tall"
+        ],
+        "correctAnswer": "thirsty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: Brrr! I am very ___ today.",
+        "options": [
+          "cold",
+          "happy",
+          "nice"
+        ],
+        "correctAnswer": "cold",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which word is NOT a feeling?",
+        "options": [
+          "sad",
+          "morning",
+          "tired"
+        ],
+        "correctAnswer": "morning",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: How are you? B: ___",
+        "options": [
+          "I am tired but happy",
+          "I am from Recife",
+          "My name is Ana"
+        ],
+        "correctAnswer": "I am tired but happy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: My sister and I ___ hungry. My parents ___ tired.",
+        "options": [
+          "are / are",
+          "is / are",
+          "am / is"
+        ],
+        "correctAnswer": "are / are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: A: ___ you cold? B: No, I ___ not.",
+        "options": [
+          "Are / am",
+          "Is / are",
+          "Are / is"
+        ],
+        "correctAnswer": "Are / am",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T05-VOC-Q1": "Hungry = you need food. Thirsty = you need water.",
+      "A1-T05-VOC-Q2": "Tired = you need sleep.",
+      "A1-T05-VOC-Q3": "Thirsty = you need water.",
+      "A1-T05-VOC-Q4": "Cold = brrr! You need a warm room.",
+      "A1-T05-VOC-Q5": "Morning is a time of day (Topic 1) - not a feeling.",
+      "A1-T05-VOC-Q6": "How are you? asks about feelings - answer with I am + feeling.",
+      "A1-T05-VOC-Q7": "My sister and I = WE -> are. My parents = THEY -> are.",
+      "A1-T05-VOC-Q8": "Are you...? -> Yes, I am / No, I am not."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic05_feelings_states.txt, Lesson 5.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

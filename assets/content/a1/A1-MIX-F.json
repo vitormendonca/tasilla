@@ -1,0 +1,255 @@
+{
+  "id": "A1-MIX-F",
+  "order": 109,
+  "title": "Mixed Review F (Topics 14-15)",
+  "description": "Roadmap-only cross-skill review: listening + reading + vocabulary/grammar + async speaking and writing.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Integrate core A1 skills in familiar situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-MIX-F-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "She is ___ doctor at the city hospital.",
+        "options": [
+          "a",
+          "an",
+          "the a"
+        ],
+        "correctAnswer": "a",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-F-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "My brother ___ speak English very well.",
+        "options": [
+          "can",
+          "cans",
+          "is can",
+          "can to"
+        ],
+        "correctAnswer": "can",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-F-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Your book, please - open ___!",
+        "options": [
+          "it",
+          "them",
+          "him",
+          "they"
+        ],
+        "correctAnswer": "it",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-F-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "What ___ 'travel' mean? (survival chunk!)",
+        "options": [
+          "does",
+          "is",
+          "do",
+          "can"
+        ],
+        "correctAnswer": "does",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Mixed Review F listening",
+    "audioScript": "Teacher: Hello, class! I am Ms. Vela, your new English\nteacher. Open your books - page eleven, please.\nStudent: Sorry, can you repeat, please?\nTeacher: Of course - page eleven! Now listen to me:\nyou can all speak English. Practice every day!",
+    "audioPath": "assets/audio/a1/mixrevF_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-MIX-F-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "Who is Ms. Vela?",
+        "options": [
+          "The new English teacher",
+          "A student",
+          "A doctor",
+          "The school office worker"
+        ],
+        "correctAnswer": "The new English teacher",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-F-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What page does the class open?",
+        "options": [
+          "Eleven",
+          "Seven",
+          "Thirty",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Eleven",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-F-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What does the student say?",
+        "options": [
+          "Sorry, can you repeat, please?",
+          "What does 'page' mean?",
+          "How do you spell it?",
+          "Goodbye, teacher!"
+        ],
+        "correctAnswer": "Sorry, can you repeat, please?",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": {
+    "readingTitle": "Mixed Review F text",
+    "readingText": "TEXT A - Text (38 words) - Job advertisement format\nJOB AT THE ENGLISH SCHOOL!\nWe need one person for the office.\nMornings, Monday to Friday.\nYou can speak a little English, and you can write\nemails.\nWrite to us: school@mail.com",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-MIX-F-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A job advertisement",
+          "Class notes",
+          "A school timetable",
+          "A note to a student"
+        ],
+        "correctAnswer": "A job advertisement",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-F-REA-Q2",
+        "type": "multipleChoice",
+        "question": "When is the work?",
+        "options": [
+          "Mornings, Monday to Friday",
+          "Nights, every day",
+          "Saturday mornings",
+          "The text does not say"
+        ],
+        "correctAnswer": "Mornings, Monday to Friday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-F-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How much does the school pay?",
+        "options": [
+          "Ten dollars",
+          "Twenty dollars",
+          "One hundred dollars",
+          "The text does not say"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": {
+    "writingPrompt": "Your classmate is not in class today. Write a short note (3-4 sentences) with the homework: the pages, the questions, and when the next class is. Use one imperative + object pronoun (Read them! / Answer them!).",
+    "writingMode": "short_message",
+    "wordBank": [],
+    "minimumRequirements": [],
+    "minSentences": 3,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Record 20-30 seconds. Say: your job or study (I am a/an...), TWO things you can do (I can...), and ONE survival question with a real word (How do you spell...? / What does ... mean?).",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 30,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_mixed_reviewF_topics14-15.txt. Auto-graded part gates progression (7 of 10); speaking/writing async.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Speaking: a",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: an + job",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: can + verb x2",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: chunk correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: understandable.",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: homework info complete",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: imperative + pronoun correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: day or time present (T8)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: spelling A1 OK.",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

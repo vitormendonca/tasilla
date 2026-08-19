@@ -1,0 +1,165 @@
+{
+  "id": "A1-R4-LIS",
+  "order": 84,
+  "title": "Review 4 (Topics 10-12) - Listening",
+  "description": "New audio + 9 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 10-12 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Review 4 listening",
+    "audioScript": "A: Good morning! Can I have a tea and bread, please?\nB: Four dollars, please.\nA: Here you are! ... Excuse me, how much are those\nbig bags?\nB: Those are twenty dollars.\nA: OK, one bag! Cash, please. ... And where is the\nstation?\nB: Go straight and turn right at the park. It is near!\nA: Thank you!",
+    "audioPath": "assets/audio/a1/rev4_listening_topics10-12.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-R4-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What does the person order at the cafe?",
+        "options": [
+          "A tea and bread",
+          "A coffee and an apple",
+          "Juice and rice",
+          "Milk and bread"
+        ],
+        "correctAnswer": "A tea and bread",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "How much is the order?",
+        "options": [
+          "Four dollars",
+          "Fourteen dollars",
+          "Forty dollars",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Four dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What does the person ask about in the shop?",
+        "options": [
+          "The big bags",
+          "The small bags",
+          "The books",
+          "The menu"
+        ],
+        "correctAnswer": "The big bags",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "How much are they?",
+        "options": [
+          "Twenty dollars",
+          "Twelve dollars",
+          "Two dollars",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Twenty dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "How does the person pay for the bag?",
+        "options": [
+          "Cash",
+          "Card",
+          "With bread",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Cash",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "Where does the person want to go at the end?",
+        "options": [
+          "The station",
+          "The park",
+          "The bank",
+          "The hospital"
+        ],
+        "correctAnswer": "The station",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q7",
+        "type": "multipleChoice",
+        "question": "Where does he turn right?",
+        "options": [
+          "At the park",
+          "At the supermarket",
+          "At the school",
+          "At the cafe"
+        ],
+        "correctAnswer": "At the park",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q8",
+        "type": "multipleChoice",
+        "question": "What day is it today?",
+        "options": [
+          "Saturday",
+          "Monday",
+          "Sunday",
+          "The audio does not say"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-LIS-Q9",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "Go straight and turn right",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review4_set_topics10-12.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

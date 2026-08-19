@@ -1,0 +1,73 @@
+{
+  "id": "A1-R6-WRI",
+  "order": 140,
+  "title": "Review 6 (Topics 16-20) - Writing",
+  "description": "Integrated writing task, no model, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 16-20 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "A new online friend asks: What is your life like these days? Write your answer - your biggest text yet.",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "8 sentences",
+      "One hobby + one don't/doesn't sentence (T16)",
+      "Weather now with -ing (T17)",
+      "What you are wearing or wear, with a colour (T18)",
+      "One health sentence (have + .../ can't) (T19)",
+      "One animal sentence (T20)"
+    ],
+    "minSentences": 8,
+    "maxSentences": 10,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review6_set_topics16-20.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "8 sentences, all five topics present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "do-system correct (T16)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Continuous/habit + have/can't correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

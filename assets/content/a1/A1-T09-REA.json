@@ -1,0 +1,118 @@
+{
+  "id": "A1-T09-REA",
+  "order": 57,
+  "title": "Topic 9: Numbers, Prices & Money - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Count, understand prices, handle money situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 9: two texts",
+    "readingText": "TEXT A - Shop flyer format\nCASA BELA - BIG PRICES? NO! SMALL PRICES!\nBed ........ eighty dollars\nTable ...... forty dollars\nChair ...... fifteen dollars\nAll very cheap!\nWe are in the city of Braga.\nMonday to Saturday, nine o'clock to six o'clock.\n\nTEXT B - Chat messages format\nRavi: Mama, I need money for school, please!\nMama: Why, Ravi?\nRavi: My new English book is twenty dollars.\nMama: Twenty? OK, that is not expensive. And your\n      brother's book?\nRavi: His book is thirty dollars!\nMama: Thirty?! OK, OK. I pay for the two books.",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T09-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A shop flyer with prices",
+          "A birthday invitation",
+          "A week schedule"
+        ],
+        "correctAnswer": "A shop flyer with prices",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How much is the bed?",
+        "options": [
+          "Eighty dollars",
+          "Eighteen dollars",
+          "Forty dollars"
+        ],
+        "correctAnswer": "Eighty dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-REA-Q3",
+        "type": "multipleChoice",
+        "question": "The chair is expensive. True or false?",
+        "options": [
+          "True",
+          "False (fifteen dollars - very cheap!) TEXT B (48 words) - Chat messages format: --------------------------------------- Ravi: Mama, I need money for school, please! Mama: Why, Ravi? Ravi: My new English book is twenty dollars. Mama: Twenty? OK, that is not expensive. And your brother's book? Ravi: His book is thirty dollars! Mama: Thirty?! OK, OK. I pay for the two books. ---------------------------------------"
+        ],
+        "correctAnswer": "False (fifteen dollars - very cheap!) TEXT B (48 words) - Chat messages format: --------------------------------------- Ravi: Mama, I need money for school, please! Mama: Why, Ravi? Ravi: My new English book is twenty dollars. Mama: Twenty? OK, that is not expensive. And your brother's book? Ravi: His book is thirty dollars! Mama: Thirty?! OK, OK. I pay for the two books. ---------------------------------------",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What does Ravi want?",
+        "options": [
+          "Money for school books",
+          "A new table",
+          "A birthday party"
+        ],
+        "correctAnswer": "Money for school books",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-REA-Q5",
+        "type": "multipleChoice",
+        "question": "How much is Ravi's book?",
+        "options": [
+          "Twenty dollars",
+          "Thirty dollars",
+          "Twelve dollars"
+        ],
+        "correctAnswer": "Twenty dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Mama says: I ___ for the two books.",
+        "options": [
+          "pay",
+          "pays",
+          "buy"
+        ],
+        "correctAnswer": "pay",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic09_numbers_prices_money.txt, Lesson 9.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

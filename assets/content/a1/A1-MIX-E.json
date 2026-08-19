@@ -1,0 +1,256 @@
+{
+  "id": "A1-MIX-E",
+  "order": 93,
+  "title": "Mixed Review E (Topics 11-13)",
+  "description": "Roadmap-only cross-skill review: listening + reading + vocabulary/grammar + async speaking and writing.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Integrate core A1 skills in familiar situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-MIX-E-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "___ bag here is nice, but ___ bag there is cheap.",
+        "options": [
+          "This / that",
+          "That / this",
+          "These / those",
+          "This / these"
+        ],
+        "correctAnswer": "This / that",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-E-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "___ right at the park!",
+        "options": [
+          "Turn",
+          "Turns",
+          "Turning",
+          "You turns"
+        ],
+        "correctAnswer": "Turn",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-E-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "I go to work ___ train.",
+        "options": [
+          "by",
+          "in a",
+          "on a",
+          "at"
+        ],
+        "correctAnswer": "by",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-E-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "The shop is not open today. It is ___.",
+        "options": [
+          "closed",
+          "cheap",
+          "near",
+          "new"
+        ],
+        "correctAnswer": "closed",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Mixed Review E listening",
+    "audioScript": "A: Excuse me! Where is the station, please?\nB: Go straight and turn left at the bank. It is near!\nA: Thank you! ...\nA: Good morning! One ticket to Olinda, please.\nWhat time is the train?\nB: At four thirty. Five dollars, please.\nA: Here you are!",
+    "audioPath": "assets/audio/a1/mixrevE_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-MIX-E-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What does the person want FIRST?",
+        "options": [
+          "Directions to the station",
+          "A bag",
+          "A coffee",
+          "A taxi"
+        ],
+        "correctAnswer": "Directions to the station",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-E-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "Where does the person turn left?",
+        "options": [
+          "At the bank",
+          "At the park",
+          "At the supermarket",
+          "At the school"
+        ],
+        "correctAnswer": "At the bank",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-E-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What time is the train to Olinda?",
+        "options": [
+          "Four thirty",
+          "Four o'clock",
+          "Five o'clock",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Four thirty",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": {
+    "readingTitle": "Mixed Review E text",
+    "readingText": "TEXT A - Text (42 words) - Chat messages format\nBea: Are you at the market, Gui?\nGui: Yes! These apples are one dollar - very cheap!\nBea: Buy ten for me, please! And your bus home?\nGui: By bus at six o'clock. The ticket is two dollars.\nBea: Great! See you at home!",
+    "readingFormat": "message",
+    "readingQuestions": [
+      {
+        "id": "A1-MIX-E-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this chat about?",
+        "options": [
+          "Gui at the market, and his bus home",
+          "A new apartment",
+          "Bea's birthday",
+          "A cafe menu"
+        ],
+        "correctAnswer": "Gui at the market, and his bus home",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-E-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How much are the apples?",
+        "options": [
+          "One dollar",
+          "Ten dollars",
+          "Two dollars",
+          "Six dollars"
+        ],
+        "correctAnswer": "One dollar",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-E-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How does Gui pay at the market - card or cash?",
+        "options": [
+          "Card",
+          "Cash",
+          "He does not pay",
+          "The text does not say"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": {
+    "writingPrompt": "A friend visits your city on Saturday. Write a message (4-5 sentences): the bus or train time, the ticket price, and directions from the station to your home (one imperative + next to/near).",
+    "writingMode": "short_message",
+    "wordBank": [],
+    "minimumRequirements": [],
+    "minSentences": 3,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Record 20-30 seconds. A friend is at the station in your town. Give directions to your home (Go..., Turn..., next to...) and say how YOU go home every day (by bus / by car...).",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 30,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_mixed_reviewE_topics11-13.txt. Auto-graded part gates progression (7 of 10); speaking/writing async.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Speaking: 2+ imperatives",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: next to or near",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: by + transport",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: understandable.",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: time + price present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: imperative + place phrase correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: this",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: that or Can request bonus",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: spelling A1 OK.",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

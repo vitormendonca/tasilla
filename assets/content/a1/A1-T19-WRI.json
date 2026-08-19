@@ -1,0 +1,83 @@
+{
+  "id": "A1-T19-WRI",
+  "order": 130,
+  "title": "Topic 19: Health & Body - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say what hurts, name body parts, manage a pharmacy visit",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "PROMPT:\n  Write the sick-day message as a TEXT to your teacher\n  or boss (the same situation as the speaking task -\n  now in writing).\n\nMinimum requirements:\n  - 5-6 sentences\n  - I am sick + one have + symptom sentence\n  - one can't sentence\n  - one present continuous sentence (what is happening\n    at home now)\n  - a day (T8): See you on Monday!",
+    "writingMode": "short_message",
+    "wordBank": [
+      "body",
+      "head",
+      "arm",
+      "leg",
+      "hand",
+      "foot",
+      "sick",
+      "headache",
+      "pharmacy",
+      "medicine"
+    ],
+    "minimumRequirements": [
+      "5-6 sentences",
+      "I am sick + one have + symptom sentence",
+      "one can't sentence",
+      "one present continuous sentence (what is happening at home now)",
+      "a day (T8): See you on Monday!"
+    ],
+    "minSentences": 5,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic19_health_body.txt, Lesson 19.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Message complete and polite",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "have + symptom, can't correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Continuous sentence correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

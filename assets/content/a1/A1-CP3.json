@@ -1,0 +1,329 @@
+{
+  "id": "A1-CP3",
+  "order": 110,
+  "title": "Checkpoint 3 - Unit 3 (Topics 11-15)",
+  "description": "Hard gate: 20 auto-graded items across listening, reading and vocabulary/grammar. 2 attempts, then teacher unlock.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 25,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "checkpoint",
+  "canDoStatement": "Prove Unit 3 (Topics 11-15) language under checkpoint conditions",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-CP3-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "___ bags here are cheap. ___ bag there is expensive.",
+        "options": [
+          "These / That",
+          "This / Those",
+          "Those / These",
+          "That / This"
+        ],
+        "correctAnswer": "These / That",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "___ left at the bank, and the cafe is next to the school.",
+        "options": [
+          "Turn",
+          "Turns",
+          "Turning",
+          "You turns"
+        ],
+        "correctAnswer": "Turn",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "My sister goes to work ___ train.",
+        "options": [
+          "by",
+          "in a",
+          "on a",
+          "at"
+        ],
+        "correctAnswer": "by",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "I am ___ student. My mother works in ___ office.",
+        "options": [
+          "a / an",
+          "an / a",
+          "a / a",
+          "an / an"
+        ],
+        "correctAnswer": "a / an",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "She ___ speak English and Italian.",
+        "options": [
+          "can",
+          "cans",
+          "is can",
+          "can to"
+        ],
+        "correctAnswer": "can",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "The questions? Answer ___ on paper, please!",
+        "options": [
+          "them",
+          "it",
+          "they",
+          "him"
+        ],
+        "correctAnswer": "them",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Survival chunk: What ___ this word mean?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "can"
+        ],
+        "correctAnswer": "does",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Checkpoint 3 listening",
+    "audioScript": "A: Good morning! How much are these small bags?\nB: Twelve dollars.\nA: Nice! Can I have one, please? Card, please. ...\nA: Excuse me, where is the station?\nB: Go straight, and turn right at the hospital.\nIt is near!\nA: Thank you! ...\nA: One ticket to Braga, please. What time is the train?\nB: At two thirty. Nine dollars, please.",
+    "audioPath": "assets/audio/a1/checkpoint3_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 2,
+    "listeningQuestions": [
+      {
+        "id": "A1-CP3-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What happens in this audio?",
+        "options": [
+          "A person shops, asks directions, and buys a ticket",
+          "A person orders food in a cafe",
+          "A teacher starts a class",
+          "Two friends talk about family"
+        ],
+        "correctAnswer": "A person shops, asks directions, and buys a ticket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "How much are the small bags?",
+        "options": [
+          "Twelve dollars",
+          "Twenty dollars",
+          "Two dollars",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Twelve dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How does the person pay?",
+        "options": [
+          "By card",
+          "Cash",
+          "With a ticket",
+          "The audio does not say"
+        ],
+        "correctAnswer": "By card",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "Where does the person turn right?",
+        "options": [
+          "At the hospital",
+          "At the bank",
+          "At the park",
+          "At the supermarket"
+        ],
+        "correctAnswer": "At the hospital",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "What time is the train to Braga?",
+        "options": [
+          "Two thirty",
+          "Two o'clock",
+          "Nine o'clock",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Two thirty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "What day is it today?",
+        "options": [
+          "Monday",
+          "Saturday",
+          "Sunday",
+          "The audio does not say"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-LIS-Q7",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "One ticket to Braga please",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": {
+    "readingTitle": "Checkpoint 3 text",
+    "readingText": "TEXT A - Personal message format\nHi Tia Lu!\nBig news: I have a new job! I am an office worker at\nthe English school. I can write emails, and I can\nspeak a little English now!\nThe school is next to the park. I go by bus every day.\nIn class our teacher says: 'Open your books! Read\nthem!' Ha!\nKisses, Kiko",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-CP3-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Kiko tells his aunt his news",
+          "A job advertisement",
+          "Class notes",
+          "Directions to a school"
+        ],
+        "correctAnswer": "Kiko tells his aunt his news",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-REA-Q2",
+        "type": "multipleChoice",
+        "question": "What is Kiko's new job?",
+        "options": [
+          "Office worker at the English school",
+          "Teacher",
+          "Doctor",
+          "Bus driver"
+        ],
+        "correctAnswer": "Office worker at the English school",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What can Kiko do?",
+        "options": [
+          "Write emails and speak a little English",
+          "Speak three languages",
+          "Drive a bus",
+          "The text does not say"
+        ],
+        "correctAnswer": "Write emails and speak a little English",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-REA-Q4",
+        "type": "multipleChoice",
+        "question": "Where is the school, and how does Kiko go?",
+        "options": [
+          "Next to the park; by bus",
+          "Next to the station; by train",
+          "Next to the bank; by taxi",
+          "The text does not say"
+        ],
+        "correctAnswer": "Next to the park; by bus",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What does the teacher say in class?",
+        "options": [
+          "Open your books! Read them!",
+          "How do you spell it?",
+          "Turn left at the park!",
+          "Two tickets, please!"
+        ],
+        "correctAnswer": "Open your books! Read them!",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-CP3-REA-Q6",
+        "type": "multipleChoice",
+        "question": "How much does the school pay Kiko?",
+        "options": [
+          "Ten dollars",
+          "Twelve dollars",
+          "One hundred dollars",
+          "The text does not say"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_checkpoint3_unit3.txt. Pass 70% (14 of 20). XP 40. Max plays 2.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

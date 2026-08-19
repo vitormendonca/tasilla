@@ -1,0 +1,64 @@
+{
+  "id": "A1-T14-SPE",
+  "order": 97,
+  "title": "Topic 14: Work & Study - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about your job or studies",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record yourself. You, at work or at school.\nSay 4 things:\n1. Your job or study: I am a/an... (student? teacher?\nyour real job - ask your teacher for your job word!)\n2. Where + when: I work/study in/at... in the morning /\nat night (T7-8)\n3. TWO things you can do: I can speak... I can write...\nI can help...\n4. One person in your family: his/her job with -s\n(My mother works...)\n\nTip: Your real job word is YOUR word - learn it well!",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 60,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic14_work_study.txt, Lesson 14.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "a/an + job correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "can + verb correct (2 examples)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "3rd person -s for family member",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

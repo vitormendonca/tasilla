@@ -1,0 +1,116 @@
+{
+  "id": "A1-PT2",
+  "order": 143,
+  "title": "Portfolio Task 2 - A Day in My World",
+  "description": "Extended teacher-graded speaking + writing evidence pair for the certificate. Async; both parts must be approved.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 30,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "portfolio_task",
+  "canDoStatement": "Produce extended personal language as certificate evidence",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "Your next English teacher (A2 course!) wants to know\nyou before day one. Write a letter: 10-12 sentences.\nInclude:\n- Who you are: name, age, city, job or studies\n(T1-2, T14)\n- Your people: one family member or friend, with a\ndescription (T3-4, T18 colours welcome)\n- Your life: home + one routine with times (T6-8)\n- Your likes: hobby + one thing you don't like (T16)\n- Right now: the weather and what you are doing as\nyou write (T17)\n- One question for the new teacher (Do you...? /\nCan you...?)",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "10-12 sentences, letter shape (greeting + sign-off)",
+      "At least one: 's possessive, there is/are, can, don't/doesn't, present continuous",
+      "One question to the reader"
+    ],
+    "minSentences": 10,
+    "maxSentences": 12,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Record 90-120 seconds - your longest recording of the\ncourse. Tell the story of a REAL day in your life,\nmorning to night, TODAY or a typical day.\nCover:\n1. The start: the day, the weather right now, how you\nare (T8, T17, T5)\n2. Your morning: routine + transport (T7, T13)\n3. Your work or study + one thing you can do (T14)\n4. Out in the world: a shop, cafe or place in town -\nwith one price or direction (T9-12)\n5. Your evening: free time, family, your animal if\nyou have one (T16, T3, T20)\n6. What you are wearing while you record this! (T18)\nSpeak freely - this is YOUR day, not a list.\n\nTip: Record it like a voice message to a friend who",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 120,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_portfolio_task2.txt. Approval bar: 5 of 6 per part, understandability mandatory. XP 25 per part +15 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Speaking: Covers 5+ of the 6 content areas",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: Simple present + 3rd person -s solid",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: Continuous used correctly for 'now'",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: do/does/don't/doesn't + can correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: Connected speech: and/but/so, not a word list",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: Understandable throughout (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: All six content areas present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: to be / have / there is systems solid",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: Simple present + -s + do-system solid",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: Continuous correct for 'now'",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: Letter format + question to reader",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: Spelling readable throughout (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

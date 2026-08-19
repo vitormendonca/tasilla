@@ -1,0 +1,182 @@
+{
+  "id": "A1-T02-VOC",
+  "order": 6,
+  "title": "Topic 2: Personal Information - Vocabulary",
+  "description": "Core words for personal information: age, country, city, number, email, address. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Give name, age, nationality, phone, email; spell aloud",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "age = how old you are\ncountry = Brazil, Japan, Italy...\ncity = Sao Paulo, Rome, Tokyo...\nnumber = 1, 2, 3... your phone has a number\nemail = ana@mail.com\naddress = where your house is\n+ phrase bank: How old are you? | Where are you from? |\nCan you spell it?",
+  "vocabularyBlocks": [
+    {
+      "title": "Personal Information words",
+      "words": [
+        "age",
+        "country",
+        "city",
+        "number",
+        "email",
+        "address"
+      ],
+      "exampleSentences": [
+        "How old are you?",
+        "I am ... years old",
+        "Where are you from?",
+        "I am from Brazil",
+        "What is your phone number?",
+        "Can you spell it?"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "TO BE questions and negatives (Are you...? I am not...) + po",
+      "explanation": "TO BE questions and negatives (Are you...? I am not...) + possessive adjectives MY / YOUR",
+      "patterns": [
+        "Are you...? Yes, I am / No, I am not.",
+        "my name, your name, my email, your city"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T02-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Brazil is a ___.",
+        "options": [
+          "country",
+          "city",
+          "number"
+        ],
+        "correctAnswer": "country",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "ana@mail.com is an ___.",
+        "options": [
+          "address",
+          "email",
+          "age"
+        ],
+        "correctAnswer": "email",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: How old are you? - I am 20 years old. This is my ___.",
+        "options": [
+          "age",
+          "email",
+          "country"
+        ],
+        "correctAnswer": "age",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: What is your phone ___?",
+        "options": [
+          "city",
+          "number",
+          "country"
+        ],
+        "correctAnswer": "number",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is a CITY?",
+        "options": [
+          "Japan",
+          "Tokyo",
+          "25"
+        ],
+        "correctAnswer": "Tokyo",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: Where are you from? B: ___",
+        "options": [
+          "I am from Brazil",
+          "I am 20 years old",
+          "Nice to meet you"
+        ],
+        "correctAnswer": "I am from Brazil",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: ___ you from Italy? - No, I am not.",
+        "options": [
+          "Are",
+          "Is",
+          "Am"
+        ],
+        "correctAnswer": "Are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: A: What is ___ name? B: ___ name is Pedro.",
+        "options": [
+          "your / My",
+          "my / Your",
+          "your / Your"
+        ],
+        "correctAnswer": "your / My",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T02-VOC-Q1": "Brazil is a country. Sao Paulo is a city.",
+      "A1-T02-VOC-Q2": "An email has @ in it.",
+      "A1-T02-VOC-Q3": "Age = how old you are.",
+      "A1-T02-VOC-Q4": "A phone has a number.",
+      "A1-T02-VOC-Q5": "Tokyo is a city. Japan is a country. 25 is a number.",
+      "A1-T02-VOC-Q6": "Where are you from? asks about your country or city.",
+      "A1-T02-VOC-Q7": "With YOU, questions use ARE: Are you...?",
+      "A1-T02-VOC-Q8": "I ask about YOUR name. You answer with MY name."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic02_personal_information.txt, Lesson 2.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

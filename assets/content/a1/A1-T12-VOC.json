@@ -1,0 +1,194 @@
+{
+  "id": "A1-T12-VOC",
+  "order": 78,
+  "title": "Topic 12: Places in Town & Directions - Vocabulary",
+  "description": "Core words for places in town & directions: street, bank, hospital, supermarket, park, station, left, right. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Identify places in town, ask for and follow simple directions",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "street = cars and houses are on it\nbank = your money is there  |  hospital = doctors work\nthere  |  supermarket = a big food shop\npark = green place, trees  |  station = trains and\nbuses go from there\nleft = <- this side  |  right = this side ->\n+ phrase bank: Excuse me, where is...? | Go straight. |\nTurn left/right. | next to | near",
+  "vocabularyBlocks": [
+    {
+      "title": "Places in Town & Directions words",
+      "words": [
+        "street",
+        "bank",
+        "hospital",
+        "supermarket",
+        "park",
+        "station",
+        "left",
+        "right"
+      ],
+      "exampleSentences": [
+        "Excuse me, where is the bank?",
+        "Go straight.",
+        "Turn left.",
+        "Turn right.",
+        "It is next to the park.",
+        "It is near.",
+        "Thank you!"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "IMPERATIVES (G12: Turn left. Go straight.) + prepositions of",
+      "explanation": "IMPERATIVES (G12: Turn left. Go straight.) + prepositions of place extended (G6: next to, near) + there is/are and Where is...? recycled (G5)",
+      "patterns": [
+        "imperative = verb first, no subject",
+        "(Turn left! Go straight!)",
+        "next to + place / near (no object needed)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T12-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Your money is in the ___.",
+        "options": [
+          "bank",
+          "park",
+          "hospital",
+          "street"
+        ],
+        "correctAnswer": "bank",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "A big shop with all the food is a ___.",
+        "options": [
+          "supermarket",
+          "station",
+          "bank",
+          "bag"
+        ],
+        "correctAnswer": "supermarket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: Trains go from the ___.",
+        "options": [
+          "station",
+          "park",
+          "bedroom",
+          "menu"
+        ],
+        "correctAnswer": "station",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: The trees are green and the children play. It is a ___.",
+        "options": [
+          "park",
+          "hospital",
+          "supermarket",
+          "size"
+        ],
+        "correctAnswer": "park",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which word is NOT a place in town?",
+        "options": [
+          "hospital",
+          "thirsty",
+          "bank",
+          "park"
+        ],
+        "correctAnswer": "thirsty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: Excuse me, where is the bank? B: ___",
+        "options": [
+          "Go straight and turn left. It is next to the park",
+          "It is thirty dollars",
+          "I am fine, thank you",
+          "There are two bedrooms"
+        ],
+        "correctAnswer": "Go straight and turn left. It is next to the park",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: Which one is a direction (an instruction)?",
+        "options": [
+          "Turn right at the supermarket!",
+          "I turn right every day",
+          "She turns right",
+          "The supermarket is right"
+        ],
+        "correctAnswer": "Turn right at the supermarket!",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: The bank is ___ the park - they are on the same street.",
+        "options": [
+          "next to",
+          "under",
+          "in",
+          "at"
+        ],
+        "correctAnswer": "next to",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T12-VOC-Q1": "Bank = the money place (T9 money!).",
+      "A1-T12-VOC-Q2": "Supermarket = big food shop. Market (T11) = many small shops.",
+      "A1-T12-VOC-Q3": "Station = trains and buses start there.",
+      "A1-T12-VOC-Q4": "Park = the green place in town.",
+      "A1-T12-VOC-Q5": "Thirsty is a feeling (Topic 5) - not a place.",
+      "A1-T12-VOC-Q6": "Where is...? -> answer with directions!",
+      "A1-T12-VOC-Q7": "Instructions start with the VERB: Turn...! Go...!",
+      "A1-T12-VOC-Q8": "Next to = at the side of. Under (T6) = below!"
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic12_places_directions.txt, Lesson 12.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,104 @@
+{
+  "id": "A1-T04-LIS",
+  "order": 23,
+  "title": "Topic 4: Describing People - Listening",
+  "description": "One audio (1 speaker) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe a person's appearance and personality simply",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 4 listening",
+    "audioScript": "This is my best friend. | Her name is Carol. | She is tall\nand she has long hair. | Her eyes are big. | She is 22\nyears old and she is very nice.",
+    "audioPath": "assets/audio/a1/t04_listening_my_best_friend.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T04-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this audio?",
+        "options": [
+          "A description of a friend",
+          "A goodbye message",
+          "A registration form"
+        ],
+        "correctAnswer": "A description of a friend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What does Carol look like?",
+        "options": [
+          "Tall, with long hair",
+          "Short, with short hair",
+          "The audio does not describe her"
+        ],
+        "correctAnswer": "Tall, with long hair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How old is Carol?",
+        "options": [
+          "22",
+          "12",
+          "32"
+        ],
+        "correctAnswer": "22",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-LIS-Q4",
+        "type": "trueFalse",
+        "question": "Carol is the speaker's sister. True or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "She has long hair",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic04_describing_people.txt, Lesson 4.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

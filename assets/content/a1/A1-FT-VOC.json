@@ -1,0 +1,319 @@
+{
+  "id": "A1-FT-VOC",
+  "order": 144,
+  "title": "Final Test - Vocabulary path",
+  "description": "20 new items sampling all four units. Completes the Vocabulary skill path.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_final",
+  "difficultyLevel": 5,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Prove course-wide vocabulary and use of English",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-FT-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "It is 9:00 AM. You meet your teacher. You say:",
+        "options": [
+          "Good morning!",
+          "Goodbye!",
+          "Good night!",
+          "Fine, thank you!"
+        ],
+        "correctAnswer": "Good morning!",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "Tokyo is a ___. Japan is a ___.",
+        "options": [
+          "city / country",
+          "country / city",
+          "number / city",
+          "city / email"
+        ],
+        "correctAnswer": "city / country",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "This is my brother. ___ name is Caio, and this is my mother - ___ name is Vera.",
+        "options": [
+          "His / her",
+          "Her / his",
+          "My / your",
+          "His / his"
+        ],
+        "correctAnswer": "His / her",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "I ___ short hair. My sister ___ long hair.",
+        "options": [
+          "have / has",
+          "has / have",
+          "am / is",
+          "have / have"
+        ],
+        "correctAnswer": "have / has",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "I need food! I am ___. And water too - I am ___!",
+        "options": [
+          "hungry / thirsty",
+          "thirsty / hungry",
+          "tired / cold",
+          "hungry / tired"
+        ],
+        "correctAnswer": "hungry / thirsty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "___ a big table in the kitchen, and ___ two chairs.",
+        "options": [
+          "There is / there are",
+          "There are / there is",
+          "It is / they are",
+          "There is / there is"
+        ],
+        "correctAnswer": "There is / there are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "The cat is not ON the bed. It is ___ the bed!",
+        "options": [
+          "under",
+          "in",
+          "at",
+          "next"
+        ],
+        "correctAnswer": "under",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "My father ___ to work every day, and at night he ___ TV.",
+        "options": [
+          "goes / watches",
+          "go / watch",
+          "gos / watchs",
+          "goes / watchs"
+        ],
+        "correctAnswer": "goes / watches",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q9",
+        "type": "multipleChoice",
+        "question": "My class is ___ Monday ___ eight o'clock ___ July.",
+        "options": [
+          "on / at / in",
+          "in / on / at",
+          "at / on / in",
+          "on / in / at"
+        ],
+        "correctAnswer": "on / at / in",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q10",
+        "type": "multipleChoice",
+        "question": "15 = ___ and 50 = ___.",
+        "options": [
+          "fifteen / fifty",
+          "fifty / fifteen",
+          "five / fifteen",
+          "fifteen / five"
+        ],
+        "correctAnswer": "fifteen / fifty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q11",
+        "type": "multipleChoice",
+        "question": "Can I have ___ apple and ___ tea, please?",
+        "options": [
+          "an / a",
+          "a / an",
+          "an / an",
+          "a / a"
+        ],
+        "correctAnswer": "an / a",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q12",
+        "type": "multipleChoice",
+        "question": "___ shoes here are cheap. ___ jacket there is expensive.",
+        "options": [
+          "These / That",
+          "This / Those",
+          "Those / These",
+          "That / This"
+        ],
+        "correctAnswer": "These / That",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q13",
+        "type": "multipleChoice",
+        "question": "___ left at the bank - the pharmacy is ___ the supermarket.",
+        "options": [
+          "Turn / next to",
+          "Turns / under",
+          "Turning / on",
+          "You turn / in"
+        ],
+        "correctAnswer": "Turn / next to",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q14",
+        "type": "multipleChoice",
+        "question": "I go to work ___ bus, and my sister ___ by train.",
+        "options": [
+          "by / travels",
+          "by a / travel",
+          "on / travels",
+          "by / travel"
+        ],
+        "correctAnswer": "by / travels",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q15",
+        "type": "multipleChoice",
+        "question": "She ___ speak English. The words? Read ___, please!",
+        "options": [
+          "can / them",
+          "cans / them",
+          "can / they",
+          "can / it"
+        ],
+        "correctAnswer": "can / them",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q16",
+        "type": "multipleChoice",
+        "question": "___ you like music? - Yes, I ___!",
+        "options": [
+          "Do / do",
+          "Does / does",
+          "Are / am",
+          "Do / does"
+        ],
+        "correctAnswer": "Do / do",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q17",
+        "type": "multipleChoice",
+        "question": "I ___ dance, and my brother ___ sing.",
+        "options": [
+          "don't / doesn't",
+          "doesn't / don't",
+          "don't / don't",
+          "no / not"
+        ],
+        "correctAnswer": "don't / doesn't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q18",
+        "type": "multipleChoice",
+        "question": "It ___ every winter here - and look, it ___ right now!",
+        "options": [
+          "rains / is raining",
+          "is raining / rains",
+          "rain / rains",
+          "rains / rains"
+        ],
+        "correctAnswer": "rains / is raining",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q19",
+        "type": "multipleChoice",
+        "question": "Today she ___ her new ___.",
+        "options": [
+          "is wearing / white dress",
+          "wears / dress white",
+          "is wearing / dress white",
+          "wearing / white dress"
+        ],
+        "correctAnswer": "is wearing / white dress",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-VOC-Q20",
+        "type": "multipleChoice",
+        "question": "My dog ___ ten years old. He ___ big black eyes, but he ___ see very well now.",
+        "options": [
+          "is / has / can't",
+          "has / is / can't",
+          "is / have / doesn't",
+          "is / has / don't"
+        ],
+        "correctAnswer": "is / has / can't",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_final_test_vocabulary.txt. SKILL PATH FINAL TEST (step 27/27). Pass 70% (14/20), XP 50.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

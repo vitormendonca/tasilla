@@ -1,0 +1,64 @@
+{
+  "id": "A1-R5-SPE",
+  "order": 107,
+  "title": "Review 5 (Topics 13-15) - Speaking",
+  "description": "Integrated speaking task, no scaffold, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 13-15 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record 45-60 seconds. Your student life!\n1. How you go to school or work: by... (T13)\n2. Your job or study: I am a/an... + TWO can sentences\n(T14)\n3. One classroom survival question, said naturally:\nHow do you spell...? / What does ... mean? (T15)\nNo example - you know these phrases now!",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 60,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_review5_set_topics13-15.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "by + transport correct (T13)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "a/an + job, can + verb correct (T14)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Survival chunk correct (T15)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

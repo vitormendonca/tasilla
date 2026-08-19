@@ -1,0 +1,198 @@
+{
+  "id": "A1-T17-VOC",
+  "order": 116,
+  "title": "Topic 17: Weather & Seasons - Vocabulary",
+  "description": "Core words for weather & seasons: weather, sun, rain, snow, wind, hot, spring, summer, autumn, winter. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe the weather and seasons",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "weather = sun? rain? hot? cold? - that!\nsun = the hot yellow one in the sky\nrain = water from the sky  |  snow = white, very cold!\nwind = air that moves - whooosh!\nhot = very very warm (summer!)\nseasons: spring (flowers) -> summer (hot!) ->\nautumn (wind) -> winter (cold, snow)\n+ phrase bank: What is the weather like? | It is\nraining now. | The sun is out.\n+ grammar note: NOW = am/is/are + -ING:\nIt is raining. I am watching the rain!",
+  "vocabularyBlocks": [
+    {
+      "title": "Weather & Seasons words",
+      "words": [
+        "weather",
+        "sun",
+        "rain",
+        "snow",
+        "wind",
+        "hot",
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "exampleSentences": [
+        "What is the weather like?",
+        "It is hot.",
+        "It is raining now.",
+        "The sun is out.",
+        "my favorite season (season = intro-card word, like 'set' words in T2",
+        "T8)"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "PRESENT CONTINUOUS (G10): It is raining. / I am watching TV.",
+      "explanation": "PRESENT CONTINUOUS (G10): It is raining. / I am watching TV. + THE CONTRAST with simple present: It rains every winter (habit - T7) vs It is raining NOW. A1 includes continuous for NOW only - continuous for future arrangements is A2 and stays out.",
+      "patterns": [
+        "am/is/are + verb-ing (I am writing, it is",
+        "raining, we are swimming)",
+        "-ing spelling flags: swim -> swimMing,",
+        "dance -> dancing (e drops), rain -> raining",
+        "CONTRAST: It rains every winter. <-> It is",
+        "raining now."
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T17-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Water from the sky - but not white and cold. It is ___.",
+        "options": [
+          "rain",
+          "snow",
+          "wind",
+          "sun"
+        ],
+        "correctAnswer": "rain",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "The very hot season is ___.",
+        "options": [
+          "summer",
+          "winter",
+          "autumn",
+          "spring"
+        ],
+        "correctAnswer": "summer",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: Whooosh! Close the window - the ___ is very strong today!",
+        "options": [
+          "wind",
+          "sun",
+          "snow",
+          "weather"
+        ],
+        "correctAnswer": "wind",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: It is 35 degrees. It is very ___ - I need water!",
+        "options": [
+          "hot",
+          "cold",
+          "tired",
+          "old"
+        ],
+        "correctAnswer": "hot",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT a season?",
+        "options": [
+          "winter",
+          "weekend",
+          "summer",
+          "spring"
+        ],
+        "correctAnswer": "weekend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: What is the weather like in your city today? B: ___",
+        "options": [
+          "It is cold, and it is raining",
+          "I am a doctor",
+          "It is next to the bank",
+          "Yes, I do"
+        ],
+        "correctAnswer": "It is cold, and it is raining",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: Look! It ___ snowing! We ___ watching from the window!",
+        "options": [
+          "is / are",
+          "are / is",
+          "is / is",
+          "does / do"
+        ],
+        "correctAnswer": "is / are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: It ___ every winter here. Look - it ___ right now!",
+        "options": [
+          "rains / is raining",
+          "is raining / rains",
+          "rain / raining",
+          "rains / rains"
+        ],
+        "correctAnswer": "rains / is raining",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T17-VOC-Q1": "Rain = water. Snow = white and very cold.",
+      "A1-T17-VOC-Q2": "Summer = hot! Winter = cold!",
+      "A1-T17-VOC-Q3": "Wind = air that moves. Whooosh!",
+      "A1-T17-VOC-Q4": "Hot = the opposite of cold (T5!). Hot day -> thirsty (T5!).",
+      "A1-T17-VOC-Q5": "Weekend (T16) = Saturday + Sunday, in EVERY season!",
+      "A1-T17-VOC-Q6": "What is the weather like? -> hot/cold + rain/sun/snow.",
+      "A1-T17-VOC-Q7": "It IS snowing. We ARE watching. (am/is/are + -ing = NOW)",
+      "A1-T17-VOC-Q8": "Every winter = habit -> rainS (T7). Right now -> IS rainING. This contrast = strong A1!"
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic17_weather_seasons.txt, Lesson 17.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

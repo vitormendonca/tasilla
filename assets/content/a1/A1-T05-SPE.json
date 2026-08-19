@@ -1,0 +1,64 @@
+{
+  "id": "A1-T05-SPE",
+  "order": 30,
+  "title": "Topic 5: Feelings & States - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say how you feel; ask others how they feel",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record yourself. Talk about feelings today.\nSay 4 things:\n1. A greeting + how you are (Hello! I am fine... - T1)\n2. TWO feeling words about you today (I am ... and ...)\n3. One family member or friend: how is he/she today?\n(My mother is... - T3)\n4. Ask ME a question: Are you...?\nExample: Hi! I am fine. I am happy but a little tired.\nMy father is hungry! And you? Are you tired?\n\nTip: Think: how are you REALLY today? Use true feelings!",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 45,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic05_feelings_states.txt, Lesson 5.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Uses 2+ feeling words about self",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "He/She is + feeling for another person",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Asks Are you...? question",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

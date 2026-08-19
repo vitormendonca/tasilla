@@ -1,0 +1,119 @@
+{
+  "id": "A1-T04-REA",
+  "order": 24,
+  "title": "Topic 4: Describing People - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe a person's appearance and personality simply",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 4: two texts",
+    "readingText": "TEXT A - Lost person notice format\nHELP! WHERE IS MY GRANDFATHER?\nHis name is Sr. Adao. He is 80 years old.\nHe is short and he has short hair.\nHis eyes are small. He is very nice.\nPlease call: 9 8 7 6.\n\nTEXT B - Chat messages format\nZeca: Is your new teacher nice?\nLia:  Yes! Her name is Dona Fatima. She is very nice.\nZeca: What does she look like?\nLia:  She is tall. She has long hair and big eyes.\nZeca: My teacher is her brother!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T04-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this notice for?",
+        "options": [
+          "To find a person",
+          "To sell a phone",
+          "To say hello to a class"
+        ],
+        "correctAnswer": "To find a person",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-REA-Q2",
+        "type": "multipleChoice",
+        "question": "What does Sr. Adao look like?",
+        "options": [
+          "Short, with short hair",
+          "Tall, with long hair",
+          "The notice does not say"
+        ],
+        "correctAnswer": "Short, with short hair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Who is Sr. Adao?",
+        "options": [
+          "The writer's grandfather",
+          "The writer's father",
+          "The writer's friend TEXT B (37 words) - Chat messages format: --------------------------------------- Zeca: Is your new teacher nice? Lia: Yes! Her name is Dona Fatima. She is very nice. Zeca: What does she look like? Lia: She is tall. She has long hair and big eyes. Zeca: My teacher is her brother! ---------------------------------------"
+        ],
+        "correctAnswer": "The writer's grandfather",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What are Zeca and Lia talking about?",
+        "options": [
+          "Lia's new teacher",
+          "Lia's family",
+          "A lost person"
+        ],
+        "correctAnswer": "Lia's new teacher",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What does Dona Fatima look like?",
+        "options": [
+          "Tall, long hair, big eyes",
+          "Short, short hair, small eyes",
+          "The text does not describe her"
+        ],
+        "correctAnswer": "Tall, long hair, big eyes",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Who is Zeca's teacher?",
+        "options": [
+          "Dona Fatima's brother",
+          "Dona Fatima's sister",
+          "Lia's mother"
+        ],
+        "correctAnswer": "Dona Fatima's brother",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic04_describing_people.txt, Lesson 4.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

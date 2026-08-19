@@ -1,0 +1,195 @@
+{
+  "id": "A1-T14-VOC",
+  "order": 94,
+  "title": "Topic 14: Work & Study - Vocabulary",
+  "description": "Core words for work & study: job, teacher, doctor, student, office, speak, write, help (teacher and student promoted from sight words - used since Topic 1 - to active, tested vocabulary). 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about your job or studies",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "job = your work: teacher, doctor...\nteacher = teaches students (your English teacher!)\ndoctor = works at the hospital\nstudent = studies at school\noffice = the work room with tables, chairs, computers\nspeak = talk (speak English!)  |  write = make words\non paper  |  help = do good things for a person\n+ phrase bank: What is your job? | I am a... |\nI can speak English!\n+ grammar note: I am A teacher / AN office worker\n(a/an + job). can + verb: NO -s, ever!",
+  "vocabularyBlocks": [
+    {
+      "title": "Work & Study words",
+      "words": [
+        "job",
+        "teacher",
+        "doctor",
+        "student",
+        "office",
+        "speak",
+        "write",
+        "help (teacher and student promoted from sight words - used since Topic 1 - to active",
+        "tested vocabulary)"
+      ],
+      "exampleSentences": [
+        "What is your job?",
+        "I am a teacher.",
+        "She works in an office.",
+        "I can speak English.",
+        "He can help you.",
+        "I am a student at night!"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "CAN + verb = ABILITY (G11 second half: I can speak English -",
+      "explanation": "CAN + verb = ABILITY (G11 second half: I can speak English - can never takes -s) + A/AN with jobs (I am A teacher) + 3rd person -s consolidation (G7)",
+      "patterns": [
+        "a/an + job: a doctor, a teacher, an office",
+        "can + base verb, ALL persons the same:",
+        "I can speak / she can speak (never cans,",
+        "never can speaks)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T14-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "This person works at the hospital. ___",
+        "options": [
+          "A doctor",
+          "A student",
+          "A teacher",
+          "A taxi"
+        ],
+        "correctAnswer": "A doctor",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "The work room with tables, chairs and computers is an ___.",
+        "options": [
+          "office",
+          "airport",
+          "bedroom",
+          "bathroom"
+        ],
+        "correctAnswer": "office",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: My little brother is 6. I ___ him with his school things every day.",
+        "options": [
+          "help",
+          "write",
+          "drink",
+          "travel"
+        ],
+        "correctAnswer": "help",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: In my English class, we ___ and we write.",
+        "options": [
+          "speak",
+          "sleep",
+          "pay",
+          "turn"
+        ],
+        "correctAnswer": "speak",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT a job?",
+        "options": [
+          "teacher",
+          "juice",
+          "doctor",
+          "student"
+        ],
+        "correctAnswer": "juice",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: What is your job? B: ___",
+        "options": [
+          "I am a teacher. I work at a school in Santos",
+          "I am hungry",
+          "It is ten dollars",
+          "Turn left at the bank"
+        ],
+        "correctAnswer": "I am a teacher. I work at a school in Santos",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: She is ___ doctor. He works in ___ office.",
+        "options": [
+          "a / an",
+          "an / a",
+          "a / a",
+          "an / an"
+        ],
+        "correctAnswer": "a / an",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ speak English. My sister ___ speak English too.",
+        "options": [
+          "can / can",
+          "can / cans",
+          "cans / can",
+          "can / can speaks"
+        ],
+        "correctAnswer": "can / can",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T14-VOC-Q1": "Doctor -> hospital (T12!). Teacher -> school.",
+      "A1-T14-VOC-Q2": "Office = the work room.",
+      "A1-T14-VOC-Q3": "Help = do good things for a person.",
+      "A1-T14-VOC-Q4": "Speak = talk. Speak English every day!",
+      "A1-T14-VOC-Q5": "Juice is a drink (Topic 10)!",
+      "A1-T14-VOC-Q6": "What is your job? -> I am a/an + job.",
+      "A1-T14-VOC-Q7": "A doctor. AN office (a-e-i-o-u sound - T10 rule!).",
+      "A1-T14-VOC-Q8": "CAN never changes: I can, she can, we can!"
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic14_work_study.txt, Lesson 14.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

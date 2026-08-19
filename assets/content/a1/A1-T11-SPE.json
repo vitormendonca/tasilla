@@ -1,0 +1,64 @@
+{
+  "id": "A1-T11-SPE",
+  "order": 76,
+  "title": "Topic 11: Shopping - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Buy things, ask prices, sizes, quantities",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record yourself. You are in a shop. Play BOTH voices\n(assistant and you) - like a mini theater!\nInclude:\n1. Assistant: Can I help you?\n2. You: ask the price of one NEAR thing (this/these)\nand one FAR thing (that/those)\n3. Assistant: give two prices\n4. You: choose one, ask for it politely (Can I have...),\nand say card or cash\n\nTip: Change your voice a little for each speaker - fun",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 60,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic11_shopping.txt, Lesson 11.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "this/that/these/those used correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Polite request with Can I + please",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Prices with clear numbers (T9)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

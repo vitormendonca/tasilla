@@ -1,0 +1,192 @@
+{
+  "id": "A1-T13-VOC",
+  "order": 88,
+  "title": "Topic 13: Travel & Transport - Vocabulary",
+  "description": "Core words for travel & transport: bus, train, car, taxi, plane, ticket, airport, travel. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name transport, buy tickets, handle simple travel situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "bus = big, many people, in the city\ntrain = long, on rails, from the station\ncar = your family drives it  |  taxi = a car you pay for\nplane = it flies! (airport)\nticket = your paper to go in (bus, train, plane)\nairport = planes go from there\ntravel = go to another city or country\n+ phrase bank: by bus / by train / by car |\nA ticket to..., please | What time is the bus?",
+  "vocabularyBlocks": [
+    {
+      "title": "Travel & Transport words",
+      "words": [
+        "bus",
+        "train",
+        "car",
+        "taxi",
+        "plane",
+        "ticket",
+        "airport",
+        "travel"
+      ],
+      "exampleSentences": [
+        "I go to work by bus.",
+        "A ticket to Olinda, please.",
+        "What time is the bus?",
+        "The bus is at ten thirty.",
+        "Can I have two tickets, please?"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "BY + transport (go by bus - no article) + ticket-office requ",
+      "explanation": "BY + transport (go by bus - no article) + ticket-office requests with CAN (G11 recycled) + What time is...? (T8 recycled with timetables)",
+      "patterns": [
+        "by + transport, NO article (by bus - not by",
+        "a bus)",
+        "travel as verb: I travel / she travels (-s)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T13-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "It flies, and it is at the airport. It is a ___.",
+        "options": [
+          "plane",
+          "train",
+          "taxi",
+          "bus"
+        ],
+        "correctAnswer": "plane",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "A car with a driver - you pay at the end. It is a ___.",
+        "options": [
+          "taxi",
+          "bus",
+          "ticket",
+          "plane"
+        ],
+        "correctAnswer": "taxi",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: Your ___ please! - Here you are. Seat twelve.",
+        "options": [
+          "ticket",
+          "airport",
+          "menu",
+          "bag"
+        ],
+        "correctAnswer": "ticket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: In July we ___ to Portugal. My mother's family is there!",
+        "options": [
+          "travel",
+          "sleep",
+          "turn",
+          "buy"
+        ],
+        "correctAnswer": "travel",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT transport?",
+        "options": [
+          "bus",
+          "kitchen",
+          "train",
+          "taxi"
+        ],
+        "correctAnswer": "kitchen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "Ticket office: Good morning! Can I help you? You: ___",
+        "options": [
+          "A ticket to Recife, please. What time is the bus?",
+          "Turn left at the park",
+          "I have long hair",
+          "There is a table in the kitchen"
+        ],
+        "correctAnswer": "A ticket to Recife, please. What time is the bus?",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: I go to work ___ bus. My father goes ___ car.",
+        "options": [
+          "by / by",
+          "by a / by a",
+          "in / on",
+          "on / at"
+        ],
+        "correctAnswer": "by / by",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ by train. My sister ___ by plane - expensive!",
+        "options": [
+          "travel / travels",
+          "travels / travel",
+          "travel / travel",
+          "travels / travels"
+        ],
+        "correctAnswer": "travel / travels",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T13-VOC-Q1": "Plane = it flies. Train = on rails.",
+      "A1-T13-VOC-Q2": "Taxi = a car you pay for.",
+      "A1-T13-VOC-Q3": "Ticket = your paper for the bus, train or plane.",
+      "A1-T13-VOC-Q4": "Travel = go to another city or country.",
+      "A1-T13-VOC-Q5": "Kitchen is a room (Topic 6)!",
+      "A1-T13-VOC-Q6": "At the ticket office: say WHERE + ask WHEN.",
+      "A1-T13-VOC-Q7": "BY bus, BY car, BY train - no a, no the!",
+      "A1-T13-VOC-Q8": "I travel. She travelS (T7 rule)."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic13_travel_transport.txt, Lesson 13.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

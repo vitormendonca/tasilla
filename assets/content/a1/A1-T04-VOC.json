@@ -1,0 +1,182 @@
+{
+  "id": "A1-T04-VOC",
+  "order": 22,
+  "title": "Topic 4: Describing People - Vocabulary",
+  "description": "Core words for describing people: tall, short, long, hair, eyes, nice. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe a person's appearance and personality simply",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "tall = a big person (up!)  |  short = a small person\nlong = long hair (down to the back)\nhair = on your head  |  eyes = you see with them\nnice = a good, friendly person\n+ phrase bank: He is tall | She has long hair |\nWhat does he look like?",
+  "vocabularyBlocks": [
+    {
+      "title": "Describing People words",
+      "words": [
+        "tall",
+        "short",
+        "long",
+        "hair",
+        "eyes",
+        "nice"
+      ],
+      "exampleSentences": [
+        "He is tall.",
+        "She is short.",
+        "I have long hair.",
+        "She has big eyes.",
+        "He is very nice.",
+        "What does she look like?"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "TO BE + adjective (He is tall) + HAVE / HAS for features (Sh",
+      "explanation": "TO BE + adjective (He is tall) + HAVE / HAS for features (She has long hair)",
+      "patterns": [
+        "to be + adjective (is tall / is nice)",
+        "have vs has (I/you HAVE - he/she HAS)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T04-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "A basketball player is usually ___.",
+        "options": [
+          "tall",
+          "short",
+          "long"
+        ],
+        "correctAnswer": "tall",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "You see with your ___.",
+        "options": [
+          "eyes",
+          "hair",
+          "family"
+        ],
+        "correctAnswer": "eyes",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: My sister has very ___ hair - down to her back!",
+        "options": [
+          "long",
+          "tall",
+          "nice"
+        ],
+        "correctAnswer": "long",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: My teacher is very ___. I like her!",
+        "options": [
+          "nice",
+          "long",
+          "eyes"
+        ],
+        "correctAnswer": "nice",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which word is NOT for describing people?",
+        "options": [
+          "tall",
+          "email",
+          "short"
+        ],
+        "correctAnswer": "email",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: What does your brother look like? B: ___",
+        "options": [
+          "He is tall and he has short hair",
+          "He is from Brazil",
+          "His name is Leo"
+        ],
+        "correctAnswer": "He is tall and he has short hair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: My mother ___ short. My parents ___ very nice.",
+        "options": [
+          "is / are",
+          "are / is",
+          "am / are"
+        ],
+        "correctAnswer": "is / are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T04-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ short hair. My sister ___ long hair.",
+        "options": [
+          "have / has",
+          "has / have",
+          "has / has"
+        ],
+        "correctAnswer": "have / has",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T04-VOC-Q1": "Tall = big up! People are tall. Hair is long.",
+      "A1-T04-VOC-Q2": "Eyes = for seeing. Hair = on your head.",
+      "A1-T04-VOC-Q3": "Hair is LONG or SHORT. People are TALL or SHORT.",
+      "A1-T04-VOC-Q4": "Nice = good and friendly.",
+      "A1-T04-VOC-Q5": "Email is from Topic 2 - not a description word.",
+      "A1-T04-VOC-Q6": "What does he LOOK LIKE? asks about appearance.",
+      "A1-T04-VOC-Q7": "She IS (one person). They ARE (two or more).",
+      "A1-T04-VOC-Q8": "I/you HAVE. He/she HAS."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic04_describing_people.txt, Lesson 4.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

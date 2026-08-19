@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../data/a1_learning_experience_data.dart';
+import '../../data/a1_content_loader.dart';
 import '../../data/learning_path_data.dart';
 import '../../models/learning_enums.dart';
 import '../../models/learning_experience.dart';

@@ -1,0 +1,195 @@
+{
+  "id": "A1-T20-VOC",
+  "order": 131,
+  "title": "Topic 20: Animals & Nature - Vocabulary",
+  "description": "Core words for animals & nature: animal, dog, cat, bird, fish, horse, tree, flower, garden, fly. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about pets, common animals and simple nature words",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "animal = dog, cat, bird...  |  dog = your best friend!\ncat = it sleeps all day  |  bird = it can fly and sing\nfish = it lives in water (two fish - no -s!)\nhorse = big, you can ride it  |  tree = big and green\nflower = small, beautiful, in the garden\ngarden = the green place at a house\nfly = move in the sky (birds can!)\n+ phrase bank: Do you have a pet? | My dog's name\nis... | Birds can fly!",
+  "vocabularyBlocks": [
+    {
+      "title": "Animals & Nature words",
+      "words": [
+        "animal",
+        "dog",
+        "cat",
+        "bird",
+        "fish",
+        "horse",
+        "tree",
+        "flower",
+        "garden",
+        "fly"
+      ],
+      "exampleSentences": [
+        "I have a dog.",
+        "My dog's name is Bobi.",
+        "Birds can fly.",
+        "She is sleeping now.",
+        "Do you have a pet? (pet = intro-card chunk: an animal in your house)"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "Grammar focus",
+      "explanation": "",
+      "patterns": [
+        "nothing new - deliberate. The lesson shows",
+        "the student how much machine they now own:",
+        "has, is, can, does, there are, is sleeping -",
+        "all in one topic."
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T20-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "It lives in water and it can swim - but it can't sing! It is a ___.",
+        "options": [
+          "fish",
+          "bird",
+          "cat",
+          "horse"
+        ],
+        "correctAnswer": "fish",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "Big and green, with birds in it: a ___.",
+        "options": [
+          "tree",
+          "flower",
+          "garden",
+          "dog"
+        ],
+        "correctAnswer": "tree",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: Birds can ___ - up, up in the sky!",
+        "options": [
+          "fly",
+          "swim",
+          "read",
+          "buy"
+        ],
+        "correctAnswer": "fly",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: There are red and white flowers in my ___.",
+        "options": [
+          "garden",
+          "bedroom",
+          "office",
+          "pharmacy"
+        ],
+        "correctAnswer": "garden",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT an animal?",
+        "options": [
+          "horse",
+          "flower",
+          "bird",
+          "cat"
+        ],
+        "correctAnswer": "flower",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: Do you have a pet? B: ___",
+        "options": [
+          "Yes, I do! I have a small dog",
+          "Yes, I am",
+          "No, it is closed",
+          "It is raining"
+        ],
+        "correctAnswer": "Yes, I do! I have a small dog",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: Birds ___ fly, but they ___ swim like fish!",
+        "options": [
+          "can / can't",
+          "can't / can",
+          "can / don't",
+          "do / can't"
+        ],
+        "correctAnswer": "can / can't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T20-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: My cat ___ ten years old. She ___ green eyes, and right now she ___ on my bed!",
+        "options": [
+          "is / has / is sleeping",
+          "has / is / sleeps",
+          "is / have / sleeping",
+          "is / has / sleeps"
+        ],
+        "correctAnswer": "is / has / is sleeping",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T20-VOC-Q1": "Fish -> water. Bird -> sky and songs!",
+      "A1-T20-VOC-Q2": "Tree = big. Flower = small. Garden = the whole green place!",
+      "A1-T20-VOC-Q3": "Fly = move in the sky. Fish swim, birds fly!",
+      "A1-T20-VOC-Q4": "Garden = the green place at a house (T6 neighbor!).",
+      "A1-T20-VOC-Q5": "A flower is nature - but not an animal!",
+      "A1-T20-VOC-Q6": "Do you have...? -> Yes, I do / No, I don't (T16 - forever!).",
+      "A1-T20-VOC-Q7": "can = yes ability, can't = no ability (T14 + T19).",
+      "A1-T20-VOC-Q8": "IS + age (T2), HAS + eyes (T4), IS SLEEPING + now (T17). Three topics, one cat - look how much you know!"
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic20_animals_nature.txt, Lesson 20.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

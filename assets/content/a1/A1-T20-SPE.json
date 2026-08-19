@@ -1,0 +1,64 @@
+{
+  "id": "A1-T20-SPE",
+  "order": 134,
+  "title": "Topic 20: Animals & Nature - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about pets, common animals and simple nature words",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "LESSON SPEAKING TASK):\nRecord a 60-second monologue: AN ANIMAL I KNOW.\nA pet, a family member's pet, or an animal you see\nevery day.\nCover:\n1. Who: I have... / My sister has... + its name\n(my dog's name is... - T3 's!)\n2. What it looks like: big/small + colours (T4 + T18)\n3. What it CAN do and CAN'T do\n4. Its day: what it does every day + what it is doing\nright now, if you can see it! (T7 + T17)\n\nTip: This is your LAST topic lesson recording. Show",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 75,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic20_animals_nature.txt, Lesson 20.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Fills ~60s, organized",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "has + description + colours correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "can/can't + does/is doing correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

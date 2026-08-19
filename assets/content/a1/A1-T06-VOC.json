@@ -1,0 +1,187 @@
+{
+  "id": "A1-T06-VOC",
+  "order": 34,
+  "title": "Topic 6: Home & Where You Live - Vocabulary",
+  "description": "Core words for home & where you live: house, room, bedroom, kitchen, bathroom, bed, table, chair. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name rooms and furniture; describe your home simply",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "house = your building  |  room = one space in a house\nbedroom = room with a bed (sleep!)\nkitchen = room for food  |  bathroom = room for a shower\nbed = you sleep in it  |  table = you eat on it\nchair = you sit on it\n+ phrase bank: There is a... | There are two... |\nin / on / under\n+ grammar note: a + word (a bed); an + a-e-i-o-u word\n(an address)",
+  "vocabularyBlocks": [
+    {
+      "title": "Home & Where You Live words",
+      "words": [
+        "house",
+        "room",
+        "bedroom",
+        "kitchen",
+        "bathroom",
+        "bed",
+        "table",
+        "chair"
+      ],
+      "exampleSentences": [
+        "There is a table in the kitchen.",
+        "There are two bedrooms.",
+        "Where is the cat?... -> Where is my phone?",
+        "It is on the table.",
+        "under the bed",
+        "My house is small but happy!"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "THERE IS / THERE ARE (G5) + prepositions IN / ON / UNDER (G6",
+      "explanation": "THERE IS / THERE ARE (G5) + prepositions IN / ON / UNDER (G6) + A/AN with singular nouns (G3 intro)",
+      "patterns": [
+        "there is + a + singular / there are + number +",
+        "plural (-s)",
+        "in / on / under + the + noun",
+        "a/an: a bedroom, a chair (an enters fully in T10",
+        "with an apple - here only noted on intro card)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T06-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "You sleep in this room. It is the ___.",
+        "options": [
+          "bedroom",
+          "kitchen",
+          "bathroom"
+        ],
+        "correctAnswer": "bedroom",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "Your food is in this room. It is the ___.",
+        "options": [
+          "kitchen",
+          "bedroom",
+          "chair"
+        ],
+        "correctAnswer": "kitchen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: I am tired. Where is my ___? I need sleep!",
+        "options": [
+          "bed",
+          "table",
+          "kitchen"
+        ],
+        "correctAnswer": "bed",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: Dinner time! The food is on the ___.",
+        "options": [
+          "table",
+          "chair",
+          "bathroom"
+        ],
+        "correctAnswer": "table",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which word is NOT a room?",
+        "options": [
+          "bathroom",
+          "chair",
+          "bedroom"
+        ],
+        "correctAnswer": "chair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: Is your house big? B: ___",
+        "options": [
+          "No, it is small. But it is very happy!",
+          "Yes, I am 21 years old",
+          "It is on the table"
+        ],
+        "correctAnswer": "No, it is small. But it is very happy!",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: ___ two bedrooms in my house. ___ a table in the kitchen.",
+        "options": [
+          "There are / There is",
+          "There is / There are",
+          "There are / There are"
+        ],
+        "correctAnswer": "There are / There is",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: My phone is not ON the table. It is ___ the table!",
+        "options": [
+          "under",
+          "in",
+          "is"
+        ],
+        "correctAnswer": "under",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T06-VOC-Q1": "Bedroom = bed + room. You sleep there.",
+      "A1-T06-VOC-Q2": "Kitchen = the room for food.",
+      "A1-T06-VOC-Q3": "Tired (T5!) -> you need your BED.",
+      "A1-T06-VOC-Q4": "Food goes ON the table. You sit ON a chair.",
+      "A1-T06-VOC-Q5": "A chair is furniture - it is IN a room.",
+      "A1-T06-VOC-Q6": "Is your HOUSE big? -> answer about the house (it).",
+      "A1-T06-VOC-Q7": "There ARE + two (plural). There IS + a (one).",
+      "A1-T06-VOC-Q8": "On = on top. Under = below. In = inside."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic06_home.txt, Lesson 6.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../data/a1_learning_experience_data.dart';
+import '../../data/a1_content_loader.dart';
 import '../../models/learning_experience.dart';
 import '../../services/submission_service.dart';
 import '../../theme/app_theme.dart';

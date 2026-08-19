@@ -1,0 +1,125 @@
+{
+  "id": "A1-T18-REA",
+  "order": 123,
+  "title": "Topic 18: Clothes & Colours - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name clothes and colours; describe what people are wearing",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 18: two texts",
+    "readingText": "TEXT A - Clothes shop flyer format\nMODA MIA - NEW CLOTHES THIS WEEK!\nWhite shirts ......... twenty dollars\nRed dresses .......... forty dollars\nBlack shoes .......... thirty-five dollars\nWinter jackets ....... fifty dollars\n* THIS WEEK ONLY: two white shirts for thirty dollars!\nOpen Monday to Saturday, nine to seven.\nWe are next to the bank - come and see the new\ncolours!\n\nTEXT B - Chat messages format\nBia:  Rafa, help me! The party is at eight, and I am\n      looking at my clothes NOW. Blue dress or white\n      shirt?\nRafa: Your blue dress is super!\nBia:  Hmm... no. Blue is not my colour.\nRafa: OK: the white shirt, and your new black shoes!\nBia:  Yes!! Perfect. And you? What are you wearing?\nRafa: My green jacket, of course. I love it!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T18-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A clothes shop flyer",
+          "A weather report",
+          "A party invitation",
+          "A postcard"
+        ],
+        "correctAnswer": "A clothes shop flyer",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How much are the black shoes?",
+        "options": [
+          "Thirty-five dollars",
+          "Fifty dollars",
+          "Twenty dollars",
+          "Forty dollars"
+        ],
+        "correctAnswer": "Thirty-five dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-REA-Q3",
+        "type": "multipleChoice",
+        "question": "It is very cold in your city. Which thing in this shop is for you?",
+        "options": [
+          "A winter jacket",
+          "A red dress",
+          "Two white shirts",
+          "Black shoes"
+        ],
+        "correctAnswer": "A winter jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What is this chat about?",
+        "options": [
+          "Bia chooses clothes for a party tonight",
+          "Bia buys a dress in a shop",
+          "The weather at a party",
+          "Rafa's new shoes"
+        ],
+        "correctAnswer": "Bia chooses clothes for a party tonight",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What does Bia wear in the end?",
+        "options": [
+          "The white shirt and black shoes",
+          "The blue dress",
+          "A green jacket",
+          "The text does not say"
+        ],
+        "correctAnswer": "The white shirt and black shoes",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Bia asks: What ___ you ___? (about clothes, right now/tonight)",
+        "options": [
+          "are / wearing",
+          "do / wear",
+          "is / wearing",
+          "are / wear"
+        ],
+        "correctAnswer": "are / wearing",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic18_clothes_colours.txt, Lesson 18.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,119 @@
+{
+  "id": "A1-T05-REA",
+  "order": 29,
+  "title": "Topic 5: Feelings & States - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say how you feel; ask others how they feel",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 5: two texts",
+    "readingText": "TEXT A - Handwritten note format\nNOTE FOR MY MOTHER\nGood morning, Mama!\nI am at school. I am fine and happy.\nMy sister is very tired - she is in bed.\nHer friend Tina is here.\n- Kisses, Duda\n\nTEXT B - Chat messages format\nRafa: Hi Gil! Are you happy today?\nGil:  No, I am not. I am sad and tired.\nRafa: Oh no! Why?\nGil:  I am hungry and my house is very cold!\nRafa: Come to my house! We are happy here.",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T05-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A note from Duda to her mother",
+          "A registration form",
+          "A lost person notice"
+        ],
+        "correctAnswer": "A note from Duda to her mother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How is Duda?",
+        "options": [
+          "Fine and happy",
+          "Tired",
+          "Cold"
+        ],
+        "correctAnswer": "Fine and happy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Who is very tired?",
+        "options": [
+          "Duda's sister",
+          "Duda",
+          "Tina TEXT B (38 words) - Chat messages format: --------------------------------------- Rafa: Hi Gil! Are you happy today? Gil: No, I am not. I am sad and tired. Rafa: Oh no! Why? Gil: I am hungry and my house is very cold! Rafa: Come to my house! We are happy here. ---------------------------------------"
+        ],
+        "correctAnswer": "Duda's sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-REA-Q4",
+        "type": "multipleChoice",
+        "question": "How is Gil today?",
+        "options": [
+          "Sad and tired",
+          "Happy",
+          "Fine, thank you"
+        ],
+        "correctAnswer": "Sad and tired",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-REA-Q5",
+        "type": "multipleChoice",
+        "question": "Gil is hungry and his house is very ___.",
+        "options": [
+          "cold",
+          "big",
+          "nice"
+        ],
+        "correctAnswer": "cold",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T05-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Rafa says: ___ are happy here. Which word is in the text?",
+        "options": [
+          "We",
+          "He",
+          "I"
+        ],
+        "correctAnswer": "We",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic05_feelings_states.txt, Lesson 5.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

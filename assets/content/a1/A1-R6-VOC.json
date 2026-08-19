@@ -1,0 +1,249 @@
+{
+  "id": "A1-R6-VOC",
+  "order": 136,
+  "title": "Review 6 (Topics 16-20) - Vocabulary",
+  "description": "Skill-path review: 15 new exercises recycling Topics 16-20.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 16-20 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-R6-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Saturday + Sunday = the ___.",
+        "options": [
+          "weekend",
+          "week",
+          "hobby",
+          "month"
+        ],
+        "correctAnswer": "weekend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "___ you like films? - No, I ___.",
+        "options": [
+          "Do / don't",
+          "Does / doesn't",
+          "Are / am not",
+          "Do / doesn't"
+        ],
+        "correctAnswer": "Do / don't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "My brother ___ play games - he reads.",
+        "options": [
+          "doesn't",
+          "don't",
+          "isn't",
+          "not"
+        ],
+        "correctAnswer": "doesn't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "White, very cold, in winter: ___.",
+        "options": [
+          "snow",
+          "rain",
+          "wind",
+          "sun"
+        ],
+        "correctAnswer": "snow",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Look out the window! It ___ right now!",
+        "options": [
+          "is raining",
+          "rains",
+          "rain",
+          "is rain"
+        ],
+        "correctAnswer": "is raining",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "It ___ every winter in my city.",
+        "options": [
+          "rains",
+          "is raining",
+          "raining",
+          "rain"
+        ],
+        "correctAnswer": "rains",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Snow is ___ and the night is ___.",
+        "options": [
+          "white / black",
+          "black / white",
+          "red / blue",
+          "white / red"
+        ],
+        "correctAnswer": "white / black",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Look! She ___ a red dress today!",
+        "options": [
+          "is wearing",
+          "wears",
+          "wearing",
+          "wear"
+        ],
+        "correctAnswer": "is wearing",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q9",
+        "type": "multipleChoice",
+        "question": "I ___ black shoes to work every day.",
+        "options": [
+          "wear",
+          "am wearing",
+          "wears",
+          "wearing"
+        ],
+        "correctAnswer": "wear",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q10",
+        "type": "multipleChoice",
+        "question": "The medicine shop is the ___.",
+        "options": [
+          "pharmacy",
+          "supermarket",
+          "bank",
+          "station"
+        ],
+        "correctAnswer": "pharmacy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q11",
+        "type": "multipleChoice",
+        "question": "She ___ a headache, so she ___ come to class.",
+        "options": [
+          "has / can't",
+          "have / can",
+          "has / doesn't",
+          "is / can't"
+        ],
+        "correctAnswer": "has / can't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q12",
+        "type": "multipleChoice",
+        "question": "One foot, two ___.",
+        "options": [
+          "feet",
+          "foots",
+          "foot",
+          "feets"
+        ],
+        "correctAnswer": "feet",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q13",
+        "type": "multipleChoice",
+        "question": "It can fly and it can sing: a ___.",
+        "options": [
+          "bird",
+          "fish",
+          "cat",
+          "horse"
+        ],
+        "correctAnswer": "bird",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q14",
+        "type": "multipleChoice",
+        "question": "My ___ name is Bobi. (the dog of my family)",
+        "options": [
+          "dog's",
+          "dogs",
+          "dog is",
+          "dogs'"
+        ],
+        "correctAnswer": "dog's",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-VOC-Q15",
+        "type": "multipleChoice",
+        "question": "Look! The cat ___ with my shoe right now!",
+        "options": [
+          "is playing",
+          "plays",
+          "play",
+          "playing"
+        ],
+        "correctAnswer": "is playing",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review6_set_topics16-20.txt. All content new; never copies of lesson items.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

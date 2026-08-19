@@ -1,0 +1,64 @@
+{
+  "id": "A1-T18-SPE",
+  "order": 124,
+  "title": "Topic 18: Clothes & Colours - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name clothes and colours; describe what people are wearing",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record a 60-second monologue: CLOTHES AND COLOURS.\nCover:\n1. What you are wearing RIGHT NOW - with colours\n(I am wearing...)\n2. What you wear every day to work/school - the habit\n(I wear...)\n3. One person: what he/she is wearing now, or wears\nevery day (T4 + T3: describe a real person!)\n4. Your favorite colour + one thing you have in that\ncolour\n\nTip: Look at yourself - real clothes, real colours.",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 75,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic18_clothes_colours.txt, Lesson 18.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Fills ~60s, organized",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "am/is wearing vs wear used correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Colour + clothes word order correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

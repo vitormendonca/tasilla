@@ -1,0 +1,125 @@
+{
+  "id": "A1-T13-REA",
+  "order": 90,
+  "title": "Topic 13: Travel & Transport - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name transport, buy tickets, handle simple travel situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 13: two texts",
+    "readingText": "TEXT A - Station timetable format\nCITY STATION - BUSES TODAY\nOlinda ..... ten o'clock ...... seven dollars\nRecife ..... ten thirty ....... nine dollars\nSantos ..... eleven o'clock ... twelve dollars\nTickets: at the ticket office or in the app.\nThe ticket office is next to door two.\nGood travels!\n\nTEXT B - Chat messages format\nIris: Hi Leo! On Saturday I travel to Salvador!\nLeo:  Nice! By plane?\nIris: No, by bus. The plane is very expensive.\nLeo:  What time is your bus?\nIris: At seven o'clock in the morning! My brother goes\n      with me - he likes Salvador.\nLeo:  Two happy travelers! Can you buy a present for\n      me there?",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T13-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A bus timetable with prices",
+          "A cafe menu",
+          "Directions to a house",
+          "A shop notice"
+        ],
+        "correctAnswer": "A bus timetable with prices",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-REA-Q2",
+        "type": "multipleChoice",
+        "question": "What time is the bus to Recife?",
+        "options": [
+          "Ten thirty",
+          "Ten o'clock",
+          "Eleven o'clock",
+          "The text does not say"
+        ],
+        "correctAnswer": "Ten thirty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How much is the ticket to Santos?",
+        "options": [
+          "Twelve dollars",
+          "Twenty dollars",
+          "Nine dollars",
+          "Seven dollars TEXT B (57 words) - Chat messages format: --------------------------------------- Iris: Hi Leo! On Saturday I travel to Salvador! Leo: Nice! By plane? Iris: No, by bus. The plane is very expensive. Leo: What time is your bus? Iris: At seven o'clock in the morning! My brother goes with me - he likes Salvador. Leo: Two happy travelers! Can you buy a present for me there? ---------------------------------------"
+        ],
+        "correctAnswer": "Twelve dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What is Iris's news?",
+        "options": [
+          "She travels to Salvador on Saturday",
+          "She has a new apartment",
+          "She works at the station",
+          "It is her birthday"
+        ],
+        "correctAnswer": "She travels to Salvador on Saturday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-REA-Q5",
+        "type": "multipleChoice",
+        "question": "Why does Iris go by bus, not by plane?",
+        "options": [
+          "The plane is very expensive",
+          "She likes buses",
+          "There is no airport",
+          "The text does not say"
+        ],
+        "correctAnswer": "The plane is very expensive",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Who goes to Salvador with Iris?",
+        "options": [
+          "Her brother",
+          "Leo",
+          "Her sister",
+          "She goes alone"
+        ],
+        "correctAnswer": "Her brother",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic13_travel_transport.txt, Lesson 13.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

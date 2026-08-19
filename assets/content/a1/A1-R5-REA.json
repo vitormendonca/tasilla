@@ -1,0 +1,167 @@
+{
+  "id": "A1-R5-REA",
+  "order": 106,
+  "title": "Review 5 (Topics 13-15) - Reading",
+  "description": "New text(s) + 9 exercises.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 13-15 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Review 5 text",
+    "readingText": "TEXT A - School news format\nENGLISH SCHOOL - NEWS FOR STUDENTS\nClass trip! On Friday our class travels by train to\nPorto. Tickets: five dollars. The train is at nine\no'clock - the station is next to the school!\nNew teacher: Mr. Davi. He can speak three languages,\nand he writes books!\nHomework for Monday: pages ten and eleven. Read them!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-R5-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "News for the school's students",
+          "A bus timetable",
+          "A student's class notes",
+          "A job advertisement"
+        ],
+        "correctAnswer": "News for the school's students",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How does the class travel to Porto?",
+        "options": [
+          "By train",
+          "By bus",
+          "By plane",
+          "By taxi"
+        ],
+        "correctAnswer": "By train",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How much are the tickets?",
+        "options": [
+          "Five dollars",
+          "Nine dollars",
+          "Fifteen dollars",
+          "The text does not say"
+        ],
+        "correctAnswer": "Five dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q4",
+        "type": "multipleChoice",
+        "question": "Who is Mr. Davi?",
+        "options": [
+          "The new teacher",
+          "A student",
+          "A doctor",
+          "The train driver"
+        ],
+        "correctAnswer": "The new teacher",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What can Mr. Davi do?",
+        "options": [
+          "Speak three languages",
+          "Drive a train",
+          "Speak English very well",
+          "The text does not say"
+        ],
+        "correctAnswer": "Speak three languages",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Grammar: He ___ speak three languages.",
+        "options": [
+          "can",
+          "cans",
+          "is can",
+          "can to"
+        ],
+        "correctAnswer": "can",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q7",
+        "type": "multipleChoice",
+        "question": "What is the homework?",
+        "options": [
+          "Read pages ten and eleven",
+          "Write a book",
+          "Buy a ticket",
+          "Answer three questions"
+        ],
+        "correctAnswer": "Read pages ten and eleven",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: 'Read them!' - them = ?",
+        "options": [
+          "Pages ten and eleven",
+          "The tickets",
+          "The teachers",
+          "The trains"
+        ],
+        "correctAnswer": "Pages ten and eleven",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-REA-Q9",
+        "type": "multipleChoice",
+        "question": "What time does the class come home from Porto?",
+        "options": [
+          "Nine o'clock",
+          "Five o'clock",
+          "Ten o'clock",
+          "The text does not say"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review5_set_topics13-15.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

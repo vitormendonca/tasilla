@@ -1,0 +1,64 @@
+{
+  "id": "A1-T02-SPE",
+  "order": 9,
+  "title": "Topic 2: Personal Information - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Give name, age, nationality, phone, email; spell aloud",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record yourself. Give your personal information.\nSay 4 things:\n1. Your name (My name is...)\n2. Your age (I am ... years old)\n3. Your country or city (I am from...)\n4. SPELL your first name (A - N - A ...)\nExample: My name is Ana. I am 25 years old. I am from\nBertioga. A - N - A.\n\nTip: Practice the alphabet letters of YOUR name first.",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 40,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic02_personal_information.txt, Lesson 2.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Says name + age with I am",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Says city/country with I am from",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Spells own name, letters clear",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

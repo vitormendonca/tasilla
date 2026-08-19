@@ -1,0 +1,109 @@
+{
+  "id": "A1-T18-LIS",
+  "order": 122,
+  "title": "Topic 18: Clothes & Colours - Listening",
+  "description": "One audio (2 speakers) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name clothes and colours; describe what people are wearing",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 18 listening",
+    "audioScript": "Mila: Zeca! Are you at Vado's birthday party? I am in\nthe street - where are you?\nZeca: Inside! The music is great, and we are dancing!\nMila: Is my brother there?\nZeca: Yes! He is wearing a blue shirt and a black\njacket. He is talking with Vado now.\nMila: And Vado? I have his present here!\nZeca: Ha! Easy: Vado is wearing a big RED hat. A very\nbig red hat. You can see him from the street!",
+    "audioPath": "assets/audio/a1/t18_listening_at_the_party.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T18-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is happening in this audio?",
+        "options": [
+          "Mila calls Zeca from outside a party",
+          "Zeca buys clothes in a shop",
+          "Two friends talk about the weather",
+          "A teacher describes a student"
+        ],
+        "correctAnswer": "Mila calls Zeca from outside a party",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What is Mila's brother wearing?",
+        "options": [
+          "A blue shirt and a black jacket",
+          "A red hat",
+          "A white shirt and blue jacket",
+          "The audio does not say"
+        ],
+        "correctAnswer": "A blue shirt and a black jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What is Vado wearing?",
+        "options": [
+          "A very big red hat",
+          "A black jacket",
+          "A blue shirt",
+          "New white shoes"
+        ],
+        "correctAnswer": "A very big red hat",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "Why is Vado easy to find at the party?",
+        "options": [
+          "His big red hat - you can see it from far",
+          "He is very tall",
+          "He is at the door",
+          "He is the only person there"
+        ],
+        "correctAnswer": "His big red hat - you can see it from far",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "He is wearing a blue shirt",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic18_clothes_colours.txt, Lesson 18.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

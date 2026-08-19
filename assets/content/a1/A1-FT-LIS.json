@@ -1,0 +1,309 @@
+{
+  "id": "A1-FT-LIS",
+  "order": 145,
+  "title": "Final Test - Listening path",
+  "description": "Two new audios (slow monologue + natural-pace dialogue), 20 items including 3 dictations.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_final",
+  "difficultyLevel": 5,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Prove course-wide listening comprehension",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Final test audio 1 (slow) + audio 2 (natural pace)",
+    "audioScript": "AUDIO 1 (slow monologue):\nHello! Good morning! My name is Sandra. S - A - N -\nD - R - A. I am 34 years old, and I am from Belem.\nThis is my family: my father, Nuno, and my sister,\nRosa. Rosa is tall, and she has long hair. Our house\nis small - there are two bedrooms. Every day I get\nup in the morning, I drink coffee, and I go to work\nat eight o'clock. Coffee is one dollar at the cafe -\nvery cheap!\n\nAUDIO 2 (natural-pace dialogue):\nIgor: Nena! Are you at the shop?\nNena: Yes! I am buying a jacket - it is raining, and\nit is very cold this week!\nIgor: What colour?\nNena: Blue. It is twenty-five dollars - cheap! And\nyou? What are you doing?\nIgor: I am at home. I am sick, Nena. I have a\nheadache, and I can't go to work.\nNena: Oh no! Go to bed! Does your brother have your\nmedicine?\nIgor: Yes, he does - he is at the pharmacy now. It\nis next to the station.\nNena: Good. Sleep! And don't watch films all night!",
+    "audioPath": "assets/audio/a1/finaltest_listening_audio1.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 2,
+    "listeningQuestions": [
+      {
+        "id": "A1-FT-LIS-A-Q1",
+        "type": "multipleChoice",
+        "question": "What is this audio?",
+        "options": [
+          "Sandra introduces herself and her life",
+          "Sandra says goodbye",
+          "Sandra orders a coffee",
+          "Sandra gives directions"
+        ],
+        "correctAnswer": "Sandra introduces herself and her life",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q2",
+        "type": "multipleChoice",
+        "question": "How does she spell her name?",
+        "options": [
+          "S-A-N-D-R-A",
+          "S-A-N-T-R-A",
+          "Z-A-N-D-R-A",
+          "S-A-M-D-R-A"
+        ],
+        "correctAnswer": "S-A-N-D-R-A",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q3",
+        "type": "multipleChoice",
+        "question": "Where is Sandra from?",
+        "options": [
+          "Belem",
+          "Santos",
+          "Recife",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Belem",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q4",
+        "type": "multipleChoice",
+        "question": "Who is Rosa?",
+        "options": [
+          "Sandra's sister",
+          "Sandra's mother",
+          "Sandra's friend",
+          "Sandra's teacher"
+        ],
+        "correctAnswer": "Sandra's sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q5",
+        "type": "multipleChoice",
+        "question": "What does Rosa look like?",
+        "options": [
+          "Tall, with long hair",
+          "Short, with short hair",
+          "Small, with big eyes",
+          "The audio does not describe her"
+        ],
+        "correctAnswer": "Tall, with long hair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q6",
+        "type": "multipleChoice",
+        "question": "How many bedrooms are there?",
+        "options": [
+          "Two",
+          "Three",
+          "One",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Two",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q7",
+        "type": "multipleChoice",
+        "question": "When does Sandra go to work?",
+        "options": [
+          "At eight o'clock, in the morning",
+          "At night",
+          "At ten o'clock",
+          "On Saturdays only"
+        ],
+        "correctAnswer": "At eight o'clock, in the morning",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q8",
+        "type": "multipleChoice",
+        "question": "How much is the coffee?",
+        "options": [
+          "One dollar",
+          "Ten dollars",
+          "Eight dollars",
+          "The audio does not say"
+        ],
+        "correctAnswer": "One dollar",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-A-Q9",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "I am from Belem",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q1",
+        "type": "multipleChoice",
+        "question": "What is happening?",
+        "options": [
+          "Nena shops; Igor is sick at home",
+          "Both are at the shop",
+          "Igor buys medicine for Nena",
+          "They plan a trip by train"
+        ],
+        "correctAnswer": "Nena shops; Igor is sick at home",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q2",
+        "type": "multipleChoice",
+        "question": "What is Nena buying, and what colour?",
+        "options": [
+          "A blue jacket",
+          "A blue dress",
+          "A black jacket",
+          "White shoes"
+        ],
+        "correctAnswer": "A blue jacket",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q3",
+        "type": "multipleChoice",
+        "question": "How much is it?",
+        "options": [
+          "Twenty-five dollars",
+          "Thirty-five dollars",
+          "Twenty dollars",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Twenty-five dollars",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q4",
+        "type": "multipleChoice",
+        "question": "Why does Nena buy it?",
+        "options": [
+          "It is raining and very cold this week",
+          "It is her birthday",
+          "It is summer",
+          "Igor likes blue"
+        ],
+        "correctAnswer": "It is raining and very cold this week",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q5",
+        "type": "multipleChoice",
+        "question": "What is wrong with Igor?",
+        "options": [
+          "A headache - he can't go to work",
+          "His leg is bad",
+          "He is cold",
+          "The audio does not say"
+        ],
+        "correctAnswer": "A headache - he can't go to work",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q6",
+        "type": "multipleChoice",
+        "question": "Does Igor's brother have the medicine?",
+        "options": [
+          "Yes, he does",
+          "No, he doesn't",
+          "Only tonight",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Yes, he does",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q7",
+        "type": "multipleChoice",
+        "question": "Where is the pharmacy?",
+        "options": [
+          "Next to the station",
+          "Next to the shop",
+          "Under Igor's house",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Next to the station",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q8",
+        "type": "multipleChoice",
+        "question": "Why does Nena say 'don't watch films all night'?",
+        "options": [
+          "Igor needs sleep - and films are clearly his habit",
+          "Igor has no TV",
+          "Films are expensive",
+          "The brother is watching films"
+        ],
+        "correctAnswer": "Igor needs sleep - and films are clearly his habit",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q9",
+        "type": "multipleChoice",
+        "question": "What day is it?",
+        "options": [
+          "Saturday",
+          "Monday",
+          "Sunday",
+          "The audio does not say"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q10",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "I can't go to work",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      },
+      {
+        "id": "A1-FT-LIS-B-Q11",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "It is raining this week",
+        "audioPath": "assets/audio/a1/finaltest_listening_audio2.mp3",
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_final_test_listening.txt. SKILL PATH FINAL TEST. Audio 2 items carry their own audioPath (assets/audio/a1/finaltest_listening_audio2.mp3). Pass 70% (14/20), XP 50.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

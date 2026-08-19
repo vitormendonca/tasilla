@@ -1,0 +1,125 @@
+{
+  "id": "A1-T12-REA",
+  "order": 80,
+  "title": "Topic 12: Places in Town & Directions - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Identify places in town, ask for and follow simple directions",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 12: two texts",
+    "readingText": "TEXT A - Handwritten directions format\nHOW TO GO TO MY HOUSE - for Rita\nFrom the station:\n1. Go straight on Park Street.\n2. Turn right at the supermarket.\n3. My street is next to the school.\nMy house is number fifteen. It is small and very nice.\nThere is a big tree next to the door!\n- Nara\n\nTEXT B - Chat messages format\nKito: Is there a supermarket near your new apartment,\n      Faye?\nFaye: Yes! It is next to the station. And there is a\n      big park on my street!\nKito: Nice! And a hospital?\nFaye: There is one, but it is not near.\nKito: And your bank?\nFaye: Very near - turn left at my door, and it is there!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T12-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Directions to Nara's house",
+          "A shop notice",
+          "A cafe menu",
+          "A week schedule"
+        ],
+        "correctAnswer": "Directions to Nara's house",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Where does Rita turn right?",
+        "options": [
+          "At the supermarket",
+          "At the school",
+          "At the station",
+          "At the park"
+        ],
+        "correctAnswer": "At the supermarket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What number is Nara's house?",
+        "options": [
+          "Fifteen",
+          "Fifty",
+          "Five",
+          "The text does not say TEXT B (56 words) - Chat messages format: --------------------------------------- Kito: Is there a supermarket near your new apartment, Faye? Faye: Yes! It is next to the station. And there is a big park on my street! Kito: Nice! And a hospital? Faye: There is one, but it is not near. Kito: And your bank? Faye: Very near - turn left at my door, and it is there! ---------------------------------------"
+        ],
+        "correctAnswer": "Fifteen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What are Kito and Faye talking about?",
+        "options": [
+          "Places near Faye's new apartment",
+          "Prices at the supermarket",
+          "Faye's family",
+          "A birthday party"
+        ],
+        "correctAnswer": "Places near Faye's new apartment",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What is next to the station?",
+        "options": [
+          "The supermarket",
+          "The park",
+          "The bank",
+          "The hospital"
+        ],
+        "correctAnswer": "The supermarket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Is there a cafe near Faye's apartment?",
+        "options": [
+          "Yes, next to the park",
+          "No, there is no cafe",
+          "The text does not say",
+          "Yes, at the station"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic12_places_directions.txt, Lesson 12.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

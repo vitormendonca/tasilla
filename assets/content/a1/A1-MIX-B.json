@@ -1,0 +1,240 @@
+{
+  "id": "A1-MIX-B",
+  "order": 32,
+  "title": "Mixed Review B (Topics 4-5)",
+  "description": "Roadmap-only cross-skill review: listening + reading + vocabulary/grammar + async speaking and writing.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Integrate core A1 skills in familiar situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-MIX-B-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "I ___ short hair. My mother ___ long hair.",
+        "options": [
+          "have / has",
+          "has / have",
+          "have / have"
+        ],
+        "correctAnswer": "have / has",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-B-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "A: ___ you hungry? B: Yes, I ___.",
+        "options": [
+          "Are / am",
+          "Is / are",
+          "Are / is"
+        ],
+        "correctAnswer": "Are / am",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-B-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "You need water. You are ___.",
+        "options": [
+          "thirsty",
+          "hungry",
+          "tall"
+        ],
+        "correctAnswer": "thirsty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-B-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "My parents ___ very nice.",
+        "options": [
+          "are",
+          "is",
+          "am"
+        ],
+        "correctAnswer": "are",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Mixed Review B listening",
+    "audioScript": "Hello! My name is Iva. | This is my friend Gustavo. |\nHe is tall and he has short hair. | He is tired today,\nbut he is very happy!",
+    "audioPath": "assets/audio/a1/mixrevB_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-MIX-B-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "Who is Gustavo?",
+        "options": [
+          "Iva's friend",
+          "Iva's brother",
+          "Iva's father"
+        ],
+        "correctAnswer": "Iva's friend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-B-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What does Gustavo look like?",
+        "options": [
+          "Tall, with short hair",
+          "Short, with long hair",
+          "The audio does not describe him"
+        ],
+        "correctAnswer": "Tall, with short hair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-B-LIS-Q3",
+        "type": "trueFalse",
+        "question": "T/F: Gustavo is sad today.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": {
+    "readingTitle": "Mixed Review B text",
+    "readingText": "TEXT A - Text (33 words) - Social post format\nHi! I am Nilo. I am short and I have big eyes.\nToday I am very happy - my sister is here!\nHer name is Vane. She is tall and very nice.",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-MIX-B-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Nilo describes himself and his sister",
+          "A goodbye message",
+          "A registration form"
+        ],
+        "correctAnswer": "Nilo describes himself and his sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-B-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Who is Vane?",
+        "options": [
+          "Nilo's sister",
+          "Nilo's friend",
+          "Nilo's mother"
+        ],
+        "correctAnswer": "Nilo's sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-B-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What does Vane look like?",
+        "options": [
+          "She is tall",
+          "She is short",
+          "She has big eyes"
+        ],
+        "correctAnswer": "She is tall",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": {
+    "writingPrompt": "A friend writes to you: Hi! How are you today? And what does your best friend look like? Reply in 3-4 sentences (2 feeling words about you + 2 description sentences about your friend with is/has).",
+    "writingMode": "short_message",
+    "wordBank": [],
+    "minimumRequirements": [],
+    "minSentences": 3,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Record 20-30 seconds. Choose ONE person you know. Say: who they are + name (T3), what they look like (is + adjective, has + hair/eyes - T4), and how they are today (feeling word - T5).",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 30,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_mixed_reviewB_topics4-5.txt. Auto-graded part gates progression (7 of 10); speaking/writing async.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Speaking: describes appearance",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: gives a feeling",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: to be + have",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: has correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: understandable.",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: replies to both questions",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: is + adjective and has + feature correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: spelling A1 OK.",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

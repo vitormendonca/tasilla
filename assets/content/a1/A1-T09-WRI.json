@@ -1,0 +1,79 @@
+{
+  "id": "A1-T09-WRI",
+  "order": 59,
+  "title": "Topic 9: Numbers, Prices & Money - Writing",
+  "description": "Handwritten task (Mode B): write on paper and upload a photo.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Count, understand prices, handle money situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "FOURTH PAPER TASK. Student writes BY HAND on paper, then\nuploads a photo / scan / PDF.\n\nTASK: Write a shopping list with prices by hand.\n\nInstructions shown in app:\n  1. On paper, write a list of 5 things you buy (things\n     you know in English: book, table, chair, phone...).\n  2. Write a price for each thing.\n  3. For TWO things, write the price in WORDS\n     (twenty dollars - not 20).\n  4. At the end, write one sentence: The ... is cheap! or\n     The ... is expensive!\n  5. Take a photo and upload it.\n\nMinimum requirements:\n  - 5 items, each with a price\n  - 2 prices written out in words, spelled correctly\n  - 1 cheap/expensive sentence",
+    "writingMode": "guided_order",
+    "wordBank": [
+      "money",
+      "price",
+      "dollar",
+      "cent",
+      "cheap",
+      "expensive",
+      "buy",
+      "pay"
+    ],
+    "minimumRequirements": [
+      "5 items, each with a price",
+      "2 prices written out in words, spelled correctly",
+      "1 cheap/expensive sentence"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic09_numbers_prices_money.txt, Lesson 9.5. MODE B HANDWRITTEN: requires writing-upload feature; runs typed until built.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5 items with prices, list format",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "2 number words spelled correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "cheap/expensive sentence correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Handwriting readable (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

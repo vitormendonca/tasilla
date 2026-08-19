@@ -1,0 +1,125 @@
+{
+  "id": "A1-T11-REA",
+  "order": 75,
+  "title": "Topic 11: Shopping - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Buy things, ask prices, sizes, quantities",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 11: two texts",
+    "readingText": "TEXT A - Shop notice format\nMODA MIA - YOUR SHOP IN PORTO\nOPEN: Monday to Saturday, nine o'clock to seven o'clock\nCLOSED on Sunday\n* Small bags ...... ten dollars\n* Big bags ........ twenty-five dollars\n* Books and photo frames too!\nPay by card or cash.\nThis Saturday: all small bags five dollars!\n\nTEXT B - reading at this dial)\nZia:   Are you at the market, Bruno?\nBruno: Yes! It is very big - there are bags, books\n       and food!\nZia:   Can you buy apples for me, please?\nBruno: Yes! Apples are one dollar today - very cheap.\nZia:   Great! And a big bag of rice, please.\nBruno: OK! I pay cash - this market is cash only!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T11-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A shop notice with hours and prices",
+          "A cafe menu",
+          "A birthday invitation",
+          "A week schedule"
+        ],
+        "correctAnswer": "A shop notice with hours and prices",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-REA-Q2",
+        "type": "multipleChoice",
+        "question": "When is the shop closed?",
+        "options": [
+          "On Sunday",
+          "On Saturday",
+          "On Monday",
+          "The text does not say"
+        ],
+        "correctAnswer": "On Sunday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How much are the small bags THIS SATURDAY?",
+        "options": [
+          "Five dollars",
+          "Ten dollars",
+          "Twenty-five dollars",
+          "Fifteen dollars"
+        ],
+        "correctAnswer": "Five dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What does Zia ask Bruno?",
+        "options": [
+          "To buy things for her at the market",
+          "To open a shop",
+          "To eat apples",
+          "To go home"
+        ],
+        "correctAnswer": "To buy things for her at the market",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-REA-Q5",
+        "type": "multipleChoice",
+        "question": "How does Bruno pay at the market?",
+        "options": [
+          "Cash - the market is cash only",
+          "By card",
+          "He does not pay",
+          "The text does not say"
+        ],
+        "correctAnswer": "Cash - the market is cash only",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T11-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Is the market open on Sunday?",
+        "options": [
+          "Yes, it is",
+          "No, it is closed",
+          "The text does not say",
+          "Only in the morning"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic11_shopping.txt, Lesson 11.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,157 @@
+{
+  "id": "A1-R1-REA",
+  "order": 18,
+  "title": "Review 1 (Topics 1-3) - Reading",
+  "description": "New text(s) + 9 exercises.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 1-3 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Review 1 text",
+    "readingText": "TEXT A - lesson texts since all language is known) - Profile page\nMY PAGE - by Rita\nHello! Good morning! My name is Rita and I am your new\nteacher. I am 34 years old and I am from Braga.\nThis is my family: my mother, Ines, and my brother, Nuno.\nNuno's daughter is Bela. She is 3. Nice to meet you!",
+    "readingFormat": "paragraph",
+    "readingQuestions": [
+      {
+        "id": "A1-R1-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A teacher introduces herself and her family",
+          "A goodbye note",
+          "A registration form"
+        ],
+        "correctAnswer": "A teacher introduces herself and her family",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q2",
+        "type": "trueFalse",
+        "question": "True or false? Rita says a greeting.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Grammar: Rita writes: I ___ your new teacher.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "correctAnswer": "am",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q4",
+        "type": "multipleChoice",
+        "question": "How old is Rita?",
+        "options": [
+          "34",
+          "43",
+          "3"
+        ],
+        "correctAnswer": "34",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q5",
+        "type": "multipleChoice",
+        "question": "Where is Rita from?",
+        "options": [
+          "Braga",
+          "Bela",
+          "The text does not say"
+        ],
+        "correctAnswer": "Braga",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Rita is a ___.",
+        "options": [
+          "teacher",
+          "student",
+          "doctor"
+        ],
+        "correctAnswer": "teacher",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q7",
+        "type": "multipleChoice",
+        "question": "Who is Nuno?",
+        "options": [
+          "Rita's brother",
+          "Rita's father",
+          "Rita's friend"
+        ],
+        "correctAnswer": "Rita's brother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q8",
+        "type": "multipleChoice",
+        "question": "Who is Bela?",
+        "options": [
+          "Nuno's daughter",
+          "Rita's mother",
+          "Rita's sister"
+        ],
+        "correctAnswer": "Nuno's daughter",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-REA-Q9",
+        "type": "multipleChoice",
+        "question": "Grammar: ___ daughter is Bela.",
+        "options": [
+          "Nuno's",
+          "Nuno is",
+          "Nunos"
+        ],
+        "correctAnswer": "Nuno's",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review1_set_topics1-3.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

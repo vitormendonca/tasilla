@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 
-import '../data/a1_learning_experience_data.dart';
+import '../data/a1_content_loader.dart';
 import '../models/learning_enums.dart';
 import '../models/learning_experience.dart';
 import 'submission_service.dart';
@@ -145,6 +145,15 @@ class CertificateService {
   // ---------------------------------------------------------------------------
 
   static int? _coreNumber(LearningExperience experience) {
+    // TASILLA content ids: A1-T{nn}-{VOC|LIS|REA|SPE|WRI} -> topic number.
+    final tasilla = RegExp(
+      r'^A1-T(\d{2})-(VOC|LIS|REA|SPE|WRI)$',
+    ).firstMatch(experience.id);
+    if (tasilla != null) {
+      return int.parse(tasilla.group(1)!);
+    }
+
+    // Legacy seed-content scheme, kept so old stored ids stay readable.
     final match = RegExp(r'^A1-EXP-(\d{3})$').firstMatch(experience.id);
 
     return match == null ? null : int.parse(match.group(1)!);

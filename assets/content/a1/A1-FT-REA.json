@@ -1,0 +1,321 @@
+{
+  "id": "A1-FT-REA",
+  "order": 146,
+  "title": "Final Test - Reading path",
+  "description": "Three new texts (profile, notice, letter), 20 items with inference and not-stated.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_final",
+  "difficultyLevel": 5,
+  "estimatedMinutes": 25,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Prove course-wide reading comprehension",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Final test: three texts",
+    "readingText": "TEXT A - PROFILE PAGE (Units 1-2 language, 58 words)\nMY PAGE - by Marisa\nHello! My name is Marisa, and I am 29 years old. I am\nfrom Aveiro. I am a student at night.\nMy family is small: my mother, Ines, and my brother,\nNuno. Nuno is tall and very funny.\nOur apartment has two bedrooms. There is a big table\nin the kitchen - my favorite place!\n\nTEXT B - STATION NOTICE (Unit 3 language, 62 words)\nCITY STATION - INFORMATION\nBuses today:\nFaro ........ nine thirty ........ eight dollars\nPorto ....... ten o'clock ........ thirteen dollars\n* The ticket office is next to door three. Card or\n  cash!\n* Is the office closed? Buy your ticket in the app.\n* The cafe is open seven to seven - turn right at\n  door one.\nGood travels!\n\nTEXT C - PERSONAL LETTER (Unit 4 + full recycling, 78 words)\nHi, Duda!\nNews from my new city! It is winter here - it is\nsnowing right now, and I am wearing my big red\njacket in the house. Ha!\nI work at the hospital now. I can't write every day -\nbut I am happy. On Saturdays I swim, and at night I\nread.\nMy cat, Mimi, doesn't like the snow. She sleeps all\nday next to my bed!\nDo you have news? Write to me!\n- Carla",
+    "readingFormat": "paragraph",
+    "readingQuestions": [
+      {
+        "id": "A1-FT-REA-1-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Marisa introduces herself and her life",
+          "A goodbye note",
+          "A house advertisement",
+          "A birthday invitation"
+        ],
+        "correctAnswer": "Marisa introduces herself and her life",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-1-Q2",
+        "type": "multipleChoice",
+        "question": "How old is Marisa?",
+        "options": [
+          "29",
+          "92",
+          "19",
+          "The text does not say"
+        ],
+        "correctAnswer": "29",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-1-Q3",
+        "type": "multipleChoice",
+        "question": "Who is Nuno?",
+        "options": [
+          "Marisa's brother",
+          "Marisa's father",
+          "Marisa's friend",
+          "Marisa's teacher"
+        ],
+        "correctAnswer": "Marisa's brother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-1-Q4",
+        "type": "multipleChoice",
+        "question": "What is Nuno like?",
+        "options": [
+          "Tall and very funny",
+          "Short and nice",
+          "Small, with big eyes",
+          "The text does not describe him"
+        ],
+        "correctAnswer": "Tall and very funny",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-1-Q5",
+        "type": "multipleChoice",
+        "question": "Where is the big table?",
+        "options": [
+          "In the kitchen",
+          "In a bedroom",
+          "In the bathroom",
+          "The text does not say"
+        ],
+        "correctAnswer": "In the kitchen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-1-Q6",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ from Aveiro.",
+        "options": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "correctAnswer": "am",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-2-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Information at a bus station",
+          "A cafe menu",
+          "A school notice",
+          "A postcard"
+        ],
+        "correctAnswer": "Information at a bus station",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-2-Q2",
+        "type": "multipleChoice",
+        "question": "What time is the bus to Faro?",
+        "options": [
+          "Nine thirty",
+          "Ten o'clock",
+          "Nine o'clock",
+          "The text does not say"
+        ],
+        "correctAnswer": "Nine thirty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-2-Q3",
+        "type": "multipleChoice",
+        "question": "How much is the ticket to Porto?",
+        "options": [
+          "Thirteen dollars",
+          "Thirty dollars",
+          "Eight dollars",
+          "Three dollars"
+        ],
+        "correctAnswer": "Thirteen dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-2-Q4",
+        "type": "multipleChoice",
+        "question": "Where is the ticket office?",
+        "options": [
+          "Next to door three",
+          "Next to door one",
+          "In the cafe",
+          "The text does not say"
+        ],
+        "correctAnswer": "Next to door three",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-2-Q5",
+        "type": "multipleChoice",
+        "question": "The ticket office is closed. What can you do?",
+        "options": [
+          "Buy the ticket in the app",
+          "Pay at the cafe",
+          "Travel without a ticket",
+          "Wait for Monday"
+        ],
+        "correctAnswer": "Buy the ticket in the app",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-2-Q6",
+        "type": "multipleChoice",
+        "question": "How much is a coffee at the station cafe?",
+        "options": [
+          "One dollar",
+          "Two dollars",
+          "Seven dollars",
+          "The text does not say"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A letter from Carla about her new life",
+          "A weather report",
+          "A job advertisement",
+          "Class notes"
+        ],
+        "correctAnswer": "A letter from Carla about her new life",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q2",
+        "type": "multipleChoice",
+        "question": "What is the weather like there right now?",
+        "options": [
+          "It is snowing",
+          "It is raining",
+          "It is hot",
+          "The text does not say"
+        ],
+        "correctAnswer": "It is snowing",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q3",
+        "type": "multipleChoice",
+        "question": "What is Carla wearing?",
+        "options": [
+          "A big red jacket",
+          "A blue dress",
+          "Black shoes",
+          "A white shirt"
+        ],
+        "correctAnswer": "A big red jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q4",
+        "type": "multipleChoice",
+        "question": "Where does Carla work now?",
+        "options": [
+          "At the hospital",
+          "At a school",
+          "At the pharmacy",
+          "The text does not say"
+        ],
+        "correctAnswer": "At the hospital",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q5",
+        "type": "multipleChoice",
+        "question": "What does Carla do on Saturdays?",
+        "options": [
+          "She swims",
+          "She reads",
+          "She works",
+          "She sleeps all day"
+        ],
+        "correctAnswer": "She swims",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q6",
+        "type": "multipleChoice",
+        "question": "Who is Mimi?",
+        "options": [
+          "Carla's cat",
+          "Carla's sister",
+          "Carla's dog",
+          "Duda's cat"
+        ],
+        "correctAnswer": "Carla's cat",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q7",
+        "type": "multipleChoice",
+        "question": "Why is Carla wearing a big jacket IN THE HOUSE?",
+        "options": [
+          "The house is very cold in winter",
+          "She is going out",
+          "Red is her favorite colour",
+          "The jacket is new"
+        ],
+        "correctAnswer": "The house is very cold in winter",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-FT-REA-3-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: My cat ___ like the snow.",
+        "options": [
+          "doesn't",
+          "don't",
+          "isn't",
+          "can't not"
+        ],
+        "correctAnswer": "doesn't",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_final_test_reading.txt. SKILL PATH FINAL TEST. Pass 70% (14/20), XP 50.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

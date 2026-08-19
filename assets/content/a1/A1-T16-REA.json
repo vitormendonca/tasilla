@@ -1,0 +1,125 @@
+{
+  "id": "A1-T16-REA",
+  "order": 113,
+  "title": "Topic 16: Free Time & Preferences - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about hobbies, likes and dislikes",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 16: two texts",
+    "readingText": "TEXT A - Profile page format\nCLUB PAGE - MEET OUR MEMBERS!\nName: Tina, 24, from Santos.\nHobbies: I swim every morning before work, and I play\nthe guitar at night. I don't watch TV - I don't like\nit! On the weekend I sing with my friends at the park.\nFavorite music: everything! I dance to all of it.\nDo you like music too? Come to the club on Saturday!\n\nTEXT B - Chat messages format\nNino: Gala! Do you play games at night?\nGala: No, I don't. At night I read - one book every\n      week!\nNino: One book a WEEK?! I read one book a year...\nGala: Ha! But you swim and you dance, Nino. I don't\n      do sport.\nNino: True! So: you read, I swim. On Saturday - film\n      at my house? Do you like old films?\nGala: Yes, I do!!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T16-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A club member's profile",
+          "A job advertisement",
+          "A cafe menu",
+          "Class notes"
+        ],
+        "correctAnswer": "A club member's profile",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-REA-Q2",
+        "type": "multipleChoice",
+        "question": "What does Tina do every morning?",
+        "options": [
+          "She swims",
+          "She sings at the park",
+          "She watches TV",
+          "She plays the guitar"
+        ],
+        "correctAnswer": "She swims",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Which sentence about Tina is TRUE?",
+        "options": [
+          "Music is a very big part of her life",
+          "She likes TV very much",
+          "She doesn't like the weekend",
+          "She works at the park"
+        ],
+        "correctAnswer": "Music is a very big part of her life",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What do Nino and Gala talk about?",
+        "options": [
+          "Their different hobbies + a film on Saturday",
+          "Homework for English class",
+          "A new book shop",
+          "A trip by train"
+        ],
+        "correctAnswer": "Their different hobbies + a film on Saturday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What does Gala NOT do?",
+        "options": [
+          "Sport",
+          "Read books",
+          "Watch films",
+          "Talk to Nino"
+        ],
+        "correctAnswer": "Sport",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T16-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Gala reads one book every week. Nino reads one book a year. What is true?",
+        "options": [
+          "Gala reads much more than Nino",
+          "Nino reads more books",
+          "They read the same books",
+          "Gala doesn't like books"
+        ],
+        "correctAnswer": "Gala reads much more than Nino",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic16_free_time_preferences.txt, Lesson 16.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

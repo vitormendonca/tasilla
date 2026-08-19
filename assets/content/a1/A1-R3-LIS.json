@@ -1,0 +1,154 @@
+{
+  "id": "A1-R3-LIS",
+  "order": 61,
+  "title": "Review 3 (Topics 7-9) - Listening",
+  "description": "New audio + 9 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 7-9 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Review 3 listening",
+    "audioScript": "Hello! | Every day my mother gets up in the morning.\nShe works in the city, and at night she watches TV. |\nMy English class is on Tuesday at seven o'clock. Today\nis Tuesday! | I need a phone and books for class. |\nThe phone is fifty dollars, and the books are fifteen\ndollars.",
+    "audioPath": "assets/audio/a1/rev3_listening_topics7-9.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-R3-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "Who gets up in the morning and works in the city?",
+        "options": [
+          "The speaker's mother",
+          "The speaker",
+          "The speaker's brother"
+        ],
+        "correctAnswer": "The speaker's mother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q2",
+        "type": "trueFalse",
+        "question": "True or false? The mother watches TV in the morning.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "When is the English class?",
+        "options": [
+          "Tuesday at seven o'clock",
+          "Tuesday at eight o'clock",
+          "Sunday at seven o'clock"
+        ],
+        "correctAnswer": "Tuesday at seven o'clock",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q4",
+        "type": "trueFalse",
+        "question": "True or false? Today is Tuesday.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "How much is the phone?",
+        "options": [
+          "Fifty dollars",
+          "Fifteen",
+          "Five"
+        ],
+        "correctAnswer": "Fifty dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "How much are the books?",
+        "options": [
+          "Fifteen dollars",
+          "Fifty",
+          "Five"
+        ],
+        "correctAnswer": "Fifteen dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q7",
+        "type": "multipleChoice",
+        "question": "What does the speaker need for class?",
+        "options": [
+          "A phone and books",
+          "A table and chairs",
+          "A new bed"
+        ],
+        "correctAnswer": "A phone and books",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q8",
+        "type": "trueFalse",
+        "question": "True or false? The books are expensive - one hundred dollars.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R3-LIS-Q9",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "She works in the city",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review3_set_topics7-9.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

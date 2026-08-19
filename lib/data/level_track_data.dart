@@ -5,7 +5,7 @@ import '../models/learning_cycle.dart';
 import '../models/learning_enums.dart';
 import '../models/learning_experience.dart';
 import '../models/level_track.dart';
-import 'a1_learning_experience_data.dart';
+import 'a1_content_loader.dart';
 
 const CertificateCriteria a1CertificateCriteria = CertificateCriteria(
   minimumCompletionRate: 0.90,
@@ -23,10 +23,10 @@ const LevelTrack a1LevelTrack = LevelTrack(
   title: 'A1 English Track',
   level: 'A1',
   description: 'Beginner English track aligned with CEFR A1 descriptors.',
-  totalCoreActivities: 40,
-  totalReinforcementActivities: 18,
-  totalReviews: 6,
-  totalCheckpoints: 3,
+  totalCoreActivities: 100,
+  totalReinforcementActivities: 0,
+  totalReviews: 42,
+  totalCheckpoints: 4,
   totalPortfolioTasks: 2,
   totalFinalExams: 1,
   certificateCriteria: a1CertificateCriteria,

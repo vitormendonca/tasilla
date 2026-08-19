@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-import '../data/a1_learning_experience_data.dart';
+import '../data/a1_content_loader.dart';
 import 'supabase_bootstrap.dart';
 
 /// Thrown when the database refuses a review action. The `student_submissions`

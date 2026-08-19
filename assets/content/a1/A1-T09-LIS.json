@@ -1,0 +1,104 @@
+{
+  "id": "A1-T09-LIS",
+  "order": 56,
+  "title": "Topic 9: Numbers, Prices & Money - Listening",
+  "description": "One audio (2 speakers) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Count, understand prices, handle money situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 9 listening",
+    "audioScript": "Man:   Good morning! How much is this table?\nWoman: It is ninety dollars.\nMan:   Ninety?! That is expensive! And how much are\nthe chairs?\nWoman: The chairs are thirteen dollars.\nMan:   Thirteen? Very cheap! Four chairs, please. I pay\nwith my card.",
+    "audioPath": "assets/audio/a1/t09_listening_how_much_is_it.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T09-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "Where is this conversation?",
+        "options": [
+          "In a shop",
+          "In a school",
+          "At a birthday party"
+        ],
+        "correctAnswer": "In a shop",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "How much is the table?",
+        "options": [
+          "Ninety dollars",
+          "Nineteen dollars",
+          "Nine dollars"
+        ],
+        "correctAnswer": "Ninety dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How much are the chairs?",
+        "options": [
+          "Thirteen dollars",
+          "Thirty dollars",
+          "Three dollars"
+        ],
+        "correctAnswer": "Thirteen dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-LIS-Q4",
+        "type": "trueFalse",
+        "question": "The table is cheap. True or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T09-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "The chairs are thirteen dollars",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic09_numbers_prices_money.txt, Lesson 9.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

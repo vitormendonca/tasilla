@@ -1,0 +1,79 @@
+{
+  "id": "A1-T15-WRI",
+  "order": 103,
+  "title": "Topic 15: Classroom & Learning - Writing",
+  "description": "Handwritten task (Mode B): write on paper and upload a photo.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Use classroom language - instructions, asking about spelling and meaning",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "SIXTH PAPER TASK. Student writes BY HAND on paper, then\nuploads a photo / scan / PDF.\n\nTASK: Copy and complete a set of class notes.\n\nInstructions shown in app:\n  1. Copy this notes skeleton on paper BY HAND:\n     -----------------------------------------\n     ENGLISH - MY NOTES (day: ______)\n     3 new words from this week:\n     1. ______ = ______________________\n     2. ______ = ______________________\n     3. ______ = ______________________\n     My question for the teacher:\n     What does ______ mean?\n     -----------------------------------------\n  2. Complete it: choose 3 REAL words you know from\n     Topics 11-15 and explain each in simple English\n     (word = ...).\n  3. Write one real question for your teacher.\n  4. Take a photo and upload it.\n\nMinimum requirements:\n  - Skeleton copied completely, day filled in\n  - 3 words + simple English explanations\n  - The What does ... mean? question with a real word",
+    "writingMode": "guided_instructions",
+    "wordBank": [
+      "book",
+      "pen",
+      "paper",
+      "question",
+      "answer",
+      "word",
+      "read",
+      "listen"
+    ],
+    "minimumRequirements": [
+      "Skeleton copied completely, day filled in",
+      "3 words + simple English explanations",
+      "The What does ... mean? question with a real word"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic15_classroom_learning.txt, Lesson 15.5. MODE B HANDWRITTEN: requires writing-upload feature; runs typed until built.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Notes complete, format followed",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "3 real words, sensible explanations",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Survival question correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Handwriting readable (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

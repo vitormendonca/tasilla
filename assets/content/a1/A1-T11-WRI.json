@@ -1,0 +1,80 @@
+{
+  "id": "A1-T11-WRI",
+  "order": 77,
+  "title": "Topic 11: Shopping - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Buy things, ask prices, sizes, quantities",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "PROMPT:\n  Write a short shop dialogue (6-8 lines): YOU and a shop\n  assistant. You buy one thing.\n  Format:\n    Assistant: ...\n    You: ...\n\nMinimum requirements:\n  - 6-8 lines, two speakers\n  - Can I help you? + a polite request (Can I have...)\n  - One this/that/these/those\n  - One price + card or cash",
+    "writingMode": "guided_order",
+    "wordBank": [
+      "shop",
+      "market",
+      "open",
+      "closed",
+      "size",
+      "bag",
+      "card",
+      "cash"
+    ],
+    "minimumRequirements": [
+      "6-8 lines, two speakers",
+      "Can I help you? + a polite request (Can I have...)",
+      "One this/that/these/those",
+      "One price + card or cash"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic11_shopping.txt, Lesson 11.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Dialogue format, 6-8 lines, logical",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Requests with can correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "this/that/these/those correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

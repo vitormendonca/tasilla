@@ -1,0 +1,82 @@
+{
+  "id": "A1-T14-WRI",
+  "order": 98,
+  "title": "Topic 14: Work & Study - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about your job or studies",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "PROMPT:\n  Write a short text: My work and my studies.\n  What are you? Where and when do you work or study?\n  What can you do? And one person in your family?\n\nMinimum requirements:\n  - 5-6 sentences\n  - I am a/an + job or student\n  - can + verb at least twice\n  - one 3rd person -s sentence\n  - one time expression (T8)",
+    "writingMode": "guided_work_study",
+    "wordBank": [
+      "job",
+      "teacher",
+      "doctor",
+      "student",
+      "office",
+      "speak",
+      "write",
+      "help (teacher and student promoted from sight words - used since Topic 1 - to active",
+      "tested vocabulary)"
+    ],
+    "minimumRequirements": [
+      "5-6 sentences",
+      "I am a/an + job or student",
+      "can + verb at least twice",
+      "one 3rd person -s sentence",
+      "one time expression (T8)"
+    ],
+    "minSentences": 5,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic14_work_study.txt, Lesson 14.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5-6 sentences about real work/study",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "a/an + job correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "can + verb, no -s errors",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,155 @@
+{
+  "id": "A1-R1-LIS",
+  "order": 17,
+  "title": "Review 1 (Topics 1-3) - Listening",
+  "description": "New audio + 9 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 1-3 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Review 1 listening",
+    "audioScript": "Hi! Good morning! | My name is Tom. T - O - M. | I am 30\nyears old and I am from Salvador. | This is my brother.\nHis name is Igor. He is 20. | Nice to meet you!",
+    "audioPath": "assets/audio/a1/rev1_listening_topics1-3.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-R1-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this audio?",
+        "options": [
+          "A person introduces himself and his brother",
+          "A person says goodbye",
+          "A teacher spells a city"
+        ],
+        "correctAnswer": "A person introduces himself and his brother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q2",
+        "type": "trueFalse",
+        "question": "True or false? Tom says Good morning.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "True",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How does he spell his name?",
+        "options": [
+          "T-O-M",
+          "T-O-N",
+          "D-O-M"
+        ],
+        "correctAnswer": "T-O-M",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "How old is Tom?",
+        "options": [
+          "30",
+          "13",
+          "The audio does not say"
+        ],
+        "correctAnswer": "30",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "Where is Tom from?",
+        "options": [
+          "Salvador",
+          "Santos",
+          "Recife"
+        ],
+        "correctAnswer": "Salvador",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "Who is Igor?",
+        "options": [
+          "Tom's brother",
+          "Tom's father",
+          "Tom's friend"
+        ],
+        "correctAnswer": "Tom's brother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q7",
+        "type": "multipleChoice",
+        "question": "How old is Igor?",
+        "options": [
+          "20",
+          "12",
+          "The audio does not say"
+        ],
+        "correctAnswer": "20",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q8",
+        "type": "trueFalse",
+        "question": "True or false? Igor is 30 years old.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-LIS-Q9",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "His name is Igor",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review1_set_topics1-3.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

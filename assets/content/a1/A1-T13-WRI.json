@@ -1,0 +1,80 @@
+{
+  "id": "A1-T13-WRI",
+  "order": 92,
+  "title": "Topic 13: Travel & Transport - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name transport, buy tickets, handle simple travel situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "PROMPT:\n  Write a short text: Transport in my life.\n  How do you go to work, school or the supermarket?\n  And one person in your family - how does he or she go?\n\nMinimum requirements:\n  - 5 sentences\n  - by + transport at least twice\n  - one 3rd person -s sentence (goes / travels / likes)\n  - one time or price detail (at eight o'clock / two\n    dollars - T8/T9)",
+    "writingMode": "free_response",
+    "wordBank": [
+      "bus",
+      "train",
+      "car",
+      "taxi",
+      "plane",
+      "ticket",
+      "airport",
+      "travel"
+    ],
+    "minimumRequirements": [
+      "5 sentences",
+      "by + transport at least twice",
+      "one 3rd person -s sentence (goes / travels / likes)",
+      "one time or price detail (at eight o'clock / two dollars - T8/T9)"
+    ],
+    "minSentences": 5,
+    "maxSentences": 7,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic13_travel_transport.txt, Lesson 13.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5 sentences about real transport",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "by + transport correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "3rd person -s correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

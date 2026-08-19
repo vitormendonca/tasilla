@@ -1,0 +1,251 @@
+{
+  "id": "A1-R6-REA",
+  "order": 138,
+  "title": "Review 6 (Topics 16-20) - Reading",
+  "description": "New text(s) + 15 exercises.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 16-20 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Review 6 text",
+    "readingText": "TEXT A - Blog post format (T16-18 focus)\nHOBBY DAY - by Coco\nI don't work on Sundays. In the morning I swim, and\nat night I watch films - I love old films!\nBut today? It is raining, and it is very cold. So no\nwater for me! I am at home, and I am wearing my big\nwinter jacket.\nMy brother doesn't like films. He plays games all\nSunday. Do you like old films too?\n\nTEXT B - focus)\nNOTE FOR PAPA\nI am at the pharmacy - medicine for Mama. She has a\nheadache, and she can't work today. She is sleeping\nnow - please don't play music!\nAnd the cat is in the garden again. She can't eat\nthe flowers! Bring her in, please!\n- Fifi",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-R6-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Coco's Sundays - and today's problem",
+          "A weather report",
+          "A film review",
+          "A shop flyer"
+        ],
+        "correctAnswer": "Coco's Sundays - and today's problem",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q2",
+        "type": "multipleChoice",
+        "question": "What does Coco do on Sunday mornings (normally)?",
+        "options": [
+          "Swims",
+          "Watches films",
+          "Plays games",
+          "Works"
+        ],
+        "correctAnswer": "Swims",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Grammar: My brother ___ like films.",
+        "options": [
+          "doesn't",
+          "don't",
+          "isn't",
+          "no"
+        ],
+        "correctAnswer": "doesn't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What is the weather like today?",
+        "options": [
+          "Raining and very cold",
+          "Hot and sunny",
+          "Snowing",
+          "The text does not say"
+        ],
+        "correctAnswer": "Raining and very cold",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What is Coco doing today?",
+        "options": [
+          "Staying at home in a warm jacket",
+          "Swimming",
+          "Working",
+          "Playing games"
+        ],
+        "correctAnswer": "Staying at home in a warm jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q6",
+        "type": "multipleChoice",
+        "question": "What is Coco wearing?",
+        "options": [
+          "A big winter jacket",
+          "A white dress",
+          "Black shoes",
+          "A red hat"
+        ],
+        "correctAnswer": "A big winter jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q7",
+        "type": "multipleChoice",
+        "question": "Why is there 'no water' for Coco today?",
+        "options": [
+          "Swimming in cold rain is no fun",
+          "The water is expensive",
+          "Coco can't swim",
+          "The pool is far"
+        ],
+        "correctAnswer": "Swimming in cold rain is no fun",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q8",
+        "type": "multipleChoice",
+        "question": "How old is Coco?",
+        "options": [
+          "20",
+          "25",
+          "30",
+          "The text does not say TEXT 2 (52 words) - Handwritten note format (T19-20 focus): --------------------------------------- NOTE FOR PAPA I am at the pharmacy - medicine for Mama. She has a headache, and she can't work today. She is sleeping now - please don't play music! And the cat is in the garden again. She can't eat the flowers! Bring her in, please! - Fifi ---------------------------------------"
+        ],
+        "correctAnswer": "The text does not say TEXT 2 (52 words) - Handwritten note format (T19-20 focus): --------------------------------------- NOTE FOR PAPA I am at the pharmacy - medicine for Mama. She has a headache, and she can't work today. She is sleeping now - please don't play music! And the cat is in the garden again. She can't eat the flowers! Bring her in, please! - Fifi ---------------------------------------",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q9",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A note from Fifi to Papa",
+          "A medicine label",
+          "A postcard",
+          "A park notice"
+        ],
+        "correctAnswer": "A note from Fifi to Papa",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q10",
+        "type": "multipleChoice",
+        "question": "What is wrong with Mama?",
+        "options": [
+          "She has a headache and can't work",
+          "Her foot is bad",
+          "She is cold",
+          "The text does not say"
+        ],
+        "correctAnswer": "She has a headache and can't work",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q11",
+        "type": "multipleChoice",
+        "question": "Where is Fifi?",
+        "options": [
+          "At the pharmacy",
+          "At home",
+          "At school",
+          "In the garden"
+        ],
+        "correctAnswer": "At the pharmacy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q12",
+        "type": "multipleChoice",
+        "question": "What is Mama doing now?",
+        "options": [
+          "Sleeping",
+          "Working",
+          "Playing music",
+          "Eating flowers"
+        ],
+        "correctAnswer": "Sleeping",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q13",
+        "type": "multipleChoice",
+        "question": "Where is the cat?",
+        "options": [
+          "In the garden",
+          "In the house",
+          "At the pharmacy",
+          "Under the bed"
+        ],
+        "correctAnswer": "In the garden",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q14",
+        "type": "multipleChoice",
+        "question": "Grammar: 'Bring HER in!' - her = ?",
+        "options": [
+          "The cat",
+          "Mama",
+          "Fifi",
+          "The flower"
+        ],
+        "correctAnswer": "The cat",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-REA-Q15",
+        "type": "multipleChoice",
+        "question": "Grammar: She ___ eat the flowers!",
+        "options": [
+          "can't",
+          "can",
+          "doesn't",
+          "don't"
+        ],
+        "correctAnswer": "can't",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review6_set_topics16-20.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

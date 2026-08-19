@@ -1,0 +1,125 @@
+{
+  "id": "A1-T14-REA",
+  "order": 96,
+  "title": "Topic 14: Work & Study - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about your job or studies",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 14: two texts",
+    "readingText": "TEXT A - Job advertisement format\nJOB AT CAFE SOL!\nWe need one person for the morning: seven o'clock\nto eleven o'clock, Monday to Friday.\nYou: you like people, you can speak a little English,\nand you can help in the kitchen.\nWe pay ten dollars for one hour.\nWrite to: cafesol@mail.com\n\nTEXT B - Chat messages format\nDuca: Where is your sister now, Lia?\nLia:  At the office! She has a new job - she writes\n      for a big company.\nDuca: Nice! And you?\nLia:  I am a student. I study at night. In the morning\n      I help at my father's shop.\nDuca: Study AND work - you can do it all!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T14-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A job advertisement",
+          "A cafe menu",
+          "A student profile",
+          "A bus timetable"
+        ],
+        "correctAnswer": "A job advertisement",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-REA-Q2",
+        "type": "multipleChoice",
+        "question": "When is the work?",
+        "options": [
+          "Mornings, Monday to Friday",
+          "Nights, every day",
+          "Saturday and Sunday",
+          "The text does not say"
+        ],
+        "correctAnswer": "Mornings, Monday to Friday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What can the person do to answer this ad?",
+        "options": [
+          "Write to cafesol@mail.com",
+          "Go to the hospital",
+          "Call the school",
+          "Turn left at the bank"
+        ],
+        "correctAnswer": "Write to cafesol@mail.com",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What are Duca and Lia talking about?",
+        "options": [
+          "Work and study in Lia's family",
+          "A new shop",
+          "A trip by bus",
+          "Lia's home"
+        ],
+        "correctAnswer": "Work and study in Lia's family",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What is the sister's new job?",
+        "options": [
+          "She writes for a big company",
+          "She is a doctor",
+          "She works at a shop",
+          "She is a teacher"
+        ],
+        "correctAnswer": "She writes for a big company",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T14-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Where does Lia help in the morning?",
+        "options": [
+          "At her father's shop",
+          "At the office",
+          "At school",
+          "At the hospital"
+        ],
+        "correctAnswer": "At her father's shop",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic14_work_study.txt, Lesson 14.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,156 @@
+{
+  "id": "A1-R1-VOC",
+  "order": 16,
+  "title": "Review 1 (Topics 1-3) - Vocabulary",
+  "description": "Skill-path review: 9 new exercises recycling Topics 1-3.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 1-3 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-R1-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Choose the greeting for 10:00 AM.",
+        "options": [
+          "Good morning",
+          "Goodbye",
+          "Fine"
+        ],
+        "correctAnswer": "Good morning",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "___ to meet you!",
+        "options": [
+          "Nice",
+          "Name",
+          "Morning"
+        ],
+        "correctAnswer": "Nice",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "I ___ a student. You ___ my friend.",
+        "options": [
+          "am / are",
+          "are / am",
+          "is / is"
+        ],
+        "correctAnswer": "am / are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Sao Paulo is a ___.",
+        "options": [
+          "city",
+          "country",
+          "email"
+        ],
+        "correctAnswer": "city",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "___ you from Portugal? - No, I am not.",
+        "options": [
+          "Are",
+          "Is",
+          "Am"
+        ],
+        "correctAnswer": "Are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "What is ___ email? - ___ email is leo@mail.com.",
+        "options": [
+          "your / My",
+          "my / Your",
+          "my / My"
+        ],
+        "correctAnswer": "your / My",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Your father's mother is in your ___.",
+        "options": [
+          "family",
+          "city",
+          "email"
+        ],
+        "correctAnswer": "family",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "This is Leo. ___ sister is my friend.",
+        "options": [
+          "His",
+          "Her",
+          "My"
+        ],
+        "correctAnswer": "His",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R1-VOC-Q9",
+        "type": "multipleChoice",
+        "question": "This is ___ car. (the car of Marta)",
+        "options": [
+          "Marta's",
+          "Marta is",
+          "Martas"
+        ],
+        "correctAnswer": "Marta's",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review1_set_topics1-3.txt. All content new; never copies of lesson items.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

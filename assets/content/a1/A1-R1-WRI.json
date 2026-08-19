@@ -1,0 +1,71 @@
+{
+  "id": "A1-R1-WRI",
+  "order": 20,
+  "title": "Review 1 (Topics 1-3) - Writing",
+  "description": "Integrated writing task, no model, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 1-3 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "Write your presentation for the class notice board.",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "5 sentences",
+      "A greeting + My name is... (T1)",
+      "Your age or your city with I am (T2)",
+      "One family sentence with his/her or possessive 's (T3)"
+    ],
+    "minSentences": 5,
+    "maxSentences": 7,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review1_set_topics1-3.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5 sentences, all three topics present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "To be forms correct (am/is/are)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Possessives correct (my/your/his/her/'s)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

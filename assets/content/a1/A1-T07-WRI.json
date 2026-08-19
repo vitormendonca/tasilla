@@ -1,0 +1,80 @@
+{
+  "id": "A1-T07-WRI",
+  "order": 48,
+  "title": "Topic 7: Daily Routine & Habits - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say what you do every day",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "STEP 1 - MODEL (student reads):\n  Every day I get up in the morning.\n  I drink water and I go to work.\n  At night I study English.\n  My sister watches TV - she sleeps in the morning!\n\nSTEP 2 - GAP-FILL the model (tap: watches / get up / at) -\n3 gaps (scaffold fading):\n  Every day I ___ in the morning.     -> get up\n  ___ night I study English.          -> At\n  My sister ___ TV.                   -> watches\n  (warm-up, auto-checked, not scored)\n\nSTEP 3 - WRITE YOUR OWN VERSION (typed, teacher-graded):\nPrompt: Write about YOUR day, morning to night.\nMinimum requirements:\n  - 4 to 5 sentences\n  - 3+ routine verbs (get up, eat, drink, go, work, study,\n    watch, sleep)\n  - every day / in the morning / at night: use 2 of these\n  - one 3rd person sentence with -s (My mother works...)",
+    "writingMode": "guided_routine",
+    "wordBank": [
+      "get up",
+      "eat",
+      "drink",
+      "go",
+      "work",
+      "study",
+      "watch",
+      "sleep"
+    ],
+    "minimumRequirements": [
+      "4 to 5 sentences",
+      "3+ routine verbs (get up, eat, drink, go, work, study, watch, sleep)",
+      "every day / in the morning / at night: use 2 of these",
+      "one 3rd person sentence with -s (My mother works...)"
+    ],
+    "minSentences": 4,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic07_daily_routine.txt, Lesson 7.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "4-5 sentences, real routine, in order",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Verbs correct (I form)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "3rd person -s correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

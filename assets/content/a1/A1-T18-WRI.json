@@ -1,0 +1,82 @@
+{
+  "id": "A1-T18-WRI",
+  "order": 125,
+  "title": "Topic 18: Clothes & Colours - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name clothes and colours; describe what people are wearing",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "PROMPT:\n  Write a text: What we wear.\n  You today, you in winter or summer, and one person\n  you know.\n\nMinimum requirements:\n  - 6 sentences\n  - I am wearing... (now) AND I wear... (habit) - both!\n  - 3+ clothes words, 2+ colours\n  - One sentence about another person (is wearing /\n    wears - watch the -s!)",
+    "writingMode": "free_response",
+    "wordBank": [
+      "clothes",
+      "shirt",
+      "dress",
+      "shoes",
+      "jacket",
+      "wear",
+      "red",
+      "blue",
+      "black",
+      "white (green and yellow appear in texts as passive exposure - tested colours are the big four)"
+    ],
+    "minimumRequirements": [
+      "6 sentences",
+      "I am wearing... (now) AND I wear... (habit) - both!",
+      "3+ clothes words, 2+ colours",
+      "One sentence about another person (is wearing / wears - watch the -s!)"
+    ],
+    "minSentences": 6,
+    "maxSentences": 8,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic18_clothes_colours.txt, Lesson 18.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "6 sentences, real clothes",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "wearing/wear contrast correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Colour-noun order correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

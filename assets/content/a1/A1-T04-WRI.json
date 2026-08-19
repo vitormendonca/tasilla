@@ -1,0 +1,78 @@
+{
+  "id": "A1-T04-WRI",
+  "order": 26,
+  "title": "Topic 4: Describing People - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe a person's appearance and personality simply",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "STEP 1 - MODEL (student reads):\n  My best friend is Rafa.\n  He is short and he is 20 years old.\n  He has short hair and big eyes.\n  He is very nice and funny.\n\nSTEP 2 - GAP-FILL the model (tap: has / is / nice / short):\n  My best friend ___ Rafa.        -> is\n  He is ___ and he is 20.         -> short\n  He ___ short hair.              -> has\n  He is very ___ and funny.       -> nice\n  (warm-up, auto-checked, not scored)\n\nSTEP 3 - WRITE YOUR OWN VERSION (typed, teacher-graded):\nPrompt: Describe a person you like (family or friend).\nMinimum requirements:\n  - 4 sentences\n  - is + adjective at least twice (tall/short/nice...)\n  - has + hair or eyes at least once\n  - The person's name and who they are (T3)",
+    "writingMode": "guided_family_description",
+    "wordBank": [
+      "tall",
+      "short",
+      "long",
+      "hair",
+      "eyes",
+      "nice"
+    ],
+    "minimumRequirements": [
+      "4 sentences",
+      "is + adjective at least twice (tall/short/nice...)",
+      "has + hair or eyes at least once",
+      "The person's name and who they are (T3)"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic04_describing_people.txt, Lesson 4.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "4 sentences about a real person",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "is + adjective used correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "have/has used correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

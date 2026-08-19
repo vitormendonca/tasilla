@@ -1,0 +1,186 @@
+{
+  "id": "A1-T10-VOC",
+  "order": 65,
+  "title": "Topic 10: Food & Drink / Ordering - Vocabulary",
+  "description": "Core words for food & drink / ordering: coffee, tea, milk, bread, rice, apple, juice, menu. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Order food and drink in a cafe; say what you like",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "coffee = a hot, black drink  |  tea = a hot drink with\nleaves  |  milk = a white drink  |  bread = you eat it\nin the morning  |  rice = small and white, with lunch\napple = a red or green fruit  |  juice = a fruit drink\nmenu = the list of food and prices in a cafe\n+ phrase bank: Can I have..., please? | Here you are. |\nI like...\n+ grammar note: a coffee, a tea BUT an apple (a-e-i-o-u\nsound -> an)",
+  "vocabularyBlocks": [
+    {
+      "title": "Food & Drink / Ordering words",
+      "words": [
+        "coffee",
+        "tea",
+        "milk",
+        "bread",
+        "rice",
+        "apple",
+        "juice",
+        "menu"
+      ],
+      "exampleSentences": [
+        "Can I have a coffee, please?",
+        "Here you are.",
+        "I like rice.",
+        "She likes tea.",
+        "an apple",
+        "Is there tea? Yes, there is."
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "A / AN full rule (G3: an + a-e-i-o-u sound: an apple) + CAN ",
+      "explanation": "A / AN full rule (G3: an + a-e-i-o-u sound: an apple) + CAN I HAVE...? polite requests (G11 intro) + I LIKE + noun (affirmative only - G7 pattern; do/does questions and negatives stay in Topic 16)",
+      "patterns": [
+        "a + consonant sound (a coffee) / an + vowel",
+        "sound (an apple)",
+        "Can I have... please? (polite request chunk)",
+        "like/likes + noun (affirmative only)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T10-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "A white drink from a cow? It is ___.",
+        "options": [
+          "milk",
+          "coffee",
+          "rice"
+        ],
+        "correctAnswer": "milk",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "In a cafe, the list of food and prices is the ___.",
+        "options": [
+          "menu",
+          "bread",
+          "money"
+        ],
+        "correctAnswer": "menu",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: I am thirsty. Apple ___, please!",
+        "options": [
+          "juice",
+          "bread",
+          "rice"
+        ],
+        "correctAnswer": "juice",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: In the morning I eat ___ and I drink coffee.",
+        "options": [
+          "bread",
+          "tea",
+          "juice"
+        ],
+        "correctAnswer": "bread",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT a drink?",
+        "options": [
+          "tea",
+          "rice",
+          "juice"
+        ],
+        "correctAnswer": "rice",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "Waiter: Good morning! ... You: ___",
+        "options": [
+          "Can I have a coffee, please?",
+          "There are two bedrooms",
+          "My birthday is in May"
+        ],
+        "correctAnswer": "Can I have a coffee, please?",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: Can I have ___ apple and ___ tea, please?",
+        "options": [
+          "an / a",
+          "a / an",
+          "an / an"
+        ],
+        "correctAnswer": "an / a",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ coffee. My mother ___ tea.",
+        "options": [
+          "like / likes",
+          "likes / like",
+          "like / like"
+        ],
+        "correctAnswer": "like / likes",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T10-VOC-Q1": "Milk = white drink. Coffee = black drink.",
+      "A1-T10-VOC-Q2": "Menu = the list. Money (T9) pays for it!",
+      "A1-T10-VOC-Q3": "Thirsty (T5) -> a drink -> juice!",
+      "A1-T10-VOC-Q4": "You EAT bread. You DRINK tea and juice (T7 verbs!).",
+      "A1-T10-VOC-Q5": "You eat rice. You drink tea and juice.",
+      "A1-T10-VOC-Q6": "In a cafe, order with: Can I have..., please?",
+      "A1-T10-VOC-Q7": "AN apple (a-e-i-o-u sound). A tea.",
+      "A1-T10-VOC-Q8": "I like. He/she likeS (T7 rule - same -s!)."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic10_food_drink_ordering.txt, Lesson 10.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

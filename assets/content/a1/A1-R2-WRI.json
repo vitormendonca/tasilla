@@ -1,0 +1,71 @@
+{
+  "id": "A1-R2-WRI",
+  "order": 43,
+  "title": "Review 2 (Topics 4-6) - Writing",
+  "description": "Integrated writing task, no model, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 4-6 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "A friend asks: What is your new home like? And how is your family? Write your answer.",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "5 sentences",
+      "There is AND there are (T6)",
+      "One person: appearance with is/has (T4)",
+      "One feeling sentence (T5)"
+    ],
+    "minSentences": 5,
+    "maxSentences": 7,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review2_set_topics4-6.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5 sentences, all three topics present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "There is/are + preposition correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "is/has description correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

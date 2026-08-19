@@ -1,0 +1,79 @@
+{
+  "id": "A1-FT-WRI",
+  "order": 148,
+  "title": "Final Test - Writing path",
+  "description": "Two tasks: a practical typed message + a handwritten personal text (uploaded). Teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_final",
+  "difficultyLevel": 5,
+  "estimatedMinutes": 30,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Prove course-wide writing ability, including handwriting",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "TASK 1 - PRACTICAL WRITING (typed, ~10 minutes)\nSituation shown in app:\nYou are sick today, and you have an English class at\nthe school this afternoon. Write a message to your\nteacher (5-6 sentences):\n- say you are sick + ONE symptom (have + ...)\n- say what you can't do\n- one sentence with -ing: what is happening at home\nnow\n- ask ONE question (about the homework, the next\nclass, a word...)\n- say when the teacher sees you again (day - T8)\n\nTASK 2 - PERSONAL TEXT (HANDWRITTEN + uploaded, ~20 minutes)\nChoose ONE prompt card (the app offers all three):\nA) MY LIFE - who you are, family, home, work or\nstudy, one hobby\nB) A PERSON I LOVE - who + description + clothes +\nwhat they do every day + what they can do\nC) MY PERFECT SATURDAY - morning to night: weather,\nfood, places, free time (careful: all in PRESENT\ntense - what you DO on your perfect Saturday!)\n\nRequirements:\n- 10-12 sentences BY HAND on paper\n- Then photograph and upload",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "Task 1: 5-6 sentence message with have/can't/-ing",
+      "Task 2: 10-12 handwritten sentences on the chosen prompt"
+    ],
+    "minSentences": 10,
+    "maxSentences": 12,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_final_test_writing.txt. SKILL PATH FINAL TEST. Task 2 depends on writing-upload feature (typed fallback). XP 30 +20.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Task 1: message complete - all 5 content points",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Task 1: have/can't/-ing forms correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Task 2: 10-12 sentences, on the chosen prompt, organized",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Task 2: grammar range - to be, have, present + -s, do-system or can, one time expression",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Vocabulary range: words from 8+ different topics across both tasks",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Spelling + handwriting readable throughout (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

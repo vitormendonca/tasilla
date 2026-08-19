@@ -1,0 +1,197 @@
+{
+  "id": "A1-T19-VOC",
+  "order": 126,
+  "title": "Topic 19: Health & Body - Vocabulary",
+  "description": "Core words for health & body: body, head, arm, leg, hand, foot, sick, headache, pharmacy, medicine. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say what hurts, name body parts, manage a pharmacy visit",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "body = ALL of you!  |  head = eyes, hair - the top!\narm = shoulder to hand  |  leg = it walks!\nhand = five fingers  |  foot = it is in your shoe\n(two = FEET!)\nsick = not OK, not well  |  headache = your head is\nbad - ouch!\npharmacy = the medicine shop  |  medicine = you take\nit when you are sick\n+ phrase bank: I have a headache. | I can't go to\nwork. | Go to bed!",
+  "vocabularyBlocks": [
+    {
+      "title": "Health & Body words",
+      "words": [
+        "body",
+        "head",
+        "arm",
+        "leg",
+        "hand",
+        "foot",
+        "sick",
+        "headache",
+        "pharmacy",
+        "medicine"
+      ],
+      "exampleSentences": [
+        "I am sick.",
+        "I have a headache.",
+        "I can't go to work today.",
+        "Take one with water.",
+        "Go to bed and sleep!",
+        "Is there a pharmacy near here?"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "HAVE/HAS for symptoms (I have a headache - extends T4's have",
+      "explanation": "HAVE/HAS for symptoms (I have a headache - extends T4's have for features) + CAN'T (the negative of G11: I can't go to work) + imperatives for advice (G12: Drink water! Go to bed! + first light use of Don't..., now that do-support is known from T16)",
+      "patterns": [
+        "have/has + a + symptom (I have a headache /",
+        "she has a headache)",
+        "can't + verb (I can't come to class)",
+        "advice imperatives: Drink...! Sleep!",
+        "Don't watch TV all day!"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T19-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Your ___ is in your shoe. Your ___ has five fingers.",
+        "options": [
+          "foot / hand",
+          "hand / foot",
+          "head / leg",
+          "arm / foot"
+        ],
+        "correctAnswer": "foot / hand",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "You are not OK today - hot head, tired body. You are ___.",
+        "options": [
+          "sick",
+          "happy",
+          "closed",
+          "expensive"
+        ],
+        "correctAnswer": "sick",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: The medicine shop is the ___.",
+        "options": [
+          "pharmacy",
+          "supermarket",
+          "station",
+          "office"
+        ],
+        "correctAnswer": "pharmacy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: I have a headache. I take my ___ with water.",
+        "options": [
+          "medicine",
+          "breakfast",
+          "juice",
+          "paper"
+        ],
+        "correctAnswer": "medicine",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT a part of the body?",
+        "options": [
+          "arm",
+          "jacket",
+          "leg",
+          "head"
+        ],
+        "correctAnswer": "jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: I am sick... I have a headache. B: ___",
+        "options": [
+          "Go to bed and sleep! And drink water",
+          "Turn left at the bank",
+          "It is forty dollars",
+          "Yes, I do"
+        ],
+        "correctAnswer": "Go to bed and sleep! And drink water",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: I ___ a headache. My brother ___ a headache too - what a day!",
+        "options": [
+          "have / has",
+          "has / have",
+          "am / is",
+          "have / have"
+        ],
+        "correctAnswer": "have / has",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: I am sick, so I ___ go to work today. But I ___ watch films at home!",
+        "options": [
+          "can't / can",
+          "can / can't",
+          "don't / do",
+          "can't / can't"
+        ],
+        "correctAnswer": "can't / can",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T19-VOC-Q1": "Foot -> shoe (T18!). Hand -> fingers.",
+      "A1-T19-VOC-Q2": "Sick = not well. (I am sick - like I am tired, T5!)",
+      "A1-T19-VOC-Q3": "Pharmacy = medicine. Supermarket (T12) = food!",
+      "A1-T19-VOC-Q4": "Medicine = you take it when you are sick.",
+      "A1-T19-VOC-Q5": "A jacket (T18) goes ON the body - it is clothes!",
+      "A1-T19-VOC-Q6": "A sick friend -> give advice with imperatives (T12 grammar, new job!).",
+      "A1-T19-VOC-Q7": "I HAVE, he HAS - same rule as T4 (long hair), new use (headache!).",
+      "A1-T19-VOC-Q8": "can't = can NOT. Sick -> can't work... but CAN rest!"
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic19_health_body.txt, Lesson 19.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

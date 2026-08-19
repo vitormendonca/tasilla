@@ -1,0 +1,72 @@
+{
+  "id": "A1-R5-WRI",
+  "order": 108,
+  "title": "Review 5 (Topics 13-15) - Writing",
+  "description": "Integrated writing task, no model, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 13-15 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "Write a first message to a new English teacher: introduce yourself as a student.",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "5-6 sentences",
+      "Your job or study with a/an (T14)",
+      "How you come to class: by + transport (T13)",
+      "One can sentence (T14)",
+      "One real question for the teacher: What does ... mean? or How do you spell...? (T15)"
+    ],
+    "minSentences": 5,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review5_set_topics13-15.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5-6 sentences, all three topics",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "a/an + job, by + transport correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "can + question chunk correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,109 @@
+{
+  "id": "A1-T12-LIS",
+  "order": 79,
+  "title": "Topic 12: Places in Town & Directions - Listening",
+  "description": "One audio (2 speakers) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Identify places in town, ask for and follow simple directions",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 12 listening",
+    "audioScript": "Tourist: Excuse me! Where is the bank, please?\nWoman:   The bank? OK. Go straight on this street.\nTourist: Go straight...\nWoman:   Yes. Then turn left at the supermarket.\nTourist: Left at the supermarket.\nWoman:   Yes! The bank is next to the park. It is near -\ntwo minutes!\nTourist: Thank you very much!",
+    "audioPath": "assets/audio/a1/t12_listening_where_is_the_bank.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T12-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What does the tourist want?",
+        "options": [
+          "Directions to the bank",
+          "To buy a bag",
+          "Directions to the station",
+          "A coffee"
+        ],
+        "correctAnswer": "Directions to the bank",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "Where does the tourist turn left?",
+        "options": [
+          "At the supermarket",
+          "At the park",
+          "At the bank",
+          "At the station"
+        ],
+        "correctAnswer": "At the supermarket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "The bank is next to the ___.",
+        "options": [
+          "park",
+          "supermarket",
+          "hospital",
+          "school"
+        ],
+        "correctAnswer": "park",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "Is the bank open today?",
+        "options": [
+          "Yes, it is open",
+          "No, it is closed",
+          "The audio does not say",
+          "Only in the morning"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T12-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "Turn left at the supermarket",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic12_places_directions.txt, Lesson 12.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

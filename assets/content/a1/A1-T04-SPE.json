@@ -1,0 +1,64 @@
+{
+  "id": "A1-T04-SPE",
+  "order": 25,
+  "title": "Topic 4: Describing People - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe a person's appearance and personality simply",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record yourself. Describe ONE person you know well\n(family or friend).\nSay 4 things:\n1. Who they are + name (T3: This is my... His/Her name is...)\n2. Tall or short? (He/She is...)\n3. Their hair or eyes (He/She has...)\n4. Their personality (He/She is very nice / funny...)\nExample: This is my friend Bruno. He is tall. He has short\nhair. He is very nice.\n\nTip: Look at a photo of the person while you speak!",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 45,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic04_describing_people.txt, Lesson 4.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Identifies person + name (T3 recycle)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Uses is + adjective correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Uses has for hair/eyes correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

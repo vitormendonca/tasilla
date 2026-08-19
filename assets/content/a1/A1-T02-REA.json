@@ -1,0 +1,119 @@
+{
+  "id": "A1-T02-REA",
+  "order": 8,
+  "title": "Topic 2: Personal Information - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Give name, age, nationality, phone, email; spell aloud",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 2: two texts",
+    "readingText": "TEXT A - Student profile page format\nNEW STUDENT PROFILE\nName: Daniel Costa\nAge: 19\nCountry: Brazil\nCity: Curitiba\nEmail: daniel.costa@mail.com\nHello! My name is Daniel. I am 19 years old.\nI am from Curitiba. Nice to meet you!\n\nTEXT B - Chat messages format\nRui:  Hi Eva! What is your email?\nEva:  It is eva.lima@mail.com.\nRui:  Can you spell Lima, please?\nEva:  Yes. L - I - M - A.\nRui:  Thank you! And are you from Lisbon?\nEva:  No, I am not. I am from Porto.",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T02-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A student profile",
+          "A goodbye note",
+          "A phone message"
+        ],
+        "correctAnswer": "A student profile",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How old is Daniel?",
+        "options": [
+          "19",
+          "90",
+          "The text does not say"
+        ],
+        "correctAnswer": "19",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What city is Daniel from?",
+        "options": [
+          "Curitiba",
+          "Brazil",
+          "Costa"
+        ],
+        "correctAnswer": "Curitiba",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What does Rui want?",
+        "options": [
+          "Eva's email",
+          "Eva's age",
+          "Eva's address"
+        ],
+        "correctAnswer": "Eva's email",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-REA-Q5",
+        "type": "multipleChoice",
+        "question": "Where is Eva from?",
+        "options": [
+          "Porto",
+          "Lisbon",
+          "Lima"
+        ],
+        "correctAnswer": "Porto",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T02-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Eva says: No, I ___ not. Which words are in the text?",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "correctAnswer": "am",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic02_personal_information.txt, Lesson 2.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,165 @@
+{
+  "id": "A1-R5-LIS",
+  "order": 105,
+  "title": "Review 5 (Topics 13-15) - Listening",
+  "description": "New audio + 9 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 13-15 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Review 5 listening",
+    "audioScript": "A: A ticket to Santos, please!\nB: The train is at nine thirty, door four. Six dollars,\nplease.\nA: Here you are! ...\nB: And you? What is your job?\nA: Me? My sister is a teacher - she works at a school\nin Braga and she can speak English very well. But I\nam a student! ...\nB: OK class, open your books, please - page thirty!\nRead the questions and write the answers.",
+    "audioPath": "assets/audio/a1/rev5_listening_topics13-15.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-R5-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "Where does the traveler go?",
+        "options": [
+          "Santos",
+          "Braga",
+          "Olinda",
+          "Porto"
+        ],
+        "correctAnswer": "Santos",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What time is the train?",
+        "options": [
+          "Nine thirty",
+          "Nine o'clock",
+          "Four o'clock",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Nine thirty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How much is the ticket?",
+        "options": [
+          "Six dollars",
+          "Sixteen dollars",
+          "Sixty dollars",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Six dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "What is the sister's job?",
+        "options": [
+          "Teacher",
+          "Doctor",
+          "Student",
+          "Office worker"
+        ],
+        "correctAnswer": "Teacher",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "What can the sister do?",
+        "options": [
+          "Speak English very well",
+          "Write books",
+          "Speak three languages",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Speak English very well",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "What page does the class open?",
+        "options": [
+          "Thirty",
+          "Thirteen",
+          "Three",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Thirty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q7",
+        "type": "multipleChoice",
+        "question": "What does the class write?",
+        "options": [
+          "The answers",
+          "The questions",
+          "The words",
+          "A ticket"
+        ],
+        "correctAnswer": "The answers",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q8",
+        "type": "multipleChoice",
+        "question": "What is the teacher's name?",
+        "options": [
+          "Mira",
+          "Davi",
+          "Nel",
+          "The audio does not say"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R5-LIS-Q9",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "She is a teacher",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review5_set_topics13-15.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

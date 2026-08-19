@@ -1,0 +1,71 @@
+{
+  "id": "A1-R4-WRI",
+  "order": 87,
+  "title": "Review 4 (Topics 10-12) - Writing",
+  "description": "Integrated writing task, no model, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 10-12 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "Write a message to a friend: invite them to your favorite cafe or shop.",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "5-6 sentences",
+      "What it is + one thing you like there (T10)",
+      "One price + open/closed day (T11)",
+      "Directions with one imperative + next to/near (T12)"
+    ],
+    "minSentences": 5,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review4_set_topics10-12.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5-6 sentences, all three topics",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "like/likes + a/an correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Imperative + place phrases correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

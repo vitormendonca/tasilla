@@ -1,0 +1,64 @@
+{
+  "id": "A1-T15-SPE",
+  "order": 102,
+  "title": "Topic 15: Classroom & Learning - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Use classroom language - instructions, asking about spelling and meaning",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record yourself. Classroom theater - two voices again!\nTEACHER voice: give 2 instructions with pronouns\n(Open your book... read it! Listen to me!)\nSTUDENT voice: ask the 3 survival questions:\n1. Sorry, can you repeat, please?\n2. How do you spell ___? (choose a real word)\n3. What does ___ mean? (choose another real word)\n\nTip: These 3 questions save you in EVERY English class -",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 60,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic15_classroom_learning.txt, Lesson 15.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "2 imperatives + object pronoun",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Survival chunks said correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Real words chosen for spell/mean",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

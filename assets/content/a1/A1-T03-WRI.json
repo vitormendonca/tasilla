@@ -1,0 +1,76 @@
+{
+  "id": "A1-T03-WRI",
+  "order": 15,
+  "title": "Topic 3: Family & Relationships - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about family members",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "STEP 1 - MODEL (student reads):\n  My family is small.\n  My mother's name is Sonia. She is 48 years old.\n  I have one brother. His name is Beto.\n  He is my friend too!\n\nSTEP 2 - GAP-FILL the model (tap: name / His / have / mother's):\n  My ___ name is Sonia.        -> mother's\n  She is 48 years old. I ___ one brother.  -> have\n  ___ name is Beto.            -> His\n  (warm-up, auto-checked, not scored)\n\nSTEP 3 - WRITE YOUR OWN VERSION (typed, teacher-graded):\nPrompt: Write about YOUR family (or people close to you).\nMinimum requirements:\n  - 4 sentences\n  - Use: one possessive 's (my mother's name...),\n    his or her at least once, one age or city",
+    "writingMode": "guided_family_description",
+    "wordBank": [
+      "mother",
+      "father",
+      "brother",
+      "sister",
+      "family",
+      "friend"
+    ],
+    "minimumRequirements": [
+      "4 sentences",
+      "Use: one possessive 's (my mother's name...), his or her at least once, one age or city"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic03_family_relationships.txt, Lesson 3.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "4 sentences about real people",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Possessive 's used correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "His/her matches the person",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

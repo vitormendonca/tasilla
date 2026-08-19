@@ -1,0 +1,104 @@
+{
+  "id": "A1-T07-LIS",
+  "order": 45,
+  "title": "Topic 7: Daily Routine & Habits - Listening",
+  "description": "One audio (1 speaker) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say what you do every day",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 7 listening",
+    "audioScript": "Hello! I am Selma. | Every day I get up in the morning\nand I drink water. | I go to work in the city. | At night\nI study English, and my brother watches TV. | Then I\nsleep. Good night!",
+    "audioPath": "assets/audio/a1/t07_listening_my_day.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T07-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this audio?",
+        "options": [
+          "Selma talks about her day",
+          "Selma describes her house",
+          "Selma introduces her family"
+        ],
+        "correctAnswer": "Selma talks about her day",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T07-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What does Selma drink in the morning?",
+        "options": [
+          "Water",
+          "The audio does not say",
+          "Coffee"
+        ],
+        "correctAnswer": "Water",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T07-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "Who watches TV at night?",
+        "options": [
+          "Selma's brother",
+          "Selma",
+          "Selma's mother"
+        ],
+        "correctAnswer": "Selma's brother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T07-LIS-Q4",
+        "type": "trueFalse",
+        "question": "Selma studies English in the morning. True or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T07-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "I study English at night",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic07_daily_routine.txt, Lesson 7.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

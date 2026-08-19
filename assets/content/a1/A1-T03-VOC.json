@@ -1,0 +1,183 @@
+{
+  "id": "A1-T03-VOC",
+  "order": 11,
+  "title": "Topic 3: Family & Relationships - Vocabulary",
+  "description": "Core words for family & relationships: mother, father, brother, sister, family, friend. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about family members",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "mother = your mom\nfather = your dad\nbrother = a boy/man with the same parents\nsister = a girl/woman with the same parents\nfamily = mother + father + brothers + sisters...\nfriend = a person you like, not family\n+ phrase bank: This is my... | I have a... | His name is... |\nHer name is...",
+  "vocabularyBlocks": [
+    {
+      "title": "Family & Relationships words",
+      "words": [
+        "mother",
+        "father",
+        "brother",
+        "sister",
+        "family",
+        "friend"
+      ],
+      "exampleSentences": [
+        "This is my mother.",
+        "I have a brother.",
+        "His name is...",
+        "Her name is...",
+        "How old is she?"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "possessive 'S (Ana's brother) + possessive adjectives HIS / ",
+      "explanation": "possessive 'S (Ana's brother) + possessive adjectives HIS / HER / OUR (extends T2's my/your)",
+      "patterns": [
+        "Ana's brother / my father's car (possessive 's)",
+        "his / her / our + noun",
+        "She is... / He is... (3rd person to be, natural",
+        "extension of T1-2 to be work)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T03-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "Your mother and your father are your ___.",
+        "options": [
+          "parents / family",
+          "friends",
+          "sisters"
+        ],
+        "correctAnswer": "parents / family",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "A girl with the same mother and father as you is your ___.",
+        "options": [
+          "sister",
+          "brother",
+          "friend"
+        ],
+        "correctAnswer": "sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: This is Paulo. He is not my family. He is my ___.",
+        "options": [
+          "friend",
+          "father",
+          "sister"
+        ],
+        "correctAnswer": "friend",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: I have one brother and one ___. Her name is Lia.",
+        "options": [
+          "sister",
+          "father",
+          "friend"
+        ],
+        "correctAnswer": "sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT a family word?",
+        "options": [
+          "mother",
+          "city",
+          "brother"
+        ],
+        "correctAnswer": "city",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: Who is this? B: ___",
+        "options": [
+          "This is my mother",
+          "I am from Brazil",
+          "Good morning"
+        ],
+        "correctAnswer": "This is my mother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: Ana has a brother. He is ___ brother.",
+        "options": [
+          "Ana's",
+          "Ana is",
+          "Anas"
+        ],
+        "correctAnswer": "Ana's",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: This is my father. ___ name is Carlos.",
+        "options": [
+          "His",
+          "Her",
+          "Your"
+        ],
+        "correctAnswer": "His",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T03-VOC-Q1": "Mother + father = family (parents).",
+      "A1-T03-VOC-Q2": "Sister = girl. Brother = boy.",
+      "A1-T03-VOC-Q3": "A friend is a person you like who is not family.",
+      "A1-T03-VOC-Q4": "HER name = a girl -> sister.",
+      "A1-T03-VOC-Q5": "City is from Topic 2 - it is a place, not family.",
+      "A1-T03-VOC-Q6": "Who is this? -> answer with This is my...",
+      "A1-T03-VOC-Q7": "Ana's brother = the brother of Ana. Use apostrophe + s.",
+      "A1-T03-VOC-Q8": "Father = man -> HIS. Mother = woman -> HER."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic03_family_relationships.txt, Lesson 3.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

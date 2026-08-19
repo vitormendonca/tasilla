@@ -1,0 +1,125 @@
+{
+  "id": "A1-T17-REA",
+  "order": 118,
+  "title": "Topic 17: Weather & Seasons - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe the weather and seasons",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 17: two texts",
+    "readingText": "TEXT A - Weather app format\nWEATHER TODAY - CITY APP\nRecife: Hot! Sun all day. Perfect for water!\nCuritiba: Cold. Rain in the morning, strong wind at\nnight.\nGramado: Very cold! It is snowing in the mountains\nright now.\nTHE WEEKEND: sun in all cities! It is spring - the\ncold days go, the hot days come.\nOpen the app every morning!\n\nTEXT B - Postcard format\nHi Vava!\nI am writing this from Gramado - winter here! It is\nvery cold, and look: it is snowing NOW. My first snow!\nEvery morning we drink hot coffee, and at night we\nwatch films - it is our winter hobby.\nAnd you, in Recife? Is it hot? Are you swimming\nevery day?\nKisses, Bibi",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T17-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A weather report for three cities",
+          "A postcard from Recife",
+          "A bus timetable",
+          "A school notice"
+        ],
+        "correctAnswer": "A weather report for three cities",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Where is it snowing right now?",
+        "options": [
+          "In the mountains near Gramado",
+          "In Recife",
+          "In Curitiba",
+          "In all cities"
+        ],
+        "correctAnswer": "In the mountains near Gramado",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Which city is good for swimming TODAY?",
+        "options": [
+          "Recife",
+          "Curitiba",
+          "Gramado",
+          "No city today"
+        ],
+        "correctAnswer": "Recife",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A postcard from Bibi's winter trip",
+          "A weather app report",
+          "Class notes",
+          "A shopping list"
+        ],
+        "correctAnswer": "A postcard from Bibi's winter trip",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What is happening in Gramado at the moment Bibi writes?",
+        "options": [
+          "It is snowing",
+          "It is raining",
+          "The sun is out",
+          "It is hot"
+        ],
+        "correctAnswer": "It is snowing",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T17-REA-Q6",
+        "type": "multipleChoice",
+        "question": "'Every morning we DRINK hot coffee' but 'it IS SNOWING now'. Why the two forms?",
+        "options": [
+          "drink = every day (habit), is snowing = right now",
+          "They mean the same",
+          "is snowing = every day, drink = now",
+          "One of them is a mistake"
+        ],
+        "correctAnswer": "drink = every day (habit), is snowing = right now",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic17_weather_seasons.txt, Lesson 17.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,76 @@
+{
+  "id": "A1-T01-WRI",
+  "order": 5,
+  "title": "Topic 1: Introductions & Greetings - Writing",
+  "description": "Typed writing task, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Greet people, introduce yourself, use basic courtesy phrases",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "STEP 1 - MODEL (student reads):\n  Hello! Good morning!\n  My name is Carla.\n  I am fine, thank you.\n  Nice to meet you!\n\nSTEP 2 - GAP-FILL the model (tap words: name / am / meet / Hello):\n  ___! Good morning!            -> Hello\n  My ___ is Carla.              -> name\n  I ___ fine, thank you.        -> am\n  Nice to ___ you!              -> meet\n(auto-checked, not scored - warm-up only)\n\nSTEP 3 - WRITE YOUR OWN VERSION (typed, teacher-graded):\nPrompt: Now write YOUR introduction. Change the name to YOUR name.\nMinimum requirements:\n  - 3 to 4 sentences\n  - Use: a greeting, My name is..., I am...",
+    "writingMode": "guided_introduction",
+    "wordBank": [
+      "hello",
+      "hi",
+      "goodbye",
+      "morning",
+      "name",
+      "fine"
+    ],
+    "minimumRequirements": [
+      "3 to 4 sentences",
+      "Use: a greeting, My name is..., I am..."
+    ],
+    "minSentences": 3,
+    "maxSentences": 4,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic01_introductions.txt, Lesson 1.5. Mode A typed.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Has a greeting",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "My name is + own name",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "I am used correctly",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

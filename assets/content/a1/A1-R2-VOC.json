@@ -1,0 +1,156 @@
+{
+  "id": "A1-R2-VOC",
+  "order": 39,
+  "title": "Review 2 (Topics 4-6) - Vocabulary",
+  "description": "Skill-path review: 9 new exercises recycling Topics 4-6.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 4-6 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-R2-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "People are tall or short. Hair is long or ___.",
+        "options": [
+          "short",
+          "tall",
+          "big"
+        ],
+        "correctAnswer": "short",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "My brothers ___ very tall.",
+        "options": [
+          "are",
+          "is",
+          "am"
+        ],
+        "correctAnswer": "are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "She ___ big eyes and long hair.",
+        "options": [
+          "has",
+          "have",
+          "is"
+        ],
+        "correctAnswer": "has",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Water, please! I am very ___.",
+        "options": [
+          "thirsty",
+          "hungry",
+          "tall"
+        ],
+        "correctAnswer": "thirsty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "___ you tired? - No, I ___ not.",
+        "options": [
+          "Are / am",
+          "Is / are",
+          "Are / is"
+        ],
+        "correctAnswer": "Are / am",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "My sister and I ___ very happy.",
+        "options": [
+          "are",
+          "is",
+          "am"
+        ],
+        "correctAnswer": "are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "You sit on a ___ at the table.",
+        "options": [
+          "chair",
+          "bed",
+          "bathroom"
+        ],
+        "correctAnswer": "chair",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "___ a big kitchen in our house.",
+        "options": [
+          "There is",
+          "There are",
+          "It are"
+        ],
+        "correctAnswer": "There is",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R2-VOC-Q9",
+        "type": "multipleChoice",
+        "question": "My phone is ___ the table - not on it!",
+        "options": [
+          "under",
+          "on",
+          "at"
+        ],
+        "correctAnswer": "under",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review2_set_topics4-6.txt. All content new; never copies of lesson items.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

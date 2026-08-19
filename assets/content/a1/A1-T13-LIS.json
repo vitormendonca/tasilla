@@ -1,0 +1,109 @@
+{
+  "id": "A1-T13-LIS",
+  "order": 89,
+  "title": "Topic 13: Travel & Transport - Listening",
+  "description": "One audio (2 speakers) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name transport, buy tickets, handle simple travel situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 13 listening",
+    "audioScript": "Clerk: Good morning! Can I help you?\nMalu:  Yes! A ticket to Olinda, please. What time is\nthe bus?\nClerk: The bus to Olinda is at ten thirty.\nMalu:  Ten thirty, good. How much is the ticket?\nClerk: Seven dollars.\nMalu:  Can I have two tickets, please? My sister\ntravels with me.\nClerk: Two tickets - fourteen dollars, please.",
+    "audioPath": "assets/audio/a1/t13_listening_two_tickets_please.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T13-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "Where is this conversation?",
+        "options": [
+          "At a ticket office",
+          "In a cafe",
+          "At a hospital",
+          "In a supermarket"
+        ],
+        "correctAnswer": "At a ticket office",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What time is the bus to Olinda?",
+        "options": [
+          "Ten thirty",
+          "Ten o'clock",
+          "Two o'clock",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Ten thirty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How much are the TWO tickets?",
+        "options": [
+          "Fourteen dollars",
+          "Seven dollars",
+          "Forty dollars",
+          "Four dollars"
+        ],
+        "correctAnswer": "Fourteen dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "How does Malu pay - card or cash?",
+        "options": [
+          "Card",
+          "Cash",
+          "She does not pay",
+          "The audio does not say"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T13-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "The bus is at ten thirty",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic13_travel_transport.txt, Lesson 13.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

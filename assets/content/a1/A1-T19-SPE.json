@@ -1,0 +1,64 @@
+{
+  "id": "A1-T19-SPE",
+  "order": 129,
+  "title": "Topic 19: Health & Body - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say what hurts, name body parts, manage a pharmacy visit",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record a 60-second voice message: YOU ARE SICK TODAY.\nImagine you send this to your teacher or your boss.\nCover:\n1. Greeting + the news: I am sick today.\n2. What is wrong: I have a... / my ... is ...\n(2 details)\n3. What you can't do today: I can't come to... /\nI can't...\n4. What is happening now: My mother is buying\nmedicine... / I am drinking tea... (T17 -ing!)\n5. A polite end: Sorry! See you on... (day - T8)\n\nTip: This is a REAL message people send - record it",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 75,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic19_health_body.txt, Lesson 19.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Fills ~60s, message structure clear",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "have + symptom correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "can't + verb correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

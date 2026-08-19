@@ -1,0 +1,118 @@
+{
+  "id": "A1-T10-REA",
+  "order": 67,
+  "title": "Topic 10: Food & Drink / Ordering - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Order food and drink in a cafe; say what you like",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 10: two texts",
+    "readingText": "TEXT A - Menu format\nCAFE SOL - MENU\nCoffee ......... two dollars\nTea ............ two dollars\nMilk ........... three dollars\nApple juice .... three dollars\nBread .......... one dollar\nMonday to Saturday, eight o'clock to six o'clock.\nWe are in Olinda!\n\nTEXT B - Chat messages format\nOdo: I am hungry, Ema!\nEma: Me too! There is rice and bread in the kitchen.\nOdo: I like rice! And juice?\nEma: There is apple juice on the table.\nOdo: My sister likes tea. Is there tea?\nEma: Yes, there is. It is very good tea!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T10-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A cafe menu",
+          "A shopping list",
+          "A week schedule"
+        ],
+        "correctAnswer": "A cafe menu",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How much is the milk?",
+        "options": [
+          "Three dollars",
+          "Two dollars",
+          "One dollar"
+        ],
+        "correctAnswer": "Three dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Cafe Sol is open on Sunday. True or false?",
+        "options": [
+          "True",
+          "False (Monday to SATURDAY) TEXT B (47 words) - Chat messages format: --------------------------------------- Odo: I am hungry, Ema! Ema: Me too! There is rice and bread in the kitchen. Odo: I like rice! And juice? Ema: There is apple juice on the table. Odo: My sister likes tea. Is there tea? Ema: Yes, there is. It is very good tea! ---------------------------------------"
+        ],
+        "correctAnswer": "False (Monday to SATURDAY) TEXT B (47 words) - Chat messages format: --------------------------------------- Odo: I am hungry, Ema! Ema: Me too! There is rice and bread in the kitchen. Odo: I like rice! And juice? Ema: There is apple juice on the table. Odo: My sister likes tea. Is there tea? Ema: Yes, there is. It is very good tea! ---------------------------------------",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What are Odo and Ema talking about?",
+        "options": [
+          "Food and drink at home",
+          "A cafe menu",
+          "Prices in a shop"
+        ],
+        "correctAnswer": "Food and drink at home",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What does Odo like?",
+        "options": [
+          "Rice",
+          "Tea",
+          "Milk"
+        ],
+        "correctAnswer": "Rice",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T10-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Who likes tea?",
+        "options": [
+          "Odo's sister",
+          "Odo",
+          "Ema"
+        ],
+        "correctAnswer": "Odo's sister",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic10_food_drink_ordering.txt, Lesson 10.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

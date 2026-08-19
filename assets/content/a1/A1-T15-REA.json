@@ -1,0 +1,125 @@
+{
+  "id": "A1-T15-REA",
+  "order": 101,
+  "title": "Topic 15: Classroom & Learning - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Use classroom language - instructions, asking about spelling and meaning",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 15: two texts",
+    "readingText": "TEXT A - Class notes format\nENGLISH CLASS - MY NOTES (Monday)\nNew words: station, ticket, travel\nPhrase of the day: 'A ticket to Olinda, please!'\nFor Thursday: read pages twenty and twenty-one.\nAnswer questions one to five on paper.\nRemember: How do you spell it? = S-P-E-L-L!\n\nTEXT B - Chat messages format\nPam:  Zeca! The English homework - is it question\n      three?\nZeca: No! Questions four and five. Read them at night,\n      it is easy.\nPam:  OK. One thing: what does 'help' mean?\nZeca: Help = you do good things for a person. Ask me -\n      I can help you!\nPam:  Ha! You are a good teacher, Zeca!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T15-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A student's notes from English class",
+          "A bus timetable",
+          "A job advertisement",
+          "A cafe menu"
+        ],
+        "correctAnswer": "A student's notes from English class",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-REA-Q2",
+        "type": "multipleChoice",
+        "question": "What are the new words in these notes?",
+        "options": [
+          "station, ticket, travel",
+          "book, pen, paper",
+          "Olinda, Thursday, Monday",
+          "The text does not say"
+        ],
+        "correctAnswer": "station, ticket, travel",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What pages does the student read for Thursday?",
+        "options": [
+          "Twenty and twenty-one",
+          "Twelve and thirteen",
+          "One to five",
+          "The text does not say TEXT B (54 words) - Chat messages format: --------------------------------------- Pam: Zeca! The English homework - is it question three? Zeca: No! Questions four and five. Read them at night, it is easy. Pam: OK. One thing: what does 'help' mean? Zeca: Help = you do good things for a person. Ask me - I can help you! Pam: Ha! You are a good teacher, Zeca! ---------------------------------------"
+        ],
+        "correctAnswer": "Twenty and twenty-one",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-REA-Q4",
+        "type": "multipleChoice",
+        "question": "What are Pam and Zeca talking about?",
+        "options": [
+          "The English homework",
+          "A trip by train",
+          "Zeca's job",
+          "A new book shop"
+        ],
+        "correctAnswer": "The English homework",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-REA-Q5",
+        "type": "multipleChoice",
+        "question": "What is the homework?",
+        "options": [
+          "Questions four and five",
+          "Question three",
+          "Pages four and five",
+          "The text does not say"
+        ],
+        "correctAnswer": "Questions four and five",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Zeca says: Read ___ at night. (= questions four and five)",
+        "options": [
+          "them",
+          "it",
+          "they",
+          "him"
+        ],
+        "correctAnswer": "them",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic15_classroom_learning.txt, Lesson 15.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

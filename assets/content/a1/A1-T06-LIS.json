@@ -1,0 +1,104 @@
+{
+  "id": "A1-T06-LIS",
+  "order": 35,
+  "title": "Topic 6: Home & Where You Live - Listening",
+  "description": "One audio (1 speaker) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name rooms and furniture; describe your home simply",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 6 listening",
+    "audioScript": "This is my house! | It is small, but it is very nice. |\nThere are two bedrooms and one bathroom. | The kitchen is\nbig. | There is a big table in the kitchen. | Our cat\nsleeps under the table!",
+    "audioPath": "assets/audio/a1/t06_listening_my_house.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T06-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this audio?",
+        "options": [
+          "A person describes her house",
+          "A person describes her family",
+          "A person says how she feels"
+        ],
+        "correctAnswer": "A person describes her house",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "How many bedrooms are there?",
+        "options": [
+          "Two",
+          "One",
+          "Three"
+        ],
+        "correctAnswer": "Two",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "Where is the big table?",
+        "options": [
+          "In the kitchen",
+          "In the bedroom",
+          "In the bathroom"
+        ],
+        "correctAnswer": "In the kitchen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-LIS-Q4",
+        "type": "trueFalse",
+        "question": "The house is big. True or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T06-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "There is a big table",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic06_home.txt, Lesson 6.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

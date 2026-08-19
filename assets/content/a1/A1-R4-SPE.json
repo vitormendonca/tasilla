@@ -1,0 +1,64 @@
+{
+  "id": "A1-R4-SPE",
+  "order": 86,
+  "title": "Review 4 (Topics 10-12) - Speaking",
+  "description": "Integrated speaking task, no scaffold, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 10-12 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record 45-60 seconds. Your town tour!\n1. Order or buy one thing politely: Can I have this/\nthese..., please? (T10-11)\n2. Ask AND answer one price (T9 recycled via T11)\n3. Give simple directions to the shop or cafe:\nGo..., Turn... at the..., it is next to... (T12)\nNo example - you know these phrases now!",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 60,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_review4_set_topics10-12.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Polite request + this/these correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Price with clear number",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "2+ imperatives + next to/near (T12)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

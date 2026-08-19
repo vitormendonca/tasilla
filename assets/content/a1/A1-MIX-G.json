@@ -1,0 +1,251 @@
+{
+  "id": "A1-MIX-G",
+  "order": 141,
+  "title": "Mixed Review G (Topics 16-20)",
+  "description": "Roadmap-only cross-skill review: listening + reading + vocabulary/grammar + async speaking and writing.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Integrate core A1 skills in familiar situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-MIX-G-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "___ your father like music? - Yes, he ___!",
+        "options": [
+          "Does / does",
+          "Do / do",
+          "Is / is",
+          "Does / do"
+        ],
+        "correctAnswer": "Does / does",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-G-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "Look out the window! It ___ !",
+        "options": [
+          "is snowing",
+          "snows",
+          "snow",
+          "is snow"
+        ],
+        "correctAnswer": "is snowing",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-G-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "She has a headache, so she ___ work today.",
+        "options": [
+          "can't",
+          "can",
+          "doesn't can",
+          "isn't"
+        ],
+        "correctAnswer": "can't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-G-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "She is wearing ___ today - her favorite!",
+        "options": [
+          "a red dress",
+          "a dress red",
+          "red a dress",
+          "dress a red"
+        ],
+        "correctAnswer": "a red dress",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Mixed Review G listening",
+    "audioScript": "Pipa: Hi, Ciro! It is raining - no park today!\nCiro: I know... so I am at home. I am watching an old\nfilm with my dog!\nPipa: Ha! Does your dog like films?\nCiro: Yes, he does! But he can't watch all day - he\nsleeps.\nPipa: And what are you wearing? It is cold today!\nCiro: My big blue jacket, Mama Pipa! Don't worry!",
+    "audioPath": "assets/audio/a1/mixrevG_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-MIX-G-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this conversation?",
+        "options": [
+          "A rainy day at home, with a film and a dog",
+          "A trip to the park",
+          "Buying a jacket in a shop",
+          "A sick day at the pharmacy"
+        ],
+        "correctAnswer": "A rainy day at home, with a film and a dog",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-G-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What is Ciro doing?",
+        "options": [
+          "Watching an old film with his dog",
+          "Walking in the park",
+          "Sleeping",
+          "Playing games"
+        ],
+        "correctAnswer": "Watching an old film with his dog",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-G-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "What is Ciro wearing?",
+        "options": [
+          "His big blue jacket",
+          "A white shirt",
+          "His winter hat",
+          "The audio does not say"
+        ],
+        "correctAnswer": "His big blue jacket",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 2
+  },
+  "readingBlock": {
+    "readingTitle": "Mixed Review G text",
+    "readingText": "TEXT A - Text (44 words) - Message to a teacher format\nHi, Teacher!\nI am sick today. I have a headache, and I can't come\nto class. My sister has my homework - she can bring\nit tomorrow.\nOne question: what does 'garden' mean?\nSee you on Thursday!\n- Nilo",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-MIX-G-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Nilo tells the teacher he is sick",
+          "Nilo asks for more homework",
+          "A note about a garden",
+          "A pharmacy notice"
+        ],
+        "correctAnswer": "Nilo tells the teacher he is sick",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-G-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Who has Nilo's homework?",
+        "options": [
+          "His sister",
+          "Nilo",
+          "The teacher",
+          "The text does not say"
+        ],
+        "correctAnswer": "His sister",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-G-REA-Q3",
+        "type": "multipleChoice",
+        "question": "When is Nilo back in class?",
+        "options": [
+          "On Thursday",
+          "Tomorrow",
+          "On Monday",
+          "The text does not say"
+        ],
+        "correctAnswer": "On Thursday",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": {
+    "writingPrompt": "A friend writes: It is a rain day! What are you doing at home? Reply in 4-5 sentences: what you are doing now (-ing), one hobby you do on rain days, one don't/doesn't sentence, and one sentence about an animal or your clothes.",
+    "writingMode": "short_message",
+    "wordBank": [],
+    "minimumRequirements": [],
+    "minSentences": 3,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Record 20-30 seconds. Right now: what is the weather like, what are you doing, and what are you wearing? End with one thing you DON'T do on days like this.",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 30,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_mixed_reviewG_topics16-20.txt. Auto-graded part gates progression (7 of 10); speaking/writing async.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Speaking: continuous forms correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: weather + clothes words",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: one don't sentence",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: understandable.",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: continuous + habit both present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: do-system correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: topic words used",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: spelling A1 OK.",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

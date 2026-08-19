@@ -1,0 +1,165 @@
+{
+  "id": "A1-R4-VOC",
+  "order": 83,
+  "title": "Review 4 (Topics 10-12) - Vocabulary",
+  "description": "Skill-path review: 9 new exercises recycling Topics 10-12.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 10-12 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-R4-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "A fruit drink is a ___.",
+        "options": [
+          "juice",
+          "bread",
+          "menu",
+          "rice"
+        ],
+        "correctAnswer": "juice",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "Can I have ___ apple and ___ coffee, please?",
+        "options": [
+          "an / a",
+          "a / an",
+          "a / a",
+          "an / an"
+        ],
+        "correctAnswer": "an / a",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "My father ___ rice every day.",
+        "options": [
+          "likes",
+          "like",
+          "is like",
+          "liking"
+        ],
+        "correctAnswer": "likes",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "The shop is open Monday to Friday. On Sunday it is ___.",
+        "options": [
+          "closed",
+          "open",
+          "cheap",
+          "big"
+        ],
+        "correctAnswer": "closed",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "___ bags here are nice. ___ bag there is old.",
+        "options": [
+          "These / That",
+          "This / Those",
+          "These / These",
+          "That / This"
+        ],
+        "correctAnswer": "These / That",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "___ you buy bread for me, please?",
+        "options": [
+          "Can",
+          "Am",
+          "Is",
+          "Do"
+        ],
+        "correctAnswer": "Can",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Doctors work in the ___.",
+        "options": [
+          "hospital",
+          "bank",
+          "park",
+          "station"
+        ],
+        "correctAnswer": "hospital",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "___ left at the school!",
+        "options": [
+          "Turn",
+          "Turns",
+          "Turning",
+          "You turns"
+        ],
+        "correctAnswer": "Turn",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-VOC-Q9",
+        "type": "multipleChoice",
+        "question": "The cafe is ___ the bank - same street, side by side.",
+        "options": [
+          "next to",
+          "under",
+          "in",
+          "on"
+        ],
+        "correctAnswer": "next to",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review4_set_topics10-12.txt. All content new; never copies of lesson items.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

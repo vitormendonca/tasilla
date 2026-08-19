@@ -1,0 +1,64 @@
+{
+  "id": "A1-T17-SPE",
+  "order": 119,
+  "title": "Topic 17: Weather & Seasons - Speaking",
+  "description": "Recorded speaking task, teacher-graded against a 4-criterion rubric.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 12,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe the weather and seasons",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "Record a 60-second monologue: WEATHER AND ME.\nCover:\n1. The weather in your city RIGHT NOW (It is... /\nIt is raining / The sun is out) - look out the\nwindow!\n2. What you are doing now (I am recording... I am\nlooking at...)\n3. Your favorite season + why (one reason is enough:\nIn summer I swim...)\n4. One season habit vs now: In winter I... but today\nit is...\n\nTip: Point 1 and 2 = -ING (now). Points 3 and 4 = simple",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 75,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_topic17_weather_seasons.txt, Lesson 17.4. XP 15 on submit, +10 on approval.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Fills ~60s, organized",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Present continuous correct (2+ uses)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Habit vs now contrast attempted",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable pronunciation",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

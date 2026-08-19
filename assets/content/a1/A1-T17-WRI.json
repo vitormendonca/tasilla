@@ -1,0 +1,81 @@
+{
+  "id": "A1-T17-WRI",
+  "order": 120,
+  "title": "Topic 17: Weather & Seasons - Writing",
+  "description": "Handwritten task (Mode B): write on paper and upload a photo.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Describe the weather and seasons",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "SEVENTH PAPER TASK. Student writes BY HAND on paper for\nTHREE DIFFERENT DAYS, then uploads one photo of the full\ndiary.\n\nTASK: Keep a short weather diary for 3 days.\n\nInstructions shown in app:\n  1. Take one piece of paper. Write: MY WEATHER DIARY.\n  2. On 3 different days this week, write 2-3 lines:\n     - the day (Monday...) - T8!\n     - the weather (It is hot / cold / raining...)\n     - one thing happening or one habit (I am drinking\n       tea. / I swim every hot day.)\n  3. After day 3, photograph the page and upload it.\n\nMinimum requirements:\n  - 3 dated entries (day names, spelled correctly)\n  - 3 different weather descriptions\n  - at least one present continuous sentence (...ing!)",
+    "writingMode": "free_response",
+    "wordBank": [
+      "weather",
+      "sun",
+      "rain",
+      "snow",
+      "wind",
+      "hot",
+      "spring",
+      "summer",
+      "autumn",
+      "winter"
+    ],
+    "minimumRequirements": [
+      "3 dated entries (day names, spelled correctly)",
+      "3 different weather descriptions",
+      "at least one present continuous sentence (...ing!)"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic17_weather_seasons.txt, Lesson 17.5. MODE B HANDWRITTEN: requires writing-upload feature; runs typed until built.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "3 entries, days correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Weather words correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "One correct -ing sentence",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Handwriting readable (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

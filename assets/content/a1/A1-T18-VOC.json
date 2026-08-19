@@ -1,0 +1,196 @@
+{
+  "id": "A1-T18-VOC",
+  "order": 121,
+  "title": "Topic 18: Clothes & Colours - Vocabulary",
+  "description": "Core words for clothes & colours: clothes, shirt, dress, shoes, jacket, wear, red, blue, black, white (green and yellow appear in texts as passive exposure - tested colours are the big four). 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Name clothes and colours; describe what people are wearing",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "clothes = shirts, dresses, jackets - all of it!\nshirt = on your top  |  dress = one piece, top to legs\nshoes = on your feet (always TWO - shoes ARE!)\njacket = warm, for cold days  |  wear = have clothes on\ncolours: red | blue | black | white\n+ phrase bank: What are you wearing? | What colour\nis it? | these shoes\n+ grammar note: colour BEFORE the thing: a red dress,\nwhite shoes (like big table - T4!)",
+  "vocabularyBlocks": [
+    {
+      "title": "Clothes & Colours words",
+      "words": [
+        "clothes",
+        "shirt",
+        "dress",
+        "shoes",
+        "jacket",
+        "wear",
+        "red",
+        "blue",
+        "black",
+        "white (green and yellow appear in texts as passive exposure - tested colours are the big four)"
+      ],
+      "exampleSentences": [
+        "What are you wearing?",
+        "He is wearing a blue shirt.",
+        "I wear a jacket in winter.",
+        "What colour is it?",
+        "these shoes",
+        "my new dress"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "PRESENT CONTINUOUS with WEAR (G10: She is wearing a red dres",
+      "explanation": "PRESENT CONTINUOUS with WEAR (G10: She is wearing a red dress) + habit contrast (I wear a jacket every winter) + THESE/THOSE recycled with plural clothes (G4: these shoes, those jackets)",
+      "patterns": [
+        "colour before noun: a RED dress, BLACK shoes",
+        "(same slot as big/small - T4!)",
+        "wear (habit) vs am/is/are wearing (now) -",
+        "the G10 contrast on its most useful verb"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T18-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "They are on your feet, and they are always two: ___.",
+        "options": [
+          "shoes",
+          "shirts",
+          "jackets",
+          "hats"
+        ],
+        "correctAnswer": "shoes",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "Snow is ___. The night sky is ___.",
+        "options": [
+          "white / black",
+          "black / white",
+          "red / blue",
+          "blue / red"
+        ],
+        "correctAnswer": "white / black",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: It is winter and very cold - I need my ___!",
+        "options": [
+          "jacket",
+          "dress",
+          "juice",
+          "shoes"
+        ],
+        "correctAnswer": "jacket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: What do you ___ to work? - A white shirt, every day.",
+        "options": [
+          "wear",
+          "eat",
+          "buy",
+          "watch"
+        ],
+        "correctAnswer": "wear",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT clothes?",
+        "options": [
+          "shirt",
+          "snow",
+          "dress",
+          "jacket"
+        ],
+        "correctAnswer": "snow",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "A: What colour is your new dress? B: ___",
+        "options": [
+          "It is red - my favorite colour!",
+          "It is forty dollars",
+          "I am wearing it now",
+          "It is on the table"
+        ],
+        "correctAnswer": "It is red - my favorite colour!",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: Look at Vado! He ___ a big red hat right now!",
+        "options": [
+          "is wearing",
+          "wears",
+          "wearing",
+          "wear"
+        ],
+        "correctAnswer": "is wearing",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T18-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: Every day I ___ black shoes. Today I ___ my new white shoes!",
+        "options": [
+          "wear / am wearing",
+          "am wearing / wear",
+          "wears / wearing",
+          "wearing / wear"
+        ],
+        "correctAnswer": "wear / am wearing",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T18-VOC-Q1": "Shoes = feet, always a pair - these shoes ARE.",
+      "A1-T18-VOC-Q2": "Snow (T17!) = white. Night = black.",
+      "A1-T18-VOC-Q3": "Jacket = the warm one, for winter (T17).",
+      "A1-T18-VOC-Q4": "Wear = have clothes on you.",
+      "A1-T18-VOC-Q5": "Snow (T17) is weather - very cold on your head, and NOT clothes!",
+      "A1-T18-VOC-Q6": "What COLOUR...? -> answer with a colour!",
+      "A1-T18-VOC-Q7": "Right now -> IS WEARING (G10, same as T17!).",
+      "A1-T18-VOC-Q8": "Every day = habit -> wear. Today, on me now -> am wearing."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic18_clothes_colours.txt, Lesson 18.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

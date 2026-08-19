@@ -1,0 +1,194 @@
+{
+  "id": "A1-T15-VOC",
+  "order": 99,
+  "title": "Topic 15: Classroom & Learning - Vocabulary",
+  "description": "Core words for classroom & learning: book, pen, paper, question, answer, word, read, listen. 8 tap exercises with embedded grammar.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "vocabulary_use_of_english",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Use classroom language - instructions, asking about spelling and meaning",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "book = you read it (open your book!)\npen = you write with it  |  paper = you write on it\nquestion = Where...? What...? -> ?\nanswer = your response to a question\nword = hello is a word!  |  read = eyes on the words\nlisten = ears on! (listen to the audio)\n+ phrase bank: How do you spell...? |\nWhat does ... mean? | Sorry, can you repeat, please?\n+ grammar note: Open IT (the book). Read THEM (the\nwords). Help ME!",
+  "vocabularyBlocks": [
+    {
+      "title": "Classroom & Learning words",
+      "words": [
+        "book",
+        "pen",
+        "paper",
+        "question",
+        "answer",
+        "word",
+        "read",
+        "listen"
+      ],
+      "exampleSentences": [
+        "Open your book.",
+        "Listen and repeat.",
+        "How do you spell...?",
+        "What does ... mean?",
+        "Sorry, can you repeat, please?",
+        "Good question!"
+      ]
+    }
+  ],
+  "grammarBlocks": [
+    {
+      "title": "IMPERATIVES + OBJECT PRONOUNS (G12 complete: Open it! Read t",
+      "explanation": "IMPERATIVES + OBJECT PRONOUNS (G12 complete: Open it! Read them! Help me!) + classroom survival CHUNKS (How do you spell...? / What does ... mean? - taught as fixed phrases; their do/does grammar is analyzed in Topic 16)",
+      "patterns": [
+        "imperative + object pronoun:",
+        "Open it. Read them. Help me. Listen to me.",
+        "object pronouns: me, it, them (core set;",
+        "him/her/us noted on intro card)"
+      ],
+      "examples": []
+    }
+  ],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-T15-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "You write with a ___ on paper.",
+        "options": [
+          "pen",
+          "book",
+          "word",
+          "chair"
+        ],
+        "correctAnswer": "pen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "'Where is the bank?' is a ___. 'Next to the park.' is the ___.",
+        "options": [
+          "question / answer",
+          "answer / question",
+          "word / book",
+          "pen / paper"
+        ],
+        "correctAnswer": "question / answer",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: ___ to the audio, then answer the questions.",
+        "options": [
+          "Listen",
+          "Read",
+          "Eat",
+          "Buy"
+        ],
+        "correctAnswer": "Listen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "Tap the missing word: 'Goodbye' is an English ___.",
+        "options": [
+          "word",
+          "paper",
+          "answer",
+          "office"
+        ],
+        "correctAnswer": "word",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-VOC-Q5",
+        "type": "multipleChoice",
+        "question": "Which one is NOT a classroom thing?",
+        "options": [
+          "book",
+          "ticket",
+          "pen",
+          "paper"
+        ],
+        "correctAnswer": "ticket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-VOC-Q6",
+        "type": "multipleChoice",
+        "question": "Teacher: The word is 'airport'. You: ___",
+        "options": [
+          "How do you spell it?",
+          "Turn left at the park",
+          "I am from Brazil",
+          "Two tickets, please"
+        ],
+        "correctAnswer": "How do you spell it?",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-VOC-Q7",
+        "type": "multipleChoice",
+        "question": "Grammar: The book, please - open ___. The words - read ___.",
+        "options": [
+          "it / them",
+          "them / it",
+          "it / they",
+          "him / them"
+        ],
+        "correctAnswer": "it / them",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T15-VOC-Q8",
+        "type": "multipleChoice",
+        "question": "Grammar: I don't understand this question! Teacher, can you help ___?",
+        "options": [
+          "me",
+          "I",
+          "my",
+          "them"
+        ],
+        "correctAnswer": "me",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {
+      "A1-T15-VOC-Q1": "Pen -> you write WITH it. Paper -> you write ON it.",
+      "A1-T15-VOC-Q2": "Question = ? Answer = the response.",
+      "A1-T15-VOC-Q3": "Listen = ears! Read = eyes!",
+      "A1-T15-VOC-Q4": "Hello, goodbye, ticket... all words!",
+      "A1-T15-VOC-Q5": "Ticket is for the bus (Topic 13)!",
+      "A1-T15-VOC-Q6": "New word? Ask: How do you spell it? (chunk - learn it whole!)",
+      "A1-T15-VOC-Q7": "The book = IT. The words (many) = THEM.",
+      "A1-T15-VOC-Q8": "Help ME (not help I!). I -> me after a verb."
+    }
+  },
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic15_classroom_learning.txt, Lesson 15.1. Pass 70%. All exercises tap-to-answer.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

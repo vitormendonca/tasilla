@@ -1,0 +1,80 @@
+{
+  "id": "A1-T12-WRI",
+  "order": 82,
+  "title": "Topic 12: Places in Town & Directions - Writing",
+  "description": "Handwritten task (Mode B): write on paper and upload a photo.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 3,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Identify places in town, ask for and follow simple directions",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "FIFTH PAPER TASK. Student writes BY HAND on paper, then\nuploads a photo / scan / PDF.\n\nTASK: Hand-write directions from A to B.\n\nInstructions shown in app:\n  1. Choose a real route you know: your home -> school,\n     home -> supermarket, station -> home...\n  2. On paper, write the title: HOW TO GO FROM ... TO ...\n  3. Write the directions as a numbered list (3-5 steps),\n     like a note for a friend.\n  4. Take a photo and upload it.\n\nMinimum requirements:\n  - Title with the two places\n  - 3-5 numbered steps with imperatives (Go..., Turn...)\n  - next to or near at least once\n  - One place word from this topic",
+    "writingMode": "guided_instructions",
+    "wordBank": [
+      "street",
+      "bank",
+      "hospital",
+      "supermarket",
+      "park",
+      "station",
+      "left",
+      "right"
+    ],
+    "minimumRequirements": [
+      "Title with the two places",
+      "3-5 numbered steps with imperatives (Go..., Turn...)",
+      "next to or near at least once",
+      "One place word from this topic"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic12_places_directions.txt, Lesson 12.5. MODE B HANDWRITTEN: requires writing-upload feature; runs typed until built.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Title + numbered steps format",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Imperatives correct (verb first)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "next to / near + place words correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Handwriting readable (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,78 @@
+{
+  "id": "A1-T05-WRI",
+  "order": 31,
+  "title": "Topic 5: Feelings & States - Writing",
+  "description": "Handwritten task (Mode B): write on paper and upload a photo.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say how you feel; ask others how they feel",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "SECOND PAPER TASK. Student writes BY HAND on paper, then\nuploads a photo / scan / PDF.\n\nTASK: Write a short note to a friend, by hand.\n\nInstructions shown in app:\n  1. Take a piece of paper.\n  2. Write a short note to a real friend. Say hello, say how\n     you are today (2 feelings), and ask how your friend is.\n  3. Sign your name at the end.\n  4. Take a photo and upload it.\n\nMODEL (shown in app - scaffold, Topics 1-7):\n  Hi Marta!\n  How are you?\n  I am happy but very tired today.\n  My mother is tired too!\n  Are you fine?\n  - Bia\n\nMinimum requirements:\n  - 4 to 5 sentences, handwritten\n  - 2 feeling words with I am\n  - 1 question to the friend (How are you? / Are you...?)\n  - Greeting at the start + your name at the end",
+    "writingMode": "short_message",
+    "wordBank": [
+      "happy",
+      "sad",
+      "tired",
+      "hungry",
+      "thirsty",
+      "cold"
+    ],
+    "minimumRequirements": [
+      "4 to 5 sentences, handwritten",
+      "2 feeling words with I am",
+      "1 question to the friend (How are you? / Are you...?)",
+      "Greeting at the start + your name at the end"
+    ],
+    "minSentences": 4,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic05_feelings_states.txt, Lesson 5.5. MODE B HANDWRITTEN: requires writing-upload feature; runs typed until built.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Note format: greeting + signed name",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "2 feeling words used with to be",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Question to the friend present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Handwriting readable, spelling A1 OK",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

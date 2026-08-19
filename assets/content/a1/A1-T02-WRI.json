@@ -1,0 +1,76 @@
+{
+  "id": "A1-T02-WRI",
+  "order": 10,
+  "title": "Topic 2: Personal Information - Writing",
+  "description": "Handwritten task (Mode B): write on paper and upload a photo.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Give name, age, nationality, phone, email; spell aloud",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "THE FIRST PAPER TASK. Student writes BY HAND, photographs or\nscans it, and uploads (photo / PDF / DOCX).\n\nTASK: Fill in a registration form by hand.\n\nInstructions shown in app:\n  1. Copy this form on paper (or print it).\n  2. Fill it in BY HAND with YOUR information.\n  3. Take a photo and upload it.\n\nFORM (displayed in app for the student to copy):\n  -----------------------------------------\n  ENGLISH SCHOOL - REGISTRATION FORM\n  First name:  ______________________\n  Last name:   ______________________\n  Age:         ______________________\n  Country:     ______________________\n  City:        ______________________\n  Phone number:______________________\n  Email:       ______________________\n  One sentence about you:\n  My name is ________ and I am from ________.\n  -----------------------------------------\n\nMinimum requirements:\n  - All 7 fields filled in by hand\n  - Final sentence complete and readable",
+    "writingMode": "guided_profile",
+    "wordBank": [
+      "age",
+      "country",
+      "city",
+      "number",
+      "email",
+      "address"
+    ],
+    "minimumRequirements": [
+      "All 7 fields filled in by hand",
+      "Final sentence complete and readable"
+    ],
+    "minSentences": 4,
+    "maxSentences": 6,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic02_personal_information.txt, Lesson 2.5. MODE B HANDWRITTEN: requires writing-upload feature; runs typed until built.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "All fields completed",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Information matches field labels",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Final sentence uses I am from",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Handwriting readable, spelling A1 OK",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,104 @@
+{
+  "id": "A1-T03-LIS",
+  "order": 12,
+  "title": "Topic 3: Family & Relationships - Listening",
+  "description": "One audio (1 speaker) + 5 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit1_foundation",
+  "difficultyLevel": 1,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about family members",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Topic 3 listening",
+    "audioScript": "Hello! My name is Tiago. | This is my family. | My mother's\nname is Rosa. She is 50 years old. | My father's name is\nMiguel. | I have one sister. Her name is Duda. | She is my\nbest friend too!",
+    "audioPath": "assets/audio/a1/t03_listening_my_family.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-T03-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What does Tiago talk about?",
+        "options": [
+          "His family",
+          "His city",
+          "His school"
+        ],
+        "correctAnswer": "His family",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What is his mother's name?",
+        "options": [
+          "Rosa",
+          "Duda",
+          "Ana"
+        ],
+        "correctAnswer": "Rosa",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How old is his mother?",
+        "options": [
+          "50",
+          "15",
+          "The audio does not say"
+        ],
+        "correctAnswer": "50",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-LIS-Q4",
+        "type": "trueFalse",
+        "question": "Tiago has two sisters. True or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswer": "False",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T03-LIS-Q5",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "Her name is Duda",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic03_family_relationships.txt, Lesson 3.2. Dictation is the only typed item.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

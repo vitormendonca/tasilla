@@ -1,0 +1,125 @@
+{
+  "id": "A1-T19-REA",
+  "order": 128,
+  "title": "Topic 19: Health & Body - Reading",
+  "description": "Two short texts with three questions each.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 10,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Say what hurts, name body parts, manage a pharmacy visit",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Topic 19: two texts",
+    "readingText": "TEXT A - Medicine label format\nMEDICINE - FOR HEADACHE\nTake ONE with water, in the morning.\nTake ONE at night.\nDON'T take three in one day!\nNot for children under twelve.\nSick for three days? Go to the doctor!\nQuestions? Ask us at PHARMACY BELA - next to the\nsupermarket, open every day, eight to eight.\n\nTEXT B - Chat messages format\nDuna: Vito?! You are not at school today. Are you OK?\nVito: I am sick, Duna. I have a headache, and my legs\n      are very tired.\nDuna: Oh no! Do you have medicine at home?\nVito: Yes. My mother is at the pharmacy now - more\n      medicine for tonight.\nDuna: Good. Now sleep! And DON'T watch films all day!\nVito: Ha!... OK. One film. ONE!",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-T19-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Instructions on a medicine box",
+          "A shopping list",
+          "A doctor's profile",
+          "A school notice"
+        ],
+        "correctAnswer": "Instructions on a medicine box",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How does a person take this medicine?",
+        "options": [
+          "One in the morning, one at night, with water",
+          "Three in one day",
+          "Only at night",
+          "The text does not say"
+        ],
+        "correctAnswer": "One in the morning, one at night, with water",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-REA-Q3",
+        "type": "multipleChoice",
+        "question": "You take the medicine, but you are sick for three days. What is the right thing to do?",
+        "options": [
+          "Go to the doctor",
+          "Take three in one day",
+          "Give it to a child",
+          "Go to the supermarket"
+        ],
+        "correctAnswer": "Go to the doctor",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-REA-Q4",
+        "type": "multipleChoice",
+        "question": "Why does Duna write to Vito?",
+        "options": [
+          "He is not at school, and she asks how he is",
+          "She needs the homework",
+          "She is at the pharmacy",
+          "She wants to watch a film"
+        ],
+        "correctAnswer": "He is not at school, and she asks how he is",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-REA-Q5",
+        "type": "multipleChoice",
+        "question": "Who is at the pharmacy?",
+        "options": [
+          "Vito's mother",
+          "Vito",
+          "Duna",
+          "Vito's sister"
+        ],
+        "correctAnswer": "Vito's mother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-T19-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Duna says: DON'T watch films all day! What does this tell us about Vito?",
+        "options": [
+          "Films are his big hobby - he watches a lot",
+          "He doesn't like films",
+          "He has no TV at home",
+          "He is at the cinema"
+        ],
+        "correctAnswer": "Films are his big hobby - he watches a lot",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic19_health_body.txt, Lesson 19.3. Two texts merged into one reading block (model has a single readingBlock).",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

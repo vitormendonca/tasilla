@@ -1,0 +1,74 @@
+{
+  "id": "A1-FT-SPE",
+  "order": 147,
+  "title": "Final Test - Speaking path",
+  "description": "Three recorded parts in one session: interview, description, monologue. Teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_final",
+  "difficultyLevel": 5,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "speaking",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Prove course-wide speaking ability",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": {
+    "speakingPrompt": "PART 1 - INTERVIEW (target ~60 seconds)\nThe app plays 6 recorded questions, one at a time, with\na pause for the student's spoken answer after each\n(question audio files:\naudio/a1/finaltest_speaking_q1-q6.mp3, natural pace):\n\nQ1: Hello! What is your name, and how do you spell it?\nQ2: How old are you, and where are you from?\nQ3: Who is in your family? Tell me about one person.\nQ4: What do you do every day - in the morning and\nat night?\nQ5: What is the weather like today?\nQ6: Do you like sport? What do you do in your free\ntime?\n\nStudent instruction: Answer each question in 1-2 full\nsentences. Short answers ('yes') are not enough - show\nyour English!\n\nPART 2 - DESCRIPTION TASK (target ~45 seconds)\nThe app shows this scene card (text, no image needed -\nstudents imagine or use their real life):\n\nYOUR PERSON: Choose one real person (family or\nfriend). Describe:\n- name + who they are (his/her!)\n- what they look like (is + adjective, has + hair/\neyes) + one COLOUR\n- what they are wearing today, if you can see them -\nor what they wear every day\n- one thing they can do + one thing they don't do\n\nPART 3 - MONOLOGUE (target 60+ seconds)\nChoose ONE topic card (the app offers all three):\nA) MY DAY - morning to night, with times and\ntransport\nB) MY HOME AND MY CITY - rooms, places, directions\nto your house\nC) MY LIFE NOW - job/study, hobbies, your animal or\nan animal you know\n\nSpeak for at least 60 seconds. No reading from notes!\n\nMax total recording (3 parts): 4 minutes.",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 240,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_final_test_speaking.txt. SKILL PATH FINAL TEST. Approval bar 5 of 6, criterion 6 mandatory. XP 30 +20.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Part 1: answers all 6 questions with full sentences",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Part 2: description systems correct (is/has/wearing + colour)",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Part 3: fills 60s, organized, on topic",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Grammar range: to be, present + -s, do-system, can, one -ing",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Vocabulary range: words from 8+ different topics across the 3 parts",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Understandable throughout (A1 bar: a patient listener follows easily)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

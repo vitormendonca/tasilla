@@ -1,0 +1,83 @@
+{
+  "id": "A1-T20-WRI",
+  "order": 135,
+  "title": "Topic 20: Animals & Nature - Writing",
+  "description": "Handwritten task (Mode B): write on paper and upload a photo.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "core_activity",
+  "canDoStatement": "Talk about pets, common animals and simple nature words",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "EIGHTH AND FINAL PAPER TASK. Student writes BY HAND,\nthen uploads a photo / scan / PDF.\n\nTASK: Describe a pet or an animal, handwritten.\n\nInstructions shown in app:\n  1. Choose a real animal: your pet, a family pet, or\n     an animal from your street or a park.\n  2. On paper, write 6-8 sentences about it BY HAND.\n  3. Draw it too if you like (optional - the sentences\n     are the task!).\n  4. Take a photo and upload it.\n\nMinimum requirements:\n  - 6-8 sentences, by hand\n  - name with possessive 's (My cat's name is...) OR\n    has + description\n  - one colour + one size word (T18 + T4)\n  - one can or can't sentence\n  - one habit (does every day) AND one is doing now\n    sentence if possible",
+    "writingMode": "free_response",
+    "wordBank": [
+      "animal",
+      "dog",
+      "cat",
+      "bird",
+      "fish",
+      "horse",
+      "tree",
+      "flower",
+      "garden",
+      "fly"
+    ],
+    "minimumRequirements": [
+      "6-8 sentences, by hand",
+      "name with possessive 's (My cat's name is...) OR has + description",
+      "one colour + one size word (T18 + T4)",
+      "one can or can't sentence",
+      "one habit (does every day) AND one is doing now sentence if possible"
+    ],
+    "minSentences": 6,
+    "maxSentences": 8,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_topic20_animals_nature.txt, Lesson 20.5. MODE B HANDWRITTEN: requires writing-upload feature; runs typed until built.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "6-8 sentences, real animal",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "is/has description + colour correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "can/can't + present forms correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Handwriting readable (A1 bar)",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

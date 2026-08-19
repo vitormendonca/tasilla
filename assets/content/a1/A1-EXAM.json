@@ -1,0 +1,523 @@
+{
+  "id": "A1-EXAM",
+  "order": 149,
+  "title": "A1 Final Exam (supervised)",
+  "description": "Multi-format supervised exam: listening with dictation, reading, use-of-English gap-fill, writing and speaking production. Pass: overall 75% AND every section at least 65%.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_final",
+  "difficultyLevel": 5,
+  "estimatedMinutes": 60,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "final_exam",
+  "canDoStatement": "Demonstrate full CEFR A1 competence under exam conditions",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-EXAM-USE-Q1",
+        "type": "multipleChoice",
+        "question": "I ___ 25 years old, and my parents ___ from Recife.",
+        "options": [
+          "am / are",
+          "is / are",
+          "am / is",
+          "are / am"
+        ],
+        "correctAnswer": "am / are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q2",
+        "type": "multipleChoice",
+        "question": "This is my ___ car. (the car of my father)",
+        "options": [
+          "father's",
+          "fathers",
+          "father",
+          "father is"
+        ],
+        "correctAnswer": "father's",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q3",
+        "type": "multipleChoice",
+        "question": "___ two bedrooms, and ___ a big kitchen.",
+        "options": [
+          "There are / there is",
+          "There is / there are",
+          "They are / it is",
+          "There are / there are"
+        ],
+        "correctAnswer": "There are / there is",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q4",
+        "type": "multipleChoice",
+        "question": "She ___ up at seven, and she ___ to work by train.",
+        "options": [
+          "gets / goes",
+          "get / go",
+          "gets / gos",
+          "get / goes"
+        ],
+        "correctAnswer": "gets / goes",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q5",
+        "type": "multipleChoice",
+        "question": "The party is ___ Saturday ___ four o'clock.",
+        "options": [
+          "on / at",
+          "at / on",
+          "in / in",
+          "on / in"
+        ],
+        "correctAnswer": "on / at",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q6",
+        "type": "multipleChoice",
+        "question": "Can I have ___ apple and ___ coffee, please?",
+        "options": [
+          "an / a",
+          "a / an",
+          "a / a",
+          "an / an"
+        ],
+        "correctAnswer": "an / a",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q7",
+        "type": "multipleChoice",
+        "question": "How much are ___ shoes here? And ___ jacket there?",
+        "options": [
+          "these / that",
+          "this / those",
+          "these / these",
+          "that / this"
+        ],
+        "correctAnswer": "these / that",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q8",
+        "type": "multipleChoice",
+        "question": "My brother ___ speak English, but he ___ speak Italian.",
+        "options": [
+          "can / can't",
+          "cans / can't",
+          "can / doesn't can",
+          "can / no can"
+        ],
+        "correctAnswer": "can / can't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q9",
+        "type": "multipleChoice",
+        "question": "___ you like films? - No, I ___.",
+        "options": [
+          "Do / don't",
+          "Does / doesn't",
+          "Are / am not",
+          "Do / doesn't"
+        ],
+        "correctAnswer": "Do / don't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-USE-Q10",
+        "type": "multipleChoice",
+        "question": "It ___ every winter. Look - it ___ right now!",
+        "options": [
+          "rains / is raining",
+          "is raining / rains",
+          "rain / rains",
+          "rains / raining"
+        ],
+        "correctAnswer": "rains / is raining",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Final exam audio (two scenes)",
+    "audioScript": "SCENE 1 (monologue):\nHello! I am Zara. Z - A - R - A. I am 26 years old,\nand I am from Faro. I am a teacher - I work at a\nsmall school next to the park. Every day I go to\nwork by bus, at seven thirty.\nSCENE 2 (dialogue, in a cafe):\nMan:   Good morning! Can I have a coffee and bread,\nplease? How much is it?\nWoman: Three dollars. ... Oh, look - it is raining\nagain!\nMan:   Yes, big rain! And my son is sick at home -\nhe has a headache. I need his medicine. The\npharmacy is next to the bank, yes?\nWoman: Yes, very near. Get well to him! Here - your\ncoffee and bread.",
+    "audioPath": "assets/audio/a1/finalexam_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 2,
+    "listeningQuestions": [
+      {
+        "id": "A1-EXAM-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is Zara's job?",
+        "options": [
+          "Teacher",
+          "Doctor",
+          "Student",
+          "Office worker"
+        ],
+        "correctAnswer": "Teacher",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "How does she spell her name?",
+        "options": [
+          "Z-A-R-A",
+          "S-A-R-A",
+          "Z-A-R-R-A",
+          "Z-E-R-A"
+        ],
+        "correctAnswer": "Z-A-R-A",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "How does Zara go to work, and when?",
+        "options": [
+          "By bus at seven thirty",
+          "By train at seven",
+          "By car at nine thirty",
+          "The audio does not say"
+        ],
+        "correctAnswer": "By bus at seven thirty",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "Where is her school?",
+        "options": [
+          "Next to the park",
+          "Next to the bank",
+          "At the station",
+          "In Faro center"
+        ],
+        "correctAnswer": "Next to the park",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "What does the man order, and how much is it?",
+        "options": [
+          "Coffee and bread - three dollars",
+          "Tea and bread - three dollars",
+          "Coffee and an apple - thirteen dollars",
+          "The audio does not say"
+        ],
+        "correctAnswer": "Coffee and bread - three dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "What is the weather like?",
+        "options": [
+          "It is raining",
+          "It is snowing",
+          "It is hot and sunny",
+          "The audio does not say"
+        ],
+        "correctAnswer": "It is raining",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q7",
+        "type": "multipleChoice",
+        "question": "What is wrong at home, and what does the man need?",
+        "options": [
+          "His son has a headache; he needs medicine from the pharmacy",
+          "His son is cold; he needs a jacket",
+          "The man has a headache; he needs a doctor",
+          "The audio does not say"
+        ],
+        "correctAnswer": "His son has a headache; he needs medicine from the pharmacy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q8",
+        "type": "multipleChoice",
+        "question": "How old is the man's son?",
+        "options": [
+          "6",
+          "10",
+          "16",
+          "The audio does not say"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q9",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "I go to work by bus",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-LIS-Q10",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "He has a headache",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 3
+  },
+  "readingBlock": {
+    "readingTitle": "Final exam texts",
+    "readingText": "TEXT A - School notice\nENGLISH SCHOOL - NEW STUDENTS WELCOME!\nClasses: Monday to Friday, at nine in the morning\nOR at seven at night.\nOne month: forty dollars.\nWe are on Green Street, next to the supermarket.\nFrom the station: go straight, and turn left at\nthe bank.\nQuestions? Write to: hello@school.com\n\nTEXT B - Personal letter\nHi, Bruno!\nGreetings from my new life in Porto! I am a student\nhere. I study in the morning, and at night I work\nat a cafe. I can speak Portuguese AND English at\nwork - good practice!\nIt is autumn now: wind and rain every day. Today I\nam wearing my new black jacket.\nMy cat, Tuca, sleeps all day. She doesn't like the\nrain!\nDo you have news? Write to me!\n- Alma",
+    "readingFormat": "notice",
+    "readingQuestions": [
+      {
+        "id": "A1-EXAM-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A notice from an English school",
+          "A bus timetable",
+          "A job advertisement",
+          "Class notes"
+        ],
+        "correctAnswer": "A notice from an English school",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q2",
+        "type": "multipleChoice",
+        "question": "When are the classes?",
+        "options": [
+          "Monday to Friday, morning or night",
+          "Every day at nine",
+          "Weekends only",
+          "The text does not say"
+        ],
+        "correctAnswer": "Monday to Friday, morning or night",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q3",
+        "type": "multipleChoice",
+        "question": "How much is one month?",
+        "options": [
+          "Forty dollars",
+          "Fourteen dollars",
+          "Nine dollars",
+          "Four dollars"
+        ],
+        "correctAnswer": "Forty dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q4",
+        "type": "multipleChoice",
+        "question": "Where is the school?",
+        "options": [
+          "On Green Street, next to the supermarket",
+          "Next to the bank",
+          "At the station",
+          "In the supermarket"
+        ],
+        "correctAnswer": "On Green Street, next to the supermarket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q5",
+        "type": "multipleChoice",
+        "question": "From the station, what does a person do?",
+        "options": [
+          "Go straight, turn left at the bank",
+          "Turn right at the supermarket",
+          "Take a bus",
+          "The text does not say TEXT 2 (76 words) - Personal letter: --------------------------------------- Hi, Bruno! Greetings from my new life in Porto! I am a student here. I study in the morning, and at night I work at a cafe. I can speak Portuguese AND English at work - good practice! It is autumn now: wind and rain every day. Today I am wearing my new black jacket. My cat, Tuca, sleeps all day. She doesn't like the rain! Do you have news? Write to me! - Alma ---------------------------------------"
+        ],
+        "correctAnswer": "Go straight, turn left at the bank",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q6",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "Alma's letter about her new life",
+          "A weather report",
+          "A cafe menu",
+          "A school notice"
+        ],
+        "correctAnswer": "Alma's letter about her new life",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q7",
+        "type": "multipleChoice",
+        "question": "What does Alma do?",
+        "options": [
+          "Studies in the morning, works at a cafe at night",
+          "Teaches English",
+          "Works at a school",
+          "The text does not say"
+        ],
+        "correctAnswer": "Studies in the morning, works at a cafe at night",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q8",
+        "type": "multipleChoice",
+        "question": "What season is it in Porto, and what is the weather like?",
+        "options": [
+          "Autumn - wind and rain",
+          "Winter - snow",
+          "Summer - hot",
+          "Spring - sun"
+        ],
+        "correctAnswer": "Autumn - wind and rain",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q9",
+        "type": "multipleChoice",
+        "question": "Grammar: She ___ like the rain.",
+        "options": [
+          "doesn't",
+          "don't",
+          "isn't",
+          "can't"
+        ],
+        "correctAnswer": "doesn't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-EXAM-REA-Q10",
+        "type": "multipleChoice",
+        "question": "Why does Tuca sleep all day?",
+        "options": [
+          "It is raining - and a cat loves a warm, dry bed inside",
+          "She works at night",
+          "She is sick",
+          "She doesn't live with Alma"
+        ],
+        "correctAnswer": "It is raining - and a cat loves a warm, dry bed inside",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": {
+    "writingPrompt": "Write about YOUR LIFE for a person who does not know you. 10 sentences minimum. Must include: 1. Name, age, city (T1-2) 2. One family member or friend + description (T3-4) 3. Your home (there is/are) (T6) 4. Your day: 2 routine verbs + one time expression (T7-8) 5. Job or study + one can sentence (T14) 6. One hobby + one don't/doesn't sentence (T16) 7. The weather right now, with -ing (T17)",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "10 sentences minimum, all 7 content points present"
+    ],
+    "minSentences": 10,
+    "maxSentences": 14,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Run live with the teacher (in person / call) or recorded under supervision: PART 1 - INTERVIEW (teacher asks, student answers in full sentences): 1. What is your name? Can you spell your first name? 2. Where are you from, and how old are you? 3. Tell me about your family. 4. What do you do every day? 5. What is the weather like today? 6. Do you like music? What is your hobby? PART 2 - MONOLOGUE (student speaks 60 seconds; teacher picks ONE): A) Your home and your city B) A person you love C) Your perfect Saturday",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 480,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_final_exam_a1.txt. CERTIFICATION STANDARD: overall >= 75%, every section >= 65%; engine must score sections separately (A-C auto, D-E teacher points x10). Supervised, one sitting, retake after 7+ days.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Writing: Content: all 7 points present",
+        "description": "",
+        "maxScore": 4
+      },
+      {
+        "title": "Writing: (to be, have, -s, do-system, -ing)",
+        "description": "",
+        "maxScore": 3
+      },
+      {
+        "title": "Writing: Vocabulary: range across topics",
+        "description": "",
+        "maxScore": 2
+      },
+      {
+        "title": "Writing: Spelling: readable, course words right",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: Interview: 6 answers, full sentences",
+        "description": "",
+        "maxScore": 3
+      },
+      {
+        "title": "Speaking: Monologue: 60s, organized, on topic",
+        "description": "",
+        "maxScore": 3
+      },
+      {
+        "title": "Speaking: Grammar range across both parts",
+        "description": "",
+        "maxScore": 2
+      },
+      {
+        "title": "Speaking: Pronunciation: understandable (A1)",
+        "description": "",
+        "maxScore": 2
+      }
+    ]
+  },
+  "passingScore": 0.75,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,244 @@
+{
+  "id": "A1-R6-LIS",
+  "order": 137,
+  "title": "Review 6 (Topics 16-20) - Listening",
+  "description": "New audio + 15 exercises including dictation.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit4_wider_world",
+  "difficultyLevel": 4,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "listening",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 16-20 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": {
+    "audioTitle": "Review 6 listening",
+    "audioScript": "Hi! Family news from me, Tato!\nI don't work on Saturdays. I swim - my Saturday sport!\nI don't play football. And my sister? She doesn't\nswim - she dances.\nToday it is hot, and the sun is out. Perfect...\nbut no swimming for me today!\nWhy? My father is sick. He has a headache, and he\ncan't work. I am going to the pharmacy for his\nmedicine right now.\nHappy news too: my sister is wearing her new white\ndress today - it is her birthday!\nAnd the BIG news... my brother has a horse! Its name\nis Rex. It can't go in the house - and it is eating\nour garden flowers right now!",
+    "audioPath": "assets/audio/a1/rev6_listening_topics16-20.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-R6-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What is this audio?",
+        "options": [
+          "Tato tells his family news",
+          "A weather report",
+          "A pharmacy advertisement",
+          "A birthday invitation"
+        ],
+        "correctAnswer": "Tato tells his family news",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "What does Tato do on Saturdays?",
+        "options": [
+          "He swims",
+          "He plays football",
+          "He dances",
+          "He works"
+        ],
+        "correctAnswer": "He swims",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "Does his sister swim?",
+        "options": [
+          "No - she dances",
+          "Yes, every Saturday",
+          "Only in summer",
+          "The audio does not say"
+        ],
+        "correctAnswer": "No - she dances",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q4",
+        "type": "multipleChoice",
+        "question": "What is the weather like today?",
+        "options": [
+          "Hot, sun out",
+          "Cold and raining",
+          "Snowing",
+          "Windy and cold"
+        ],
+        "correctAnswer": "Hot, sun out",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q5",
+        "type": "multipleChoice",
+        "question": "What is wrong with the father?",
+        "options": [
+          "A headache - he can't work",
+          "His leg is bad",
+          "He is cold",
+          "The audio does not say"
+        ],
+        "correctAnswer": "A headache - he can't work",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q6",
+        "type": "multipleChoice",
+        "question": "Where is Tato going right now?",
+        "options": [
+          "To the pharmacy",
+          "To the park",
+          "To the office",
+          "Swimming"
+        ],
+        "correctAnswer": "To the pharmacy",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q7",
+        "type": "multipleChoice",
+        "question": "What is the sister wearing today?",
+        "options": [
+          "Her new white dress",
+          "Black clothes",
+          "A red hat",
+          "A winter jacket"
+        ],
+        "correctAnswer": "Her new white dress",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q8",
+        "type": "multipleChoice",
+        "question": "Why is today special for her?",
+        "options": [
+          "It is her birthday",
+          "It is Saturday",
+          "She has a new job",
+          "The audio does not say"
+        ],
+        "correctAnswer": "It is her birthday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q9",
+        "type": "multipleChoice",
+        "question": "Who has a horse?",
+        "options": [
+          "Tato's brother",
+          "Tato",
+          "The father",
+          "The sister"
+        ],
+        "correctAnswer": "Tato's brother",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q10",
+        "type": "multipleChoice",
+        "question": "What is Rex doing right now?",
+        "options": [
+          "Eating the garden flowers",
+          "Sleeping in the house",
+          "Swimming",
+          "Playing football"
+        ],
+        "correctAnswer": "Eating the garden flowers",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q11",
+        "type": "multipleChoice",
+        "question": "The weather is perfect - why is there no swimming for Tato today?",
+        "options": [
+          "His father is sick, and Tato is helping",
+          "He doesn't like hot days",
+          "The water is cold",
+          "He is at work"
+        ],
+        "correctAnswer": "His father is sick, and Tato is helping",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q12",
+        "type": "multipleChoice",
+        "question": "How old is the sister today?",
+        "options": [
+          "18",
+          "21",
+          "30",
+          "The audio does not say"
+        ],
+        "correctAnswer": "The audio does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q13",
+        "type": "multipleChoice",
+        "question": "Does Tato play football?",
+        "options": [
+          "No, he doesn't",
+          "Yes, on Saturdays",
+          "Only with his brother",
+          "The audio does not say"
+        ],
+        "correctAnswer": "No, he doesn't",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q14",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "She is wearing a white dress",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R6-LIS-Q15",
+        "type": "dictation",
+        "question": "Type what you hear.",
+        "options": [],
+        "correctAnswer": "It is eating the flowers",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": null,
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review6_set_topics16-20.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

@@ -1,0 +1,71 @@
+{
+  "id": "A1-R3-WRI",
+  "order": 64,
+  "title": "Review 3 (Topics 7-9) - Writing",
+  "description": "Integrated writing task, no model, teacher-graded.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "writing",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 7-9 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": null,
+  "writingTask": {
+    "writingPrompt": "Your teacher asks: What is your week like? Write your answer.",
+    "writingMode": "free_response",
+    "wordBank": [],
+    "minimumRequirements": [
+      "5 sentences",
+      "3 routine verbs (T7), one with 3rd person -s",
+      "One day + time with at/on (T8)",
+      "One number or price sentence (T9)"
+    ],
+    "minSentences": 5,
+    "maxSentences": 7,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review3_set_topics7-9.txt.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "5 sentences, all three topics present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Verbs + 3rd person -s correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "at/on/in time expressions correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Readable spelling incl. number words",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

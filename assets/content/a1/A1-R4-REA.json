@@ -1,0 +1,167 @@
+{
+  "id": "A1-R4-REA",
+  "order": 85,
+  "title": "Review 4 (Topics 10-12) - Reading",
+  "description": "New text(s) + 9 exercises.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit3_out_in_the_world",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 15,
+  "requiredForCertificate": true,
+  "primarySkill": "reading",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Consolidate Topics 10-12 across the skill",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": null,
+  "listeningBlock": null,
+  "readingBlock": {
+    "readingTitle": "Review 4 text",
+    "readingText": "TEXT A - Flyer format\nNEW CAFE IN TOWN - CAFE LUA!\nWe are next to the bank on Green Street.\nFrom the station: go straight and turn left at the\nsupermarket.\nMENU: coffee - two dollars | apple juice - three\ndollars | bread - one dollar\nWe like cards, but cash is OK too!\nClosed on Monday.",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-R4-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A flyer for a new cafe",
+          "Directions to a friend's house",
+          "A supermarket notice",
+          "A birthday invitation"
+        ],
+        "correctAnswer": "A flyer for a new cafe",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q2",
+        "type": "multipleChoice",
+        "question": "How much is the apple juice?",
+        "options": [
+          "Three dollars",
+          "Two dollars",
+          "One dollar",
+          "Thirteen dollars"
+        ],
+        "correctAnswer": "Three dollars",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q3",
+        "type": "multipleChoice",
+        "question": "Grammar: We ___ cards, but cash is OK too.",
+        "options": [
+          "like",
+          "likes",
+          "is like",
+          "liking"
+        ],
+        "correctAnswer": "like",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q4",
+        "type": "multipleChoice",
+        "question": "Card or cash at Cafe Lua?",
+        "options": [
+          "Both are OK",
+          "Cash only",
+          "Card only",
+          "The text does not say"
+        ],
+        "correctAnswer": "Both are OK",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q5",
+        "type": "multipleChoice",
+        "question": "When is the cafe closed?",
+        "options": [
+          "On Monday",
+          "On Sunday",
+          "Every day",
+          "The text does not say"
+        ],
+        "correctAnswer": "On Monday",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q6",
+        "type": "multipleChoice",
+        "question": "Where is the cafe?",
+        "options": [
+          "Next to the bank",
+          "Next to the station",
+          "In the supermarket",
+          "In the park"
+        ],
+        "correctAnswer": "Next to the bank",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q7",
+        "type": "multipleChoice",
+        "question": "From the station, where does a person turn left?",
+        "options": [
+          "At the supermarket",
+          "At the bank",
+          "At the park",
+          "At the school"
+        ],
+        "correctAnswer": "At the supermarket",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q8",
+        "type": "multipleChoice",
+        "question": "How much is the tea?",
+        "options": [
+          "Two dollars",
+          "Three dollars",
+          "One dollar",
+          "The text does not say"
+        ],
+        "correctAnswer": "The text does not say",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-R4-REA-Q9",
+        "type": "multipleChoice",
+        "question": "Grammar: ___ straight and turn left at the supermarket.",
+        "options": [
+          "Go",
+          "Goes",
+          "Going",
+          "You goes"
+        ],
+        "correctAnswer": "Go",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": null,
+  "speakingTask": null,
+  "teacherNotes": "Source: tasilla_review4_set_topics10-12.txt.",
+  "rubric": null,
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}

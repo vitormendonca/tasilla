@@ -1,0 +1,266 @@
+{
+  "id": "A1-MIX-C",
+  "order": 54,
+  "title": "Mixed Review C (Topics 6-8)",
+  "description": "Roadmap-only cross-skill review: listening + reading + vocabulary/grammar + async speaking and writing.",
+  "level": "A1",
+  "cefrLevel": "A1",
+  "unitId": "a1_unit2_everyday_life",
+  "difficultyLevel": 2,
+  "estimatedMinutes": 20,
+  "requiredForCertificate": true,
+  "primarySkill": "mixed",
+  "secondarySkills": [],
+  "activityKind": "review",
+  "canDoStatement": "Integrate core A1 skills in familiar situations",
+  "contentVersion": "a1.tasilla.v1",
+  "status": "published",
+  "lastUpdated": "2026-07-21T00:00:00.000Z",
+  "createdBy": "tasilla_content_v1",
+  "introductionText": "",
+  "vocabularyBlocks": [],
+  "grammarBlocks": [],
+  "examples": [],
+  "quizBlock": {
+    "questions": [
+      {
+        "id": "A1-MIX-C-VOC-Q1",
+        "type": "multipleChoice",
+        "question": "___ two chairs in the kitchen.",
+        "options": [
+          "There are",
+          "There is",
+          "It is"
+        ],
+        "correctAnswer": "There are",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-C-VOC-Q2",
+        "type": "multipleChoice",
+        "question": "My father ___ TV every day.",
+        "options": [
+          "watches",
+          "watch",
+          "watchs"
+        ],
+        "correctAnswer": "watches",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-C-VOC-Q3",
+        "type": "multipleChoice",
+        "question": "The party is ___ Sunday ___ four o'clock.",
+        "options": [
+          "on / at",
+          "at / on",
+          "in / in"
+        ],
+        "correctAnswer": "on / at",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-C-VOC-Q4",
+        "type": "multipleChoice",
+        "question": "You sleep in this room. It is the ___.",
+        "options": [
+          "bedroom",
+          "kitchen",
+          "bathroom"
+        ],
+        "correctAnswer": "bedroom",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "explanations": {}
+  },
+  "listeningBlock": {
+    "audioTitle": "Mixed Review C listening",
+    "audioScript": "Hello! My name is Duna. | My apartment is small - there\nis one bedroom and one bathroom. | Every day I work in\nthe morning. | At night I study English at eight o'clock.\n| Then I sleep!",
+    "audioPath": "assets/audio/a1/mixrevC_listening.mp3",
+    "audioStatus": "pending_generation",
+    "maxAudioPlays": 3,
+    "listeningQuestions": [
+      {
+        "id": "A1-MIX-C-LIS-Q1",
+        "type": "multipleChoice",
+        "question": "What does Duna talk about?",
+        "options": [
+          "Her home and her day",
+          "Her family and her birthday",
+          "A lost person"
+        ],
+        "correctAnswer": "Her home and her day",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-C-LIS-Q2",
+        "type": "multipleChoice",
+        "question": "How many bedrooms are there?",
+        "options": [
+          "One",
+          "Two",
+          "The audio does not say"
+        ],
+        "correctAnswer": "One",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-C-LIS-Q3",
+        "type": "multipleChoice",
+        "question": "When does Duna study English?",
+        "options": [
+          "At night, at eight o'clock",
+          "In the morning",
+          "On Saturday"
+        ],
+        "correctAnswer": "At night, at eight o'clock",
+        "audioPath": null,
+        "words": []
+      }
+    ],
+    "numberOfSpeakers": 1
+  },
+  "readingBlock": {
+    "readingTitle": "Mixed Review C text",
+    "readingText": "TEXT A - Text (35 words) - Handwritten note format\nHi Pipo!\nI am at work. Your dinner is on the table in the\nkitchen.\nI go home at nine o'clock.\nOn Saturday we watch TV together!\n- Mama",
+    "readingFormat": "form",
+    "readingQuestions": [
+      {
+        "id": "A1-MIX-C-REA-Q1",
+        "type": "multipleChoice",
+        "question": "What is this text?",
+        "options": [
+          "A note from Mama to Pipo",
+          "A birthday invitation",
+          "A week schedule"
+        ],
+        "correctAnswer": "A note from Mama to Pipo",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-C-REA-Q2",
+        "type": "multipleChoice",
+        "question": "Where is Pipo's dinner?",
+        "options": [
+          "On the table in the kitchen",
+          "Under the table",
+          "At work"
+        ],
+        "correctAnswer": "On the table in the kitchen",
+        "audioPath": null,
+        "words": []
+      },
+      {
+        "id": "A1-MIX-C-REA-Q3",
+        "type": "multipleChoice",
+        "question": "What time does Mama go home?",
+        "options": [
+          "At nine o'clock",
+          "At eight o'clock",
+          "On Saturday"
+        ],
+        "correctAnswer": "At nine o'clock",
+        "audioPath": null,
+        "words": []
+      }
+    ]
+  },
+  "writingTask": {
+    "writingPrompt": "A friend writes to you: Hi! Tell me about your home and your day! Reply in 4 sentences (1 home sentence with there is/are, 2 routine sentences, 1 with a day or time).",
+    "writingMode": "short_message",
+    "wordBank": [],
+    "minimumRequirements": [],
+    "minSentences": 3,
+    "maxSentences": 5,
+    "requiresTeacherReview": true
+  },
+  "speakingTask": {
+    "speakingPrompt": "Record 20-30 seconds. Your home and your day: say ONE there is/are sentence about your home (T6), ONE thing you do every day (T7), and WHEN you do it - day or time (T8).",
+    "recordingRequired": true,
+    "maxRecordingSeconds": 30,
+    "minimumSubmissionRequired": true,
+    "requiresTeacherReview": true
+  },
+  "teacherNotes": "Source: tasilla_mixed_reviewC_topics6-8.txt. Auto-graded part gates progression (7 of 10); speaking/writing async.",
+  "rubric": {
+    "criteria": [
+      {
+        "title": "Speaking: there is",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: are correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: routine verb correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: at",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: on",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: in correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Speaking: understandable.",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: all three topics present",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: verbs + -s correct where needed",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: at",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: on",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: in correct",
+        "description": "",
+        "maxScore": 1
+      },
+      {
+        "title": "Writing: spelling A1 OK.",
+        "description": "",
+        "maxScore": 1
+      }
+    ]
+  },
+  "passingScore": 0.7,
+  "attempts": 0,
+  "completed": false,
+  "needsReview": false
+}
