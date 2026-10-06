@@ -19,6 +19,8 @@ class SubmissionReviewException implements Exception {
 class Submission {
   final String id;
   final String studentId;
+  final String teacherId;
+  final String? organizationId;
   final String studentName;
   final String learningStepId;
   final String stepTitle;
@@ -33,6 +35,8 @@ class Submission {
   const Submission({
     required this.id,
     required this.studentId,
+    required this.teacherId,
+    required this.organizationId,
     required this.studentName,
     required this.learningStepId,
     required this.stepTitle,
@@ -71,6 +75,8 @@ class Submission {
     return Submission(
       id: row['id']?.toString() ?? '',
       studentId: row['student_id']?.toString() ?? '',
+      teacherId: row['teacher_id']?.toString() ?? '',
+      organizationId: row['organization_id']?.toString(),
       studentName: studentName,
       learningStepId: learningStepId,
       stepTitle: stepTitleFor(learningStepId),
@@ -90,7 +96,7 @@ class Submission {
 class SubmissionService {
   static const String _bucket = 'submissions';
   static const String _columns =
-      'id,student_id,learning_step_id,skill,submission_type,'
+      'id,student_id,teacher_id,organization_id,learning_step_id,skill,submission_type,'
       'text_content,file_path,status,teacher_feedback,submitted_at';
 
   /// Every submission the signed-in teacher is allowed to see, newest first.
@@ -98,7 +104,7 @@ class SubmissionService {
   /// Deliberately does NOT filter by teacher: the `student_submissions_read_teacher`
   /// RLS policy already restricts rows to the teacher's actively-linked students.
   /// Filtering again in Dart would duplicate the policy and drift from it.
-  static Future<List<Submission>> getTeacherSubmissions({String? status}) async {
+  static Future<List<Submission>> getTeacherSubmissions({String? status, String? organizationId, bool filterByContext = false}) async {
     final client = SupabaseBootstrap.client;
 
     if (client == null || client.auth.currentUser == null) {
@@ -106,7 +112,12 @@ class SubmissionService {
     }
 
     try {
-      final query = client.from('student_submissions').select(_columns);
+      var query = client.from('student_submissions').select(_columns).eq('teacher_id', client.auth.currentUser!.id);
+      if (organizationId != null && organizationId.isNotEmpty) {
+        query = query.eq('organization_id', organizationId);
+      } else if (filterByContext) {
+        query = query.isFilter('organization_id', null);
+      }
       final filtered = status == null ? query : query.eq('status', status);
       final data = await filtered.order('submitted_at', ascending: false);
 
@@ -160,6 +171,23 @@ class SubmissionService {
     }
   }
 
+  static Future<Map<String, String?>> _studentTeachingContext() async {
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
+    if (client == null || user == null) {
+      throw const SubmissionReviewException('You must be signed in to submit work.');
+    }
+    final data = await client.from('teacher_students').select('teacher_id,organization_id').eq('student_id', user.id).eq('status', 'active');
+    final rows = _rowsFromResponse(data);
+    if (rows.isEmpty) {
+      throw const SubmissionReviewException('No active teacher is linked to this student account.');
+    }
+    if (rows.length != 1) {
+      throw const SubmissionReviewException('Choose a teacher or School context before submitting this work.');
+    }
+    return {'teacher_id': rows.first['teacher_id']?.toString(), 'organization_id': rows.first['organization_id']?.toString()};
+  }
+
   /// The signed-in student's submission for one lesson, if they have made one.
   static Future<Submission?> getSubmissionForStep(String learningStepId) async {
     final client = SupabaseBootstrap.client;
@@ -170,12 +198,11 @@ class SubmissionService {
     }
 
     try {
-      final row = await client
-          .from('student_submissions')
-          .select(_columns)
-          .eq('student_id', user.id)
-          .eq('learning_step_id', learningStepId)
-          .maybeSingle();
+      final teachingContext = await _studentTeachingContext();
+      var query = client.from('student_submissions').select(_columns).eq('student_id', user.id).eq('teacher_id', teachingContext['teacher_id']!).eq('learning_step_id', learningStepId);
+      final organizationId = teachingContext['organization_id'];
+      query = organizationId == null ? query.isFilter('organization_id', null) : query.eq('organization_id', organizationId);
+      final row = await query.maybeSingle();
 
       if (row == null) {
         return null;
@@ -215,15 +242,18 @@ class SubmissionService {
     }
 
     try {
+      final teachingContext = await _studentTeachingContext();
       await client.from('student_submissions').upsert({
         'student_id': user.id,
+        'teacher_id': teachingContext['teacher_id'],
+        'organization_id': teachingContext['organization_id'],
         'learning_step_id': learningStepId,
         'skill': skill,
         'submission_type': submissionType,
         'text_content': textContent,
         'file_path': filePath,
         'status': 'submitted',
-      }, onConflict: 'student_id,learning_step_id');
+      }, onConflict: 'student_id,teacher_id,organization_id,learning_step_id');
     } catch (error) {
       throw SubmissionReviewException(_friendlyError(error));
     }
@@ -259,7 +289,10 @@ class SubmissionService {
       );
     }
 
-    final path = '${user.id}/$learningStepId.$fileExtension';
+    final teachingContext = await _studentTeachingContext();
+    final teacherId = teachingContext['teacher_id']!;
+    final contextToken = teachingContext['organization_id'] ?? 'independent';
+    final path = '${user.id}/$teacherId/$contextToken/$learningStepId.$fileExtension';
 
     try {
       await client.storage
