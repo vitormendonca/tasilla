@@ -534,8 +534,9 @@ class LearningPathProgressService {
   }
 
   static Future<Set<String>?> _getRemoteCompletedStepIdsForStudent(
-    String studentId,
-  ) async {
+    String studentId, {
+    String? organizationId,
+  }) async {
     final client = SupabaseBootstrap.client;
     final user = client?.auth.currentUser;
 
