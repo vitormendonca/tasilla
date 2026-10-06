@@ -75,6 +75,7 @@ class AppAuthService {
   static Future<AppLoginResult> signInWithEmail({
     required String email,
     required String password,
+    required String expectedRole,
   }) async {
     final client = SupabaseBootstrap.client;
 
@@ -111,10 +112,13 @@ class AppAuthService {
 
       final session = _sessionFromProfile(profile, fallbackEmail: user.email);
 
-      if ((session.isTeacher || session.isSchool) && user.email != null) {
-        await client.from('profiles').update({
-          'email_normalized': user.email!.trim().toLowerCase(),
-        }).eq('id', user.id);
+      if (session.role != expectedRole) {
+        await client.auth.signOut();
+        return AppLoginResult.failure(
+          expectedRole == 'school'
+              ? 'This account is not a School account.'
+              : 'This account is not a Teacher account.',
+        );
       }
 
       await _saveSession(session);
