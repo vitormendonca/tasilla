@@ -508,6 +508,16 @@ class LearningPathProgressService {
     return null;
   }
 
+  static Future<Map<String, String?>?> _studentTeachingContext() async {
+    final client = SupabaseBootstrap.client;
+    final studentId = await _remoteStudentId();
+    if (client == null || studentId == null) return null;
+    final data = await client.from('teacher_students').select('teacher_id,organization_id').eq('student_id', studentId).eq('status', 'active');
+    final rows = _rowsFromResponse(data);
+    if (rows.length != 1) return null;
+    return {'teacher_id': rows.first['teacher_id']?.toString(), 'organization_id': rows.first['organization_id']?.toString()};
+  }
+
   static Future<Set<String>?> _getRemoteCompletedStepIds() async {
     final client = SupabaseBootstrap.client;
     final studentId = await _remoteStudentId();
@@ -517,11 +527,12 @@ class LearningPathProgressService {
     }
 
     try {
-      final data = await client
-          .from('student_step_progress')
-          .select('learning_step_id')
-          .eq('student_id', studentId)
-          .inFilter('status', const ['completed', 'validated', 'approved']);
+      final context = await _studentTeachingContext();
+      if (context == null) return null;
+      var query = client.from('student_step_progress').select('learning_step_id').eq('student_id', studentId).eq('teacher_id', context['teacher_id']!);
+      final organizationId = context['organization_id'];
+      query = organizationId == null ? query.isFilter('organization_id', null) : query.eq('organization_id', organizationId);
+      final data = await query.inFilter('status', const ['completed', 'validated', 'approved']);
 
       return _rowsFromResponse(data)
           .map((row) => row['learning_step_id']?.toString() ?? '')
@@ -557,11 +568,11 @@ class LearningPathProgressService {
     }
 
     try {
-      final data = await client
-          .from('student_step_progress')
-          .select('learning_step_id')
-          .eq('student_id', studentId)
-          .inFilter('status', const ['completed', 'validated', 'approved']);
+      var query = client.from('student_step_progress').select('learning_step_id').eq('student_id', studentId).eq('teacher_id', user.id);
+      query = organizationId != null && organizationId.isNotEmpty
+          ? query.eq('organization_id', organizationId)
+          : query.isFilter('organization_id', null);
+      final data = await query.inFilter('status', const ['completed', 'validated', 'approved']);
 
       return _rowsFromResponse(data)
           .map((row) => row['learning_step_id']?.toString() ?? '')
@@ -582,13 +593,17 @@ class LearningPathProgressService {
     }
 
     try {
+      final context = await _studentTeachingContext();
+      if (context == null) return false;
       await client.from('student_step_progress').upsert({
         'student_id': studentId,
+        'teacher_id': context['teacher_id'],
+        'organization_id': context['organization_id'],
         'learning_step_id': stepId,
         'status': 'completed',
         'validated_by_level_check': false,
         'completed_at': DateTime.now().toIso8601String(),
-      }, onConflict: 'student_id,learning_step_id');
+      }, onConflict: 'student_id,teacher_id,organization_id,learning_step_id');
 
       return true;
     } catch (error) {
@@ -606,11 +621,12 @@ class LearningPathProgressService {
     }
 
     try {
-      final data = await client
-          .from('student_step_progress')
-          .select('learning_step_id')
-          .eq('student_id', studentId)
-          .eq('validated_by_level_check', true);
+      final context = await _studentTeachingContext();
+      if (context == null) return null;
+      var query = client.from('student_step_progress').select('learning_step_id').eq('student_id', studentId).eq('teacher_id', context['teacher_id']!);
+      final organizationId = context['organization_id'];
+      query = organizationId == null ? query.isFilter('organization_id', null) : query.eq('organization_id', organizationId);
+      final data = await query.eq('validated_by_level_check', true);
 
       final stepLevelsById = {
         for (final step in learningPathSteps) step.id: step.level.toUpperCase(),
@@ -639,10 +655,14 @@ class LearningPathProgressService {
     }
 
     try {
+      final context = await _studentTeachingContext();
+      if (context == null) return;
       final completedAt = DateTime.now().toIso8601String();
       final rows = stepIds.map((stepId) {
         return {
           'student_id': studentId,
+          'teacher_id': context['teacher_id'],
+          'organization_id': context['organization_id'],
           'learning_step_id': stepId,
           'status': 'validated',
           'validated_by_level_check': true,
@@ -652,7 +672,7 @@ class LearningPathProgressService {
 
       await client
           .from('student_step_progress')
-          .upsert(rows, onConflict: 'student_id,learning_step_id');
+          .upsert(rows, onConflict: 'student_id,teacher_id,organization_id,learning_step_id');
     } catch (error) {
       debugPrint('Remote level validation failed for $level: $error');
     }
@@ -719,14 +739,18 @@ class LearningPathProgressService {
         'answers': answers,
       });
 
+      final context = await _studentTeachingContext();
+      if (context == null) return;
       await client.from('student_step_progress').upsert({
         'student_id': studentId,
+        'teacher_id': context['teacher_id'],
+        'organization_id': context['organization_id'],
         'learning_step_id': stepId,
         'status': passed ? 'completed' : 'review_needed',
         'score': score,
         'validated_by_level_check': false,
         'completed_at': DateTime.now().toIso8601String(),
-      }, onConflict: 'student_id,learning_step_id');
+      }, onConflict: 'student_id,teacher_id,organization_id,learning_step_id');
     } catch (error) {
       debugPrint('Remote step attempt recording failed: $error');
     }
