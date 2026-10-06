@@ -13,6 +13,8 @@ The tenant boundary is:
 
 organization → members → classes → class students → assignments/progress/evidence
 
+`assignments.organization_id` is the explicit tenant key for assignments. New organization-scoped assignments must reference a valid organization membership; class assignments must also match `classes.organization_id`. Legacy assignments may remain temporarily with `organization_id = null` and continue under the legacy teacher/student relationship until an explicit migration is performed.
+
 Organization membership is stored in organization_members. Organization ownership is stored in organizations.owner_id. RLS policies prevent non-members from reading tenant rows.
 
 Private SECURITY DEFINER helpers are used only where required to avoid RLS recursion; they have an empty search_path and restricted execute privileges.
