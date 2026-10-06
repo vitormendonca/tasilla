@@ -114,3 +114,12 @@ A auditoria do fluxo de evidência encontrou e corrigiu dois pontos de tenancy: 
 A emissão de certificado agora exige organização explícita no serviço e o banco é a autoridade final. O fluxo de verificação pública por código permanece público apenas para certificados não revogados.
 
 Próximo gate: validação E2E em ambiente Flutter real (analyzer/testes e fluxo aluno → submission → revisão → certificado), pois essa execução ainda não foi confirmada nesta sessão.
+
+
+### 2026-10-06 — Teacher/student tenant boundary hardening
+
+- New organization-scoped teacher/student relationships can no longer be created with a null `organization_id` by a teacher who already belongs to an organization.
+- Organization-scoped inserts require the actor to be owner/admin/teacher in that organization and the target student to be a student member of the same organization.
+- Existing legacy null relationships remain temporarily readable only for the explicit migration window; no automatic mapping was performed.
+- Live policy was verified after application. Security Advisor remains at the known single warning: leaked-password protection disabled due to current plan constraint.
+- Versioned migration: `20261006143000_harden_teacher_student_insert_tenant_boundary.sql`.
