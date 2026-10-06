@@ -349,6 +349,7 @@ class CertificateService {
             'student_name': studentName,
             'issued_by': user.id,
             'issued_by_name': teacherName,
+            'organization_id': organizationId,
             'level': level,
             'listening_score': _rounded(eligibility.listeningScore),
             'reading_score': _rounded(eligibility.readingScore),
@@ -380,7 +381,7 @@ class CertificateService {
       final row = await client
           .from(_table)
           .select()
-          .eq('student_id', studentId)
+           .eq('student_id', studentId)
           .order('issued_at', ascending: false)
           .limit(1)
           .maybeSingle();
