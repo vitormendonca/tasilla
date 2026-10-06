@@ -88,3 +88,20 @@ A migração 20261006124247_harden_learning_data_tenant_transition atualizou att
 Estado verificado: 2 relacionamentos ativos, 0 mapeados e 2 não mapeados. A retirada definitiva do legado fica bloqueada até o mapeamento explícito, teste E2E de isolamento entre organizações e nova rodada de Security Advisor.
 
 Security Advisor: permanece apenas auth_leaked_password_protection; nenhum novo alerta de RLS apareceu.
+
+
+## 2026-10-06 — propagação do contexto de organização nas telas de aprendizagem
+
+A auditoria das telas derivadas de `TeacherStudentDetailScreen` identificou que o contexto `organizationId` já estava presente na seleção do aluno e nas atribuições, mas não era propagado para Progresso e Certificado.
+
+Correção aplicada:
+- `TeacherStudentAssignedActivitiesScreen` recebe explicitamente `organizationId`.
+- `TeacherStudentProgressScreen` recebe `organizationId` e o repassa ao serviço de progresso.
+- `TeacherCertificateSignoffScreen` recebe `organizationId` e o repassa às operações de leitura/eligibilidade/emissão.
+- `LearningPathProgressService` valida a relação ativa professor → aluno → organização antes de devolver progresso remoto para uma visão de professor.
+- `CertificateService` aplica a mesma validação ao calcular elegibilidade e progresso usado na emissão.
+- `SubmissionService.getSubmissionsForStudent` valida a relação ativa na organização quando a chamada parte do professor.
+
+Importante: as tabelas de progresso e submissions ainda não possuem `organization_id` próprio. Portanto esta etapa reforça o contexto na camada de serviço e depende das políticas RLS tenant-aware já implantadas. A separação física por tenant dos dados históricos continua como etapa posterior caso a plataforma precise suportar o mesmo aluno compartilhado entre organizações com dados de aprendizagem independentes.
+
+Validação de qualidade: os arquivos foram revisados após a alteração via GitHub. O ambiente disponível nesta sessão não possui execução local confirmada do Flutter analyzer/test suite; portanto não declarar testes Flutter como aprovados até rodar no ambiente de desenvolvimento.
