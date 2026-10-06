@@ -81,3 +81,18 @@ No branch atual, a implementação Flutter correspondente está em:
 
 **Regra de reconciliação:** essas migrações foram aplicadas diretamente no ambiente ativo durante a reconciliação. Antes de um novo bootstrap/replay de migrações, os arquivos de migração devem ser reconciliados com o histórico real para evitar reaplicação duplicada. Não executar cegamente a migration inicial antiga.
 
+
+## 2026-10-06 — mapeamento explícito de teacher_students
+
+A migração ativa `20261006122730_map_legacy_teacher_students_to_organization` adiciona `teacher_students.organization_id` como referência opcional para `organizations` e cria a função transacional `map_teacher_student_to_organization(relationship_id, target_organization_id)`.
+
+Regras:
+
+- nenhuma relação existente é migrada automaticamente;
+- somente o professor dono da relação pode solicitar o mapeamento;
+- o professor precisa ser owner/admin/teacher da organização alvo;
+- o aluno é inserido como membro `student` da organização, se ainda não estiver;
+- uma relação já mapeada não pode ser movida silenciosamente para outra organização;
+- a autorização legada continua ativa até que todas as relações necessárias sejam mapeadas e a cobertura RLS seja validada.
+
+O arquivo correspondente deve permanecer versionado em `supabase/migrations/20261006122730_map_legacy_teacher_students_to_organization.sql`.

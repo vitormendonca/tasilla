@@ -147,6 +147,60 @@ class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
     if (created != null) await _loadLiveClasses();
   }
 
+  Future<void> _showLegacyMappingDialog() async {
+    final organization = selectedOrganization;
+    if (organization == null) return;
+
+    final relationships = await OrganizationService.getLegacyTeacherStudents();
+    if (!mounted) return;
+
+    final unmapped = relationships.where((item) => item.organizationId == null).toList();
+    if (unmapped.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Não há relações legadas pendentes de mapeamento.')),
+      );
+      return;
+    }
+
+    final selected = await showDialog<LegacyTeacherStudentSummary>(
+      context: context,
+      builder: (context) => SimpleDialog(
+        title: Text('Mapear aluno em ' + organization.name),
+        children: unmapped.map((item) => SimpleDialogOption(
+          onPressed: () => Navigator.pop(context, item),
+          child: ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text(item.studentName),
+            subtitle: Text('Nível ' + item.level + ' · ' + item.status),
+            leading: const CircleAvatar(child: Icon(Icons.person_outline)),
+          ),
+        )).toList(),
+      ),
+    );
+
+    if (selected == null) return;
+    setState(() => isSaving = true);
+    final ok = await OrganizationService.mapLegacyTeacherStudent(
+      relationshipId: selected.id,
+      organizationId: organization.id,
+    );
+    if (!mounted) return;
+    setState(() => isSaving = false);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          ok
+              ? selected.studentName + ' foi vinculado à organização.'
+              : 'Não foi possível concluir o vínculo.',
+        ),
+      ),
+    );
+    if (ok && selectedClass != null) {
+      await _loadRoster(selectedClass!);
+    }
+  }
+
   Future<void> _createClass() async {
     final organization = selectedOrganization;
     if (organization == null) return;
@@ -253,6 +307,15 @@ class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
                   if (!mounted) return;
                   setState(() { classes = loaded; isLoading = false; });
                 },
+              ),
+              const SizedBox(height: 14),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: OutlinedButton.icon(
+                  onPressed: isSaving ? null : _showLegacyMappingDialog,
+                  icon: const Icon(Icons.link_outlined, size: 16),
+                  label: const Text('Mapear relações legadas'),
+                ),
               ),
               const SizedBox(height: 20),
               Row(children: [
