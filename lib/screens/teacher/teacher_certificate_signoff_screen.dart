@@ -13,12 +13,14 @@ class TeacherCertificateSignoffScreen extends StatefulWidget {
   final String studentId;
   final String studentName;
   final String studentLevel;
+  final String? organizationId;
 
   const TeacherCertificateSignoffScreen({
     super.key,
     required this.studentId,
     required this.studentName,
     required this.studentLevel,
+    this.organizationId,
   });
 
   @override
@@ -48,9 +50,9 @@ class _TeacherCertificateSignoffScreenState
     });
 
     final existing =
-        await CertificateService.getCertificateForStudent(widget.studentId);
+        await CertificateService.getCertificateForStudent(widget.studentId, organizationId: widget.organizationId);
     final eligibility =
-        await CertificateService.getEligibilityForStudent(widget.studentId);
+        await CertificateService.getEligibilityForStudent(widget.studentId, organizationId: widget.organizationId);
 
     if (!mounted) return;
 
@@ -72,6 +74,7 @@ class _TeacherCertificateSignoffScreenState
         studentId: widget.studentId,
         studentName: widget.studentName,
         level: widget.studentLevel,
+        organizationId: widget.organizationId,
       );
 
       if (!mounted) return;
