@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../data/learning_path_data.dart';
 import '../models/assigned_activity.dart';
 import '../models/learning_path_step.dart';
+import 'student_teaching_context_service.dart';
 import 'supabase_bootstrap.dart';
 
 class LearningPathSkillProgress {
@@ -509,13 +510,9 @@ class LearningPathProgressService {
   }
 
   static Future<Map<String, String?>?> _studentTeachingContext() async {
-    final client = SupabaseBootstrap.client;
-    final studentId = await _remoteStudentId();
-    if (client == null || studentId == null) return null;
-    final data = await client.from('teacher_students').select('teacher_id,organization_id').eq('student_id', studentId).eq('status', 'active');
-    final rows = _rowsFromResponse(data);
-    if (rows.length != 1) return null;
-    return {'teacher_id': rows.first['teacher_id']?.toString(), 'organization_id': rows.first['organization_id']?.toString()};
+    final context = await StudentTeachingContextService.getActiveContext();
+    if (context == null) return null;
+    return {'teacher_id': context.teacherId, 'organization_id': context.organizationId};
   }
 
   static Future<Set<String>?> _getRemoteCompletedStepIds() async {
