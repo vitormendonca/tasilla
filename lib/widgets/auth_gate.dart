@@ -5,6 +5,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../models/app_session.dart';
 import '../screens/login_screen.dart';
+import '../screens/school/school_home_screen.dart';
 import '../screens/student/student_home_screen.dart';
 import '../screens/teacher/teacher_home_screen.dart';
 import '../services/app_auth_service.dart';
@@ -63,8 +64,8 @@ class _AuthGateState extends State<AuthGate> {
 
     final AppSession? session = AppAuthService.currentSession.value;
     if (session == null) return const LoginScreen();
-    return session.isTeacher
-        ? const TeacherHomeScreen()
-        : const StudentHomeScreen();
+    if (session.isSchool) return const SchoolHomeScreen();
+    if (session.isTeacher) return const TeacherHomeScreen();
+    return const StudentHomeScreen();
   }
 }
