@@ -33,3 +33,23 @@ Do not remove the legacy branch until:
 5. Security Advisor and the application quality gate are rerun.
 
 No automatic mapping is permitted.
+
+## 2026-10-06 — School → Teacher → Student institutional regression
+
+Transactional production-schema regression completed with rollback-only fixtures.
+
+Passed:
+- invited Teacher can accept the invitation and become a Teacher member of the intended School;
+- that Teacher can link a Student already belonging to the same School using the Student access code;
+- a Student belonging to another School is rejected;
+- the Teacher cannot enumerate organization_members from another School;
+- independent Teacher entitlement regression separately confirmed first Student allowed, over-limit Student blocked, and unknown access code rejected;
+- School entitlement regression separately confirmed first Teacher invite allowed and over-limit invite blocked.
+
+Security design:
+- public accept_teacher_invitation remains SECURITY INVOKER;
+- the privileged membership mutation is isolated in private.accept_teacher_invitation and validates actor_id against auth.uid(), Teacher global role, invitation status and normalized invited email before writing;
+- School billing/entitlement rows are not exposed to member Teachers; private.school_student_limit returns only the numeric limit required by the public SECURITY INVOKER linking RPC;
+- cross-tenant reads remain protected by RLS.
+
+Security Advisor after the final regression reports only the known leaked-password-protection warning, deferred under the current plan constraint.
