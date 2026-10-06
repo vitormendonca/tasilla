@@ -35,7 +35,16 @@ organization_members represents tenant membership and authorization within the S
 School ownership and Teacher membership must not be confused with the global account type.
 
 ## Learning state
-student_step_progress is the current snapshot for a student/step. attempts is append-only history.
+Private learning records are scoped to an explicit teaching context. `student_submissions`, `student_step_progress`, `attempts` and `level_check_attempts` carry `teacher_id` plus nullable `organization_id`.
+
+- `organization_id IS NULL` = Independent Teacher context.
+- `organization_id IS NOT NULL` = School context.
+- RLS requires the exact active Teacher → Student relationship in that context.
+- `student_step_progress` is the current snapshot for a Student/Teacher/context/step.
+- `attempts` is append-only history per Student/Teacher/context/step.
+- Evidence Storage paths include Student, Teacher and context so a second Teacher linked to the same Student cannot read another Teacher's private evidence.
+
+Certificates use the same context for eligibility and issuance. Independent Teacher certificates have NULL `organization_id`; School certificates carry the School id. Non-revoked certificate verification remains public by design.
 
 ## Security boundary
 Never expose service-role/secret credentials in Flutter. Data API grants and RLS are separate controls and both must be reviewed for exposed tables.
