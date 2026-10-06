@@ -123,3 +123,12 @@ Próximo gate: validação E2E em ambiente Flutter real (analyzer/testes e fluxo
 - Existing legacy null relationships remain temporarily readable only for the explicit migration window; no automatic mapping was performed.
 - Live policy was verified after application. Security Advisor remains at the known single warning: leaked-password protection disabled due to current plan constraint.
 - Versioned migration: `20261006143000_harden_teacher_student_insert_tenant_boundary.sql`.
+
+
+### 2026-10-06 — Multi-tenant A × B regression
+
+- Transactional RLS regression completed without persistent fixture data.
+- 9/9 checks passed: organization, class and assignment read isolation for students A/B plus cross-tenant rejection for class enrollment, assignment creation and teacher/student mapping.
+- The remaining staff-side regression for attempts, progress, submissions and submission Storage is intentionally blocked by the two active legacy `teacher_students.organization_id IS NULL` relationships and the absence of a second teacher identity.
+- Detailed evidence and exit criteria: `docs/MULTI_TENANT_RLS_REGRESSION.md`.
+- No legacy relationship was automatically mapped or modified.
