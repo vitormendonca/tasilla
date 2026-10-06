@@ -59,7 +59,14 @@ void main() {
       await tester.pump();
       return;
     }
-    await tapVisibleText(tester, answer);
+    final optionIndex = question.options.indexOf(answer);
+    final option = find.byKey(
+      ValueKey('answer_${question.id}_$optionIndex'),
+    );
+    await tester.ensureVisible(option);
+    await tester.pump();
+    await tester.tap(option);
+    await tester.pump();
   }
 
   Future<void> tapCompletionButton(WidgetTester tester) async {
