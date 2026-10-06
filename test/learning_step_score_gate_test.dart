@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tasilla/data/a1_content_loader.dart' hide getA1LearningExperienceById;
-import 'package:tasilla/data/a1_learning_experience_data.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/screens/student/student_learning_step_screen.dart';
 
@@ -43,7 +42,7 @@ void main() {
     tester,
   ) async {
     var completionCalls = 0;
-    await pumpStep(tester, 'A1-EXP-006', (_) async {
+    await pumpStep(tester, 'A1-T02-VOC', (_) async {
       completionCalls++;
     });
 
@@ -58,7 +57,7 @@ void main() {
 
   testWidgets('failed score shows retry and does not complete', (tester) async {
     var completionCalls = 0;
-    const stepId = 'A1-EXP-006';
+    const stepId = 'A1-T02-VOC';
     await pumpStep(tester, stepId, (_) async {
       completionCalls++;
     });
@@ -86,7 +85,7 @@ void main() {
 
   testWidgets('passing score completes the lesson', (tester) async {
     var completionCalls = 0;
-    const stepId = 'A1-EXP-006';
+    const stepId = 'A1-T02-VOC';
     await pumpStep(tester, stepId, (_) async {
       completionCalls++;
     });
@@ -106,7 +105,7 @@ void main() {
     'speaking lesson with no gradable questions is not score-blocked',
     (tester) async {
       var completionCalls = 0;
-      await pumpStep(tester, 'A1-EXP-001', (_) async {
+      await pumpStep(tester, 'A1-T01-SPE', (_) async {
         completionCalls++;
       });
 
