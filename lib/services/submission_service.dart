@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../data/a1_content_loader.dart';
+import 'student_teaching_context_service.dart';
 import 'supabase_bootstrap.dart';
 
 /// Thrown when the database refuses a review action. The `student_submissions`
@@ -179,20 +180,11 @@ class SubmissionService {
   }
 
   static Future<Map<String, String?>> _studentTeachingContext() async {
-    final client = SupabaseBootstrap.client;
-    final user = client?.auth.currentUser;
-    if (client == null || user == null) {
-      throw const SubmissionReviewException('You must be signed in to submit work.');
-    }
-    final data = await client.from('teacher_students').select('teacher_id,organization_id').eq('student_id', user.id).eq('status', 'active');
-    final rows = _rowsFromResponse(data);
-    if (rows.isEmpty) {
-      throw const SubmissionReviewException('No active teacher is linked to this student account.');
-    }
-    if (rows.length != 1) {
+    final context = await StudentTeachingContextService.getActiveContext();
+    if (context == null) {
       throw const SubmissionReviewException('Choose a teacher or School context before submitting this work.');
     }
-    return {'teacher_id': rows.first['teacher_id']?.toString(), 'organization_id': rows.first['organization_id']?.toString()};
+    return {'teacher_id': context.teacherId, 'organization_id': context.organizationId};
   }
 
   /// The signed-in student's submission for one lesson, if they have made one.
