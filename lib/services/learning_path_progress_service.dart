@@ -543,6 +543,18 @@ class LearningPathProgressService {
       return null;
     }
 
+    if (organizationId != null && organizationId.isNotEmpty) {
+      final access = await client
+          .from('teacher_students')
+          .select('id')
+          .eq('teacher_id', user.id)
+          .eq('student_id', studentId)
+          .eq('organization_id', organizationId)
+          .eq('status', 'active')
+          .limit(1);
+      if (_rowsFromResponse(access).isEmpty) return {};
+    }
+
     try {
       final data = await client
           .from('student_step_progress')
