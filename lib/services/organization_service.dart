@@ -109,7 +109,84 @@ class LegacyTeacherStudentSummary {
   }
 }
 
+
+class AccountEntitlement {
+  final String planCode;
+  final int? maxTeachers;
+  final int? maxStudents;
+  final String status;
+
+  const AccountEntitlement({
+    required this.planCode,
+    required this.maxTeachers,
+    required this.maxStudents,
+    required this.status,
+  });
+
+  factory AccountEntitlement.fromMap(Map<String, dynamic> map) {
+    return AccountEntitlement(
+      planCode: map['plan_code']?.toString() ?? 'pilot',
+      maxTeachers: map['max_teachers'] as int?,
+      maxStudents: map['max_students'] as int?,
+      status: map['status']?.toString() ?? 'active',
+    );
+  }
+}
+
 class OrganizationService {
+
+  static Future<AccountEntitlement?> ensureEntitlement() async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || client.auth.currentUser == null) return null;
+    try {
+      final response = await client.rpc('ensure_default_entitlement');
+      final row = _singleRow(response);
+      return row == null ? null : AccountEntitlement.fromMap(row);
+    } catch (error) {
+      debugPrint('Entitlement unavailable: $error');
+      return null;
+    }
+  }
+
+  static Future<bool> inviteTeacher({
+    required String organizationId,
+    required String email,
+  }) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || client.auth.currentUser == null) return false;
+    try {
+      await client.rpc('invite_teacher', params: {
+        'target_organization_id': organizationId,
+        'teacher_email': email.trim().toLowerCase(),
+      });
+      return true;
+    } catch (error) {
+      debugPrint('Teacher invitation failed: $error');
+      return false;
+    }
+  }
+
+  static Future<int> getTeacherUsage(String organizationId) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || organizationId.isEmpty) return 0;
+    try {
+      final members = await client
+          .from('organization_members')
+          .select('id')
+          .eq('organization_id', organizationId)
+          .eq('role', 'teacher');
+      final invites = await client
+          .from('teacher_invitations')
+          .select('id')
+          .eq('organization_id', organizationId)
+          .eq('status', 'pending');
+      return _rowsFromResponse(members).length + _rowsFromResponse(invites).length;
+    } catch (error) {
+      debugPrint('Teacher usage unavailable: $error');
+      return 0;
+    }
+  }
+
   static Future<List<LegacyTeacherStudentSummary>> getLegacyTeacherStudents() async {
     final client = SupabaseBootstrap.client;
     final user = client?.auth.currentUser;
