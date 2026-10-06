@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tasilla/data/a1_content_loader.dart';
+import 'package:tasilla/data/a1_content_loader.dart' hide getA1LearningExperienceById;
 import 'package:tasilla/data/a1_learning_experience_data.dart';
 import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/models/learning_enums.dart';
