@@ -79,3 +79,12 @@ A feature is done only when code is implemented, migrations are versioned when r
 - Executar flutter analyze e testes Flutter no ambiente de desenvolvimento.
 - Fazer validação E2E com duas organizações para comprovar que professor/aluno de uma organização não enxergam assignments da outra.
 - Revisar progress/certificate RLS para aposentar definitivamente dependências legadas de teacher_students.
+
+
+## 2026-10-06 — transição RLS dos dados de aprendizagem
+
+A migração 20261006124247_harden_learning_data_tenant_transition atualizou attempts, student_step_progress, student_submissions e certificates para reconhecer organization_id nas relações teacher_students mapeadas. Relações ainda não mapeadas permanecem no caminho legado durante a transição.
+
+Estado verificado: 2 relacionamentos ativos, 0 mapeados e 2 não mapeados. A retirada definitiva do legado fica bloqueada até o mapeamento explícito, teste E2E de isolamento entre organizações e nova rodada de Security Advisor.
+
+Security Advisor: permanece apenas auth_leaked_password_protection; nenhum novo alerta de RLS apareceu.
