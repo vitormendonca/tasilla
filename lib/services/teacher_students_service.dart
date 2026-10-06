@@ -19,7 +19,7 @@ class TeacherStudentSummary {
 
 class TeacherStudentsService {
   static Future<List<TeacherStudentSummary>>
-  getStudentsForCurrentTeacher() async {
+  getStudentsForCurrentTeacher({String? organizationId}) async {
     final client = SupabaseBootstrap.client;
     final user = client?.auth.currentUser;
 
@@ -28,11 +28,32 @@ class TeacherStudentsService {
     }
 
     try {
-      final linksData = await client
+      var query = client
           .from('teacher_students')
-          .select('student_id,status')
+          .select('student_id,status,organization_id')
           .eq('teacher_id', user.id)
           .eq('status', 'active');
+
+      String? resolvedOrganizationId = organizationId;
+      if (resolvedOrganizationId == null || resolvedOrganizationId.isEmpty) {
+        final memberships = await client
+            .from('organization_members')
+            .select('organization_id,role')
+            .eq('user_id', user.id)
+            .inFilter('role', ['owner', 'admin', 'teacher'])
+            .order('created_at')
+            .limit(1);
+        final membershipRows = _rowsFromResponse(memberships);
+        if (membershipRows.isNotEmpty) {
+          resolvedOrganizationId =
+              membershipRows.first['organization_id']?.toString();
+        }
+      }
+
+      final linksData = resolvedOrganizationId == null ||
+              resolvedOrganizationId.isEmpty
+          ? await query
+          : await query.eq('organization_id', resolvedOrganizationId);
 
       final studentIds = _rowsFromResponse(linksData)
           .map((row) => row['student_id']?.toString() ?? '')
