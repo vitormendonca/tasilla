@@ -10,8 +10,14 @@ import 'supabase_bootstrap.dart';
 class AssignmentService {
   static const String _assignedActivitiesKey = 'assigned_activities';
 
-  static Future<List<AssignedActivity>> getAllAssignedActivities() async {
-    final remoteAssignments = await _getRemoteAssignments();
+  static Future<List<AssignedActivity>> getAllAssignedActivities({
+    String? organizationId,
+    bool filterByContext = false,
+  }) async {
+    final remoteAssignments = await _getRemoteAssignments(
+      organizationId: organizationId,
+      filterByContext: filterByContext,
+    );
 
     if (remoteAssignments != null) {
       return remoteAssignments;
@@ -61,6 +67,7 @@ class AssignmentService {
   static Future<List<AssignedActivity>?> _getRemoteAssignments({
     String? studentId,
     String? organizationId,
+    bool filterByContext = false,
   }) async {
     final client = SupabaseBootstrap.client;
     final user = client?.auth.currentUser;
@@ -84,6 +91,8 @@ class AssignmentService {
       final resolvedOrganizationId = await _resolveOrganizationId(organizationId);
       if (resolvedOrganizationId != null && resolvedOrganizationId.isNotEmpty) {
         query = query.eq('organization_id', resolvedOrganizationId);
+      } else if (filterByContext || studentId != null) {
+        query = query.isFilter('organization_id', null);
       }
 
       final data = await query.order('assigned_at');
