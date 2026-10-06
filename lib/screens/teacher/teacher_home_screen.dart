@@ -7,6 +7,7 @@ import 'teacher_assigned_activities_screen.dart';
 import 'teacher_classes_screen.dart';
 import 'teacher_invitations_screen.dart';
 import 'teacher_profile_screen.dart';
+import 'teacher_progress_screen.dart';
 import 'teacher_review_screen.dart';
 import 'teacher_students_screen.dart';
 
@@ -174,7 +175,7 @@ class _TeacherHomeScreenState extends State<TeacherHomeScreen> {
             icon: Icons.query_stats_outlined,
             title: 'Progress',
             subtitle: 'Track completed activities and student development.',
-            onTap: () => _showComingSoon(context, 'Progress'),
+            onTap: () => _openScreen(context, const TeacherProgressScreen()),
             textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border,
           ),
         ],
