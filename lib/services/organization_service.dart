@@ -110,6 +110,20 @@ class LegacyTeacherStudentSummary {
 }
 
 
+class TeacherInvitationSummary {
+  final String id;
+  final String organizationId;
+  final String email;
+
+  const TeacherInvitationSummary({required this.id, required this.organizationId, required this.email});
+
+  factory TeacherInvitationSummary.fromMap(Map<String, dynamic> map) => TeacherInvitationSummary(
+    id: map['id']?.toString() ?? '',
+    organizationId: map['organization_id']?.toString() ?? '',
+    email: map['invited_email']?.toString() ?? '',
+  );
+}
+
 class AccountEntitlement {
   final String planCode;
   final int? maxTeachers;
@@ -134,6 +148,30 @@ class AccountEntitlement {
 }
 
 class OrganizationService {
+
+  static Future<List<TeacherInvitationSummary>> getMyTeacherInvitations() async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || client.auth.currentUser == null) return [];
+    try {
+      final data = await client.from('teacher_invitations').select('id,organization_id,invited_email').eq('status', 'pending').order('created_at');
+      return _rowsFromResponse(data).map(TeacherInvitationSummary.fromMap).where((item) => item.id.isNotEmpty).toList();
+    } catch (error) {
+      debugPrint('Teacher invitations unavailable: $error');
+      return [];
+    }
+  }
+
+  static Future<bool> acceptTeacherInvitation(String invitationId) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || client.auth.currentUser == null) return false;
+    try {
+      await client.rpc('accept_teacher_invitation', params: {'invitation_id': invitationId});
+      return true;
+    } catch (error) {
+      debugPrint('Teacher invitation acceptance failed: $error');
+      return false;
+    }
+  }
 
   static Future<AccountEntitlement?> ensureEntitlement() async {
     final client = SupabaseBootstrap.client;
