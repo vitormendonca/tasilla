@@ -179,6 +179,10 @@ class AssignmentService {
       return remoteResult;
     }
 
+    if (SupabaseBootstrap.client?.auth.currentUser != null) {
+      return false;
+    }
+
     final currentAssignments = await _getLocalAssignments();
 
     final alreadyAssigned = currentAssignments.any(
@@ -403,6 +407,10 @@ class AssignmentService {
 
     if (remoteResult != null) {
       return remoteResult;
+    }
+
+    if (SupabaseBootstrap.client?.auth.currentUser != null) {
+      return false;
     }
 
     final currentAssignments = await _getLocalAssignments();
@@ -715,12 +723,13 @@ class AssignmentService {
         return false;
       }
 
-      await client
+      final updated = await client
           .from('assignments')
           .update(_statusPayload(newStatus))
-          .eq('id', assignmentId);
+          .eq('id', assignmentId)
+          .select('id');
 
-      return true;
+      return _rowsFromResponse(updated).isNotEmpty;
     } catch (error) {
       debugPrint('Remote student assignment update failed: $error');
       return null;
@@ -736,12 +745,13 @@ class AssignmentService {
     }
 
     try {
-      await client
+      final updated = await client
           .from('assignments')
           .update({'status': 'canceled'})
-          .eq('id', assignmentId);
+          .eq('id', assignmentId)
+          .select('id');
 
-      return true;
+      return _rowsFromResponse(updated).isNotEmpty;
     } catch (error) {
       debugPrint('Remote assignment cancel failed: $error');
       return false;
