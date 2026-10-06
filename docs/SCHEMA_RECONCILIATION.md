@@ -45,7 +45,7 @@ organization_members stores one membership per user/organization with roles owne
 
 RLS is enabled on both tables. Membership/ownership checks use private SECURITY DEFINER helpers with an empty search_path and restricted execute privileges. No existing user was automatically assigned to a new organization.
 
-The foundation is additive. Classes, assignments and existing teacher/student relationships will be connected to organizations in the next schema stages rather than being rewritten implicitly.
+The foundation remains additive. Classes/enrollment are now live and assignments have an explicit organization boundary. Existing `teacher_students` rows are intentionally not auto-migrated. A future migration must explicitly map each teacher/student relationship into organization membership before legacy assignment authorization is retired.
 
 ## Decision
 
