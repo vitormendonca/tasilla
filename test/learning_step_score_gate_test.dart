@@ -32,14 +32,6 @@ void main() {
     await tester.pump();
   }
 
-  Future<void> tapVisibleText(WidgetTester tester, String text) async {
-    final finder = find.text(text).last;
-    await tester.ensureVisible(finder);
-    await tester.pump();
-    await tester.tap(finder);
-    await tester.pump();
-  }
-
   bool usesTextEntry(ActivityQuestion question) =>
       question.type == QuestionType.textInput ||
       question.type == QuestionType.dictation ||
