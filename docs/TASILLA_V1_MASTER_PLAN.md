@@ -105,3 +105,12 @@ Correção aplicada:
 Importante: as tabelas de progresso e submissions ainda não possuem `organization_id` próprio. Portanto esta etapa reforça o contexto na camada de serviço e depende das políticas RLS tenant-aware já implantadas. A separação física por tenant dos dados históricos continua como etapa posterior caso a plataforma precise suportar o mesmo aluno compartilhado entre organizações com dados de aprendizagem independentes.
 
 Validação de qualidade: os arquivos foram revisados após a alteração via GitHub. O ambiente disponível nesta sessão não possui execução local confirmada do Flutter analyzer/test suite; portanto não declarar testes Flutter como aprovados até rodar no ambiente de desenvolvimento.
+
+
+## 2026-10-06 — fechamento da propriedade tenant-aware de evidências e certificados
+
+A auditoria do fluxo de evidência encontrou e corrigiu dois pontos de tenancy: leitura de arquivos privados de submissions no Storage e propriedade de certificados. O Storage agora exige organização compatível para relações mapeadas; certificados passaram a registrar `organization_id` e exigir o mesmo tenant na emissão/leitura do professor.
+
+A emissão de certificado agora exige organização explícita no serviço e o banco é a autoridade final. O fluxo de verificação pública por código permanece público apenas para certificados não revogados.
+
+Próximo gate: validação E2E em ambiente Flutter real (analyzer/testes e fluxo aluno → submission → revisão → certificado), pois essa execução ainda não foi confirmada nesta sessão.
