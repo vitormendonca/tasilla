@@ -8,12 +8,14 @@ class QuizSectionResult {
   final int correctCount;
   final int totalCount;
   final bool allAnswered;
+  final Map<String, String> answers;
 
   const QuizSectionResult({
     required this.answeredCount,
     required this.correctCount,
     required this.totalCount,
     required this.allAnswered,
+    this.answers = const {},
   });
 
   double get score => totalCount == 0 ? 0 : correctCount / totalCount;
@@ -90,6 +92,9 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
       correctCount: correct,
       totalCount: gradable.length,
       allAnswered: answered == gradable.length,
+      answers: {
+        for (final entry in selectedAnswers.entries) entry.key: entry.value,
+      },
     );
   }
 
