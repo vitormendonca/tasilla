@@ -34,3 +34,19 @@ Após a alteração, a política foi consultada diretamente no banco e o Securit
 - Existing legacy null relationships remain temporarily readable only for the explicit migration window; no automatic mapping was performed.
 - Live policy was verified after application. Security Advisor remains at the known single warning: leaked-password protection disabled due to current plan constraint.
 - Versioned migration: `20261006143000_harden_teacher_student_insert_tenant_boundary.sql`.
+
+## 2026-10-06 — Three-account commercial model and entitlements
+
+Product identity is now explicitly School, Teacher and Student. A Teacher may be independent; therefore a teacher_students row with organization_id NULL can be a valid independent-Teacher relationship and must not be automatically migrated or retired merely because it is unscoped.
+
+Implemented:
+- School is the global account type allowed to own/create an Organization.
+- Teacher remains a standalone paid-account path and may also accept membership in a School.
+- account_entitlements centralizes pilot limits server-side; Flutter does not define the authorization limit.
+- School pilot defaults are 3 Teachers / 50 Students; independent Teacher pilot default is 10 Students. These are test defaults, not final commercial pricing.
+- teacher_invitations supports School → Teacher invitation with tenant-aware RLS.
+- invitation acceptance uses the authenticated Teacher profile email and SECURITY INVOKER; the earlier SECURITY DEFINER draft was replaced after Security Advisor flagged it.
+- link_student_to_teacher enforces Student limits for independent Teachers and School tenants.
+- Security Advisor after the final design reports only the known leaked-password-protection warning, deferred because of the current plan constraint.
+
+Architecture rule: global account role (profiles.role) and organization membership role (organization_members.role) are separate concepts.
