@@ -185,6 +185,7 @@ class _TeacherAssignActivityScreenState extends State<TeacherAssignActivityScree
       level: selectedActivity['level'] ?? '',
       dueDate: 'No due date',
       note: '',
+      organizationId: widget.organizationId,
     );
 
     if (!mounted) return;
