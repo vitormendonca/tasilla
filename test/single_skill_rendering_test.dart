@@ -42,7 +42,7 @@ void main() {
       // only listening content — no vocab chips, no grammar.
       final experience = getA1LearningExperienceById('A1-T01-LIS')!;
       expect(experience.primarySkill, LearningSkill.listening);
-      expect(experience.vocabularyBlocks, isNotEmpty);
+      expect(experience.vocabularyBlocks, isEmpty);
 
       final step = a1RoadmapSteps.firstWhere((step) => step.id == 'A1-T01-LIS');
 
