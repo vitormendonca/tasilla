@@ -1,52 +1,67 @@
 # TASILLA — Supabase
 
 ## Connected project
+
 - Project: tasilla project
 - Ref: dgkstqbrclbmrudailfz
 - PostgreSQL: 17
 
-## Current observed schema
-The active database contains profiles, teacher/student relationships, classes, class students, learning content, assignments, attempts, progress, teacher reviews, level-check attempts and certificates. All observed public tables have RLS enabled.
+## Current architecture
 
-## Migration integrity issue
-The Supabase migration history currently reports only migration version 20260717041825, while the repository contains older schema migrations that describe a substantially larger schema. This indicates migration-history drift and must be reconciled before production schema changes are considered complete.
+The active backend supports three global account types in `profiles.role`: `school`, `teacher`, and `student`.
 
-## Security findings to resolve
-Supabase advisors currently report that public.enforce_submission_review_authority() is SECURITY DEFINER and executable by anon and authenticated. Review and restrict this function before production certification flows.
+Global role and Organization membership are separate concepts. A Teacher can be independent, a member of a School, or both.
 
-Auth also reports leaked-password protection disabled; enable it before commercial launch.
+For `teacher_students`:
+- `organization_id IS NULL` means the supported Independent Teacher scope.
+- a non-null `organization_id` means the School tenant scope.
 
-## Rule
-Never modify unrelated Supabase projects. All schema changes must be reviewed, verified with a test query, and represented in repository migrations before release.
+NULL must not be automatically mapped to an Organization or treated as invalid merely because the Teacher also belongs to a School.
 
+The same Teacher/Student pair can coexist in independent and School scopes. Partial unique indexes enforce uniqueness independently for each scope.
 
-## 2026-10-06 — Storage de submissions e isolamento por organização
+## Organizations, entitlements and invitations
 
-A política de leitura dos arquivos privados de submissions foi endurecida para relações teacher_students já mapeadas a uma organização. O acesso exige professor owner/admin/teacher e aluno student na mesma organização. Relações legadas sem organization_id continuam temporariamente compatíveis durante a migração. A alteração foi aplicada no Supabase e versionada em 20261006130000_harden_submission_storage_tenant_access.sql.
+- Only a global `school` account can own/create a School Organization.
+- `account_entitlements` centralizes pilot limits server-side.
+- Pilot defaults currently used for technical validation: School 3 Teachers / 50 Students; Independent Teacher 10 Students. These are not final commercial pricing.
+- School → Teacher invitations are tenant-aware.
+- Invitation visibility and acceptance are authorized against the authenticated email in `auth.users`, not `profiles.email_normalized`.
+- The public acceptance RPC is SECURITY INVOKER; a narrowly scoped helper in the private schema performs the required privileged membership mutation.
+- School Student-limit lookup exposes only the numeric limit required by the linking operation.
 
-Após a alteração, a política foi consultada diretamente no banco e o Security Advisor foi reexecutado. O único alerta restante continua sendo auth_leaked_password_protection, mantido pendente por decisão do projeto.
+## Classes
 
+Classes are School-tenant resources and require an explicit Teacher.
 
-### 2026-10-06 — Teacher/student tenant boundary hardening
+`create_school_class` allows the School owner to create a Class only when the selected Teacher is an active Teacher member of the same Organization. Cross-School Teacher assignment is rejected.
 
-- New organization-scoped teacher/student relationships can no longer be created with a null `organization_id` by a teacher who already belongs to an organization.
-- Organization-scoped inserts require the actor to be owner/admin/teacher in that organization and the target student to be a student member of the same organization.
-- Existing legacy null relationships remain temporarily readable only for the explicit migration window; no automatic mapping was performed.
-- Live policy was verified after application. Security Advisor remains at the known single warning: leaked-password protection disabled due to current plan constraint.
-- Versioned migration: `20261006143000_harden_teacher_student_insert_tenant_boundary.sql`.
+The School account itself must never become `classes.teacher_id`.
 
-## 2026-10-06 — Three-account commercial model and entitlements
+## RLS and evidence
 
-Product identity is now explicitly School, Teacher and Student. A Teacher may be independent; therefore a teacher_students row with organization_id NULL can be a valid independent-Teacher relationship and must not be automatically migrated or retired merely because it is unscoped.
+RLS remains enabled on the observed public application tables. Learning/evidence authorization must preserve both supported Teacher/Student scopes.
 
-Implemented:
-- School is the global account type allowed to own/create an Organization.
-- Teacher remains a standalone paid-account path and may also accept membership in a School.
-- account_entitlements centralizes pilot limits server-side; Flutter does not define the authorization limit.
-- School pilot defaults are 3 Teachers / 50 Students; independent Teacher pilot default is 10 Students. These are test defaults, not final commercial pricing.
-- teacher_invitations supports School → Teacher invitation with tenant-aware RLS.
-- invitation acceptance uses the authenticated Teacher profile email and SECURITY INVOKER; the earlier SECURITY DEFINER draft was replaced after Security Advisor flagged it.
-- link_student_to_teacher enforces Student limits for independent Teachers and School tenants.
-- Security Advisor after the final design reports only the known leaked-password-protection warning, deferred because of the current plan constraint.
+Submission Storage, assignments, attempts, progress, reviews and certification must not infer that a NULL `teacher_students.organization_id` is transitional. NULL can represent an intentional Independent Teacher relationship.
 
-Architecture rule: global account role (profiles.role) and organization membership role (organization_members.role) are separate concepts.
+Where data is School-scoped, authorization must validate matching Organization membership. Where data is independent, authorization must validate the explicit Teacher/Student relationship and authenticated ownership.
+
+## Security status
+
+The earlier `public.enforce_submission_review_authority()` execution exposure was hardened: public/anon/authenticated execution was revoked and service-role execution retained where required.
+
+Current Security Advisor status after the invitation-identity, dual-scope and School-Class regressions: only `auth_leaked_password_protection` remains. This is deferred because the current plan does not provide the feature.
+
+No client-controlled metadata or profile email should be used as the authority for invitation identity.
+
+## Migration discipline
+
+The repository previously contained migration-history drift relative to the active project. Reconciliation has therefore been incremental rather than replaying the original MVP schema blindly.
+
+Rules:
+- never modify unrelated Supabase projects;
+- review and test schema changes against the active project;
+- keep every accepted production change represented in repository migrations;
+- run rollback-only authorization regressions for tenant-sensitive changes;
+- run Security Advisor after auth/RLS/function changes;
+- never automatically migrate an Independent Teacher relationship into a School tenant.
