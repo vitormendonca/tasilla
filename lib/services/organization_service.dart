@@ -75,7 +75,107 @@ class OrganizationStudentSummary {
   }
 }
 
+class LegacyTeacherStudentSummary {
+  final String id;
+  final String studentId;
+  final String studentName;
+  final String level;
+  final String status;
+  final String? organizationId;
+
+  const LegacyTeacherStudentSummary({
+    required this.id,
+    required this.studentId,
+    required this.studentName,
+    required this.level,
+    required this.status,
+    required this.organizationId,
+  });
+
+  factory LegacyTeacherStudentSummary.fromMap(
+    Map<String, dynamic> map,
+    Map<String, Map<String, dynamic>> profiles,
+  ) {
+    final studentId = map['student_id']?.toString() ?? '';
+    final profile = profiles[studentId] ?? const <String, dynamic>{};
+    return LegacyTeacherStudentSummary(
+      id: map['id']?.toString() ?? '',
+      studentId: studentId,
+      studentName: profile['full_name']?.toString() ?? 'Aluno',
+      level: profile['current_level']?.toString() ?? 'A1',
+      status: map['status']?.toString() ?? 'active',
+      organizationId: map['organization_id']?.toString(),
+    );
+  }
+}
+
 class OrganizationService {
+  static Future<List<LegacyTeacherStudentSummary>> getLegacyTeacherStudents() async {
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
+    if (client == null || user == null) return [];
+
+    try {
+      final data = await client
+          .from('teacher_students')
+          .select('id,student_id,status,organization_id')
+          .eq('teacher_id', user.id)
+          .order('created_at');
+
+      final rows = _rowsFromResponse(data);
+      final studentIds = rows
+          .map((row) => row['student_id']?.toString() ?? '')
+          .where((id) => id.isNotEmpty)
+          .toSet()
+          .toList();
+      final profiles = <String, Map<String, dynamic>>{};
+
+      if (studentIds.isNotEmpty) {
+        final profileData = await client
+            .from('profiles')
+            .select('id,full_name,current_level')
+            .inFilter('id', studentIds);
+        for (final profile in _rowsFromResponse(profileData)) {
+          final id = profile['id']?.toString();
+          if (id != null && id.isNotEmpty) profiles[id] = profile;
+        }
+      }
+
+      return rows
+          .map((row) => LegacyTeacherStudentSummary.fromMap(row, profiles))
+          .where((item) => item.id.isNotEmpty && item.studentId.isNotEmpty)
+          .toList();
+    } catch (error) {
+      debugPrint('Legacy teacher-student relationships unavailable: $error');
+      return [];
+    }
+  }
+
+  static Future<bool> mapLegacyTeacherStudent({
+    required String relationshipId,
+    required String organizationId,
+  }) async {
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
+    if (client == null || user == null || relationshipId.isEmpty || organizationId.isEmpty) {
+      return false;
+    }
+
+    try {
+      await client.rpc(
+        'map_teacher_student_to_organization',
+        params: {
+          'relationship_id': relationshipId,
+          'target_organization_id': organizationId,
+        },
+      );
+      return true;
+    } catch (error) {
+      debugPrint('Legacy relationship mapping failed: $error');
+      return false;
+    }
+  }
+
   static Future<List<OrganizationSummary>>
   getOrganizationsForCurrentUser() async {
     final client = SupabaseBootstrap.client;
