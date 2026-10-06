@@ -12,10 +12,6 @@ class TeacherClassesScreen extends StatefulWidget {
 
 class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
   List<OrganizationSummary> organizations = [];
-  List<OrganizationStudentSummary> organizationStudents = [];
-  List<ClassStudentSummary> enrolledStudents = [];
-  ClassSummary? selectedClass;
-  bool isRosterLoading = false;
   List<ClassSummary> classes = [];
   OrganizationSummary? selectedOrganization;
   bool isLoading = true;
@@ -252,7 +248,7 @@ class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
                 items: organizations.map((item) => DropdownMenuItem(value: item.id, child: Text(item.name))).toList(),
                 onChanged: isSaving ? null : (id) async {
                   final organization = organizations.firstWhere((item) => item.id == id);
-                  setState(() { selectedOrganization = organization; isLoading = true; });
+                  setState(() { selectedOrganization = organization; selectedClass = null; enrolledStudents = []; organizationStudents = []; isLoading = true; });
                   final loaded = await ClassService.listForOrganization(organization.id);
                   if (!mounted) return;
                   setState(() { classes = loaded; isLoading = false; });
