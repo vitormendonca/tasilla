@@ -692,8 +692,12 @@ class LearningPathProgressService {
     }
 
     try {
+      final context = await _studentTeachingContext();
+      if (context == null) return;
       await client.from('level_check_attempts').insert({
         'student_id': studentId,
+        'teacher_id': context['teacher_id'],
+        'organization_id': context['organization_id'],
         'level': level,
         'score': score,
         'passed': passed,
@@ -718,11 +722,19 @@ class LearningPathProgressService {
     }
 
     try {
-      final latest = await client
+      final context = await _studentTeachingContext();
+      if (context == null) return;
+      var latestQuery = client
           .from('attempts')
           .select('attempt_number')
           .eq('student_id', studentId)
-          .eq('learning_step_id', stepId)
+          .eq('teacher_id', context['teacher_id']!)
+          .eq('learning_step_id', stepId);
+      final organizationId = context['organization_id'];
+      latestQuery = organizationId == null
+          ? latestQuery.isFilter('organization_id', null)
+          : latestQuery.eq('organization_id', organizationId);
+      final latest = await latestQuery
           .order('attempt_number', ascending: false)
           .limit(1);
       final rows = _rowsFromResponse(latest);
@@ -732,6 +744,8 @@ class LearningPathProgressService {
 
       await client.from('attempts').insert({
         'student_id': studentId,
+        'teacher_id': context['teacher_id'],
+        'organization_id': context['organization_id'],
         'learning_step_id': stepId,
         'attempt_number': previous + 1,
         'score': score.clamp(0.0, 1.0),
@@ -739,8 +753,6 @@ class LearningPathProgressService {
         'answers': answers,
       });
 
-      final context = await _studentTeachingContext();
-      if (context == null) return;
       await client.from('student_step_progress').upsert({
         'student_id': studentId,
         'teacher_id': context['teacher_id'],
