@@ -62,6 +62,46 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
     });
   }
 
+  Future<void> _linkStudent() async {
+    final controller = TextEditingController();
+    final code = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Link student'),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          textCapitalization: TextCapitalization.characters,
+          decoration: const InputDecoration(
+            labelText: 'Student access code',
+            hintText: 'Enter the code shared by the student',
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancel')),
+          FilledButton(onPressed: () => Navigator.pop(context, controller.text.trim()), child: const Text('Link')),
+        ],
+      ),
+    );
+    controller.dispose();
+    if (!mounted || code == null || code.isEmpty) return;
+
+    setState(() => isLoading = true);
+    final error = await TeacherStudentsService.linkStudentByAccessCode(
+      accessCode: code,
+      organizationId: selectedOrganizationId,
+    );
+    if (!mounted) return;
+    if (error != null) {
+      setState(() => isLoading = false);
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(error)));
+      return;
+    }
+    await _loadStudents();
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Student linked.')));
+  }
+
   Future<void> _openStudent(TeacherStudentSummary student) async {
     await Navigator.push(
       context,
@@ -99,6 +139,11 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
         iconTheme: IconThemeData(color: textMuted),
         title: Text('Students', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: textPrimary)),
         actions: [
+          IconButton(
+            tooltip: 'Link student',
+            onPressed: isLoading ? null : _linkStudent,
+            icon: Icon(Icons.person_add_alt_1_outlined, color: textMuted, size: 20),
+          ),
           IconButton(
             tooltip: 'Refresh students',
             onPressed: _loadStudents,
@@ -238,7 +283,7 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
           Text('No linked students yet', textAlign: TextAlign.center, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: textPrimary)),
           const SizedBox(height: 8),
           Text(
-            'Link a student to this teacher in Supabase to manage real assignments.',
+            'Use the student access code to link a student. Your plan limit is enforced automatically.',
             textAlign: TextAlign.center,
             style: TextStyle(color: textMuted, fontSize: 13, height: 1.4),
           ),
