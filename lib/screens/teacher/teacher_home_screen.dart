@@ -24,6 +24,7 @@ class _TeacherHomeScreenState extends State<TeacherHomeScreen> {
   TeacherDashboardStats _stats = TeacherDashboardStats.empty;
   bool _loadingStats = true;
   String? _statsError;
+  int _dashboardRequest = 0;
 
   @override
   void initState() {
@@ -32,10 +33,16 @@ class _TeacherHomeScreenState extends State<TeacherHomeScreen> {
   }
 
   Future<void> _loadDashboard() async {
+    final request = ++_dashboardRequest;
+    final organizationId = _organizationId;
+    setState(() {
+      _loadingStats = true;
+      _statsError = null;
+    });
     try {
       final organizations = await OrganizationService.getOrganizationsForCurrentUser();
-      final stats = await TeacherDashboardService.getStats(organizationId: _organizationId);
-      if (!mounted) return;
+      final stats = await TeacherDashboardService.getStats(organizationId: organizationId);
+      if (!mounted || request != _dashboardRequest) return;
       setState(() {
         _organizations = organizations;
         _stats = stats;
@@ -43,7 +50,7 @@ class _TeacherHomeScreenState extends State<TeacherHomeScreen> {
         _statsError = null;
       });
     } catch (_) {
-      if (!mounted) return;
+      if (!mounted || request != _dashboardRequest) return;
       setState(() {
         _loadingStats = false;
         _statsError = 'Dashboard metrics are temporarily unavailable.';
@@ -51,8 +58,10 @@ class _TeacherHomeScreenState extends State<TeacherHomeScreen> {
     }
   }
 
-  void _openScreen(BuildContext context, Widget screen) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
+  Future<void> _openScreen(BuildContext context, Widget screen) async {
+    await Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
+    if (!mounted) return;
+    await _loadDashboard();
   }
 
   @override
