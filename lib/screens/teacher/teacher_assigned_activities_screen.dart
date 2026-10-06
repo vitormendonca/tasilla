@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/assigned_activity.dart';
 import '../../services/assignment_service.dart';
+import '../../services/organization_service.dart';
 import '../../theme/app_theme.dart';
 
 class TeacherAssignedActivitiesScreen extends StatefulWidget {
@@ -13,6 +14,8 @@ class TeacherAssignedActivitiesScreen extends StatefulWidget {
 
 class _TeacherAssignedActivitiesScreenState extends State<TeacherAssignedActivitiesScreen> {
   List<AssignedActivity> assignedActivities = [];
+  List<OrganizationSummary> organizations = [];
+  String? selectedOrganizationId;
   bool isLoading = true;
 
   @override
@@ -22,11 +25,16 @@ class _TeacherAssignedActivitiesScreenState extends State<TeacherAssignedActivit
   }
 
   Future<void> _loadAssignedActivities() async {
-    final activities = await AssignmentService.getAllAssignedActivities();
+    final loadedOrganizations = await OrganizationService.getMyOrganizations();
+    final activities = await AssignmentService.getAllAssignedActivities(
+      organizationId: selectedOrganizationId,
+      filterByContext: true,
+    );
 
     if (!mounted) return;
 
     setState(() {
+      organizations = loadedOrganizations;
       assignedActivities = activities.reversed.toList();
       isLoading = false;
     });
@@ -98,7 +106,44 @@ class _TeacherAssignedActivitiesScreenState extends State<TeacherAssignedActivit
           children: [
             Text('ASSIGNED ACTIVITIES', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: textMuted)),
             const SizedBox(height: 4),
-            Text('View activities that have already been assigned to students.', style: TextStyle(fontSize: 12, color: textMuted)),
+            Text('View activities for one teaching context at a time.', style: TextStyle(fontSize: 12, color: textMuted)),
+            const SizedBox(height: 16),
+            DropdownButtonFormField<String>(
+              value: selectedOrganizationId ?? '__independent__',
+              decoration: InputDecoration(
+                labelText: 'Teaching context',
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+              ),
+              items: [
+                const DropdownMenuItem<String>(
+                  value: '__independent__',
+                  child: Text('Independent Teacher'),
+                ),
+                ...organizations.map(
+                  (organization) => DropdownMenuItem<String>(
+                    value: organization.id,
+                    child: Text(organization.name),
+                  ),
+                ),
+              ],
+              onChanged: isLoading
+                  ? null
+                  : (value) async {
+                      setState(() {
+                        selectedOrganizationId =
+                            value == '__independent__' ? null : value;
+                        isLoading = true;
+                      });
+                      await _loadAssignedActivities();
+                    },
+            ),
+            const SizedBox(height: 8),
+            Text(
+              selectedOrganizationId == null
+                  ? 'Showing Independent Teacher assignments.'
+                  : 'Showing assignments for the selected School.',
+              style: TextStyle(fontSize: 11, color: textMuted),
+            ),
             const SizedBox(height: 20),
             if (isLoading)
               Center(child: Padding(padding: const EdgeInsets.only(top: 40), child: CircularProgressIndicator(color: textPrimary, strokeWidth: 1.5)))
