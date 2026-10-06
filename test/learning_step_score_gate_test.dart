@@ -31,10 +31,21 @@ void main() {
     await tester.pump();
   }
 
+  Future<void> tapVisibleText(WidgetTester tester, String text) async {
+    final finder = find.text(text).last;
+    await tester.ensureVisible(finder);
+    await tester.pump();
+    await tester.tap(finder);
+    await tester.pump();
+  }
+
   Future<void> tapCompletionButton(WidgetTester tester) async {
-    final button = find.text('COMPLETE LESSON');
-    await tester.ensureVisible(button);
-    await tester.tap(button);
+    await tester.scrollUntilVisible(
+      find.text('COMPLETE LESSON'),
+      400,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.tap(find.text('COMPLETE LESSON'));
     await tester.pump();
   }
 
@@ -67,8 +78,7 @@ void main() {
       final wrong = question.options.firstWhere(
         (option) => option != question.correctAnswer,
       );
-      await tester.tap(find.text(wrong).last);
-      await tester.pump();
+      await tapVisibleText(tester, wrong);
     }
     await tapCompletionButton(tester);
 
@@ -92,8 +102,7 @@ void main() {
     final questions = getA1LearningExperienceById(stepId)!.quizBlock!.questions;
 
     for (final question in questions) {
-      await tester.tap(find.text(question.correctAnswer).last);
-      await tester.pump();
+      await tapVisibleText(tester, question.correctAnswer);
     }
     await tapCompletionButton(tester);
     await tester.pumpAndSettle();
