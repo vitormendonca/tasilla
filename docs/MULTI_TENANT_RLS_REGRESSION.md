@@ -74,6 +74,20 @@ Passed 5/5 in a rollback-only production-schema transaction:
 
 Certificate verification is intentionally different from private learning records: a non-revoked certificate remains publicly readable by certificate code. Tenant isolation controls who may issue a certificate and which private evidence/progress may be used to establish eligibility; it must not disable public verification.
 
+## Student multi-context end-to-end gate
+
+Passed 6/6 in a rollback-only transaction against the production schema:
+- Teacher A created separate Independent Teacher and School assignments for the same Student;
+- the Student could read both records as distinct contexts;
+- the Student persisted separate progress and evidence in Independent and School contexts;
+- Teacher B, despite having a separate active relationship with the same Student, could not read Teacher A private progress or evidence;
+- Teacher A reviewed evidence in both owned contexts and the review trigger stamped the assigned reviewer;
+- Teacher A issued separate Independent and School certificates without collapsing their tenancy context.
+
+All fixtures were rolled back. No persistent test users, memberships, assignments, evidence, progress or certificates were created.
+
+The Flutter Student flow now resolves one validated active teaching context. A single relationship is selected automatically. Multiple active relationships require an explicit Student choice; no first-Teacher/first-School fallback is allowed. Assignments, submissions, progress, attempts and level checks consume that selected context, and local progress cache keys include it.
+
 ## Security status
 
 Security Advisor after the current regressions reports only `auth_leaked_password_protection`. This warning is intentionally deferred under the current plan constraint.
