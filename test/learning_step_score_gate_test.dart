@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/screens/student/student_learning_step_screen.dart';
+import 'package:tasilla/models/activity_question.dart';
 
 void main() {
   setUpAll(() async {
@@ -37,6 +38,28 @@ void main() {
     await tester.pump();
     await tester.tap(finder);
     await tester.pump();
+  }
+
+  bool usesTextEntry(ActivityQuestion question) =>
+      question.type == QuestionType.textInput ||
+      question.type == QuestionType.dictation ||
+      (question.type == QuestionType.fillBlank && question.options.isEmpty);
+
+  Future<void> answerQuestion(
+    WidgetTester tester,
+    ActivityQuestion question,
+    String answer,
+  ) async {
+    if (usesTextEntry(question)) {
+      final field = find.byKey(ValueKey('answer_${question.id}'));
+      await tester.ensureVisible(field);
+      await tester.pump();
+      await tester.enterText(field, answer);
+      await tester.testTextInput.receiveAction(TextInputAction.done);
+      await tester.pump();
+      return;
+    }
+    await tapVisibleText(tester, answer);
   }
 
   Future<void> tapCompletionButton(WidgetTester tester) async {
@@ -79,7 +102,7 @@ void main() {
       final wrong = question.options.firstWhere(
         (option) => option != question.correctAnswer,
       );
-      await tapVisibleText(tester, wrong);
+      await answerQuestion(tester, question, wrong);
     }
     await tapCompletionButton(tester);
 
@@ -106,7 +129,7 @@ void main() {
     final questions = getA1LearningExperienceById(stepId)!.quizBlock!.questions;
 
     for (final question in questions) {
-      await tapVisibleText(tester, question.correctAnswer);
+      await answerQuestion(tester, question, question.correctAnswer);
     }
     await tapCompletionButton(tester);
     await tester.pumpAndSettle();
