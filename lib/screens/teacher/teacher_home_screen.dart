@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../services/organization_service.dart';
+import '../../services/teacher_dashboard_service.dart';
 import '../../theme/theme_controller.dart';
 import 'teacher_assigned_activities_screen.dart';
 import 'teacher_classes_screen.dart';
@@ -8,8 +10,45 @@ import 'teacher_profile_screen.dart';
 import 'teacher_review_screen.dart';
 import 'teacher_students_screen.dart';
 
-class TeacherHomeScreen extends StatelessWidget {
+class TeacherHomeScreen extends StatefulWidget {
   const TeacherHomeScreen({super.key});
+
+  @override
+  State<TeacherHomeScreen> createState() => _TeacherHomeScreenState();
+}
+
+class _TeacherHomeScreenState extends State<TeacherHomeScreen> {
+  List<OrganizationSummary> _organizations = const [];
+  String? _organizationId;
+  TeacherDashboardStats _stats = TeacherDashboardStats.empty;
+  bool _loadingStats = true;
+  String? _statsError;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadDashboard();
+  }
+
+  Future<void> _loadDashboard() async {
+    try {
+      final organizations = await OrganizationService.getOrganizationsForCurrentUser();
+      final stats = await TeacherDashboardService.getStats(organizationId: _organizationId);
+      if (!mounted) return;
+      setState(() {
+        _organizations = organizations;
+        _stats = stats;
+        _loadingStats = false;
+        _statsError = null;
+      });
+    } catch (_) {
+      if (!mounted) return;
+      setState(() {
+        _loadingStats = false;
+        _statsError = 'Dashboard metrics are temporarily unavailable.';
+      });
+    }
+  }
 
   void _showComingSoon(BuildContext context, String featureName) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -59,6 +98,42 @@ class TeacherHomeScreen extends StatelessWidget {
           Text('Welcome, Teacher', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w300, color: textPrimary, letterSpacing: -0.5)),
           const SizedBox(height: 4),
           Text('Manage your students, classes, activities and progress from here.', style: TextStyle(fontSize: 13, color: textMuted, height: 1.4)),
+          const SizedBox(height: 20),
+          if (_organizations.isNotEmpty) ...[
+            DropdownButtonFormField<String>(
+              initialValue: _organizationId ?? '__independent__',
+              decoration: const InputDecoration(labelText: 'Teaching context'),
+              items: [
+                const DropdownMenuItem(value: '__independent__', child: Text('Independent Teacher')),
+                for (final organization in _organizations)
+                  DropdownMenuItem(value: organization.id, child: Text(organization.name)),
+              ],
+              onChanged: (value) async {
+                setState(() {
+                  _organizationId = value == '__independent__' ? null : value;
+                  _loadingStats = true;
+                  _statsError = null;
+                });
+                await _loadDashboard();
+              },
+            ),
+            const SizedBox(height: 16),
+          ],
+          if (_loadingStats)
+            const LinearProgressIndicator()
+          else if (_statsError != null)
+            Row(children: [Expanded(child: Text(_statsError!, style: TextStyle(fontSize: 12, color: textMuted))), TextButton(onPressed: () { setState(() => _loadingStats = true); _loadDashboard(); }, child: const Text('Retry'))])
+          else
+            Wrap(
+              spacing: 10,
+              runSpacing: 10,
+              children: [
+                _metricCard('Students', _stats.activeStudents, textPrimary, textMuted, surface, border),
+                _metricCard('Classes', _stats.classes, textPrimary, textMuted, surface, border),
+                _metricCard('Pending reviews', _stats.pendingReviews, textPrimary, textMuted, surface, border),
+                _metricCard('Completed steps', _stats.completedSteps, textPrimary, textMuted, surface, border),
+              ],
+            ),
           const SizedBox(height: 24),
           _actionTile(
             icon: Icons.person_outline,
@@ -104,6 +179,19 @@ class TeacherHomeScreen extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _metricCard(String label, int value, Color textPrimary, Color textMuted, Color surface, Color border) {
+    return Container(
+      width: 150,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(12), border: Border.all(color: border)),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text('$value', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500, color: textPrimary)),
+        const SizedBox(height: 4),
+        Text(label, style: TextStyle(fontSize: 11, color: textMuted)),
+      ]),
     );
   }
 
