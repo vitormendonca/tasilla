@@ -87,7 +87,7 @@ class AssignmentService {
       }).toList();
     } catch (error) {
       debugPrint('Remote assignments unavailable: $error');
-      return false;
+      return null;
     }
   }
 
@@ -114,6 +114,10 @@ class AssignmentService {
 
     if (remoteResult != null) {
       return remoteResult;
+    }
+
+    if (SupabaseBootstrap.client?.auth.currentUser != null) {
+      return false;
     }
 
     final currentAssignments = await _getLocalAssignments();
@@ -316,6 +320,10 @@ class AssignmentService {
       return;
     }
 
+    if (SupabaseBootstrap.client?.auth.currentUser != null) {
+      return;
+    }
+
     final currentAssignments = await _getLocalAssignments();
 
     final updatedAssignments = currentAssignments.map((assignment) {
@@ -441,6 +449,10 @@ class AssignmentService {
     final wasDeletedRemotely = await _cancelRemoteAssignment(assignmentId);
 
     if (wasDeletedRemotely) {
+      return;
+    }
+
+    if (SupabaseBootstrap.client?.auth.currentUser != null) {
       return;
     }
 
