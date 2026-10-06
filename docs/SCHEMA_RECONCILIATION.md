@@ -63,3 +63,21 @@ Do not apply the repository's original initial migration blindly. Reconciliation
 public.enforce_submission_review_authority() remains intentionally SECURITY DEFINER because it is a trigger function. Its public execute privilege has been removed.
 
 Supabase Auth leaked-password protection remains the only current Security Advisor warning.
+
+## 2026-10-06 — organização → alunos → matrícula
+
+A base ativa recebeu duas migrações incrementais para permitir que staff da organização consulte perfis de alunos da própria organização, sem abrir leitura global de perfis:
+
+- `20261006120654_allow_org_staff_to_read_student_profiles`
+- `20261006120658_harden_org_student_profile_visibility`
+
+A segunda migração substitui a primeira política por uma versão explicitamente tenant-aware, exigindo que o ator seja owner/admin/teacher da mesma organização do aluno.
+
+No branch atual, a implementação Flutter correspondente está em:
+
+- `OrganizationService.getStudentMembers()`
+- `ClassService.listStudents()` com perfil do aluno
+- `TeacherClassesScreen` com seleção de turma, roster e matrícula de alunos da organização.
+
+**Regra de reconciliação:** essas migrações foram aplicadas diretamente no ambiente ativo durante a reconciliação. Antes de um novo bootstrap/replay de migrações, os arquivos de migração devem ser reconciliados com o histórico real para evitar reaplicação duplicada. Não executar cegamente a migration inicial antiga.
+
