@@ -341,6 +341,10 @@ class LearningPathProgressService {
       return remoteCompleted;
     }
 
+    if (SupabaseBootstrap.client?.auth.currentUser != null) {
+      return {};
+    }
+
     return _getLocalCompletedStepIdsForIdentity(
       studentId: studentId,
       studentName: studentName,
