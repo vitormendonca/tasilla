@@ -1,10 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/data/a1_learning_experience_data.dart';
 import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/models/learning_enums.dart';
 import 'package:tasilla/models/learning_path_step.dart';
 
 void main() {
+  setUpAll(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    await loadA1Content();
+  });
   test('A1 launch roadmap exposes only polished EXP 001 to 020', () {
     final roadSteps = getA1RoadmapSteps();
     final core = _stepsForKind(roadSteps, ActivityKind.coreActivity);
