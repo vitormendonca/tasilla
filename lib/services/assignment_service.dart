@@ -23,8 +23,12 @@ class AssignmentService {
   static Future<List<AssignedActivity>> getAssignedActivitiesForStudent({
     required String studentId,
     required String studentName,
+    String? organizationId,
   }) async {
-    final remoteAssignments = await _getRemoteAssignments(studentId: studentId);
+    final remoteAssignments = await _getRemoteAssignments(
+      studentId: studentId,
+      organizationId: organizationId,
+    );
 
     if (remoteAssignments != null) {
       return remoteAssignments;
@@ -56,6 +60,7 @@ class AssignmentService {
 
   static Future<List<AssignedActivity>?> _getRemoteAssignments({
     String? studentId,
+    String? organizationId,
   }) async {
     final client = SupabaseBootstrap.client;
     final user = client?.auth.currentUser;
@@ -74,6 +79,11 @@ class AssignmentService {
 
       if (studentId != null && studentId.isNotEmpty) {
         query = query.eq('student_id', studentId);
+      }
+
+      final resolvedOrganizationId = await _resolveOrganizationId(organizationId);
+      if (resolvedOrganizationId != null && resolvedOrganizationId.isNotEmpty) {
+        query = query.eq('organization_id', resolvedOrganizationId);
       }
 
       final data = await query.order('assigned_at');
