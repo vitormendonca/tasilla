@@ -31,6 +31,9 @@ The first Sprint 2 foundation is live:
 - tenant-aware RLS
 - owner/admin/teacher/student membership roles
 - private membership/ownership helpers
+- classes and class_students with tenant-aware RLS
+- assignments.organization_id with tenant-aware assignment RLS
+- student update protection preventing reassignment across tenant/class/teacher boundaries
 
 No existing users were migrated into an organization yet. This is deliberate: the next step is to connect the existing teacher/student relationship and class model without creating an unsafe implicit tenant.
 
