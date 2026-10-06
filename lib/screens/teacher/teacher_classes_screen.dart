@@ -12,10 +12,18 @@ class TeacherClassesScreen extends StatefulWidget {
 
 class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
   List<OrganizationSummary> organizations = [];
+  List<OrganizationStudentSummary> organizationStudents = [];
+  List<ClassStudentSummary> enrolledStudents = [];
+  ClassSummary? selectedClass;
+  bool isRosterLoading = false;
   List<ClassSummary> classes = [];
   OrganizationSummary? selectedOrganization;
   bool isLoading = true;
   bool isSaving = false;
+  List<OrganizationStudentSummary> organizationStudents = [];
+  List<ClassStudentSummary> enrolledStudents = [];
+  ClassSummary? selectedClass;
+  bool isRosterLoading = false;
 
   @override
   void initState() {
@@ -49,8 +57,58 @@ class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
       organizations = loaded;
       selectedOrganization = selected;
       classes = loadedClasses;
+      selectedClass = null;
+      enrolledStudents = [];
+      organizationStudents = [];
       isLoading = false;
     });
+  }
+
+
+  Future<void> _loadRoster(ClassSummary classItem) async {
+    setState(() => isRosterLoading = true);
+    final roster = await ClassService.listStudents(classItem.id);
+    final students = await OrganizationService.getStudentMembers(classItem.organizationId);
+    if (!mounted) return;
+    setState(() {
+      selectedClass = classItem;
+      enrolledStudents = roster;
+      organizationStudents = students;
+      isRosterLoading = false;
+    });
+  }
+
+  Future<void> _showAddStudentDialog() async {
+    final classItem = selectedClass;
+    if (classItem == null) return;
+    final enrolledIds = enrolledStudents.map((item) => item.studentId).toSet();
+    final available = organizationStudents.where((student) => !enrolledIds.contains(student.userId)).toList();
+    if (available.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Todos os alunos da organização já estão nesta turma.')));
+      return;
+    }
+    final student = await showDialog<OrganizationStudentSummary>(
+      context: context,
+      builder: (context) => SimpleDialog(
+        title: const Text('Adicionar aluno'),
+        children: available.map((item) => SimpleDialogOption(
+          onPressed: () => Navigator.pop(context, item),
+          child: ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text(item.fullName),
+            subtitle: Text('Nível ${item.level}'),
+            leading: const CircleAvatar(child: Icon(Icons.person_outline)),
+          ),
+        )).toList(),
+      ),
+    );
+    if (student == null) return;
+    setState(() => isSaving = true);
+    final ok = await ClassService.enrollStudent(classId: classItem.id, studentId: student.userId);
+    if (!mounted) return;
+    setState(() => isSaving = false);
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(ok ? student.fullName + ' adicionado à turma.' : 'Não foi possível adicionar o aluno.')));
+    if (ok) await _loadRoster(classItem);
   }
 
   Future<void> _createOrganization() async {
@@ -213,7 +271,9 @@ class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
                   margin: const EdgeInsets.only(bottom: 10),
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(12), border: Border.all(color: border)),
-                  child: Row(children: [
+                  child: InkWell(
+                    onTap: () => _loadRoster(item),
+                    child: Row(children: [
                     Icon(Icons.groups_outlined, color: textMuted),
                     const SizedBox(width: 12),
                     Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -221,8 +281,35 @@ class _TeacherClassesScreenState extends State<TeacherClassesScreen> {
                       const SizedBox(height: 4),
                       Text('Level ${item.level} · ${item.status}', style: TextStyle(fontSize: 11, color: textMuted)),
                     ])),
-                  ]),
+                    ]),
+                  ),
                 )),
+              if (selectedClass != null) ...[
+                const SizedBox(height: 18),
+                Row(children: [
+                  Expanded(child: Text('ALUNOS DA TURMA', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: textMuted))),
+                  FilledButton.icon(onPressed: isSaving ? null : _showAddStudentDialog, icon: const Icon(Icons.person_add_alt_1, size: 16), label: const Text('Adicionar aluno')),
+                ]),
+                const SizedBox(height: 10),
+                if (isRosterLoading)
+                  const Center(child: Padding(padding: EdgeInsets.all(20), child: CircularProgressIndicator()))
+                else if (enrolledStudents.isEmpty)
+                  Text('Nenhum aluno matriculado nesta turma.', style: TextStyle(fontSize: 13, color: textMuted))
+                else
+                  ...enrolledStudents.map((student) => Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                    decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(10), border: Border.all(color: border)),
+                    child: Row(children: [
+                      const CircleAvatar(radius: 17, child: Icon(Icons.person_outline, size: 18)),
+                      const SizedBox(width: 10),
+                      Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(student.studentName, style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500, color: textPrimary)),
+                        Text('Nível ${student.level} · ${student.status}', style: TextStyle(fontSize: 11, color: textMuted)),
+                      ])),
+                    ]),
+                  )),
+              ],
             ],
           ],
         ),
