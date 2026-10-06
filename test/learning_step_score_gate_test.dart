@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/data/a1_learning_experience_data.dart';
 import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/screens/student/student_learning_step_screen.dart';
 
 void main() {
+  setUpAll(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    await loadA1Content();
+  });
   Future<void> pumpStep(
     WidgetTester tester,
     String stepId,
