@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/services/certificate_service.dart';
 import 'package:tasilla/services/submission_service.dart';
 
@@ -46,6 +47,10 @@ Submission _submission(String stepId, String status, {String skill = 'speaking'}
 }
 
 void main() {
+  setUpAll(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    await loadA1Content();
+  });
   group('certificate code', () {
     test('is human-readable and namespaced by level', () {
       final code = CertificateService.generateCertificateCode('A1');
