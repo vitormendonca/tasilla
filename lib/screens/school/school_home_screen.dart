@@ -17,6 +17,8 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
   OrganizationSummary? _organization;
   AccountEntitlement? _entitlement;
   SchoolDashboardStats _stats = const SchoolDashboardStats(activeTeachers: 0, pendingTeacherInvites: 0, students: 0, classes: 0);
+  List<SchoolMemberDisplay> _members = [];
+  List<TeacherInvitationSummary> _pendingInvites = [];
   bool _loading = true;
   String? _message;
 
@@ -41,11 +43,15 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
     final stats = organization == null
         ? const SchoolDashboardStats(activeTeachers: 0, pendingTeacherInvites: 0, students: 0, classes: 0)
         : await OrganizationService.getSchoolDashboardStats(organization.id);
+    final members = organization == null ? <SchoolMemberDisplay>[] : await OrganizationService.getSchoolMembers(organization.id);
+    final invites = organization == null ? <TeacherInvitationSummary>[] : await OrganizationService.getSchoolPendingInvitations(organization.id);
     if (!mounted) return;
     setState(() {
       _entitlement = entitlement;
       _organization = organization;
       _stats = stats;
+      _members = members;
+      _pendingInvites = invites;
       _loading = false;
     });
   }
@@ -84,6 +90,54 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
       _message = ok ? 'Teacher invitation registered.' : 'Could not invite teacher. Check the plan limit or email.';
       _loading = false;
     });
+  }
+
+  Future<void> _createClass() async {
+    final organization = _organization;
+    final teachers = _members.where((member) => member.role == 'teacher').toList();
+    if (organization == null || teachers.isEmpty) {
+      setState(() => _message = 'Invite a teacher and wait for acceptance before creating a class.');
+      return;
+    }
+    final name = TextEditingController();
+    String teacherId = teachers.first.userId;
+    String level = 'A1';
+    final submit = await showDialog<bool>(
+      context: context,
+      builder: (context) => StatefulBuilder(builder: (context, setDialogState) => AlertDialog(
+        title: const Text('Create class'),
+        content: Column(mainAxisSize: MainAxisSize.min, children: [
+          TextField(controller: name, autofocus: true, decoration: const InputDecoration(labelText: 'Class name')),
+          const SizedBox(height: 12),
+          DropdownButtonFormField<String>(
+            value: teacherId,
+            decoration: const InputDecoration(labelText: 'Teacher'),
+            items: teachers.map((teacher) => DropdownMenuItem(value: teacher.userId, child: Text(teacher.fullName))).toList(),
+            onChanged: (value) => setDialogState(() => teacherId = value ?? teacherId),
+          ),
+          const SizedBox(height: 12),
+          DropdownButtonFormField<String>(
+            value: level,
+            decoration: const InputDecoration(labelText: 'Level'),
+            items: const ['A1','A2','B1'].map((item) => DropdownMenuItem(value: item, child: Text(item))).toList(),
+            onChanged: (value) => setDialogState(() => level = value ?? level),
+          ),
+        ]),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Cancel')),
+          FilledButton(onPressed: () => Navigator.pop(context, true), child: const Text('Create')),
+        ],
+      )),
+    );
+    final className = name.text.trim();
+    name.dispose();
+    if (submit != true) return;
+    if (className.length < 2) { setState(() => _message = 'Class name must contain at least 2 characters.'); return; }
+    setState(() => _loading = true);
+    final error = await OrganizationService.createSchoolClass(organizationId: organization.id, teacherId: teacherId, name: className, level: level);
+    await _load();
+    if (!mounted) return;
+    setState(() { _message = error ?? 'Class created and assigned to the selected teacher.'; _loading = false; });
   }
 
   Widget _metricCard(BuildContext context, String label, String value, String detail) {
@@ -170,6 +224,39 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
                           onPressed: teacherLimit != null && _stats.teacherSeatsUsed >= teacherLimit ? null : _inviteTeacher,
                           child: const Text('Invite teacher'),
                         ),
+                        const SizedBox(height: 28),
+                        Row(children: [
+                          Expanded(child: Text('Teachers', style: Theme.of(context).textTheme.titleMedium)),
+                          OutlinedButton.icon(onPressed: _createClass, icon: const Icon(Icons.add), label: const Text('New class')),
+                        ]),
+                        const SizedBox(height: 8),
+                        ..._members.where((member) => member.role == 'teacher').map((member) => ListTile(
+                          contentPadding: EdgeInsets.zero,
+                          leading: const CircleAvatar(child: Icon(Icons.school_outlined)),
+                          title: Text(member.fullName),
+                          subtitle: const Text('Active teacher'),
+                        )),
+                        if (_members.where((member) => member.role == 'teacher').isEmpty) const Text('No active teachers yet.'),
+                        if (_pendingInvites.isNotEmpty) ...[
+                          const SizedBox(height: 16),
+                          Text('Pending invitations', style: Theme.of(context).textTheme.titleSmall),
+                          ..._pendingInvites.map((invite) => ListTile(
+                            contentPadding: EdgeInsets.zero,
+                            leading: const Icon(Icons.mark_email_unread_outlined),
+                            title: Text(invite.email),
+                            subtitle: const Text('Waiting for teacher acceptance'),
+                          )),
+                        ],
+                        const SizedBox(height: 28),
+                        Text('Students', style: Theme.of(context).textTheme.titleMedium),
+                        const SizedBox(height: 8),
+                        ..._members.where((member) => member.role == 'student').map((member) => ListTile(
+                          contentPadding: EdgeInsets.zero,
+                          leading: const CircleAvatar(child: Icon(Icons.person_outline)),
+                          title: Text(member.fullName),
+                          subtitle: Text('Level ${member.level}'),
+                        )),
+                        if (_members.where((member) => member.role == 'student').isEmpty) const Text('No students enrolled in this school yet.'),
                       ],
                       if (_message != null) ...[
                         const SizedBox(height: 16),
