@@ -48,7 +48,13 @@ No existing users were migrated into an organization yet. This is deliberate: th
 
 Finish the organization → class → enrollment → assignment application flow, then explicitly map `teacher_students` into organization membership and retire legacy assignment authorization only after RLS regression coverage is in place.
 
-Next: connect real organization members to class enrollment, then make the student/assignment screens organization-aware before expanding dashboard analytics.
+Next: use the explicit teacher/student relationship mapping to place legacy relationships into an organization, then make the student/assignment screens organization-aware before expanding dashboard analytics.
+
+## 2026-10-06 — legacy relationship mapping
+
+The active database now supports explicit mapping of a `teacher_students` relationship into an organization. Mapping is never automatic: the teacher must select a specific relationship and target organization. The transactional function also creates the student's organization membership when needed, and the relationship remains unchanged if mapping fails.
+
+The legacy relationship remains readable during transition. Legacy assignment authorization is not retired until the existing relationships are explicitly mapped and RLS regression coverage confirms the tenant path.
 
 ## Definition of done
 
