@@ -48,6 +48,33 @@ class OrganizationMemberSummary {
   }
 }
 
+
+class OrganizationStudentSummary {
+  final String membershipId;
+  final String userId;
+  final String fullName;
+  final String level;
+
+  const OrganizationStudentSummary({
+    required this.membershipId,
+    required this.userId,
+    required this.fullName,
+    required this.level,
+  });
+
+  factory OrganizationStudentSummary.fromMap(Map<String, dynamic> map) {
+    final profile = map['profiles'] is Map
+        ? Map<String, dynamic>.from(map['profiles'] as Map)
+        : const <String, dynamic>{};
+    return OrganizationStudentSummary(
+      membershipId: map['id']?.toString() ?? '',
+      userId: map['user_id']?.toString() ?? profile['id']?.toString() ?? '',
+      fullName: profile['full_name']?.toString() ?? 'Aluno',
+      level: profile['current_level']?.toString() ?? 'A1',
+    );
+  }
+}
+
 class OrganizationService {
   static Future<List<OrganizationSummary>>
   getOrganizationsForCurrentUser() async {
@@ -104,6 +131,30 @@ class OrganizationService {
     } catch (error) {
       debugPrint('Organization creation failed: $error');
       return null;
+    }
+  }
+
+  static Future<List<OrganizationStudentSummary>> getStudentMembers(
+    String organizationId,
+  ) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || organizationId.isEmpty) return [];
+
+    try {
+      final data = await client
+          .from('organization_members')
+          .select('id,user_id,profiles(id,full_name,current_level)')
+          .eq('organization_id', organizationId)
+          .eq('role', 'student')
+          .order('created_at');
+
+      return _rowsFromResponse(data)
+          .map(OrganizationStudentSummary.fromMap)
+          .where((student) => student.userId.isNotEmpty)
+          .toList();
+    } catch (error) {
+      debugPrint('Organization students unavailable: $error');
+      return [];
     }
   }
 
