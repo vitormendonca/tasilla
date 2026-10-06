@@ -105,3 +105,15 @@ O arquivo correspondente deve permanecer versionado em `supabase/migrations/2026
 - Relações legadas teacher_students sem organization_id não aparecem na tela de alunos de uma organização.
 - Usuário autenticado sem organização vê estado vazio orientando a criação/entrada em uma organização, em vez de receber dados globais.
 - Isso mantém a migração legada controlada e evita que a UI reintroduza o caminho global depois das políticas tenant-aware.
+
+
+## 2026-10-06 — assignments e contexto de organização nas telas
+
+- `AssignmentService.getAssignedActivitiesForStudent` passou a aceitar `organizationId` e filtrar assignments pelo tenant resolvido.
+- `StudentAssignmentsScreen` deixou de usar `SharedPreferences` para decidir qual aluno consultar; em sessão autenticada usa `auth.currentUser.id` e o perfil remoto.
+- `TeacherStudentDetailScreen`, `TeacherAssignActivityScreen` e `TeacherStudentAssignedActivitiesScreen` propagam o `organizationId` selecionado.
+- Criação de assignment para aluno inclui o tenant explícito quando disponível.
+- Operações autenticadas de assignments não usam mais `SharedPreferences` como fallback após falha remota.
+- Atualização/cancelamento remoto confirma que uma linha foi efetivamente alterada antes de considerar a operação concluída.
+- A autorização final continua no Supabase RLS; a UI não é considerada mecanismo de segurança.
+- Ainda é necessário validar progress/certificate screens quanto ao mesmo contexto de organização e executar analyzer/testes Flutter no ambiente de desenvolvimento antes de declarar a etapa como totalmente validada.
