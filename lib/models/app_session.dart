@@ -13,9 +13,11 @@ class AppSession {
     required this.isRemote,
   });
 
-  bool get isTeacher {
-    return role == 'teacher' || role == 'admin';
-  }
+  bool get isSchool => role == 'school';
+
+  bool get isTeacher => role == 'teacher';
+
+  bool get isStudent => role == 'student';
 }
 
 class AppLoginResult {
