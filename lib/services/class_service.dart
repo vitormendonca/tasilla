@@ -74,10 +74,13 @@ class ClassService {
     if (client == null || organizationId.isEmpty) return [];
 
     try {
+      final user = client.auth.currentUser;
+      if (user == null) return [];
       final data = await client
           .from('classes')
           .select('id,organization_id,teacher_id,name,level,status')
           .eq('organization_id', organizationId)
+          .eq('teacher_id', user.id)
           .order('created_at');
 
       return _rows(data)
