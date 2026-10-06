@@ -9,12 +9,14 @@ class TeacherAssignActivityScreen extends StatefulWidget {
   final String studentId;
   final String studentName;
   final String studentLevel;
+  final String? organizationId;
 
   const TeacherAssignActivityScreen({
     super.key,
     required this.studentId,
     required this.studentName,
     required this.studentLevel,
+    this.organizationId,
   });
 
   @override
@@ -102,6 +104,7 @@ class _TeacherAssignActivityScreenState extends State<TeacherAssignActivityScree
         await AssignmentService.getAssignedActivitiesForStudent(
           studentId: widget.studentId,
           studentName: widget.studentName,
+          organizationId: widget.organizationId,
         );
 
     for (final activity in availableActivities) {
