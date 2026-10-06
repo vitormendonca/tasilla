@@ -96,3 +96,12 @@ Regras:
 - a autorização legada continua ativa até que todas as relações necessárias sejam mapeadas e a cobertura RLS seja validada.
 
 O arquivo correspondente deve permanecer versionado em `supabase/migrations/20261006122730_map_legacy_teacher_students_to_organization.sql`.
+
+
+## 2026-10-06 — tela de alunos orientada por organização
+
+- TeacherStudentsScreen passou a carregar as organizações disponíveis ao professor e exigir uma organização selecionada para consultar alunos.
+- TeacherStudentsService.getStudentsForCurrentTeacher(organizationId: ...) é chamado com o tenant explícito.
+- Relações legadas teacher_students sem organization_id não aparecem na tela de alunos de uma organização.
+- Usuário autenticado sem organização vê estado vazio orientando a criação/entrada em uma organização, em vez de receber dados globais.
+- Isso mantém a migração legada controlada e evita que a UI reintroduza o caminho global depois das políticas tenant-aware.
