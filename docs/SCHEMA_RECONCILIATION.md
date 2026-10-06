@@ -154,3 +154,10 @@ Correção aplicada:
 Importante: as tabelas de progresso e submissions ainda não possuem `organization_id` próprio. Portanto esta etapa reforça o contexto na camada de serviço e depende das políticas RLS tenant-aware já implantadas. A separação física por tenant dos dados históricos continua como etapa posterior caso a plataforma precise suportar o mesmo aluno compartilhado entre organizações com dados de aprendizagem independentes.
 
 Validação de qualidade: os arquivos foram revisados após a alteração via GitHub. O ambiente disponível nesta sessão não possui execução local confirmada do Flutter analyzer/test suite; portanto não declarar testes Flutter como aprovados até rodar no ambiente de desenvolvimento.
+
+
+## 2026-10-06 — ownership de certificados por organização
+
+A tabela `certificates` recebeu `organization_id` antes da primeira emissão real (0 certificados existentes no momento da mudança). As políticas de INSERT/SELECT para professores passaram a exigir o mesmo contexto de organização entre emissor, aluno e relacionamento `teacher_students`, além de membership do aluno na organização. O fluxo público de verificação por código não foi alterado.
+
+Migração: `20261006130500_add_certificate_organization_tenancy.sql`.
