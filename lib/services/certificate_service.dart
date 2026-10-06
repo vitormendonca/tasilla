@@ -326,6 +326,12 @@ class CertificateService {
       );
     }
 
+    if (organizationId == null || organizationId.isEmpty) {
+      throw const CertificateException(
+        'An organization is required to issue a certificate.',
+      );
+    }
+
     final eligibility = await getEligibilityForStudent(
       studentId,
       organizationId: organizationId,
