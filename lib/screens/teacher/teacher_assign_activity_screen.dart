@@ -212,17 +212,6 @@ class _TeacherAssignActivityScreenState extends State<TeacherAssignActivityScree
     );
   }
 
-  IconData _getActivityIcon(String type) {
-    switch (type) {
-      case 'Listening': return Icons.headphones_outlined;
-      case 'Speaking': return Icons.mic_none_outlined;
-      case 'Vocabulary': return Icons.style_outlined;
-      case 'Homework': return Icons.edit_note_outlined;
-      case 'Reading': return Icons.menu_book_outlined;
-      default: return Icons.task_alt_outlined;
-    }
-  }
-
   Color _getStatusColor(String status) {
     switch (status) {
       case 'Completed': return AppTheme.semanticGreen;
