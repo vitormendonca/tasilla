@@ -2,16 +2,18 @@
 
 ## Product north star
 
-School → organization → teacher → class → students → learning → evidence → teacher review → competency consolidation → approval → certificate → QR/code → public verification.
+School → Teachers → Classes/Students → learning → evidence → review → competency → certification.
 
-TASILLA is a B2B learning platform for teachers and schools. Students are the end users.
+Independent Teacher → Students → Classes/Learning → evidence → review → certification.
+
+TASILLA supports two paying account families: School and Independent Teacher. Student is the end user.
 
 ## Execution order
 
 1. Sprint 0 — Foundation and audit.
-2. Sprint 1 — Integrity — persist attempt history, answers, score, retry history and verify RLS.
-3. Sprint 2 — Organizations — membership, roles, tenant isolation, invitations and data migration.
-4. Sprint 3 — Classes — class lifecycle, enrollment, transfers and assignments.
+2. Sprint 1 — Integrity.
+3. Sprint 2 — Organizations / multi-tenancy.
+4. Sprint 3 — Classes.
 5. Sprint 4 — Teacher dashboard.
 6. Sprint 5 — Certification.
 7. Sprint 6 — E2E quality.
@@ -20,41 +22,39 @@ TASILLA is a B2B learning platform for teachers and schools. Students are the en
 10. Sprint 9 — Scale/admin/analytics.
 11. Sprint 10 — Expansion.
 
-## Current status
+## Current status — 2026-10-06
 
-Sprint 1 attempt persistence is implemented and protected by a unique (student_id, learning_step_id, attempt_number) index.
+### Completed foundation
 
-The first Sprint 2 foundation is live:
+- Three global account roles: School, Teacher and Student.
+- School onboarding owns the Organization; Teacher does not need an Organization to operate independently.
+- Teacher can belong to a School and continue using Independent Teacher context.
+- `organization_id IS NULL` is the intentional independent scope; non-null is School scope.
+- The same Teacher/Student pair can coexist in independent and School scopes without one relationship overwriting the other.
+- Server-side entitlements enforce School Teacher/Student limits and Independent Teacher Student limits.
+- School → Teacher invitation flow is tenant-aware and invitation identity is bound to the authenticated Auth email.
+- School operational dashboard exposes real Teacher, invite, Student and Class metrics.
+- School can create a Class only by selecting a Teacher belonging to the same School.
+- Teacher Students UI exposes an explicit Independent Teacher context plus each School context.
+- Email login enforces the selected Teacher/School global role.
+- Multi-tenant, dual-context, invitation identity and School Class regressions have passed.
+- Current Security Advisor result contains only the deferred leaked-password-protection warning.
 
-- organizations
-- organization_members
-- tenant-aware RLS
-- owner/admin/teacher/student membership roles
-- private membership/ownership helpers
-- classes and class_students with tenant-aware RLS
-- assignments.organization_id with tenant-aware assignment RLS
-- student update protection preventing reassignment across tenant/class/teacher boundaries
+### Current V1 gates
 
-No existing users were migrated into an organization yet. This is deliberate: the next step is to connect the existing teacher/student relationship and class model without creating an unsafe implicit tenant.
+1. Finish School management UX: invitation revoke/resend semantics, Teacher/Student lists and Class management lifecycle.
+2. Audit Teacher Classes UI so it no longer offers School Organization creation and so independent-vs-School class behavior is explicit.
+3. Verify assignment/progress/submission/certificate behavior in both supported scopes; older code was built during the previous organization-migration interpretation.
+4. Complete Teacher Dashboard around real operational data.
+5. Run end-to-end School → Teacher → Student and Independent Teacher → Student flows.
+6. Update certification for Independent Teacher issuance where product rules permit it.
+7. Complete pilot readiness, billing, admin and launch documentation.
 
-## Current blockers
+### Superseded migration assumption
 
-- Existing `teacher_students` rows still need an explicit organization mapping before the legacy relationship can be retired.
-- Historical repository schema definitions still require explicit reconciliation.
-- Supabase Auth leaked-password protection is currently disabled.
-- Teacher-facing organization/class/assignment UI is being connected incrementally; the Classes screen now consumes live organization/class data and can create both organizations and classes.
+Earlier Sprint 2 work treated `teacher_students.organization_id IS NULL` as a temporary legacy state that should eventually be mapped into an Organization. That assumption is superseded.
 
-## Immediate next gate
-
-Finish the organization → class → enrollment → assignment application flow, then explicitly map `teacher_students` into organization membership and retire legacy assignment authorization only after RLS regression coverage is in place.
-
-Next: use the explicit teacher/student relationship mapping to place legacy relationships into an organization, then make the student/assignment screens organization-aware before expanding dashboard analytics.
-
-## 2026-10-06 — legacy relationship mapping
-
-The active database now supports explicit mapping of a `teacher_students` relationship into an organization. Mapping is never automatic: the teacher must select a specific relationship and target organization. The transactional function also creates the student's organization membership when needed, and the relationship remains unchanged if mapping fails.
-
-The legacy relationship remains readable during transition. Legacy assignment authorization is not retired until the existing relationships are explicitly mapped and RLS regression coverage confirms the tenant path.
+Do not automatically map or retire NULL relationships. A NULL relationship is valid when it represents Independent Teacher scope. Historical sections below that refer to “legacy NULL relationships” document the earlier transition and must not be used as the current architecture rule.
 
 ## Definition of done
 
@@ -116,35 +116,22 @@ A emissão de certificado agora exige organização explícita no serviço e o b
 Próximo gate: validação E2E em ambiente Flutter real (analyzer/testes e fluxo aluno → submission → revisão → certificado), pois essa execução ainda não foi confirmada nesta sessão.
 
 
-### 2026-10-06 — Teacher/student tenant boundary hardening
-
-- New organization-scoped teacher/student relationships can no longer be created with a null `organization_id` by a teacher who already belongs to an organization.
-- Organization-scoped inserts require the actor to be owner/admin/teacher in that organization and the target student to be a student member of the same organization.
-- Existing legacy null relationships remain temporarily readable only for the explicit migration window; no automatic mapping was performed.
-- Live policy was verified after application. Security Advisor remains at the known single warning: leaked-password protection disabled due to current plan constraint.
-- Versioned migration: `20261006143000_harden_teacher_student_insert_tenant_boundary.sql`.
 
 
-### 2026-10-06 — Multi-tenant A × B regression
+## 2026-10-06 — Current tenancy and security checkpoint
 
-- Transactional RLS regression completed without persistent fixture data.
-- 9/9 checks passed: organization, class and assignment read isolation for students A/B plus cross-tenant rejection for class enrollment, assignment creation and teacher/student mapping.
-- The remaining staff-side regression for attempts, progress, submissions and submission Storage is intentionally blocked by the two active legacy `teacher_students.organization_id IS NULL` relationships and the absence of a second teacher identity.
-- Detailed evidence and exit criteria: `docs/MULTI_TENANT_RLS_REGRESSION.md`.
-- No legacy relationship was automatically mapped or modified.
+Current rule:
+- Independent Teacher relationship: `teacher_students.organization_id IS NULL`.
+- School relationship: `teacher_students.organization_id IS NOT NULL`.
+- A Teacher may use both simultaneously.
+- Global account role and Organization membership role remain separate concepts.
 
-## 2026-10-06 — Three-account commercial model and entitlements
+Verified regressions:
+- tenant isolation: 9/9;
+- Teacher dual-scope relationship behavior: 3/3;
+- invitation identity: 5/5;
+- School Class creation for same-tenant Teacher: 2/2.
 
-Product identity is now explicitly School, Teacher and Student. A Teacher may be independent; therefore a teacher_students row with organization_id NULL can be a valid independent-Teacher relationship and must not be automatically migrated or retired merely because it is unscoped.
+Invitation identity no longer depends on client-maintained `profiles.email_normalized`; it is checked against the authenticated Auth identity.
 
-Implemented:
-- School is the global account type allowed to own/create an Organization.
-- Teacher remains a standalone paid-account path and may also accept membership in a School.
-- account_entitlements centralizes pilot limits server-side; Flutter does not define the authorization limit.
-- School pilot defaults are 3 Teachers / 50 Students; independent Teacher pilot default is 10 Students. These are test defaults, not final commercial pricing.
-- teacher_invitations supports School → Teacher invitation with tenant-aware RLS.
-- invitation acceptance uses the authenticated Teacher profile email and SECURITY INVOKER; the earlier SECURITY DEFINER draft was replaced after Security Advisor flagged it.
-- link_student_to_teacher enforces Student limits for independent Teachers and School tenants.
-- Security Advisor after the final design reports only the known leaked-password-protection warning, deferred because of the current plan constraint.
-
-Architecture rule: global account role (profiles.role) and organization membership role (organization_members.role) are separate concepts.
+Security Advisor after these changes reports only the known leaked-password-protection warning, deferred under the current plan constraint.
