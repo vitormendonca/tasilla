@@ -109,6 +109,7 @@ void main() {
       expect(latest!.correctCount, 1);
       expect(latest!.allAnswered, true);
       expect(latest!.score, 1.0);
+      expect(latest!.answers, const {'q1': 'Paris'});
     },
   );
 

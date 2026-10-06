@@ -1,153 +1,79 @@
-﻿# TASILLA
+# TASILLA
 
-TASILLA is a Flutter MVP for guided English learning. It combines a student learning road, teacher guidance, progress tracking, placement tests, and a Supabase-ready backend structure.
+TASILLA is a Flutter learning platform being evolved from an MVP into a B2B product for teachers, language schools and educational organizations. Students are the end users.
 
-The project was built as a portfolio product: it shows mobile/web UI work, state management with local persistence, Supabase integration readiness, product thinking, and a complete teacher-student workflow.
+## Product direction
 
-## Problem
+The core workflow is:
 
-Many English students depend on the teacher to decide every next step. TASILLA gives the student a clear path to follow independently while keeping the teacher as a guide when assignments, review, or feedback are needed.
+School → organization → teacher → class → students → learning → evidence → teacher review → competency consolidation → approval → certificate → QR/code → public verification.
 
-## Solution
+The first commercial validation scope is A1.
 
-- A guided A1 Road Map with 60 activities, reviews every 6 activities, and one final test.
-- Skill paths for focused practice: Listening, Speaking, Reading, Vocabulary, and Grammar.
-- Teacher guidance for assigning activities and reviewing student work.
-- Student profile with progress, level badge, placement test access, and activity status.
-- Dark and light UI themes.
-- Supabase schema, seed, and Flutter bootstrap for real auth/progress migration.
+## Current capabilities
 
-## Demo Access
+- Flutter Web application.
+- Supabase authentication and persistence.
+- Teacher/student profiles and relationships.
+- Guided A1 learning path.
+- Progress and level-check attempts.
+- Teacher assignments.
+- Speaking and writing submissions.
+- Teacher review and approval.
+- Four-skill certificate eligibility.
+- Certificate issuance and public verification data.
+- Automated tests around the certification gate.
+- Local demo fallback when Supabase configuration is absent.
 
-The app can run in local demo mode without Supabase credentials.
+## Architecture
 
-Student demo codes:
+The Flutter client uses Supabase through the application services layer. The database is protected with Row Level Security.
 
-```text
-joao123
-maria123
-ana123
-```
+Supabase project used by the TASILLA application:
 
-Teacher demo code:
+- Project ref: dgkstqbrclbmrudailfz
+- Region: us-east-1
 
-```text
-teacher123
-```
+The exact active schema and migration reconciliation are documented in docs/SCHEMA_RECONCILIATION.md.
 
-## Tech Stack
+## Important development rule
 
-- Flutter / Dart
-- Material 3
-- Supabase Flutter
-- SharedPreferences for local MVP state
-- GitHub Pages deployment workflow
-- Supabase SQL migrations and seed data
+The active Supabase database and the repository migration history are currently not identical. Do not blindly replay the original MVP migration against the active project.
 
-## Current MVP Features
+Schema changes must be inspected against the live database, implemented as forward migrations, protected by RLS and authorization, verified with SQL tests, reflected in Flutter services/models, and documented.
 
-- Student login with demo code or Supabase email login when configured.
-- Teacher login with demo code.
-- Student A1 Road Map.
-- Linked progress between roadmap activities and skill categories.
-- A1 reviews and final test checkpoints.
-- Skill-specific paths.
-- Teacher assignment flow.
-- Teacher student progress view.
-- Student profile and level badge system.
-- Placement Test flow.
-- Dark/light mode.
-- Supabase database schema and row-level security policies.
+## Running locally
 
-## Running Locally
+Install Flutter, then:
 
-Install Flutter, then run:
-
-```powershell
 flutter pub get
 flutter run -d chrome
-```
 
-To run with Supabase:
+With Supabase:
 
-```powershell
-flutter run -d chrome `
-  --dart-define=SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co `
-  --dart-define=SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
-```
+flutter run -d chrome --dart-define=SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co --dart-define=SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 
-If Supabase values are not provided, the app uses local MVP demo data.
-
-## Supabase Setup
-
-Run the SQL files in this order:
-
-```text
-supabase/migrations/202605310001_initial_mvp_schema.sql
-supabase/migrations/202606010001_add_a1_roadmap_steps.sql
-supabase/seed.sql
-```
-
-For GitHub Pages deployment with Supabase, add these repository variables:
-
-```text
-SUPABASE_URL
-SUPABASE_ANON_KEY
-```
-
-## Web Deployment
-
-This repository includes a GitHub Actions workflow for GitHub Pages:
-
-```text
-.github/workflows/deploy-web.yml
-```
-
-After pushing to `main`, enable GitHub Pages:
-
-1. Open the GitHub repository.
-2. Go to Settings.
-3. Open Pages.
-4. In Build and deployment, choose GitHub Actions.
-5. Push to `main`.
-
-The workflow builds Flutter Web and deploys the `build/web` artifact.
-
-## Project Structure
-
-```text
-lib/
-  data/       Demo content and learning path definitions
-  models/     App models
-  screens/    Student, teacher, auth, and activity screens
-  services/   Auth, assignments, progress, Supabase bootstrap
-  theme/      Light/dark app theme
-  widgets/    Shared UI components
-supabase/
-  migrations/ Database schema changes
-  seed.sql    MVP seed data
-tool/
-  verify_learning_path.dart
-```
+If Supabase values are not provided, the app can use local MVP/demo data.
 
 ## Validation
 
-Useful local checks:
+Useful checks:
 
-```powershell
 dart analyze lib test tool
 dart run tool\verify_learning_path.dart
-```
 
-## Roadmap
+## Documentation
 
-- Replace development exercise placeholders with richer real content.
-- Add real speaking recording and teacher audio review.
-- Move all assignments and attempts to Supabase.
-- Improve certificates after final test completion.
-- Add production payment flow for teacher/school plans.
-- Expand A2, B1, B2, and C-level paths.
+- docs/PRODUCT.md — product positioning and target customer.
+- docs/ROADMAP.md — execution roadmap.
+- docs/ARCHITECTURE.md — application architecture.
+- docs/SUPABASE.md — database/security notes.
+- docs/CERTIFICATION.md — certification standard.
+- docs/CONTENT.md — content contract and launch scope.
+- docs/BILLING.md — planned B2B billing.
+- docs/SCHEMA_RECONCILIATION.md — live database versus repository migration findings.
+- docs/TASILLA_V1_MASTER_PLAN.md — end-to-end execution order.
 
-## Portfolio Note
+## Next engineering gate
 
-This is an MVP built to demonstrate product design, Flutter development, backend planning, and iterative UX decisions. It is not a finished commercial learning platform yet, but it is structured to evolve into one.
+Finish schema reconciliation first. Then execute Sprint 1 against the existing attempts/progress model, preserving historical answers, scores, status and retries without creating a duplicate assessment table.

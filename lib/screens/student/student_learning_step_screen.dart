@@ -101,6 +101,10 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
   bool get _allSectionsAnswered =>
       _sectionResults.values.every((result) => result.allAnswered);
 
+  Map<String, String> get _attemptAnswers => {
+    for (final result in _sectionResults.values) ...result.answers,
+  };
+
   Future<void> _completeStep() async {
     if (widget.alreadyCompleted || isSaving) {
       Navigator.pop(context, false);
@@ -123,6 +127,7 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
         stepId: widget.step.id,
         score: _combinedScore,
         passed: false,
+        answers: _attemptAnswers,
       );
       if (!mounted) return;
       setState(() {
@@ -140,6 +145,7 @@ class _StudentLearningStepScreenState extends State<StudentLearningStepScreen> {
       stepId: widget.step.id,
       score: _combinedScore,
       passed: true,
+      answers: _attemptAnswers,
     );
     final markCompleted =
         widget.onMarkStepCompleted ??

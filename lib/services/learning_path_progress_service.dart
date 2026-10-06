@@ -268,11 +268,13 @@ class LearningPathProgressService {
     required String stepId,
     required double score,
     required bool passed,
+    Map<String, String> answers = const {},
   }) async {
     await _recordRemoteStepAttempt(
       stepId: stepId,
       score: score,
       passed: passed,
+      answers: answers,
     );
   }
 
@@ -665,6 +667,7 @@ class LearningPathProgressService {
     required String stepId,
     required double score,
     required bool passed,
+    required Map<String, String> answers,
   }) async {
     final client = SupabaseBootstrap.client;
     final studentId = await _remoteStudentId();
@@ -674,6 +677,27 @@ class LearningPathProgressService {
     }
 
     try {
+      final latest = await client
+          .from('attempts')
+          .select('attempt_number')
+          .eq('student_id', studentId)
+          .eq('learning_step_id', stepId)
+          .order('attempt_number', ascending: false)
+          .limit(1);
+      final rows = _rowsFromResponse(latest);
+      final previous = rows.isEmpty
+          ? 0
+          : (rows.first['attempt_number'] as num?)?.toInt() ?? 0;
+
+      await client.from('attempts').insert({
+        'student_id': studentId,
+        'learning_step_id': stepId,
+        'attempt_number': previous + 1,
+        'score': score.clamp(0.0, 1.0),
+        'passed': passed,
+        'answers': answers,
+      });
+
       await client.from('student_step_progress').upsert({
         'student_id': studentId,
         'learning_step_id': stepId,
