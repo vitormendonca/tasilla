@@ -447,10 +447,10 @@ class _StudentAssignmentsScreenState extends State<StudentAssignmentsScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('MVP Note', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: textPrimary)),
+          Text('How completion works', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: textPrimary)),
           const SizedBox(height: 8),
           Text(
-            'Opening an activity does not automatically complete it. The assignment is completed only after the activity returns a real completion confirmation.',
+            'Opening an activity keeps it in progress. It is marked complete only after you finish the activity successfully.',
             style: TextStyle(fontSize: 12, color: textMuted, height: 1.45),
           ),
         ],
