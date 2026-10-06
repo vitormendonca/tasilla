@@ -27,8 +27,6 @@ class ClassSummary {
       name: map['name']?.toString() ?? '',
       level: map['level']?.toString() ?? 'A1',
       status: map['status']?.toString() ?? 'active',
-      studentName: _profileValue(map, 'full_name', 'Aluno'),
-      level: _profileValue(map, 'current_level', 'A1'),
     );
   }
 }
@@ -56,6 +54,8 @@ class ClassStudentSummary {
       classId: map['class_id']?.toString() ?? '',
       studentId: map['student_id']?.toString() ?? '',
       status: map['status']?.toString() ?? 'active',
+      studentName: _profileValue(map, 'full_name', 'Aluno'),
+      level: _profileValue(map, 'current_level', 'A1'),
     );
   }
 }
