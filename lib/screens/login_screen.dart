@@ -283,8 +283,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
 
-                // Demo codes hint (subtle, only in student mode)
-                if (!_usesEmailLogin) ...[
+                // Demo codes are visible only in an intentionally unconfigured demo build.
+                if (!_usesEmailLogin && !isSupabaseConfigured) ...[
                   const SizedBox(height: 48),
                   Container(
                     padding: const EdgeInsets.all(14),
