@@ -25,7 +25,7 @@ class _TeacherAssignedActivitiesScreenState extends State<TeacherAssignedActivit
   }
 
   Future<void> _loadAssignedActivities() async {
-    final loadedOrganizations = await OrganizationService.getMyOrganizations();
+    final loadedOrganizations = await OrganizationService.getOrganizationsForCurrentUser();
     final activities = await AssignmentService.getAllAssignedActivities(
       organizationId: selectedOrganizationId,
       filterByContext: true,
