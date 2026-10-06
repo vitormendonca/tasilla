@@ -96,6 +96,7 @@ class _TeacherStudentDetailScreenState extends State<TeacherStudentDetailScreen>
           studentId: widget.studentId,
           studentName: widget.studentName,
           studentLevel: widget.studentLevel,
+          organizationId: widget.organizationId,
         ),
       ),
     );
@@ -109,6 +110,7 @@ class _TeacherStudentDetailScreenState extends State<TeacherStudentDetailScreen>
           studentId: widget.studentId,
           studentName: widget.studentName,
           studentLevel: widget.studentLevel,
+          organizationId: widget.organizationId,
         ),
       ),
     );
