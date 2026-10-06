@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/students_data.dart';
 import '../models/app_session.dart';
+import 'student_teaching_context_service.dart';
 import 'supabase_bootstrap.dart';
 
 class AppAuthService {
@@ -257,7 +258,11 @@ class AppAuthService {
 
   static Future<void> signOut() async {
     final client = SupabaseBootstrap.client;
+    final signedOutUserId = client?.auth.currentUser?.id;
 
+    if (signedOutUserId != null) {
+      await StudentTeachingContextService.clearSelection(studentId: signedOutUserId);
+    }
     if (client != null) {
       await client.auth.signOut();
     }
