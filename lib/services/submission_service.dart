@@ -158,12 +158,19 @@ class SubmissionService {
     }
 
     try {
-      final data = await client
+      var query = client
           .from('student_submissions')
           .select(_columns)
-          .eq('student_id', studentId)
-          .order('submitted_at', ascending: false);
+          .eq('student_id', studentId);
 
+      if (user.id != studentId) {
+        query = query.eq('teacher_id', user.id);
+        query = organizationId != null && organizationId.isNotEmpty
+            ? query.eq('organization_id', organizationId)
+            : query.isFilter('organization_id', null);
+      }
+
+      final data = await query.order('submitted_at', ascending: false);
       return await _withStudentNames(_rowsFromResponse(data));
     } catch (error) {
       debugPrint('Remote student submissions unavailable: $error');
