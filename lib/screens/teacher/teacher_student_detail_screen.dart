@@ -13,6 +13,7 @@ class TeacherStudentDetailScreen extends StatefulWidget {
   final String studentName;
   final String studentLevel;
   final String accessCode;
+  final String? organizationId;
 
   const TeacherStudentDetailScreen({
     super.key,
@@ -20,6 +21,7 @@ class TeacherStudentDetailScreen extends StatefulWidget {
     required this.studentName,
     required this.studentLevel,
     required this.accessCode,
+    this.organizationId,
   });
 
   @override
@@ -40,6 +42,7 @@ class _TeacherStudentDetailScreenState extends State<TeacherStudentDetailScreen>
     final activities = await AssignmentService.getAssignedActivitiesForStudent(
       studentId: widget.studentId,
       studentName: widget.studentName,
+      organizationId: widget.organizationId,
     );
 
     if (!mounted) return;
@@ -63,6 +66,7 @@ class _TeacherStudentDetailScreenState extends State<TeacherStudentDetailScreen>
           studentId: widget.studentId,
           studentName: widget.studentName,
           studentLevel: widget.studentLevel,
+          organizationId: widget.organizationId,
         ),
       ),
     );
