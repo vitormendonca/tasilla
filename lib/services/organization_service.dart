@@ -110,6 +110,18 @@ class LegacyTeacherStudentSummary {
 }
 
 
+class SchoolMemberDisplay {
+  final String userId;
+  final String role;
+  final String fullName;
+  final String level;
+  const SchoolMemberDisplay({required this.userId, required this.role, required this.fullName, required this.level});
+  factory SchoolMemberDisplay.fromMap(Map<String, dynamic> map) {
+    final profile = map['profiles'] is Map ? Map<String, dynamic>.from(map['profiles'] as Map) : const <String, dynamic>{};
+    return SchoolMemberDisplay(userId: map['user_id']?.toString() ?? '', role: map['role']?.toString() ?? '', fullName: profile['full_name']?.toString() ?? 'Member', level: profile['current_level']?.toString() ?? 'A1');
+  }
+}
+
 class SchoolDashboardStats {
   final int activeTeachers;
   final int pendingTeacherInvites;
@@ -164,6 +176,24 @@ class AccountEntitlement {
 }
 
 class OrganizationService {
+
+  static Future<List<SchoolMemberDisplay>> getSchoolMembers(String organizationId) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || organizationId.isEmpty) return [];
+    try {
+      final data = await client.from('organization_members').select('user_id,role,profiles(id,full_name,current_level)').eq('organization_id', organizationId).inFilter('role', ['teacher', 'student']).order('created_at');
+      return _rowsFromResponse(data).map(SchoolMemberDisplay.fromMap).where((item) => item.userId.isNotEmpty).toList();
+    } catch (error) { debugPrint('School members unavailable: $error'); return []; }
+  }
+
+  static Future<List<TeacherInvitationSummary>> getSchoolPendingInvitations(String organizationId) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || organizationId.isEmpty) return [];
+    try {
+      final data = await client.from('teacher_invitations').select('id,organization_id,invited_email').eq('organization_id', organizationId).eq('status', 'pending').order('created_at');
+      return _rowsFromResponse(data).map(TeacherInvitationSummary.fromMap).toList();
+    } catch (error) { debugPrint('School pending invitations unavailable: $error'); return []; }
+  }
 
   static Future<SchoolDashboardStats> getSchoolDashboardStats(String organizationId) async {
     final client = SupabaseBootstrap.client;
