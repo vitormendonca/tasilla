@@ -124,12 +124,26 @@ class SubmissionService {
 
   /// All submissions for one student, any status, newest first.
   static Future<List<Submission>> getSubmissionsForStudent(
-    String studentId,
-  ) async {
+    String studentId, {
+    String? organizationId,
+  }) async {
     final client = SupabaseBootstrap.client;
 
-    if (client == null || client.auth.currentUser == null || studentId.isEmpty) {
+    final user = client?.auth.currentUser;
+    if (client == null || user == null || studentId.isEmpty) {
       return [];
+    }
+
+    if (organizationId != null && organizationId.isNotEmpty && user.id != studentId) {
+      final access = await client
+          .from('teacher_students')
+          .select('id')
+          .eq('teacher_id', user.id)
+          .eq('student_id', studentId)
+          .eq('organization_id', organizationId)
+          .eq('status', 'active')
+          .limit(1);
+      if (_rowsFromResponse(access).isEmpty) return [];
     }
 
     try {
