@@ -704,7 +704,6 @@ class LearningPathProgressService {
         'status': passed ? 'completed' : 'review_needed',
         'score': score,
         'validated_by_level_check': false,
-        'validated_by_level_check': false,
         'completed_at': DateTime.now().toIso8601String(),
       }, onConflict: 'student_id,learning_step_id');
     } catch (error) {
