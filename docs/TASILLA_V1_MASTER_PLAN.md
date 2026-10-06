@@ -44,10 +44,10 @@ TASILLA supports two paying account families: School and Independent Teacher. St
 
 1. Finish School management UX: invitation revoke/resend semantics, Teacher/Student lists and Class management lifecycle.
 2. Audit Teacher Classes UI so it no longer offers School Organization creation and so independent-vs-School class behavior is explicit.
-3. Verify assignment/progress/submission/certificate behavior in both supported scopes; older code was built during the previous organization-migration interpretation.
+3. Complete Student-side context selection and browser E2E for the now context-scoped assignment/progress/submission/assessment/certificate flows.
 4. Complete Teacher Dashboard around real operational data.
 5. Run end-to-end School → Teacher → Student and Independent Teacher → Student flows.
-6. Update certification for Independent Teacher issuance where product rules permit it.
+6. Validate Independent Teacher and School certification end-to-end in the target browser environment.
 7. Complete pilot readiness, billing, admin and launch documentation.
 
 ### Superseded migration assumption
@@ -60,63 +60,27 @@ Do not automatically map or retire NULL relationships. A NULL relationship is va
 
 A feature is done only when code is implemented, migrations are versioned when required, RLS/authorization are reviewed, loading/empty/error/retry states exist, automated tests cover critical behavior, the real target flow is verified, documentation is updated and no known regression remains.
 
-## 2026-10-06 — isolamento de assignments e leitura de progresso
+## 2026-10-06 — Contextual learning-data gate
 
-### Concluído nesta etapa
+Completed:
+- assignments and Teacher Student screens propagate the selected Independent/School context;
+- submissions/evidence carry explicit Teacher + Organization context and Storage paths are scoped by Student/Teacher/context;
+- learning progress carries explicit Teacher + Organization context;
+- attempts and level-check attempts carry explicit Teacher + Organization context;
+- Review Queue exposes explicit Independent Teacher / School context selection;
+- certification eligibility reads only progress/evidence belonging to the issuing Teacher and selected context;
+- Independent Teacher certification is supported; School certification requires matching School memberships;
+- public verification remains available for non-revoked certificates.
 
-- TeacherStudentsScreen opera com organização selecionada e passa o tenant para o detalhe do aluno.
-- TeacherStudentDetailScreen propaga organizationId para assignments.
-- TeacherAssignActivityScreen consulta e cria assignments no contexto da organização.
-- TeacherStudentAssignedActivitiesScreen consulta assignments no contexto da organização.
-- StudentAssignmentsScreen usa a identidade autenticada (auth.currentUser.id) para carregar os próprios assignments, em vez de nome persistido localmente.
-- AssignmentService filtra leituras remotas por organização quando o contexto está disponível.
-- Para usuários autenticados, falhas remotas de assignments não retornam silenciosamente dados de SharedPreferences.
-- Atualizações e cancelamentos remotos confirmam a linha alterada.
-- Leitura de progresso de outro aluno não cai mais em estado local persistido quando a sessão está autenticada e a consulta remota falha.
+Validation:
+- contextual assessment/progress/certification regression passed 5/5 with transactional fixtures and ROLLBACK;
+- Flutter Quality/build/deploy for the contextual Progress/Review/Assessment/Certification commits completed successfully;
+- Security Advisor reports only the deferred leaked-password-protection warning.
 
-### Validação pendente
-
-- Executar flutter analyze e testes Flutter no ambiente de desenvolvimento.
-- Fazer validação E2E com duas organizações para comprovar que professor/aluno de uma organização não enxergam assignments da outra.
-- Revisar progress/certificate RLS para aposentar definitivamente dependências legadas de teacher_students.
-
-
-## 2026-10-06 — transição RLS dos dados de aprendizagem
-
-A migração 20261006124247_harden_learning_data_tenant_transition atualizou attempts, student_step_progress, student_submissions e certificates para reconhecer organization_id nas relações teacher_students mapeadas. Relações ainda não mapeadas permanecem no caminho legado durante a transição.
-
-Estado verificado: 2 relacionamentos ativos, 0 mapeados e 2 não mapeados. A retirada definitiva do legado fica bloqueada até o mapeamento explícito, teste E2E de isolamento entre organizações e nova rodada de Security Advisor.
-
-Security Advisor: permanece apenas auth_leaked_password_protection; nenhum novo alerta de RLS apareceu.
-
-
-## 2026-10-06 — propagação do contexto de organização nas telas de aprendizagem
-
-A auditoria das telas derivadas de `TeacherStudentDetailScreen` identificou que o contexto `organizationId` já estava presente na seleção do aluno e nas atribuições, mas não era propagado para Progresso e Certificado.
-
-Correção aplicada:
-- `TeacherStudentAssignedActivitiesScreen` recebe explicitamente `organizationId`.
-- `TeacherStudentProgressScreen` recebe `organizationId` e o repassa ao serviço de progresso.
-- `TeacherCertificateSignoffScreen` recebe `organizationId` e o repassa às operações de leitura/eligibilidade/emissão.
-- `LearningPathProgressService` valida a relação ativa professor → aluno → organização antes de devolver progresso remoto para uma visão de professor.
-- `CertificateService` aplica a mesma validação ao calcular elegibilidade e progresso usado na emissão.
-- `SubmissionService.getSubmissionsForStudent` valida a relação ativa na organização quando a chamada parte do professor.
-
-Importante: as tabelas de progresso e submissions ainda não possuem `organization_id` próprio. Portanto esta etapa reforça o contexto na camada de serviço e depende das políticas RLS tenant-aware já implantadas. A separação física por tenant dos dados históricos continua como etapa posterior caso a plataforma precise suportar o mesmo aluno compartilhado entre organizações com dados de aprendizagem independentes.
-
-Validação de qualidade: os arquivos foram revisados após a alteração via GitHub. O ambiente disponível nesta sessão não possui execução local confirmada do Flutter analyzer/test suite; portanto não declarar testes Flutter como aprovados até rodar no ambiente de desenvolvimento.
-
-
-## 2026-10-06 — fechamento da propriedade tenant-aware de evidências e certificados
-
-A auditoria do fluxo de evidência encontrou e corrigiu dois pontos de tenancy: leitura de arquivos privados de submissions no Storage e propriedade de certificados. O Storage agora exige organização compatível para relações mapeadas; certificados passaram a registrar `organization_id` e exigir o mesmo tenant na emissão/leitura do professor.
-
-A emissão de certificado agora exige organização explícita no serviço e o banco é a autoridade final. O fluxo de verificação pública por código permanece público apenas para certificados não revogados.
-
-Próximo gate: validação E2E em ambiente Flutter real (analyzer/testes e fluxo aluno → submission → revisão → certificado), pois essa execução ainda não foi confirmada nesta sessão.
-
-
-
+Remaining V1 work in this area:
+- add explicit Student-side context selection before allowing a Student with multiple active teaching contexts to submit evidence or write progress/attempts;
+- complete E2E browser validation for Independent Teacher → Student and School → Teacher → Student;
+- keep public certificate verification separate from private tenant learning data.
 
 ## 2026-10-06 — Current tenancy and security checkpoint
 
