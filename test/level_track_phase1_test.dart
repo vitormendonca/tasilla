@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/data/a1_learning_experience_data.dart';
 import 'package:tasilla/data/level_track_data.dart';
 import 'package:tasilla/data/learning_path_data.dart';
@@ -9,6 +10,10 @@ import 'package:tasilla/models/student_activity_result.dart';
 import 'package:tasilla/services/level_progress_service.dart';
 
 void main() {
+  setUpAll(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    await loadA1Content();
+  });
   test('A1 level track keeps the official certificate structure metadata', () {
     expect(a1LevelTrack.id, 'a1');
     expect(a1LevelTrack.totalCoreActivities, 40);
