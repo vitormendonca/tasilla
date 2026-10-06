@@ -320,10 +320,12 @@ class LearningPathProgressService {
   getAllSkillProgressForStudent({
     required String studentId,
     required String studentName,
+    String? organizationId,
   }) async {
     final completed = await getCompletedStepIdsForStudent(
       studentId: studentId,
       studentName: studentName,
+      organizationId: organizationId,
     );
 
     return getAllSkillProgressFromCompleted(completed);
@@ -332,9 +334,11 @@ class LearningPathProgressService {
   static Future<Set<String>> getCompletedStepIdsForStudent({
     required String studentId,
     required String studentName,
+    String? organizationId,
   }) async {
     final remoteCompleted = await _getRemoteCompletedStepIdsForStudent(
       studentId,
+      organizationId: organizationId,
     );
 
     if (remoteCompleted != null) {
