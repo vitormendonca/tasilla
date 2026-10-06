@@ -18,7 +18,7 @@ void main() {
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.resetPhysicalSize);
     addTearDown(tester.view.resetDevicePixelRatio);
-    final step = a1RoadmapSteps.firstWhere((step) => step.id == stepId);
+    final step = getA1RoadmapSteps().firstWhere((step) => step.id == stepId);
     await tester.pumpWidget(
       MaterialApp(
         home: StudentLearningStepScreen(
@@ -72,7 +72,8 @@ void main() {
     await pumpStep(tester, stepId, (_) async {
       completionCalls++;
     });
-    final questions = getA1LearningExperienceById(stepId)!.quizBlock!.questions;
+    final experience = getA1LearningExperienceById(stepId)!;
+    final questions = experience.quizBlock!.questions;
 
     for (final question in questions) {
       final wrong = question.options.firstWhere(
@@ -82,7 +83,10 @@ void main() {
     }
     await tapCompletionButton(tester);
 
-    expect(find.textContaining('needs 75% to pass'), findsOneWidget);
+    expect(
+      find.textContaining('needs ${(experience.passingScore * 100).round()}% to pass'),
+      findsOneWidget,
+    );
     expect(find.text('TRY AGAIN'), findsOneWidget);
     expect(completionCalls, 0);
 
