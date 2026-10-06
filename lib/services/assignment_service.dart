@@ -17,7 +17,7 @@ class AssignmentService {
       return remoteAssignments;
     }
 
-    return _getLocalAssignments();
+    return [];
   }
 
   static Future<List<AssignedActivity>> getAssignedActivitiesForStudent({
@@ -30,7 +30,7 @@ class AssignmentService {
       return remoteAssignments;
     }
 
-    return getAssignedActivitiesByStudentName(studentName);
+    return [];
   }
 
   static Future<List<AssignedActivity>> _getLocalAssignments() async {
@@ -87,7 +87,7 @@ class AssignmentService {
       }).toList();
     } catch (error) {
       debugPrint('Remote assignments unavailable: $error');
-      return null;
+      return false;
     }
   }
 
@@ -490,7 +490,7 @@ class AssignmentService {
     try {
       final targetStudentId = studentId?.isNotEmpty == true
           ? studentId
-          : await _findStudentIdByName(studentName);
+          : await _findStudentIdByName(studentName, organizationId: organizationId);
 
       if (targetStudentId == null || targetStudentId.isEmpty) {
         return null;
@@ -646,12 +646,13 @@ class AssignmentService {
     }
 
     try {
-      await client
+      final updated = await client
           .from('assignments')
           .update(_statusPayload(newStatus))
-          .eq('id', assignmentId);
+          .eq('id', assignmentId)
+          .select('id');
 
-      return true;
+      return _rowsFromResponse(updated).isNotEmpty;
     } catch (error) {
       debugPrint('Remote assignment status update failed: $error');
       return false;
@@ -753,25 +754,44 @@ class AssignmentService {
     return null;
   }
 
-  static Future<String?> _findStudentIdByName(String studentName) async {
+  static Future<String?> _findStudentIdByName(
+    String studentName, {
+    String? organizationId,
+  }) async {
     final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
 
-    if (client == null || studentName.trim().isEmpty) {
+    if (client == null || user == null || studentName.trim().isEmpty) {
       return null;
     }
+
+    final resolvedOrganizationId =
+        await _resolveOrganizationId(organizationId);
+    if (resolvedOrganizationId == null || resolvedOrganizationId.isEmpty) {
+      return null;
+    }
+
+    final memberships = await client
+        .from('organization_members')
+        .select('user_id')
+        .eq('organization_id', resolvedOrganizationId)
+        .eq('role', 'student');
+
+    final studentIds = _rowsFromResponse(memberships)
+        .map((row) => row['user_id']?.toString() ?? '')
+        .where((id) => id.isNotEmpty)
+        .toList();
+
+    if (studentIds.isEmpty) return null;
 
     final data = await client
         .from('profiles')
         .select('id')
-        .eq('role', 'student')
+        .inFilter('id', studentIds)
         .eq('full_name', studentName.trim())
         .maybeSingle();
 
-    if (data == null) {
-      return null;
-    }
-
-    return data['id']?.toString();
+    return data?['id']?.toString();
   }
 
   static Future<Map<String, String>> _loadProfileNames(
