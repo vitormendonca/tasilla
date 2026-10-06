@@ -7,7 +7,7 @@ import 'package:tasilla/services/submission_service.dart';
 Submission _textSubmission({
   String status = 'submitted',
   String? feedback,
-  String learningStepId = 'A1-EXP-016',
+  String learningStepId = 'A1-T01-WRI',
 }) {
   return Submission(
     id: 'sub-1',
@@ -50,7 +50,7 @@ void main() {
     await _pumpDetail(tester, _textSubmission());
 
     expect(find.text('Ana'), findsOneWidget);
-    expect(find.text('My Activities'), findsOneWidget);
+    expect(find.text('Topic 1: Introductions & Greetings - Writing'), findsOneWidget);
     expect(
       find.text('Hello. My name is Ana. I am from Peru.'),
       findsOneWidget,
@@ -58,9 +58,9 @@ void main() {
 
     // The rubric is the point of the screen — without it, approval is vibes.
     expect(find.text('Rubric'), findsOneWidget);
-    expect(find.text('A1 clarity'), findsOneWidget);
-    expect(find.text('Task completion'), findsOneWidget);
-    expect(find.text('Accuracy'), findsOneWidget);
+    expect(find.text('Has a greeting'), findsOneWidget);
+    expect(find.text('My name is + own name'), findsOneWidget);
+    expect(find.text('I am used correctly'), findsOneWidget);
   });
 
   testWidgets('a redo without feedback is blocked before it reaches the database', (
