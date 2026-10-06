@@ -47,6 +47,10 @@ with check (
   and (
     (
       organization_id is null
+      and not exists (
+        select 1 from public.organization_members om
+        where om.user_id = (select auth.uid())
+      )
       and (
         student_id is null
         or exists (
