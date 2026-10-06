@@ -68,7 +68,7 @@ class AssignmentService {
       var query = client
           .from('assignments')
           .select(
-            'id,title,category,level,target_type,status,note,due_date,student_id,class_id',
+            'id,title,category,level,target_type,status,note,due_date,student_id,class_id,organization_id',
           )
           .neq('status', 'canceled');
 
@@ -108,6 +108,7 @@ class AssignmentService {
       level: level,
       dueDate: dueDate,
       note: note,
+      organizationId: organizationId,
     );
 
     if (remoteResult != null) {
@@ -150,12 +151,29 @@ class AssignmentService {
 
   static Future<bool> assignActivityToClass({
     required String className,
+    String? classId,
+    String? organizationId,
     required String title,
     required String category,
     required String level,
     String dueDate = 'No due date',
     String note = '',
   }) async {
+    final remoteResult = await _assignRemoteActivityToClass(
+      classId: classId,
+      className: className,
+      organizationId: organizationId,
+      title: title,
+      category: category,
+      level: level,
+      dueDate: dueDate,
+      note: note,
+    );
+
+    if (remoteResult != null) {
+      return remoteResult;
+    }
+
     final currentAssignments = await _getLocalAssignments();
 
     final alreadyAssigned = currentAssignments.any(
@@ -459,6 +477,7 @@ class AssignmentService {
     required String level,
     required String dueDate,
     required String note,
+    String? organizationId,
   }) async {
     final client = SupabaseBootstrap.client;
     final user = client?.auth.currentUser;
@@ -476,7 +495,7 @@ class AssignmentService {
         return null;
       }
 
-      final existingData = await client
+      final resolvedOrganizationId = await _resolveOrganizationId(organizationId);\n\n      final existingData = await client
           .from('assignments')
           .select('id,status')
           .eq('teacher_id', user.id)
@@ -495,6 +514,7 @@ class AssignmentService {
 
       final payload = <String, dynamic>{
         'teacher_id': user.id,
+        if (resolvedOrganizationId != null) 'organization_id': resolvedOrganizationId,
         'student_id': targetStudentId,
         'target_type': 'student',
         'title': title,
@@ -517,6 +537,87 @@ class AssignmentService {
       debugPrint('Remote assign failed: $error');
       return null;
     }
+  }
+
+  static Future<bool?> _assignRemoteActivityToClass({
+    required String? classId,
+    required String className,
+    required String? organizationId,
+    required String title,
+    required String category,
+    required String level,
+    required String dueDate,
+    required String note,
+  }) async {
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
+    if (client == null || user == null) return null;
+
+    try {
+      final resolvedOrganizationId = await _resolveOrganizationId(organizationId);
+      if (resolvedOrganizationId == null) return null;
+
+      String? targetClassId = classId;
+      if (targetClassId == null || targetClassId.isEmpty) {
+        final classData = await client
+            .from('classes')
+            .select('id')
+            .eq('organization_id', resolvedOrganizationId)
+            .eq('name', className.trim())
+            .maybeSingle();
+        targetClassId = classData?['id']?.toString();
+      }
+      if (targetClassId == null || targetClassId.isEmpty) return null;
+
+      final existingData = await client
+          .from('assignments')
+          .select('id,status')
+          .eq('teacher_id', user.id)
+          .eq('organization_id', resolvedOrganizationId)
+          .eq('class_id', targetClassId)
+          .eq('title', title)
+          .eq('category', category);
+      final alreadyAssigned = _rowsFromResponse(existingData).any((row) {
+        final status = row['status']?.toString() ?? '';
+        return status != 'reviewed' && status != 'canceled';
+      });
+      if (alreadyAssigned) return false;
+
+      final payload = <String, dynamic>{
+        'teacher_id': user.id,
+        'organization_id': resolvedOrganizationId,
+        'class_id': targetClassId,
+        'target_type': 'class',
+        'title': title,
+        'category': category,
+        'level': level,
+        'note': note,
+        'status': 'pending',
+      };
+      final remoteDueDate = _dateOrNull(dueDate);
+      if (remoteDueDate != null) payload['due_date'] = remoteDueDate;
+      await client.from('assignments').insert(payload);
+      return true;
+    } catch (error) {
+      debugPrint('Remote class assign failed: $error');
+      return null;
+    }
+  }
+
+  static Future<String?> _resolveOrganizationId(String? organizationId) async {
+    if (organizationId?.isNotEmpty == true) return organizationId;
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
+    if (client == null || user == null) return null;
+    final data = await client
+        .from('organization_members')
+        .select('organization_id')
+        .eq('user_id', user.id)
+        .inFilter('role', ['owner', 'admin', 'teacher'])
+        .order('created_at')
+        .limit(1);
+    final rows = _rowsFromResponse(data);
+    return rows.isEmpty ? null : rows.first['organization_id']?.toString();
   }
 
   static Future<bool> _updateRemoteAssignmentStatus({
