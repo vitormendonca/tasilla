@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../theme/theme_controller.dart';
 import 'teacher_assigned_activities_screen.dart';
 import 'teacher_classes_screen.dart';
+import 'teacher_invitations_screen.dart';
 import 'teacher_profile_screen.dart';
 import 'teacher_review_screen.dart';
 import 'teacher_students_screen.dart';
@@ -64,6 +65,13 @@ class TeacherHomeScreen extends StatelessWidget {
             title: 'Students',
             subtitle: 'View students, assign activities and check individual progress.',
             onTap: () => _openScreen(context, const TeacherStudentsScreen()),
+            textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border,
+          ),
+          _actionTile(
+            icon: Icons.mail_outline,
+            title: 'School invitations',
+            subtitle: 'Review and accept invitations to teach for a school.',
+            onTap: () => _openScreen(context, const TeacherInvitationsScreen()),
             textPrimary: textPrimary, textMuted: textMuted, surface: surface, border: border,
           ),
           _actionTile(
