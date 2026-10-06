@@ -22,7 +22,9 @@ class StudentTeachingContext {
 }
 
 class StudentTeachingContextService {
-  static const _selectedKey = 'student_teaching_context';
+  static const _selectedKeyPrefix = 'student_teaching_context';
+
+  static String _selectedKey(String studentId) => '${_selectedKeyPrefix}_$studentId';
 
   static Future<List<StudentTeachingContext>> getAvailableContexts() async {
     final client = SupabaseBootstrap.client;
@@ -80,17 +82,19 @@ class StudentTeachingContextService {
     final contexts = await getAvailableContexts();
     if (contexts.isEmpty) return null;
 
+    final studentId = SupabaseBootstrap.client?.auth.currentUser?.id;
+    if (studentId == null) return null;
     final prefs = await SharedPreferences.getInstance();
-    final selected = prefs.getString(_selectedKey);
+    final selected = prefs.getString(_selectedKey(studentId));
     if (selected != null) {
       for (final context in contexts) {
         if (context.key == selected) return context;
       }
-      await prefs.remove(_selectedKey);
+      await prefs.remove(_selectedKey(studentId));
     }
 
     if (contexts.length == 1) {
-      await prefs.setString(_selectedKey, contexts.first.key);
+      await prefs.setString(_selectedKey(studentId), contexts.first.key);
       return contexts.first;
     }
 
@@ -102,13 +106,16 @@ class StudentTeachingContextService {
     if (!contexts.any((candidate) => candidate.key == context.key)) {
       throw StateError('This teaching context is no longer active.');
     }
+    final studentId = SupabaseBootstrap.client?.auth.currentUser?.id;
+    if (studentId == null) throw StateError('No signed-in Student.');
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_selectedKey, context.key);
+    await prefs.setString(_selectedKey(studentId), context.key);
   }
 
-  static Future<void> clearSelection() async {
+  static Future<void> clearSelection({String? studentId}) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.remove(_selectedKey);
+    final id = studentId ?? SupabaseBootstrap.client?.auth.currentUser?.id;
+    if (id != null) await prefs.remove(_selectedKey(id));
   }
 
   static List<Map<String, dynamic>> _rows(Object? response) {
