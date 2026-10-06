@@ -9,8 +9,8 @@ void main() {
   });
   group('Submission.stepTitleFor', () {
     test('resolves a lesson title from the A1 content set', () {
-      expect(Submission.stepTitleFor('A1-EXP-001'), 'Introducing Yourself');
-      expect(Submission.stepTitleFor('A1-EXP-016'), 'My Activities');
+      expect(Submission.stepTitleFor('A1-T01-SPE'), 'Topic 1: Introductions & Greetings - Speaking');
+      expect(Submission.stepTitleFor('A1-T01-WRI'), 'Topic 1: Introductions & Greetings - Writing');
     });
 
     test('falls back to the raw step id when the lesson is unknown', () {
@@ -23,7 +23,7 @@ void main() {
       final submission = Submission.fromRow({
         'id': 'sub-1',
         'student_id': 'student-1',
-        'learning_step_id': 'A1-EXP-016',
+        'learning_step_id': 'A1-T01-WRI',
         'skill': 'writing',
         'submission_type': 'text',
         'text_content': 'Hello. My name is Ana.',
@@ -35,7 +35,7 @@ void main() {
 
       expect(submission.id, 'sub-1');
       expect(submission.studentName, 'Ana');
-      expect(submission.stepTitle, 'My Activities');
+      expect(submission.stepTitle, 'Topic 1: Introductions & Greetings - Writing');
       expect(submission.skill, 'writing');
       expect(submission.textContent, 'Hello. My name is Ana.');
       expect(submission.isPending, isTrue);
@@ -47,7 +47,7 @@ void main() {
       final submission = Submission.fromRow({
         'id': 'sub-2',
         'student_id': 'student-1',
-        'learning_step_id': 'A1-EXP-016',
+        'learning_step_id': 'A1-T01-WRI',
         'skill': 'writing',
         'submission_type': 'text',
         'text_content': 'Hello.',
@@ -65,16 +65,16 @@ void main() {
       final submission = Submission.fromRow({
         'id': 'sub-3',
         'student_id': 'student-1',
-        'learning_step_id': 'A1-EXP-016',
+        'learning_step_id': 'A1-T01-WRI',
         'skill': 'speaking',
         'submission_type': 'audio',
-        'file_path': 'student-1/A1-EXP-016.m4a',
+        'file_path': 'student-1/A1-T01-WRI.m4a',
         'submitted_at': '2026-07-12T10:00:00Z',
       }, studentName: 'Ana');
 
       expect(submission.status, 'submitted');
       expect(submission.isAudio, isTrue);
-      expect(submission.filePath, 'student-1/A1-EXP-016.m4a');
+      expect(submission.filePath, 'student-1/A1-T01-WRI.m4a');
     });
   });
 
