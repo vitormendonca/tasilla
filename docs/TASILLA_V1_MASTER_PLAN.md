@@ -42,13 +42,13 @@ No existing users were migrated into an organization yet. This is deliberate: th
 - Existing `teacher_students` rows still need an explicit organization mapping before the legacy relationship can be retired.
 - Historical repository schema definitions still require explicit reconciliation.
 - Supabase Auth leaked-password protection is currently disabled.
-- Teacher-facing organization/class/assignment UI still needs to consume the new services end-to-end.
+- Teacher-facing organization/class/assignment UI is being connected incrementally; the Classes screen now consumes live organization/class data and can create both organizations and classes.
 
 ## Immediate next gate
 
 Finish the organization → class → enrollment → assignment application flow, then explicitly map `teacher_students` into organization membership and retire legacy assignment authorization only after RLS regression coverage is in place.
 
-After that, expand the teacher dashboard around organization/class data rather than the legacy teacher/student relationship.
+Next: connect real organization members to class enrollment, then make the student/assignment screens organization-aware before expanding dashboard analytics.
 
 ## Definition of done
 
