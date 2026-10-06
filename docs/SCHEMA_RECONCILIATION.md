@@ -117,3 +117,23 @@ O arquivo correspondente deve permanecer versionado em `supabase/migrations/2026
 - Atualização/cancelamento remoto confirma que uma linha foi efetivamente alterada antes de considerar a operação concluída.
 - A autorização final continua no Supabase RLS; a UI não é considerada mecanismo de segurança.
 - Ainda é necessário validar progress/certificate screens quanto ao mesmo contexto de organização e executar analyzer/testes Flutter no ambiente de desenvolvimento antes de declarar a etapa como totalmente validada.
+
+
+## 2026-10-06 — transição de autorização dos dados de aprendizagem para tenant
+
+A auditoria de RLS confirmou que attempts, student_step_progress, student_submissions e certificates ainda usavam teacher_students como autorização principal. A migração 20261006124247_harden_learning_data_tenant_transition atualizou essas políticas.
+
+- Relação teacher_students com organization_id preenchido: o professor/staff precisa ser membro owner/admin/teacher da organização e o aluno precisa ser membro student da mesma organização.
+- Relação ainda sem organization_id: o caminho legado continua temporariamente permitido para não quebrar os dois relacionamentos existentes durante a migração.
+- O banco foi verificado após a alteração e as políticas novas estão ativas.
+- Estado atual: 2 relacionamentos ativos; 0 mapeados; 2 ainda não mapeados.
+- Portanto, a remoção definitiva da autorização legada ainda NÃO deve ser feita.
+- Security Advisor continua apresentando somente auth_leaked_password_protection como alerta; nenhum novo alerta de RLS foi introduzido por esta alteração.
+
+### Critério para retirar o legado
+
+1. Mapear explicitamente todos os relacionamentos ativos para uma organização.
+2. Confirmar membership student correspondente para cada aluno.
+3. Executar teste E2E de isolamento entre duas organizações.
+4. Substituir as políticas para remover o ramo organization_id is null.
+5. Reexecutar Security Advisor e testes de regressão.
