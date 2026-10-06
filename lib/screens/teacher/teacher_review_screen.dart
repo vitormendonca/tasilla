@@ -70,6 +70,8 @@ class _TeacherReviewScreenState extends State<TeacherReviewScreen> {
         return Submission(
           id: item.id,
           studentId: item.studentId,
+          teacherId: item.teacherId,
+          organizationId: item.organizationId,
           studentName: item.studentName,
           learningStepId: item.learningStepId,
           stepTitle: item.stepTitle,
