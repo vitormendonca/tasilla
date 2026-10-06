@@ -61,6 +61,19 @@ Passed 2/2:
 
 The School UI must select an explicit Teacher. A School account is never used as `classes.teacher_id`.
 
+## Learning evidence, progress, assessment and certification regression
+
+Passed 5/5 in a rollback-only production-schema transaction:
+- one Student can persist distinct Independent Teacher and School attempts/progress for the same Teacher without the scopes collapsing;
+- Teacher B cannot read Teacher A private attempts or learning progress for a shared Student;
+- Teacher A can read the private learning records assigned to Teacher A in both supported contexts;
+- Teacher A can issue a certificate in Independent Teacher context when the active independent relationship exists;
+- Teacher A can issue a separate School-context certificate when the Teacher, Student and relationship belong to that School.
+
+`student_submissions`, `student_step_progress`, `attempts` and `level_check_attempts` now carry explicit `teacher_id` + nullable `organization_id` teaching context. NULL means Independent Teacher; non-NULL means School. Their RLS checks the exact active `teacher_students` relationship for that context.
+
+Certificate verification is intentionally different from private learning records: a non-revoked certificate remains publicly readable by certificate code. Tenant isolation controls who may issue a certificate and which private evidence/progress may be used to establish eligibility; it must not disable public verification.
+
 ## Security status
 
 Security Advisor after the current regressions reports only `auth_leaked_password_protection`. This warning is intentionally deferred under the current plan constraint.
