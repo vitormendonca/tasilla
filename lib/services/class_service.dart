@@ -27,6 +27,8 @@ class ClassSummary {
       name: map['name']?.toString() ?? '',
       level: map['level']?.toString() ?? 'A1',
       status: map['status']?.toString() ?? 'active',
+      studentName: _profileValue(map, 'full_name', 'Aluno'),
+      level: _profileValue(map, 'current_level', 'A1'),
     );
   }
 }
@@ -36,12 +38,16 @@ class ClassStudentSummary {
   final String classId;
   final String studentId;
   final String status;
+  final String studentName;
+  final String level;
 
   const ClassStudentSummary({
     required this.id,
     required this.classId,
     required this.studentId,
     required this.status,
+    required this.studentName,
+    required this.level,
   });
 
   factory ClassStudentSummary.fromMap(Map<String, dynamic> map) {
@@ -52,6 +58,12 @@ class ClassStudentSummary {
       status: map['status']?.toString() ?? 'active',
     );
   }
+}
+
+String _profileValue(Map<String, dynamic> map, String key, String fallback) {
+  final profile = map['profiles'];
+  if (profile is Map && profile[key] != null) return profile[key].toString();
+  return fallback;
 }
 
 class ClassService {
@@ -115,7 +127,7 @@ class ClassService {
     try {
       final data = await client
           .from('class_students')
-          .select('id,class_id,student_id,status')
+          .select('id,class_id,student_id,status,profiles(id,full_name,current_level)')
           .eq('class_id', classId)
           .order('joined_at');
 
