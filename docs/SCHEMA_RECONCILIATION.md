@@ -21,6 +21,9 @@ The database now contains the certification/submission model plus the Sprint 1 a
 - assignments with a class_id column.
 - attempts as append-only step-attempt history.
 - organizations and organization_members as the first multi-tenant foundation.
+- classes and class_students for organization-scoped classroom enrollment.
+- assignments.organization_id for explicit assignment tenancy, with tenant-aware RLS and compatibility for legacy null-tenant rows.
+- assignments.class_id now references classes.id.
 
 student_step_progress has a unique (student_id, learning_step_id) constraint, so it remains the current snapshot while attempts preserves historical retries.
 
