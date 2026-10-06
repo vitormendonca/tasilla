@@ -33,9 +33,7 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
         selectedOrganizationId != null &&
                 loadedOrganizations.any((item) => item.id == selectedOrganizationId)
             ? selectedOrganizationId
-            : loadedOrganizations.isNotEmpty
-                ? loadedOrganizations.first.id
-                : null;
+            : null;
 
     setState(() {
       organizations = loadedOrganizations;
@@ -159,23 +157,35 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
           children: [
             if (organizations.isNotEmpty) ...[
               DropdownButtonFormField<String>(
-                value: selectedOrganizationId,
+                value: selectedOrganizationId ?? '__independent__',
                 decoration: InputDecoration(
-                  labelText: 'Organization',
+                  labelText: 'Teaching context',
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                 ),
-                items: organizations
-                    .map((organization) => DropdownMenuItem<String>(
-                          value: organization.id,
-                          child: Text(organization.name),
-                        ))
-                    .toList(),
+                items: [
+                  const DropdownMenuItem<String>(
+                    value: '__independent__',
+                    child: Text('Independent Teacher'),
+                  ),
+                  ...organizations.map((organization) => DropdownMenuItem<String>(
+                        value: organization.id,
+                        child: Text(organization.name),
+                      )),
+                ],
                 onChanged: isLoading
                     ? null
                     : (value) async {
-                        setState(() => selectedOrganizationId = value);
+                        setState(() => selectedOrganizationId =
+                            value == '__independent__' ? null : value);
                         await _loadStudents();
                       },
+              ),
+              const SizedBox(height: 8),
+              Text(
+                selectedOrganizationId == null
+                    ? 'Independent students use your Teacher plan.'
+                    : 'School students use the selected School context.',
+                style: TextStyle(color: textMuted, fontSize: 12),
               ),
               const SizedBox(height: 20),
             ] else
