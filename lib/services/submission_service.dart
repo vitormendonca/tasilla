@@ -35,8 +35,8 @@ class Submission {
   const Submission({
     required this.id,
     required this.studentId,
-    required this.teacherId,
-    required this.organizationId,
+    this.teacherId = '',
+    this.organizationId,
     required this.studentName,
     required this.learningStepId,
     required this.stepTitle,
