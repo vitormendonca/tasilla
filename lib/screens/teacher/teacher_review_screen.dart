@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../services/organization_service.dart';
 import '../../services/submission_service.dart';
 import '../../theme/app_theme.dart';
 import 'teacher_submission_detail_screen.dart';
@@ -17,6 +18,8 @@ class _TeacherReviewScreenState extends State<TeacherReviewScreen> {
   List<Submission> _submissions = [];
   _SkillFilter _filter = _SkillFilter.all;
   bool _isLoading = true;
+  List<OrganizationSummary> _organizations = [];
+  String? _organizationId;
 
   @override
   void initState() {
@@ -25,10 +28,15 @@ class _TeacherReviewScreenState extends State<TeacherReviewScreen> {
   }
 
   Future<void> _load() async {
-    final submissions = await SubmissionService.getTeacherSubmissions();
+    final organizations = await OrganizationService.getOrganizationsForCurrentUser();
+    final submissions = await SubmissionService.getTeacherSubmissions(
+      organizationId: _organizationId,
+      filterByContext: true,
+    );
 
     if (!mounted) return;
     setState(() {
+      _organizations = organizations;
       _submissions = submissions;
       _isLoading = false;
     });
@@ -143,6 +151,25 @@ class _TeacherReviewScreenState extends State<TeacherReviewScreen> {
               border: border,
             ),
             const SizedBox(height: 16),
+            if (_organizations.isNotEmpty) ...[
+              DropdownButtonFormField<String>(
+                initialValue: _organizationId ?? '__independent__',
+                decoration: const InputDecoration(labelText: 'Teaching context'),
+                items: [
+                  const DropdownMenuItem(value: '__independent__', child: Text('Independent Teacher')),
+                  for (final organization in _organizations)
+                    DropdownMenuItem(value: organization.id, child: Text(organization.name)),
+                ],
+                onChanged: (value) async {
+                  setState(() {
+                    _organizationId = value == '__independent__' ? null : value;
+                    _isLoading = true;
+                  });
+                  await _load();
+                },
+              ),
+              const SizedBox(height: 16),
+            ],
             _filterRow(textPrimary: textPrimary, textMuted: textMuted, border: border),
             const SizedBox(height: 16),
             if (_isLoading)
