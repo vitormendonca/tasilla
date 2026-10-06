@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tasilla/data/a1_content_loader.dart' hide getA1LearningExperienceById;
-import 'package:tasilla/data/a1_learning_experience_data.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/models/learning_enums.dart';
 import 'package:tasilla/screens/student/student_learning_step_screen.dart';
@@ -14,10 +13,10 @@ void main() {
   test(
     'foreign-skill blocks are not generated at all (full separation)',
     () {
-      final speaking = getA1LearningExperienceById('A1-EXP-001')!;
-      final listening = getA1LearningExperienceById('A1-EXP-002')!;
-      final reading = getA1LearningExperienceById('A1-EXP-005')!;
-      final mixed = getA1LearningExperienceById('A1-EXP-010')!;
+      final speaking = getA1LearningExperienceById('A1-T01-SPE')!;
+      final listening = getA1LearningExperienceById('A1-T01-LIS')!;
+      final reading = getA1LearningExperienceById('A1-T01-REA')!;
+      final mixed = getA1LearningExperienceById('A1-MIX-A')!;
 
       // A single-skill speaking lesson carries no listening or reading block,
       // even if its seed holds an audio script / reading text (orphaned content
@@ -41,11 +40,11 @@ void main() {
       // EXP-002 "Greetings" is a listening lesson whose seed still carries
       // generated vocabulary blocks. Under full separation the lesson renders
       // only listening content — no vocab chips, no grammar.
-      final experience = getA1LearningExperienceById('A1-EXP-002')!;
+      final experience = getA1LearningExperienceById('A1-T01-LIS')!;
       expect(experience.primarySkill, LearningSkill.listening);
       expect(experience.vocabularyBlocks, isNotEmpty);
 
-      final step = a1RoadmapSteps.firstWhere((step) => step.id == 'A1-EXP-002');
+      final step = a1RoadmapSteps.firstWhere((step) => step.id == 'A1-T01-LIS');
 
       await tester.pumpWidget(
         MaterialApp(
@@ -62,7 +61,7 @@ void main() {
   testWidgets('speaking lesson renders only its skill-specific activity', (
     tester,
   ) async {
-    final step = a1RoadmapSteps.firstWhere((step) => step.id == 'A1-EXP-001');
+    final step = a1RoadmapSteps.firstWhere((step) => step.id == 'A1-T01-SPE');
 
     await tester.pumpWidget(
       MaterialApp(
@@ -70,7 +69,7 @@ void main() {
       ),
     );
 
-    final experience = getA1LearningExperienceById('A1-EXP-001')!;
+    final experience = getA1LearningExperienceById('A1-T01-SPE')!;
     expect(find.text(experience.speakingTask!.speakingPrompt), findsOneWidget);
     expect(find.text('Listening comprehension'), findsNothing);
     expect(find.text('Reading comprehension'), findsNothing);
@@ -81,8 +80,8 @@ void main() {
     );
   });
 
-  testWidgets('mixed lesson retains all integrative sections', (tester) async {
-    final step = a1RoadmapSteps.firstWhere((step) => step.id == 'A1-EXP-010');
+  testWidgets('vocabulary lesson renders its own core sections', (tester) async {
+    final step = getA1RoadmapSteps().firstWhere((step) => step.id == 'A1-T01-VOC');
 
     await tester.pumpWidget(
       MaterialApp(
@@ -90,9 +89,8 @@ void main() {
       ),
     );
 
-    expect(find.text('Listening comprehension'), findsOneWidget);
-    expect(find.text('Questions'), findsOneWidget);
-    expect(find.text('Writing'), findsOneWidget);
-    expect(find.text('Speaking'), findsOneWidget);
+    expect(find.text('Vocabulary'), findsOneWidget);
+    expect(find.text('Listening comprehension'), findsNothing);
+    expect(find.text('Reading comprehension'), findsNothing);
   });
 }
