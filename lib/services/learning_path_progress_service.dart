@@ -408,21 +408,17 @@ class LearningPathProgressService {
   static Future<String> _completedStepsKey(SharedPreferences prefs) async {
     final studentId = prefs.getString('currentStudentId');
     final studentName = prefs.getString('currentStudentName');
-
-    return _completedStepsKeyForIdentity(
-      studentId: studentId,
-      studentName: studentName,
-    );
+    final context = await StudentTeachingContextService.getActiveContext();
+    final base = _completedStepsKeyForIdentity(studentId: studentId, studentName: studentName);
+    return context == null ? base : '${base}_${_normalizeKey(context.key)}';
   }
 
   static Future<String> _validatedLevelsKey(SharedPreferences prefs) async {
     final studentId = prefs.getString('currentStudentId');
     final studentName = prefs.getString('currentStudentName');
-
-    return _validatedLevelsKeyForIdentity(
-      studentId: studentId,
-      studentName: studentName,
-    );
+    final context = await StudentTeachingContextService.getActiveContext();
+    final base = _validatedLevelsKeyForIdentity(studentId: studentId, studentName: studentName);
+    return context == null ? base : '${base}_${_normalizeKey(context.key)}';
   }
 
   static String _normalizeKey(String value) {
