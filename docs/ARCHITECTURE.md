@@ -1,33 +1,41 @@
 # TASILLA — Architecture
 
+## Identity
+Supabase Auth provides authentication. public.profiles.role is the global account type and is constrained to school, teacher or student.
+
+Global role and tenant role are deliberately separate:
+- profiles.role = school | teacher | student
+- organization_members.role = owner | admin | teacher | student
+
+## Product boundaries
+School owns an Organization. A School can manage Teachers subject to plan entitlements.
+A Teacher may be independent and manage Students directly, or operate inside a School.
+A Student may participate in authorized Teacher/School learning relationships.
+
+An organization_id IS NULL teacher/student relationship is therefore not inherently legacy or invalid: it can represent the supported independent-Teacher model.
+
 ## Client
-Flutter Web / Dart. The client may use local demo data when Supabase configuration is absent, but production flows must use the persisted backend.
+Flutter Web / Dart. Production flows use persisted backend state. Demo fallback is isolated from configured production environments.
 
 ## Backend
-Supabase Auth + PostgreSQL + Row Level Security. Supabase is the source of truth for identity, organizations, relationships, progress, attempts, submissions, reviews and certificates.
+Supabase Auth + PostgreSQL + RLS. Supabase is the source of truth for identity, organizations, memberships, learning relationships, progress, attempts, submissions, reviews, certificates and future entitlements.
 
 ## Authorization
-Authorization is enforced by PostgreSQL RLS and backend constraints, not by hidden UI controls.
+Authorization is enforced by RLS/backend constraints, never by hidden UI controls.
 
-The tenant boundary is:
+School tenant path:
+School → Organization → Teachers → Classes/Students → learning data
 
-organization → members → classes → class students → assignments/progress/evidence
+Independent path:
+Teacher → Students → learning data
 
-`assignments.organization_id` is the explicit tenant key for assignments. New organization-scoped assignments must reference a valid organization membership; class assignments must also match `classes.organization_id`. Legacy assignments may remain temporarily with `organization_id = null` and continue under the legacy teacher/student relationship until an explicit migration is performed.
+## Organizations
+organizations.owner_id references the School profile.
+organization_members represents tenant membership and authorization within the School.
+School ownership and Teacher membership must not be confused with the global account type.
 
-Organization membership is stored in organization_members. Organization ownership is stored in organizations.owner_id. RLS policies prevent non-members from reading tenant rows.
+## Learning state
+student_step_progress is the current snapshot for a student/step. attempts is append-only history.
 
-Private SECURITY DEFINER helpers are used only where required to avoid RLS recursion; they have an empty search_path and restricted execute privileges.
-
-## Data flow
-Auth → profile → organization membership → class membership → learning activity → attempt/submission → teacher review → progress/competency → certificate → public verification.
-
-## Data model boundary
-student_step_progress is the current snapshot for a student/step. attempts is append-only history for retries and submitted answers.
-
-organizations, organization_members, classes and class_students are live in Supabase. `assignments.class_id` now references `classes.id`, and `assignments.organization_id` provides the tenant boundary. The old `teacher_students` relationship remains only as a compatibility bridge for legacy rows; it is not the target authorization model.
-
-## Important boundary
-Never expose service-role/secret credentials in the Flutter client. Publishable/anon credentials are client-safe only when paired with correct RLS.
-
-Supabase's current guidance treats grants and RLS as separate controls, so both must be reviewed for every exposed tenant table.
+## Security boundary
+Never expose service-role/secret credentials in Flutter. Data API grants and RLS are separate controls and both must be reviewed for exposed tables.
