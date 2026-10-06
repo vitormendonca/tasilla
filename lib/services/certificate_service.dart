@@ -326,13 +326,7 @@ class CertificateService {
       );
     }
 
-    if (organizationId == null || organizationId.isEmpty) {
-      throw const CertificateException(
-        'An organization is required to issue a certificate.',
-      );
-    }
-
-    final eligibility = await getEligibilityForStudent(
+     final eligibility = await getEligibilityForStudent(
       studentId,
       organizationId: organizationId,
     );
@@ -475,10 +469,17 @@ class CertificateService {
     }
 
     try {
-      final data = await client
+      var query = client
           .from('student_step_progress')
           .select('learning_step_id,score,status')
           .eq('student_id', studentId);
+      if (user != null && user.id != studentId) {
+        query = query.eq('teacher_id', user.id);
+      }
+      query = organizationId != null && organizationId.isNotEmpty
+          ? query.eq('organization_id', organizationId)
+          : query.isFilter('organization_id', null);
+      final data = await query;
 
       final scores = <String, double?>{};
       final completed = <String>{};
