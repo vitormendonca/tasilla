@@ -25,7 +25,7 @@ Auth → profile → organization membership → class membership → learning a
 ## Data model boundary
 student_step_progress is the current snapshot for a student/step. attempts is append-only history for retries and submitted answers.
 
-organizations is now live in Supabase. classes is still the next schema dependency because assignments.class_id already exists but the active classes table does not yet.
+organizations, organization_members, classes and class_students are live in Supabase. `assignments.class_id` now references `classes.id`, and `assignments.organization_id` provides the tenant boundary. The old `teacher_students` relationship remains only as a compatibility bridge for legacy rows; it is not the target authorization model.
 
 ## Important boundary
 Never expose service-role/secret credentials in the Flutter client. Publishable/anon credentials are client-safe only when paired with correct RLS.
