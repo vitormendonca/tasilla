@@ -195,6 +195,26 @@ class OrganizationService {
     } catch (error) { debugPrint('School pending invitations unavailable: $error'); return []; }
   }
 
+  static Future<String?> createSchoolClass({required String organizationId, required String teacherId, required String name, required String level}) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null) return 'School service unavailable.';
+    try {
+      await client.rpc('create_school_class', params: {
+        'target_organization_id': organizationId,
+        'target_teacher_id': teacherId,
+        'class_name': name.trim(),
+        'class_level': level,
+      });
+      return null;
+    } catch (error) {
+      final message = error.toString();
+      if (message.contains('Teacher must belong to school')) return 'Select a teacher from this school.';
+      if (message.contains('Invalid class name')) return 'Class name must contain at least 2 characters.';
+      debugPrint('School class creation failed: $error');
+      return 'Could not create class.';
+    }
+  }
+
   static Future<SchoolDashboardStats> getSchoolDashboardStats(String organizationId) async {
     final client = SupabaseBootstrap.client;
     if (client == null || organizationId.isEmpty) {
