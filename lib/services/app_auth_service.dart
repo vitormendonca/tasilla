@@ -155,13 +155,13 @@ class AppAuthService {
     final client = SupabaseBootstrap.client;
     if (client != null) {
       final remoteResult = await _signInStudentByAccessCode(normalizedCode);
-      if (remoteResult != null) {
-        return remoteResult;
-      }
-      // Fall through to local demo list only if the remote lookup found nothing,
-      // so existing demo codes keep working during migration.
+      return remoteResult ?? AppLoginResult.failure(
+        'Invalid access code. Please check with your teacher or School.',
+      );
     }
 
+    // Local demo identities are available only when Supabase is intentionally
+    // not configured. Production-connected builds must never fall back to them.
     for (final student in studentsData) {
       if (student.accessCode.toLowerCase() == normalizedCode) {
         final session = AppSession(
