@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../services/organization_service.dart';
 import '../../services/teacher_students_service.dart';
 import 'teacher_student_detail_screen.dart';
 
@@ -12,16 +13,48 @@ class TeacherStudentsScreen extends StatefulWidget {
 
 class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
   List<TeacherStudentSummary> students = [];
+  List<OrganizationSummary> organizations = [];
+  String? selectedOrganizationId;
   bool isLoading = true;
 
   @override
   void initState() {
     super.initState();
-    _loadStudents();
+    _loadOrganizations();
+  }
+
+  Future<void> _loadOrganizations() async {
+    final loadedOrganizations =
+        await OrganizationService.getOrganizationsForCurrentUser();
+
+    if (!mounted) return;
+
+    final nextOrganizationId =
+        selectedOrganizationId != null &&
+                loadedOrganizations.any((item) => item.id == selectedOrganizationId)
+            ? selectedOrganizationId
+            : loadedOrganizations.isNotEmpty
+                ? loadedOrganizations.first.id
+                : null;
+
+    setState(() {
+      organizations = loadedOrganizations;
+      selectedOrganizationId = nextOrganizationId;
+    });
+
+    await _loadStudents();
   }
 
   Future<void> _loadStudents() async {
-    final loadedStudents = await TeacherStudentsService.getStudentsForCurrentTeacher();
+    setState(() {
+      isLoading = true;
+    });
+
+    final loadedStudents = selectedOrganizationId == null
+        ? <TeacherStudentSummary>[]
+        : await TeacherStudentsService.getStudentsForCurrentTeacher(
+            organizationId: selectedOrganizationId,
+          );
 
     if (!mounted) return;
 
@@ -80,6 +113,40 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
         child: ListView(
           padding: const EdgeInsets.all(20),
           children: [
+            if (organizations.isNotEmpty) ...[
+              DropdownButtonFormField<String>(
+                value: selectedOrganizationId,
+                decoration: InputDecoration(
+                  labelText: 'Organization',
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                ),
+                items: organizations
+                    .map((organization) => DropdownMenuItem<String>(
+                          value: organization.id,
+                          child: Text(organization.name),
+                        ))
+                    .toList(),
+                onChanged: isLoading
+                    ? null
+                    : (value) async {
+                        setState(() => selectedOrganizationId = value);
+                        await _loadStudents();
+                      },
+              ),
+              const SizedBox(height: 20),
+            ] else
+              Container(
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: border),
+                ),
+                child: Text(
+                  'Create or join an organization before managing students.',
+                  style: TextStyle(color: textMuted, fontSize: 12),
+                ),
+              ),
+            const SizedBox(height: 20),
             Text('YOUR STUDENTS', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, letterSpacing: 1.6, color: textMuted)),
             const SizedBox(height: 4),
             Text('Select a student to assign activities or view progress.', style: TextStyle(fontSize: 12, color: textMuted)),
