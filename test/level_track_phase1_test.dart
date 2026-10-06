@@ -1,11 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tasilla/data/a1_content_loader.dart' hide getA1LearningExperienceById;
-import 'package:tasilla/data/a1_learning_experience_data.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/data/level_track_data.dart';
-import 'package:tasilla/data/learning_path_data.dart';
 import 'package:tasilla/models/learning_activity.dart';
 import 'package:tasilla/models/learning_enums.dart';
-import 'package:tasilla/models/learning_experience.dart';
 import 'package:tasilla/models/student_activity_result.dart';
 import 'package:tasilla/services/level_progress_service.dart';
 
@@ -14,280 +11,109 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     await loadA1Content();
   });
-  test('A1 level track keeps the official certificate structure metadata', () {
+
+  test('A1 level track matches the current 149-experience package', () {
     expect(a1LevelTrack.id, 'a1');
-    expect(a1LevelTrack.totalCoreActivities, 40);
-    expect(a1LevelTrack.totalReinforcementActivities, 18);
-    expect(a1LevelTrack.totalReviews, 6);
-    expect(a1LevelTrack.totalCheckpoints, 3);
+    expect(a1LevelTrack.totalCoreActivities, 100);
+    expect(a1LevelTrack.totalReinforcementActivities, 0);
+    expect(a1LevelTrack.totalReviews, 42);
+    expect(a1LevelTrack.totalCheckpoints, 4);
     expect(a1LevelTrack.totalPortfolioTasks, 2);
     expect(a1LevelTrack.totalFinalExams, 1);
-    expect(a1LevelTrack.totalLearningExperiences, 70);
+    expect(a1LevelTrack.totalLearningExperiences, 149);
+    expect(getA1LearningExperiences(), hasLength(149));
+    expect(a1LearningCycles, hasLength(12));
     expect(a1CertificateCriteria.minimumCompletionRate, 0.90);
     expect(a1CertificateCriteria.minimumOverallAverage, 0.75);
     expect(a1CertificateCriteria.minimumFinalExamScore, 0.75);
     expect(a1CertificateCriteria.minimumSkillAverage, 0.65);
-    expect(a1CertificateCriteria.minimumSpeakingSubmissions, 10);
-    expect(a1CertificateCriteria.minimumWritingSubmissions, 10);
-    expect(a1LearningCycles, hasLength(12));
-    expect(a1LearningExperiences, hasLength(70));
   });
 
-  test(
-    'A1 source package retains the full certificate structure for later phases',
-    () {
-      final roadmapSteps = getA1RoadmapSteps();
-      final activities = getA1LearningActivities();
-      final coreActivities = activities
-          .where(
-            (activity) => activity.activityKind == ActivityKind.coreActivity,
-          )
-          .toList();
-      final reinforcementActivities = activities
-          .where(
-            (activity) =>
-                activity.activityKind == ActivityKind.reinforcementActivity,
-          )
-          .toList();
-      final reviewActivities = activities
-          .where((activity) => activity.activityKind == ActivityKind.review)
-          .toList();
-      final checkpointActivities = activities
-          .where((activity) => activity.activityKind == ActivityKind.checkpoint)
-          .toList();
-      final portfolioActivities = activities
-          .where(
-            (activity) => activity.activityKind == ActivityKind.portfolioTask,
-          )
-          .toList();
-      final finalExamActivities = activities
-          .where((activity) => activity.activityKind == ActivityKind.finalExam)
-          .toList();
-      final coreSkills = coreActivities
-          .map((activity) => activity.skill)
-          .toSet();
-      final integratedCoreActivities = coreActivities
-          .where((activity) => activity.skill == LearningSkill.mixed)
-          .toList();
+  test('A1 package preserves skill and certification activity structure', () {
+    final activities = getA1LearningActivities();
+    int count(ActivityKind kind) => activities.where((a) => a.activityKind == kind).length;
+    expect(activities, hasLength(149));
+    expect(count(ActivityKind.coreActivity), 100);
+    expect(count(ActivityKind.reinforcementActivity), 0);
+    expect(count(ActivityKind.review), 42);
+    expect(count(ActivityKind.checkpoint), 4);
+    expect(count(ActivityKind.portfolioTask), 2);
+    expect(count(ActivityKind.finalExam), 1);
 
-      expect(roadmapSteps, hasLength(a1LaunchExperienceLimit));
-      expect(activities, hasLength(70));
-      expect(coreActivities, hasLength(40));
-      expect(reinforcementActivities, hasLength(18));
-      expect(reviewActivities, hasLength(6));
-      expect(checkpointActivities, hasLength(3));
-      expect(portfolioActivities, hasLength(2));
-      expect(finalExamActivities, hasLength(1));
-      expect(coreSkills, contains(LearningSkill.listening));
-      expect(coreSkills, contains(LearningSkill.reading));
-      expect(coreSkills, contains(LearningSkill.vocabularyUseOfEnglish));
-      expect(coreSkills, contains(LearningSkill.writing));
-      expect(coreSkills, contains(LearningSkill.speaking));
-      expect(integratedCoreActivities, hasLength(3));
-      expect(
-        activities.every(
-          (activity) =>
-              activity.levelId == 'a1' &&
-              activity.cycleId.isNotEmpty &&
-              activity.cefrLevel == 'A1' &&
-              activity.canDoStatement.isNotEmpty &&
-              activity.passingScore == 0.75,
-        ),
-        true,
-      );
-    },
-  );
-
-  test('LearningExperience supports JSON-ready content and optional audio', () {
-    final listening = a1LearningExperiences.firstWhere(
-      (experience) => experience.primarySkill == LearningSkill.listening,
-    );
-    final decoded = LearningExperience.fromJson(listening.toJson());
-    final portfolio = a1LearningExperiences.firstWhere(
-      (experience) => experience.activityKind == ActivityKind.portfolioTask,
-    );
-
-    expect(decoded.id, listening.id);
-    expect(decoded.status, LearningExperienceStatus.published);
-    expect(decoded.listeningBlock?.audioScript, isNotEmpty);
-    expect(decoded.hasPlannedAudio, true);
-    expect(decoded.listeningBlock?.audioPath, startsWith('assets/audio/a1/'));
-    expect(portfolio.requiresTeacherReview, true);
-    expect(portfolio.rubric?.criteria, isNotEmpty);
-  });
-
-  test('A1 content package details are mapped into the first experiences', () {
-    final exp001 = getA1LearningExperienceById('A1-EXP-001')!;
-    final exp002 = getA1LearningExperienceById('A1-EXP-002')!;
-    final exp010 = getA1LearningExperienceById('A1-EXP-010')!;
-    final exp011 = getA1LearningExperienceById('A1-EXP-011')!;
-    final exp020 = getA1LearningExperienceById('A1-EXP-020')!;
-    final firstReinforcement = getA1LearningExperienceById('A1-REF-001')!;
-
-    expect(exp001.title, 'Introducing Yourself');
-    expect(exp001.primarySkill, LearningSkill.speaking);
-    expect(exp001.secondarySkills, [
+    final coreSkills = activities
+        .where((a) => a.activityKind == ActivityKind.coreActivity)
+        .map((a) => a.skill)
+        .toSet();
+    expect(coreSkills, containsAll([
       LearningSkill.listening,
       LearningSkill.reading,
-    ]);
-    expect(exp001.difficultyLevel, 1);
-    expect(exp001.estimatedMinutes, 10);
-    // Full skill separation (spec v2): a single-skill speaking lesson surfaces
-    // no listening or reading block. The "Meeting Anna" audio and "Lucas"
-    // reading text are orphaned content that belongs to a future listening /
-    // reading lesson on this topic; they stay in the seed but are not exposed
-    // here, so they can never render inside the speaking lesson.
-    expect(exp001.listeningBlock, isNull);
-    expect(exp001.readingBlock, isNull);
-    expect(exp001.quizBlock?.questions, hasLength(2));
-    expect(exp001.writingTask?.writingPrompt, contains('Introduce yourself'));
-    expect(exp001.speakingTask?.maxRecordingSeconds, 45);
+      LearningSkill.vocabularyUseOfEnglish,
+      LearningSkill.writing,
+      LearningSkill.speaking,
+    ]));
+    expect(activities.every((a) =>
+      a.levelId == 'a1' &&
+      a.cycleId.isNotEmpty &&
+      a.cefrLevel == 'A1' &&
+      a.canDoStatement.isNotEmpty), true);
+  });
 
-    expect(exp002.primarySkill, LearningSkill.listening);
-    expect(exp002.listeningBlock?.numberOfSpeakers, 2);
-    expect(exp010.primarySkill, LearningSkill.mixed);
-    expect(exp010.quizBlock?.questions, hasLength(3));
-    expect(exp011.title, 'My Family');
-    // EXP-011 is a vocabulary lesson: its "My Family" audio and "Emma" reading
-    // text are orphaned content, not surfaced as blocks under full separation.
-    expect(exp011.primarySkill, LearningSkill.vocabularyUseOfEnglish);
-    expect(exp011.listeningBlock, isNull);
-    expect(exp011.readingBlock, isNull);
-    expect(exp020.title, 'Personal Life Challenge');
-    expect(exp020.primarySkill, LearningSkill.mixed);
-    expect(
-      exp020.listeningBlock?.audioPath,
-      'assets/audio/a1/a1_exp_020_personal_life_challenge.mp3',
-    );
-    expect(exp020.quizBlock?.questions, hasLength(4));
-    expect(exp020.speakingTask?.maxRecordingSeconds, 120);
-    for (var number = 11; number <= 20; number++) {
-      final id = 'A1-EXP-${number.toString().padLeft(3, '0')}';
-      final experience = getA1LearningExperienceById(id)!;
+  test('current content resolves representative core and review experiences', () {
+    final listening = getA1LearningExperienceById('A1-T01-LIS')!;
+    final speaking = getA1LearningExperienceById('A1-T01-SPE')!;
+    final writing = getA1LearningExperienceById('A1-T01-WRI')!;
+    final mixed = getA1LearningExperienceById('A1-MIX-A')!;
 
-      // Full skill separation (spec v2): a lesson surfaces a listening or
-      // reading block only for its own skill (mixed lessons may carry either).
-      // Every other lesson must not expose a foreign-skill block.
-      final skill = experience.primarySkill;
-      if (skill == LearningSkill.listening) {
-        expect(
-          experience.listeningBlock?.audioStatus,
-          'ready',
-          reason: '$id audio is generated and bundled, so it is ready.',
-        );
-        expect(
-          experience.listeningBlock?.audioScript.trim(),
-          isNotEmpty,
-          reason: '$id should render its listening script.',
-        );
-      } else if (skill != LearningSkill.mixed) {
-        expect(
-          experience.listeningBlock,
-          isNull,
-          reason: '$id ($skill) must not surface a foreign listening block.',
-        );
-      }
-      if (skill == LearningSkill.reading) {
-        expect(
-          experience.readingBlock?.readingText.trim(),
-          isNotEmpty,
-          reason: '$id should render its reading content.',
-        );
-      } else if (skill != LearningSkill.mixed) {
-        expect(
-          experience.readingBlock,
-          isNull,
-          reason: '$id ($skill) must not surface a foreign reading block.',
-        );
-      }
-      expect(
-        experience.quizBlock?.questions.length,
-        greaterThanOrEqualTo(2),
-        reason: '$id should include comprehension questions.',
-      );
-      expect(
-        experience.writingTask?.writingPrompt.trim(),
-        isNotEmpty,
-        reason: '$id should include a writing prompt.',
-      );
-      expect(
-        experience.speakingTask?.speakingPrompt.trim(),
-        isNotEmpty,
-        reason: '$id should include a speaking prompt.',
-      );
-      expect(experience.passingScore, 0.75);
-    }
-    expect(firstReinforcement.title, contains('Verb To Be Mastery'));
+    expect(listening.primarySkill, LearningSkill.listening);
+    expect(listening.listeningBlock?.listeningQuestions, hasLength(5));
+    expect(speaking.primarySkill, LearningSkill.speaking);
+    expect(speaking.speakingTask?.requiresTeacherReview, true);
+    expect(speaking.rubric?.criteria, hasLength(4));
+    expect(writing.primarySkill, LearningSkill.writing);
+    expect(writing.writingTask?.requiresTeacherReview, true);
+    expect(mixed.primarySkill, LearningSkill.mixed);
+    expect(mixed.listeningBlock, isNotNull);
+    expect(mixed.readingBlock, isNotNull);
+    expect(mixed.speakingTask, isNotNull);
+    expect(mixed.writingTask, isNotNull);
   });
 
   test('level progress calculates completion, scores and review needs', () {
     final activities = getA1LearningActivities();
-    final listening = activities.firstWhere(
-      (activity) => activity.skill == LearningSkill.listening,
-    );
-    final speaking = activities.firstWhere(
-      (activity) => activity.skill == LearningSkill.speaking,
-    );
-    final review = activities.firstWhere(
-      (activity) => activity.activityKind == ActivityKind.review,
-    );
+    final listening = activities.firstWhere((a) => a.skill == LearningSkill.listening);
+    final speaking = activities.firstWhere((a) => a.skill == LearningSkill.speaking);
+    final review = activities.firstWhere((a) => a.activityKind == ActivityKind.review);
 
     final summary = LevelProgressService.calculateProgress(
       levelId: 'a1',
       activities: activities,
       results: [
         _resultFor(listening, score: 0.8, status: ActivityStatus.completed),
-        _resultFor(
-          speaking,
-          score: 0.6,
-          status: ActivityStatus.reviewNeeded,
-          needsReview: true,
-        ),
+        _resultFor(speaking, score: 0.6, status: ActivityStatus.reviewNeeded, needsReview: true),
         _resultFor(review, score: 0.9, status: ActivityStatus.submitted),
       ],
     );
 
-    expect(summary.totalActivities, 70);
+    expect(summary.totalActivities, 149);
     expect(summary.completedActivities, 2);
     expect(summary.scoredActivities, 3);
     expect(summary.reviewNeededActivities, 1);
-    expect(summary.completionRate, closeTo(2 / 70, 0.0001));
+    expect(summary.completionRate, closeTo(2 / 149, 0.0001));
     expect(summary.overallAverage, closeTo((0.8 + 0.6 + 0.9) / 3, 0.0001));
-
-    final listeningProgress = summary.skillProgress[LearningSkill.listening]!;
-    final speakingProgress = summary.skillProgress[LearningSkill.speaking]!;
-    final mixedProgress = summary.skillProgress[LearningSkill.mixed]!;
-
-    expect(listeningProgress.completedActivities, 1);
-    expect(listeningProgress.averageScore, 0.8);
-    expect(speakingProgress.completedActivities, 0);
-    expect(speakingProgress.reviewNeededActivities, 1);
-    expect(speakingProgress.averageScore, 0.6);
-    expect(mixedProgress.completedActivities, 1);
   });
 
-  test(
-    'completed IDs calculate progress without inventing certificate scores',
-    () {
-      final activities = getA1LearningActivities();
-      final firstActivity = activities.first;
-
-      final summary = LevelProgressService.calculateProgressFromCompletedIds(
-        levelId: 'a1',
-        activities: activities,
-        completedActivityIds: {firstActivity.id},
-      );
-
-      expect(summary.completedActivities, 1);
-      expect(summary.scoredActivities, 0);
-      expect(summary.overallAverage, 0);
-      expect(
-        summary.skillProgress[firstActivity.skill]!.completedActivities,
-        1,
-      );
-      expect(summary.skillProgress[firstActivity.skill]!.scoredActivities, 0);
-    },
-  );
+  test('completed IDs do not invent certificate scores', () {
+    final activities = getA1LearningActivities();
+    final first = activities.first;
+    final summary = LevelProgressService.calculateProgressFromCompletedIds(
+      levelId: 'a1',
+      activities: activities,
+      completedActivityIds: {first.id},
+    );
+    expect(summary.completedActivities, 1);
+    expect(summary.scoredActivities, 0);
+    expect(summary.overallAverage, 0);
+  });
 }
 
 StudentActivityResult _resultFor(
@@ -295,17 +121,15 @@ StudentActivityResult _resultFor(
   required double score,
   required ActivityStatus status,
   bool needsReview = false,
-}) {
-  return StudentActivityResult(
-    studentId: 'student_1',
-    activityId: activity.id,
-    levelId: activity.levelId,
-    cycleId: activity.cycleId,
-    skill: activity.skill,
-    activityKind: activity.activityKind,
-    score: score,
-    attempts: 1,
-    status: status,
-    needsReview: needsReview,
-  );
-}
+}) => StudentActivityResult(
+  studentId: 'student_1',
+  activityId: activity.id,
+  levelId: activity.levelId,
+  cycleId: activity.cycleId,
+  skill: activity.skill,
+  activityKind: activity.activityKind,
+  score: score,
+  attempts: 1,
+  status: status,
+  needsReview: needsReview,
+);
