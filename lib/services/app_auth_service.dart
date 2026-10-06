@@ -111,6 +111,12 @@ class AppAuthService {
 
       final session = _sessionFromProfile(profile, fallbackEmail: user.email);
 
+      if ((session.isTeacher || session.isSchool) && user.email != null) {
+        await client.from('profiles').update({
+          'email_normalized': user.email!.trim().toLowerCase(),
+        }).eq('id', user.id);
+      }
+
       await _saveSession(session);
       currentSession.value = session;
 
@@ -284,7 +290,7 @@ class AppAuthService {
 
     await prefs.setString('currentUserRole', session.role);
 
-    if (session.isTeacher) {
+    if (session.isTeacher || session.isSchool) {
       await prefs.setString('currentTeacherId', session.userId);
       await prefs.setString('currentTeacherName', session.name);
 
