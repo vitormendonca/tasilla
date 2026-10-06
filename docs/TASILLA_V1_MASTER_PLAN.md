@@ -132,3 +132,19 @@ Próximo gate: validação E2E em ambiente Flutter real (analyzer/testes e fluxo
 - The remaining staff-side regression for attempts, progress, submissions and submission Storage is intentionally blocked by the two active legacy `teacher_students.organization_id IS NULL` relationships and the absence of a second teacher identity.
 - Detailed evidence and exit criteria: `docs/MULTI_TENANT_RLS_REGRESSION.md`.
 - No legacy relationship was automatically mapped or modified.
+
+## 2026-10-06 — Three-account commercial model and entitlements
+
+Product identity is now explicitly School, Teacher and Student. A Teacher may be independent; therefore a teacher_students row with organization_id NULL can be a valid independent-Teacher relationship and must not be automatically migrated or retired merely because it is unscoped.
+
+Implemented:
+- School is the global account type allowed to own/create an Organization.
+- Teacher remains a standalone paid-account path and may also accept membership in a School.
+- account_entitlements centralizes pilot limits server-side; Flutter does not define the authorization limit.
+- School pilot defaults are 3 Teachers / 50 Students; independent Teacher pilot default is 10 Students. These are test defaults, not final commercial pricing.
+- teacher_invitations supports School → Teacher invitation with tenant-aware RLS.
+- invitation acceptance uses the authenticated Teacher profile email and SECURITY INVOKER; the earlier SECURITY DEFINER draft was replaced after Security Advisor flagged it.
+- link_student_to_teacher enforces Student limits for independent Teachers and School tenants.
+- Security Advisor after the final design reports only the known leaked-password-protection warning, deferred because of the current plan constraint.
+
+Architecture rule: global account role (profiles.role) and organization membership role (organization_members.role) are separate concepts.
