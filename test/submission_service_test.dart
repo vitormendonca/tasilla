@@ -1,7 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/services/submission_service.dart';
 
 void main() {
+  setUpAll(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    await loadA1Content();
+  });
   group('Submission.stepTitleFor', () {
     test('resolves a lesson title from the A1 content set', () {
       expect(Submission.stepTitleFor('A1-EXP-001'), 'Introducing Yourself');
