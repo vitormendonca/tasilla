@@ -16,7 +16,7 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
   final _teacherEmail = TextEditingController();
   OrganizationSummary? _organization;
   AccountEntitlement? _entitlement;
-  int _teacherUsage = 0;
+  SchoolDashboardStats _stats = const SchoolDashboardStats(activeTeachers: 0, pendingTeacherInvites: 0, students: 0, classes: 0);
   bool _loading = true;
   String? _message;
 
@@ -38,14 +38,14 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
     final entitlement = await OrganizationService.ensureEntitlement();
     final organizations = await OrganizationService.getOrganizationsForCurrentUser();
     final organization = organizations.isEmpty ? null : organizations.first;
-    final usage = organization == null
-        ? 0
-        : await OrganizationService.getTeacherUsage(organization.id);
+    final stats = organization == null
+        ? const SchoolDashboardStats(activeTeachers: 0, pendingTeacherInvites: 0, students: 0, classes: 0)
+        : await OrganizationService.getSchoolDashboardStats(organization.id);
     if (!mounted) return;
     setState(() {
       _entitlement = entitlement;
       _organization = organization;
-      _teacherUsage = usage;
+      _stats = stats;
       _loading = false;
     });
   }
@@ -86,10 +86,32 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
     });
   }
 
+  Widget _metricCard(BuildContext context, String label, String value, String detail) {
+    return SizedBox(
+      width: 150,
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(label, style: Theme.of(context).textTheme.labelLarge),
+              const SizedBox(height: 8),
+              Text(value, style: Theme.of(context).textTheme.headlineSmall),
+              const SizedBox(height: 4),
+              Text(detail, style: Theme.of(context).textTheme.bodySmall),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final session = AppAuthService.currentSession.value;
-    final limit = _entitlement?.maxTeachers;
+    final teacherLimit = _entitlement?.maxTeachers;
+    final studentLimit = _entitlement?.maxStudents;
     return Scaffold(
       appBar: AppBar(
         title: const Text('TASILLA School'),
@@ -121,8 +143,20 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
                       ] else ...[
                         Text(_organization!.name, style: Theme.of(context).textTheme.titleLarge),
                         const SizedBox(height: 6),
-                        Text('Plan: ${_entitlement?.planCode ?? 'unavailable'}'),
-                        Text('Teachers: $_teacherUsage / ${limit?.toString() ?? '—'}'),
+                        Text('Plan: ${_entitlement?.planCode ?? 'unavailable'} · ${_entitlement?.status ?? 'unavailable'}'),
+                        const SizedBox(height: 16),
+                        Wrap(
+                          spacing: 12,
+                          runSpacing: 12,
+                          children: [
+                            _metricCard(context, 'Teachers', '${_stats.activeTeachers}', 'Active members'),
+                            _metricCard(context, 'Invites', '${_stats.pendingTeacherInvites}', 'Pending'),
+                            _metricCard(context, 'Students', '${_stats.students} / ${studentLimit?.toString() ?? '—'}', 'Plan usage'),
+                            _metricCard(context, 'Classes', '${_stats.classes}', 'Active'),
+                          ],
+                        ),
+                        const SizedBox(height: 12),
+                        Text('Teacher seats: ${_stats.teacherSeatsUsed} / ${teacherLimit?.toString() ?? '—'}'),
                         const SizedBox(height: 24),
                         Text('Invite a teacher', style: Theme.of(context).textTheme.titleMedium),
                         const SizedBox(height: 12),
@@ -133,7 +167,7 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
                         ),
                         const SizedBox(height: 16),
                         FilledButton(
-                          onPressed: limit != null && _teacherUsage >= limit ? null : _inviteTeacher,
+                          onPressed: teacherLimit != null && _stats.teacherSeatsUsed >= teacherLimit ? null : _inviteTeacher,
                           child: const Text('Invite teacher'),
                         ),
                       ],
