@@ -110,7 +110,7 @@ class SubmissionService {
       final filtered = status == null ? query : query.eq('status', status);
       final data = await filtered.order('submitted_at', ascending: false);
 
-      return _withStudentNames(_rowsFromResponse(data));
+      return await _withStudentNames(_rowsFromResponse(data));
     } catch (error) {
       debugPrint('Remote submissions unavailable: $error');
       return [];
@@ -153,7 +153,7 @@ class SubmissionService {
           .eq('student_id', studentId)
           .order('submitted_at', ascending: false);
 
-      return _withStudentNames(_rowsFromResponse(data));
+      return await _withStudentNames(_rowsFromResponse(data));
     } catch (error) {
       debugPrint('Remote student submissions unavailable: $error');
       return [];
