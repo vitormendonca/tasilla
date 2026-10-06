@@ -4,7 +4,7 @@ create or replace function public.create_organization(
 )
 returns public.organizations
 language plpgsql
-security definer
+security invoker
 set search_path = ''
 as $$
 declare
@@ -12,14 +12,6 @@ declare
 begin
   if (select auth.uid()) is null then
     raise exception 'Authentication required';
-  end if;
-
-  if not exists (
-    select 1 from public.profiles p
-    where p.id = (select auth.uid())
-      and p.role = 'teacher'
-  ) then
-    raise exception 'Only teachers can create organizations';
   end if;
 
   insert into public.organizations (owner_id, name, slug)
