@@ -34,26 +34,9 @@ class TeacherStudentsService {
           .eq('teacher_id', user.id)
           .eq('status', 'active');
 
-      String? resolvedOrganizationId = organizationId;
-      if (resolvedOrganizationId == null || resolvedOrganizationId.isEmpty) {
-        final memberships = await client
-            .from('organization_members')
-            .select('organization_id,role')
-            .eq('user_id', user.id)
-            .inFilter('role', ['owner', 'admin', 'teacher'])
-            .order('created_at')
-            .limit(1);
-        final membershipRows = _rowsFromResponse(memberships);
-        if (membershipRows.isNotEmpty) {
-          resolvedOrganizationId =
-              membershipRows.first['organization_id']?.toString();
-        }
-      }
-
-      final linksData = resolvedOrganizationId == null ||
-              resolvedOrganizationId.isEmpty
-          ? await query
-          : await query.eq('organization_id', resolvedOrganizationId);
+      final linksData = organizationId == null || organizationId.isEmpty
+          ? await query.isFilter('organization_id', null)
+          : await query.eq('organization_id', organizationId);
 
       final studentIds = _rowsFromResponse(linksData)
           .map((row) => row['student_id']?.toString() ?? '')
