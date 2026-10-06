@@ -8,12 +8,14 @@ class TeacherStudentProgressScreen extends StatefulWidget {
   final String studentId;
   final String studentName;
   final String studentLevel;
+  final String? organizationId;
 
   const TeacherStudentProgressScreen({
     super.key,
     required this.studentId,
     required this.studentName,
     required this.studentLevel,
+    this.organizationId,
   });
 
   @override
@@ -34,6 +36,7 @@ class _TeacherStudentProgressScreenState extends State<TeacherStudentProgressScr
     final progress = await LearningPathProgressService.getAllSkillProgressForStudent(
       studentId: widget.studentId,
       studentName: widget.studentName,
+      organizationId: widget.organizationId,
     );
 
     if (!mounted) return;
