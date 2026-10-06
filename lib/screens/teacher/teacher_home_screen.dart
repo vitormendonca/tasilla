@@ -51,12 +51,6 @@ class _TeacherHomeScreenState extends State<TeacherHomeScreen> {
     }
   }
 
-  void _showComingSoon(BuildContext context, String featureName) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('$featureName will be available soon.')),
-    );
-  }
-
   void _openScreen(BuildContext context, Widget screen) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
   }
