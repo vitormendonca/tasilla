@@ -50,11 +50,9 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
       isLoading = true;
     });
 
-    final loadedStudents = selectedOrganizationId == null
-        ? <TeacherStudentSummary>[]
-        : await TeacherStudentsService.getStudentsForCurrentTeacher(
-            organizationId: selectedOrganizationId,
-          );
+    final loadedStudents = await TeacherStudentsService.getStudentsForCurrentTeacher(
+      organizationId: selectedOrganizationId,
+    );
 
     if (!mounted) return;
 
@@ -143,7 +141,7 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
                   border: Border.all(color: border),
                 ),
                 child: Text(
-                  'Create or join an organization before managing students.',
+                  'Independent Teacher mode — these students belong directly to your Teacher account and are limited by your plan.',
                   style: TextStyle(color: textMuted, fontSize: 12),
                 ),
               ),
