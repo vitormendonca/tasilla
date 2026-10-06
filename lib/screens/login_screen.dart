@@ -20,7 +20,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
   String? _errorMessage;
   bool _isLoading = false;
-  bool _isTeacherMode = false;
+  String _loginMode = 'student';
+
+  bool get _isTeacherMode => _loginMode == 'teacher';
+  bool get _isSchoolMode => _loginMode == 'school';
+  bool get _usesEmailLogin => _isTeacherMode || _isSchoolMode;
 
   @override
   void dispose() {
@@ -128,9 +132,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 // Headline
                 Text(
-                  _isTeacherMode
-                      ? 'Teacher\nsign in.'
-                      : 'Learn English\nwith your\nteacher.',
+                  _isSchoolMode
+                      ? 'School\nsign in.'
+                      : _isTeacherMode
+                          ? 'Teacher\nsign in.'
+                          : 'Learn English\nwith your\nteacher.',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w300,
@@ -151,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
                 // STUDENT: access code field
-                if (!_isTeacherMode) ...[
+                if (_loginMode == 'student') ...[
                   _UnderlineField(
                     controller: _accessCodeController,
                     label: 'ACCESS CODE',
@@ -166,7 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
 
                 // TEACHER: email + password fields
-                if (_isTeacherMode && isSupabaseConfigured) ...[
+                if (_usesEmailLogin && isSupabaseConfigured) ...[
                   _UnderlineField(
                     controller: _emailController,
                     label: 'EMAIL',
@@ -210,7 +216,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 GestureDetector(
                   onTap: _isLoading
                       ? null
-                      : (_isTeacherMode ? _loginWithEmail : _loginWithCode),
+                      : (_usesEmailLogin ? _loginWithEmail : _loginWithCode),
                   child: Container(
                     width: double.infinity,
                     height: 50,
@@ -247,16 +253,33 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 24),
 
-                // Toggle teacher / student
-                GestureDetector(
-                  onTap: () => setState(() {
-                    _isTeacherMode = !_isTeacherMode;
-                    _errorMessage = null;
-                  }),
-                  child: Text(
-                    _isTeacherMode ? 'I am a student' : 'I am a teacher',
-                    style: TextStyle(fontSize: 12, color: textMuted),
-                  ),
+                // Explicit account type selector.
+                Wrap(
+                  spacing: 16,
+                  runSpacing: 8,
+                  children: [
+                    for (final mode in const ['student', 'teacher', 'school'])
+                      GestureDetector(
+                        onTap: () => setState(() {
+                          _loginMode = mode;
+                          _errorMessage = null;
+                        }),
+                        child: Text(
+                          mode == 'student'
+                              ? 'Student'
+                              : mode == 'teacher'
+                                  ? 'Teacher'
+                                  : 'School',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: _loginMode == mode
+                                ? FontWeight.w700
+                                : FontWeight.w400,
+                            color: _loginMode == mode ? textPrimary : textMuted,
+                          ),
+                        ),
+                      ),
+                  ],
                 ),
 
                 // Demo codes hint (subtle, only in student mode)
