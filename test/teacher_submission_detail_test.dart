@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tasilla/data/a1_content_loader.dart';
 import 'package:tasilla/screens/teacher/teacher_submission_detail_screen.dart';
 import 'package:tasilla/services/submission_service.dart';
 
@@ -39,6 +40,10 @@ Future<void> _pumpDetail(WidgetTester tester, Submission submission) async {
 }
 
 void main() {
+  setUpAll(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    await loadA1Content();
+  });
   testWidgets('shows the student work and the lesson rubric together', (
     tester,
   ) async {
