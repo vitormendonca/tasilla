@@ -99,6 +99,7 @@ class AssignmentService {
     String? studentId,
     String dueDate = 'No due date',
     String note = '',
+    String? organizationId,
   }) async {
     final remoteResult = await _assignRemoteActivityToStudent(
       studentId: studentId,
@@ -495,13 +496,26 @@ class AssignmentService {
         return null;
       }
 
-      final resolvedOrganizationId = await _resolveOrganizationId(organizationId);\n\n      final existingData = await client
+      final resolvedOrganizationId = await _resolveOrganizationId(organizationId);
+
+      var existingData = await client
           .from('assignments')
           .select('id,status')
           .eq('teacher_id', user.id)
           .eq('student_id', targetStudentId)
           .eq('title', title)
           .eq('category', category);
+
+      if (resolvedOrganizationId != null) {
+        existingData = await client
+            .from('assignments')
+            .select('id,status')
+            .eq('teacher_id', user.id)
+            .eq('organization_id', resolvedOrganizationId)
+            .eq('student_id', targetStudentId)
+            .eq('title', title)
+            .eq('category', category);
+      }
 
       final alreadyAssigned = _rowsFromResponse(existingData).any((row) {
         final status = row['status']?.toString() ?? '';
