@@ -649,19 +649,11 @@ class AssignmentService {
   }
 
   static Future<String?> _resolveOrganizationId(String? organizationId) async {
-    if (organizationId?.isNotEmpty == true) return organizationId;
-    final client = SupabaseBootstrap.client;
-    final user = client?.auth.currentUser;
-    if (client == null || user == null) return null;
-    final data = await client
-        .from('organization_members')
-        .select('organization_id')
-        .eq('user_id', user.id)
-        .inFilter('role', ['owner', 'admin', 'teacher'])
-        .order('created_at')
-        .limit(1);
-    final rows = _rowsFromResponse(data);
-    return rows.isEmpty ? null : rows.first['organization_id']?.toString();
+    final normalized = organizationId?.trim();
+    if (normalized == null || normalized.isEmpty) {
+      return null;
+    }
+    return normalized;
   }
 
   static Future<bool> _updateRemoteAssignmentStatus({
