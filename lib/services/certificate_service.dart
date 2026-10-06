@@ -289,11 +289,17 @@ class CertificateService {
   /// the teacher (RLS scopes rows to their linked students) and for the student
   /// viewing their own readiness.
   static Future<CertificateEligibility> getEligibilityForStudent(
-    String studentId,
-  ) async {
-    final progress = await _stepProgressForStudent(studentId);
-    final submissions =
-        await SubmissionService.getSubmissionsForStudent(studentId);
+    String studentId, {
+    String? organizationId,
+  }) async {
+    final progress = await _stepProgressForStudent(
+      studentId,
+      organizationId: organizationId,
+    );
+    final submissions = await SubmissionService.getSubmissionsForStudent(
+      studentId,
+      organizationId: organizationId,
+    );
 
     return evaluate(
       scoresByStepId: progress.scores,
@@ -309,6 +315,7 @@ class CertificateService {
     required String studentId,
     required String studentName,
     String level = 'A1',
+    String? organizationId,
   }) async {
     final client = SupabaseBootstrap.client;
     final user = client?.auth.currentUser;
@@ -319,7 +326,10 @@ class CertificateService {
       );
     }
 
-    final eligibility = await getEligibilityForStudent(studentId);
+    final eligibility = await getEligibilityForStudent(
+      studentId,
+      organizationId: organizationId,
+    );
 
     if (!eligibility.isEligible) {
       throw const CertificateException(
@@ -357,8 +367,9 @@ class CertificateService {
 
   /// The certificate a student already holds, if any. Newest first.
   static Future<IssuedCertificate?> getCertificateForStudent(
-    String studentId,
-  ) async {
+    String studentId, {
+    String? organizationId,
+  }) async {
     final client = SupabaseBootstrap.client;
 
     if (client == null || studentId.isEmpty) {
@@ -430,11 +441,29 @@ class CertificateService {
   static num _rounded(double score) =>
       (score.clamp(0.0, 1.0) * 1000).round() / 1000;
 
-  static Future<_StepProgress> _stepProgressForStudent(String studentId) async {
+  static Future<_StepProgress> _stepProgressForStudent(
+    String studentId, {
+    String? organizationId,
+  }) async {
     final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
 
     if (client == null || studentId.isEmpty) {
       return const _StepProgress(scores: {}, completed: {});
+    }
+
+    if (organizationId != null && organizationId.isNotEmpty && user != null) {
+      final access = await client
+          .from('teacher_students')
+          .select('id')
+          .eq('teacher_id', user.id)
+          .eq('student_id', studentId)
+          .eq('organization_id', organizationId)
+          .eq('status', 'active')
+          .limit(1);
+      if (_rowsFromResponse(access).isEmpty) {
+        return const _StepProgress(scores: {}, completed: {});
+      }
     }
 
     try {
