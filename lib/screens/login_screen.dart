@@ -60,6 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final result = await AppAuthService.signInWithEmail(
       email: email,
       password: password,
+      expectedRole: _isSchoolMode ? 'school' : 'teacher',
     );
     await _handleLoginResult(result);
   }
@@ -283,7 +284,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
                 // Demo codes hint (subtle, only in student mode)
-                if (!_isTeacherMode) ...[
+                if (!_usesEmailLogin) ...[
                   const SizedBox(height: 48),
                   Container(
                     padding: const EdgeInsets.all(14),
