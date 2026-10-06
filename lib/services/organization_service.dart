@@ -110,6 +110,22 @@ class LegacyTeacherStudentSummary {
 }
 
 
+class SchoolDashboardStats {
+  final int activeTeachers;
+  final int pendingTeacherInvites;
+  final int students;
+  final int classes;
+
+  const SchoolDashboardStats({
+    required this.activeTeachers,
+    required this.pendingTeacherInvites,
+    required this.students,
+    required this.classes,
+  });
+
+  int get teacherSeatsUsed => activeTeachers + pendingTeacherInvites;
+}
+
 class TeacherInvitationSummary {
   final String id;
   final String organizationId;
@@ -148,6 +164,38 @@ class AccountEntitlement {
 }
 
 class OrganizationService {
+
+  static Future<SchoolDashboardStats> getSchoolDashboardStats(String organizationId) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || organizationId.isEmpty) {
+      return const SchoolDashboardStats(activeTeachers: 0, pendingTeacherInvites: 0, students: 0, classes: 0);
+    }
+    try {
+      final members = _rowsFromResponse(await client
+          .from('organization_members')
+          .select('id,role')
+          .eq('organization_id', organizationId));
+      final invites = _rowsFromResponse(await client
+          .from('teacher_invitations')
+          .select('id')
+          .eq('organization_id', organizationId)
+          .eq('status', 'pending'));
+      final classes = _rowsFromResponse(await client
+          .from('classes')
+          .select('id')
+          .eq('organization_id', organizationId)
+          .eq('status', 'active'));
+      return SchoolDashboardStats(
+        activeTeachers: members.where((row) => row['role'] == 'teacher').length,
+        pendingTeacherInvites: invites.length,
+        students: members.where((row) => row['role'] == 'student').length,
+        classes: classes.length,
+      );
+    } catch (error) {
+      debugPrint('School dashboard stats unavailable: $error');
+      return const SchoolDashboardStats(activeTeachers: 0, pendingTeacherInvites: 0, students: 0, classes: 0);
+    }
+  }
 
   static Future<List<TeacherInvitationSummary>> getMyTeacherInvitations() async {
     final client = SupabaseBootstrap.client;
