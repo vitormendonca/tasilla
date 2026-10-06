@@ -73,6 +73,7 @@ class _TeacherStudentsScreenState extends State<TeacherStudentsScreen> {
           studentName: student.name,
           studentLevel: student.level,
           accessCode: student.accessCode,
+          organizationId: selectedOrganizationId,
         ),
       ),
     );
