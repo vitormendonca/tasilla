@@ -384,10 +384,11 @@ class CertificateService {
     }
 
     try {
-      final row = await client
-          .from(_table)
-          .select()
-           .eq('student_id', studentId)
+      var query = client.from(_table).select().eq('student_id', studentId);
+      if (organizationId != null && organizationId.isNotEmpty) {
+        query = query.eq('organization_id', organizationId);
+      }
+      final row = await query
           .order('issued_at', ascending: false)
           .limit(1)
           .maybeSingle();
