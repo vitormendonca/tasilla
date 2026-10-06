@@ -6,6 +6,7 @@ import '../../models/assigned_activity.dart';
 import '../../models/learning_path_step.dart';
 import '../../services/assignment_service.dart';
 import '../../services/learning_path_progress_service.dart';
+import '../../services/student_teaching_context_service.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/theme_controller.dart';
 import 'student_a1_certificate_track_screen.dart';
@@ -32,6 +33,8 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
   int completedRoadReviews = 0;
   bool roadFinalTestCompleted = false;
   bool isLoadingProgress = true;
+  List<StudentTeachingContext> teachingContexts = const [];
+  StudentTeachingContext? activeTeachingContext;
 
   final Map<String, int> completedBySkill = {
     'listening': 0, 'speaking': 0, 'reading': 0, 'vocabulary': 0, 'homework': 0,
@@ -54,6 +57,17 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
   }
 
   Future<void> loadProgress() async {
+    final contexts = await StudentTeachingContextService.getAvailableContexts();
+    final activeContext = await StudentTeachingContextService.getActiveContext();
+    if (contexts.length > 1 && activeContext == null) {
+      if (!mounted) return;
+      setState(() {
+        teachingContexts = contexts;
+        activeTeachingContext = null;
+        isLoadingProgress = false;
+      });
+      return;
+    }
     final prefs = await SharedPreferences.getInstance();
     final savedStudentName = prefs.getString('currentStudentName') ?? '';
     final savedStudentLevel = prefs.getString('currentStudentLevel') ?? 'A1';
@@ -98,6 +112,8 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
         reviewBySkill[skill] = sp?.completedReviews ?? 0;
         finalTestBySkill[skill] = sp?.finalTestCompleted ?? false;
       }
+      teachingContexts = contexts;
+      activeTeachingContext = activeContext;
       isLoadingProgress = false;
     });
   }
@@ -179,6 +195,33 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
                 padding: const EdgeInsets.fromLTRB(20, 8, 20, 40),
                 children: [
                   _greetingSection(isDark, textPrimary, textMuted, surface, border),
+                  if (teachingContexts.length > 1) ...[
+                    const SizedBox(height: 16),
+                    DropdownButtonFormField<String>(
+                      initialValue: activeTeachingContext?.key,
+                      decoration: const InputDecoration(labelText: 'Learning context'),
+                      hint: const Text('Choose your teacher or School'),
+                      items: [
+                        for (final item in teachingContexts)
+                          DropdownMenuItem(value: item.key, child: Text(item.label)),
+                      ],
+                      onChanged: (value) async {
+                        if (value == null) return;
+                        final selected = teachingContexts.firstWhere((item) => item.key == value);
+                        await StudentTeachingContextService.selectContext(selected);
+                        setState(() => isLoadingProgress = true);
+                        await loadProgress();
+                      },
+                    ),
+                  ],
+                  if (teachingContexts.length > 1 && activeTeachingContext == null) ...[
+                    const SizedBox(height: 16),
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(color: surface, borderRadius: BorderRadius.circular(12), border: Border.all(color: border)),
+                      child: Text('Choose a learning context to load assignments, progress, lessons and submissions.', style: TextStyle(fontSize: 12, color: textMuted)),
+                    ),
+                  ] else ...[
                   const SizedBox(height: 24),
                   _nextLessonCard(isDark, textPrimary, textMuted, surface, border),
                   const SizedBox(height: 24),
@@ -197,6 +240,7 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
                   _sectionLabel('SKILL PATHS', textMuted),
                   const SizedBox(height: 12),
                   _skillsGrid(isDark, textPrimary, textMuted, surface, border),
+                  ],
                 ],
               ),
       ),
