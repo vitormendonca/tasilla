@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 import '../../data/homework_data.dart';
 import '../../data/listening_data.dart';
 import '../../data/reading_data.dart';
@@ -13,6 +11,7 @@ import '../../models/reading_activity.dart';
 import '../../models/speaking_activity.dart';
 import '../../models/vocabulary_quiz.dart';
 import '../../services/assignment_service.dart';
+import '../../services/supabase_bootstrap.dart';
 import '../../theme/app_theme.dart';
 import '../homework/homework_activity_screen.dart';
 import '../listening/listening_exercise_screen.dart';
@@ -42,14 +41,33 @@ class _StudentAssignmentsScreenState extends State<StudentAssignmentsScreen> {
   }
 
   Future<void> _loadStudentAssignments() async {
-    final prefs = await SharedPreferences.getInstance();
+    final client = SupabaseBootstrap.client;
+    final user = client?.auth.currentUser;
 
-    final savedStudentName = prefs.getString('currentStudentName') ?? '';
-    final savedStudentLevel = prefs.getString('currentStudentLevel') ?? '';
+    if (client == null || user == null) {
+      if (!mounted) return;
+      setState(() {
+        currentStudentName = '';
+        currentStudentLevel = '';
+        studentAssignments = [];
+        isLoading = false;
+      });
+      return;
+    }
+
+    final profile = await client
+        .from('profiles')
+        .select('full_name,current_level')
+        .eq('id', user.id)
+        .maybeSingle();
+
+    final savedStudentName = profile?['full_name']?.toString() ?? '';
+    final savedStudentLevel = profile?['current_level']?.toString() ?? '';
 
     final assignments =
-        await AssignmentService.getAssignedActivitiesByStudentName(
-          savedStudentName,
+        await AssignmentService.getAssignedActivitiesForStudent(
+          studentId: user.id,
+          studentName: savedStudentName,
         );
 
     if (!mounted) return;
