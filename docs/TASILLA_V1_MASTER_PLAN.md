@@ -39,10 +39,10 @@ No existing users were migrated into an organization yet. This is deliberate: th
 
 ## Current blockers
 
-- The active database still lacks the classes table even though assignments.class_id exists.
+- Existing `teacher_students` rows still need an explicit organization mapping before the legacy relationship can be retired.
 - Historical repository schema definitions still require explicit reconciliation.
 - Supabase Auth leaked-password protection is currently disabled.
-- The application needs organization management UI/service before the new tables are useful to teachers.
+- Teacher-facing organization/class/assignment UI still needs to consume the new services end-to-end.
 
 ## Immediate next gate
 
