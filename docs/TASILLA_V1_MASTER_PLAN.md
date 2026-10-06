@@ -46,9 +46,9 @@ No existing users were migrated into an organization yet. This is deliberate: th
 
 ## Immediate next gate
 
-Build the organization service and teacher-facing organization creation/member flow, then connect teacher_students to organization membership.
+Finish the organization → class → enrollment → assignment application flow, then explicitly map `teacher_students` into organization membership and retire legacy assignment authorization only after RLS regression coverage is in place.
 
-After that, restore the missing classes dependency and make assignments.class_id enforce a real class relationship before expanding the teacher dashboard.
+After that, expand the teacher dashboard around organization/class data rather than the legacy teacher/student relationship.
 
 ## Definition of done
 
