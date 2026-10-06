@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/assigned_activity.dart';
 import 'learning_path_progress_service.dart';
+import 'student_teaching_context_service.dart';
 import 'supabase_bootstrap.dart';
 
 class AssignmentService {
@@ -242,8 +243,11 @@ class AssignmentService {
     final currentStudentId = await _currentRemoteStudentId();
 
     if (currentStudentId != null) {
+      final context = await StudentTeachingContextService.getActiveContext();
+      if (context == null) return [];
       final remoteAssignments = await _getRemoteAssignments(
         studentId: currentStudentId,
+        organizationId: context.organizationId,
       );
 
       if (remoteAssignments != null) {
@@ -712,12 +716,19 @@ class AssignmentService {
         return null;
       }
 
-      final data = await client
+      final context = await StudentTeachingContextService.getActiveContext();
+      if (context == null) return false;
+      var assignmentQuery = client
           .from('assignments')
           .select('id,status')
           .eq('student_id', targetStudentId)
+          .eq('teacher_id', context.teacherId)
           .eq('title', title)
           .eq('category', category);
+      assignmentQuery = context.organizationId == null
+          ? assignmentQuery.isFilter('organization_id', null)
+          : assignmentQuery.eq('organization_id', context.organizationId!);
+      final data = await assignmentQuery;
 
       String? assignmentId;
 
