@@ -98,6 +98,31 @@ class TeacherStudentsService {
     }
   }
 
+  static Future<String?> linkStudentByAccessCode({
+    required String accessCode,
+    String? organizationId,
+  }) async {
+    final client = SupabaseBootstrap.client;
+    if (client == null || client.auth.currentUser == null) {
+      return 'Sign in before linking a student.';
+    }
+    try {
+      await client.rpc('link_student_by_access_code', params: {
+        'student_access_code': accessCode.trim().toUpperCase(),
+        'target_organization_id': organizationId,
+      });
+      return null;
+    } catch (error) {
+      final message = error.toString();
+      if (message.contains('Student plan limit reached')) return 'Student plan limit reached.';
+      if (message.contains('Student not found')) return 'Student code not found.';
+      if (message.contains('Student must belong to organization')) return 'This student is not enrolled in the selected school.';
+      if (message.contains('Organization teacher must select an organization')) return 'Select the school before linking a student.';
+      debugPrint('Student link failed: $error');
+      return 'Could not link student.';
+    }
+  }
+
   static List<TeacherStudentSummary> _demoStudents() {
     return studentsData.map((student) {
       return TeacherStudentSummary(
