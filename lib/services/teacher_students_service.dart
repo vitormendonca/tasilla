@@ -94,7 +94,7 @@ class TeacherStudentsService {
           .toList();
     } catch (error) {
       debugPrint('Remote teacher students unavailable: $error');
-      return _demoStudents();
+      return [];
     }
   }
 
