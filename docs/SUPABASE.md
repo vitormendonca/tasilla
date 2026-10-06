@@ -25,3 +25,12 @@ Never modify unrelated Supabase projects. All schema changes must be reviewed, v
 A política de leitura dos arquivos privados de submissions foi endurecida para relações teacher_students já mapeadas a uma organização. O acesso exige professor owner/admin/teacher e aluno student na mesma organização. Relações legadas sem organization_id continuam temporariamente compatíveis durante a migração. A alteração foi aplicada no Supabase e versionada em 20261006130000_harden_submission_storage_tenant_access.sql.
 
 Após a alteração, a política foi consultada diretamente no banco e o Security Advisor foi reexecutado. O único alerta restante continua sendo auth_leaked_password_protection, mantido pendente por decisão do projeto.
+
+
+### 2026-10-06 — Teacher/student tenant boundary hardening
+
+- New organization-scoped teacher/student relationships can no longer be created with a null `organization_id` by a teacher who already belongs to an organization.
+- Organization-scoped inserts require the actor to be owner/admin/teacher in that organization and the target student to be a student member of the same organization.
+- Existing legacy null relationships remain temporarily readable only for the explicit migration window; no automatic mapping was performed.
+- Live policy was verified after application. Security Advisor remains at the known single warning: leaked-password protection disabled due to current plan constraint.
+- Versioned migration: `20261006143000_harden_teacher_student_insert_tenant_boundary.sql`.
