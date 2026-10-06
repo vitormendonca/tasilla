@@ -217,10 +217,11 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
           spacing: 7,
           runSpacing: 7,
           children: [
-            for (final option in question.options)
+            for (int optionIndex = 0; optionIndex < question.options.length; optionIndex++)
               _optionChip(
                 question: question,
-                option: option,
+                option: question.options[optionIndex],
+                optionIndex: optionIndex,
                 selected: selected,
                 textMuted: textMuted,
               ),
@@ -308,6 +309,7 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
   Widget _optionChip({
     required ActivityQuestion question,
     required String option,
+    required int optionIndex,
     required String? selected,
     required Color textMuted,
   }) {
@@ -325,6 +327,7 @@ class _InteractiveQuizSectionState extends State<InteractiveQuizSection> {
     }
 
     return GestureDetector(
+      key: ValueKey('answer_${question.id}_$optionIndex'),
       onTap: () => _selectAnswer(question, option),
       child: _chip(option, color),
     );
