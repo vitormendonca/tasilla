@@ -59,3 +59,23 @@ The legacy relationship remains readable during transition. Legacy assignment au
 ## Definition of done
 
 A feature is done only when code is implemented, migrations are versioned when required, RLS/authorization are reviewed, loading/empty/error/retry states exist, automated tests cover critical behavior, the real target flow is verified, documentation is updated and no known regression remains.
+
+## 2026-10-06 — isolamento de assignments e leitura de progresso
+
+### Concluído nesta etapa
+
+- TeacherStudentsScreen opera com organização selecionada e passa o tenant para o detalhe do aluno.
+- TeacherStudentDetailScreen propaga organizationId para assignments.
+- TeacherAssignActivityScreen consulta e cria assignments no contexto da organização.
+- TeacherStudentAssignedActivitiesScreen consulta assignments no contexto da organização.
+- StudentAssignmentsScreen usa a identidade autenticada (auth.currentUser.id) para carregar os próprios assignments, em vez de nome persistido localmente.
+- AssignmentService filtra leituras remotas por organização quando o contexto está disponível.
+- Para usuários autenticados, falhas remotas de assignments não retornam silenciosamente dados de SharedPreferences.
+- Atualizações e cancelamentos remotos confirmam a linha alterada.
+- Leitura de progresso de outro aluno não cai mais em estado local persistido quando a sessão está autenticada e a consulta remota falha.
+
+### Validação pendente
+
+- Executar flutter analyze e testes Flutter no ambiente de desenvolvimento.
+- Fazer validação E2E com duas organizações para comprovar que professor/aluno de uma organização não enxergam assignments da outra.
+- Revisar progress/certificate RLS para aposentar definitivamente dependências legadas de teacher_students.
